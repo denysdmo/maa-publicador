@@ -113,8 +113,24 @@ def espera(cid, limite=300):
         time.sleep(5)
 
 
+def reel_direto(arquivo, legenda, extra):
+    """Plano B para vídeo: upload direto para a Meta (protocolo resumable), sem precisar de link público."""
+    r = api("POST", f"{UID}/media", media_type="REELS", upload_type="resumable", caption=legenda, share_to_feed="true", **extra)
+    cid = r["id"]
+    uri = r.get("uri") or f"https://rupload.facebook.com/ig-api-upload/v21.0/{cid}"
+    dados = open(arquivo, "rb").read()
+    req = urllib.request.Request(uri, data=dados, method="POST", headers={"Authorization": f"OAuth {TOKEN}", "offset": "0", "file_size": str(len(dados))})
+    try:
+        with urllib.request.urlopen(req, timeout=900) as resp:
+            print("  upload direto:", resp.read().decode()[:200])
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"upload direto: HTTP {e.code} {e.read().decode()[:300]}") from None
+    espera(cid, 900)
+    return cid
+
+
 def publica(cid, teste):
-    espera(cid)
+    espera(cid, 900)
     if teste:
         print("  TESTE: container pronto, NÃO publicado:", cid)
         return None
@@ -168,7 +184,16 @@ def main():
             cid = api("POST", f"{UID}/media", media_type="CAROUSEL", children=",".join(filhos), caption=legenda)["id"]
         else:
             extra = {"cover_url": sobe(a.capa)} if a.capa else {}
-            cid = api("POST", f"{UID}/media", media_type="REELS", video_url=sobe(a.arquivos[0]), caption=legenda, share_to_feed="true", **extra)["id"]
+            cid = None
+            if os.environ.get("IG_VIDEO", "url") == "url":
+                try:
+                    cid = api("POST", f"{UID}/media", media_type="REELS", video_url=sobe(a.arquivos[0]), caption=legenda, share_to_feed="true", **extra)["id"]
+                    espera(cid, 900)
+                except RuntimeError as e:
+                    print(f"  vídeo por link falhou ({e}); tentando o upload direto")
+                    cid = None
+            if cid is None:
+                cid = reel_direto(a.arquivos[0], legenda, extra)
         res = publica(cid, a.teste)
         registra(a.tipo, a.arquivos, res or f"container {cid}", a.teste)
     except Exception as e:  # noqa: BLE001

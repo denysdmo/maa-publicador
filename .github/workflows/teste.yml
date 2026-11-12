@@ -1,14 +1,46 @@
 name: Teste (nao publica)
+# Cria o container no Instagram e espera ficar pronto, mas NAO publica (--teste).
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      tipo:
+        description: "story, post, carrossel ou reel"
+        default: "story"
+        required: true
+      arquivo:
+        description: "caminho no repositorio (ex.: midia/teste.jpg)"
+        default: "midia/teste.jpg"
+        required: true
+      legenda:
+        description: "caminho do .txt da legenda (opcional)"
+        default: ""
+        required: false
+      capa:
+        description: "caminho da capa .jpg (opcional, so reel)"
+        default: ""
+        required: false
+      modo_video:
+        description: "url (link do GitHub) ou direto (upload direto para a Meta)"
+        default: "url"
+        required: false
 jobs:
   teste:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
-      - name: Cria o container de um story sem publicar
+      - name: Cria o container sem publicar
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
-        run: python instagram.py story midia/teste.jpg --teste
+          IG_VIDEO: ${{ inputs.modo_video }}
+          TIPO: ${{ inputs.tipo }}
+          ARQ: ${{ inputs.arquivo }}
+          LEG: ${{ inputs.legenda }}
+          CAPA: ${{ inputs.capa }}
+        run: |
+          args=("$TIPO" "$ARQ")
+          if [ -n "$LEG" ]; then args+=(--legenda "$LEG"); fi
+          if [ -n "$CAPA" ]; then args+=(--capa "$CAPA"); fi
+          python instagram.py "${args[@]}" --teste
