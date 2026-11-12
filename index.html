@@ -46,6 +46,7 @@
   .status a { color: var(--ciano); text-decoration: none; }
   .nota { font-size: 11px; color: var(--suave); margin-top: 3px; word-break: break-word; }
   .manual { border-left-color: var(--ouro); background: rgba(226,179,60,0.10); padding: 6px 10px; }
+  .manual { display: flex; gap: 10px; cursor: pointer; }
   .manual .tipo { text-transform: none; letter-spacing: 0; }
   .vazio { color: var(--suave); font-size: 13px; padding: 6px 2px; }
   footer { max-width: 1400px; margin: 0 auto; padding: 0 16px 30px; color: var(--suave); font-size: 12px; }
@@ -101,7 +102,7 @@
   <div class="vlegenda" id="vlegenda"></div>
   <div class="vbase">
     <button id="vant">‹ Anterior</button>
-    <div class="vcont" id="vcont"></div>
+    <div class="vcont"><span id="vcont"></span><br><button id="vbaixar" class="destaque" style="margin-top:8px">⬇ Baixar</button></div>
     <button id="vprox">Próximo ›</button>
   </div>
 </div>
@@ -163,12 +164,21 @@ function cartao(p) {
   const s = STATUS[p.status] || { cor: "var(--rasc)", txt: p.status || "—" };
   const h = String(p.data.getHours()).padStart(2, "0") + ":" + String(p.data.getMinutes()).padStart(2, "0");
   const n = (p.arquivos || "").split("|").filter((x) => x.trim()).length;
-  const tipo = (TIPO[p.tipo] || p.tipo) + (p.tipo === "carrossel" ? " · " + n + " slides" : "");
+  const tipo = p.cta ? "Story de CTA (manual)" : (TIPO[p.tipo] || p.tipo) + (p.tipo === "carrossel" ? " · " + n + " slides" : "");
   let st = s.txt;
   if (p.status === "publicado" && /^https?:/.test(p.resultado)) st = '<a href="' + p.resultado + '" target="_blank" rel="noopener">Publicado · ver ↗</a>';
   const nota = (p.status === "erro" || p.status === "atrasado") && p.resultado ? '<div class="nota">' + p.resultado.replace(/</g, "&lt;") + "</div>" : "";
   const abrir = p.status === "publicado" ? "" : '<div class="abrir">Toque para ver ›</div>';
   return '<div class="post" data-i="' + fila.indexOf(p) + '" style="border-left-color:' + s.cor + '">' + mini(p) + '<div class="info"><div class="hora">' + h + '</div><div class="tipo">' + tipo + '</div><div class="status" style="color:' + s.cor + '">' + st + "</div>" + nota + abrir + "</div></div>";
+}
+
+// arte do CTA do dia: mesma rotação do aviso do GitHub (cta.yml): 14 artes a partir de 12/11/2026
+function ctaDoDia(d) {
+  const dias = Math.round((new Date(d.getFullYear(), d.getMonth(), d.getDate()) - new Date(2026, 10, 12)) / 86400000);
+  if (dias < 0) return null;
+  const n = String((dias % 14) + 1).padStart(2, "0");
+  const data = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 20, 0);
+  return { cta: true, data, tipo: "story", status: "manual", arquivos: "midia/cta/cta-" + n + ".jpg", legenda: "" };
 }
 
 // ---------------------------------------------------------------- visor de mídia
@@ -190,7 +200,7 @@ function fecharVisor() {
 }
 async function mostrar() {
   const p = lista[pos];
-  const s = STATUS[p.status] || { cor: "var(--rasc)", txt: p.status || "—" };
+  const s = p.cta ? { cor: "var(--ouro)", txt: "Você posta: sticker de LINK com meuarraisamador.com.br" } : STATUS[p.status] || { cor: "var(--rasc)", txt: p.status || "—" };
   const arqs = (p.arquivos || "").split("|").map((x) => x.trim()).filter(Boolean);
   const tipo = (TIPO[p.tipo] || p.tipo) + (p.tipo === "carrossel" ? " · " + arqs.length + " slides (deslize)" : "");
   document.getElementById("vtitulo").innerHTML = '<div class="hora">' + nomeDia(p.data) + " " + dd(p.data) + " · " + hhmm(p.data) + '</div><div class="tipo">' + esc(tipo) + '</div><div class="status" style="color:' + s.cor + '">' + esc(s.txt) + "</div>";
@@ -209,6 +219,7 @@ async function mostrar() {
   document.getElementById("vcont").textContent = pos + 1 + " de " + lista.length;
   document.getElementById("vant").disabled = pos === 0;
   document.getElementById("vprox").disabled = pos === lista.length - 1;
+  document.getElementById("vbaixar").hidden = p.status === "publicado" || !arqs.length;
   const leg = document.getElementById("vlegenda");
   leg.textContent = "";
   if (p.legenda) {
@@ -221,6 +232,13 @@ async function mostrar() {
 function passo(d) { const n = pos + d; if (n >= 0 && n < lista.length) { pos = n; mostrar(); } }
 
 document.getElementById("grade").addEventListener("click", (e) => {
+  const m = e.target.closest(".post[data-cta]");
+  if (m) {
+    const d = new Date(inicio); d.setDate(d.getDate() + +m.dataset.cta);
+    const c = ctaDoDia(d);
+    if (c) abrirVisor([c], 0);
+    return;
+  }
   const c = e.target.closest(".post[data-i]");
   if (!c || e.target.closest("a")) return;
   const p = fila[+c.dataset.i];
@@ -233,6 +251,26 @@ document.getElementById("revisar").onclick = () => {
   if (r.length) abrirVisor(r, 0);
 };
 document.getElementById("vfechar").onclick = fecharVisor;
+// baixar a mídia aberta: no celular abre o menu de compartilhar ("Salvar imagem"); no computador, baixa o arquivo
+document.getElementById("vbaixar").onclick = async () => {
+  const p = lista[pos];
+  const arqs = (p.arquivos || "").split("|").map((x) => x.trim()).filter(Boolean);
+  try {
+    const arquivos = await Promise.all(arqs.map(async (a) => {
+      const b = await (await fetch(a)).blob();
+      return new File([b], a.split("/").pop(), { type: b.type || (/\.mp4$/i.test(a) ? "video/mp4" : "image/jpeg") });
+    }));
+    if (navigator.canShare && navigator.canShare({ files: arquivos })) { await navigator.share({ files: arquivos }); return; }
+    for (const f of arquivos) {
+      const u = URL.createObjectURL(f), l = document.createElement("a");
+      l.href = u; l.download = f.name; document.body.appendChild(l); l.click(); l.remove();
+      setTimeout(() => URL.revokeObjectURL(u), 5000);
+    }
+  } catch (e) {
+    if (e && e.name === "AbortError") return;
+    window.open(arqs[0], "_blank");
+  }
+};
 document.getElementById("vant").onclick = () => passo(-1);
 document.getElementById("vprox").onclick = () => passo(1);
 document.addEventListener("keydown", (e) => {
@@ -267,7 +305,8 @@ function desenhar() {
   for (let i = 0; i < 7; i++) {
     const d = new Date(inicio); d.setDate(d.getDate() + i);
     const posts = daSemana.filter((p) => mesmoDia(p.data, d)).sort((a, b) => a.data - b.data);
-    const manual = '<div class="post manual"><div class="info"><div class="hora">20:00 · CTA com link</div><div class="tipo">Você posta no app (aviso chega no celular)</div></div></div>';
+    const c = ctaDoDia(d);
+    const manual = '<div class="post manual" data-cta="' + i + '">' + (c ? '<div class="mini" style="background-image:url('' + c.arquivos + '')"></div>' : "") + '<div class="info"><div class="hora">20:00 · CTA com link</div><div class="tipo">Você posta no app, com o sticker de link</div>' + (c ? '<div class="abrir">Toque para ver e baixar ›</div>' : "") + "</div></div>";
     html += '<section class="dia' + (mesmoDia(d, hoje) ? " hoje" : "") + '"><h2><span>' + DIAS[d.getDay()] + "</span><span>" + dd(d) + "</span></h2>" + (posts.length ? posts.map(cartao).join("") : '<div class="vazio">Nada agendado</div>') + manual + "</section>";
   }
   document.getElementById("grade").innerHTML = html;
