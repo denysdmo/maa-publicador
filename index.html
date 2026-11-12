@@ -306,7 +306,7 @@ function desenhar() {
     const d = new Date(inicio); d.setDate(d.getDate() + i);
     const posts = daSemana.filter((p) => mesmoDia(p.data, d)).sort((a, b) => a.data - b.data);
     const c = ctaDoDia(d);
-    const manual = '<div class="post manual" data-cta="' + i + '">' + (c ? '<div class="mini" style="background-image:url('' + c.arquivos + '')"></div>' : "") + '<div class="info"><div class="hora">20:00 · CTA com link</div><div class="tipo">Você posta no app, com o sticker de link</div>' + (c ? '<div class="abrir">Toque para ver e baixar ›</div>' : "") + "</div></div>";
+    const manual = '<div class="post manual" data-cta="' + i + '">' + (c ? '<div class="mini" style="background-image:url(' + c.arquivos + ')"></div>' : "") + '<div class="info"><div class="hora">20:00 · CTA com link</div><div class="tipo">Você posta no app, com o sticker de link</div>' + (c ? '<div class="abrir">Toque para ver e baixar ›</div>' : "") + "</div></div>";
     html += '<section class="dia' + (mesmoDia(d, hoje) ? " hoje" : "") + '"><h2><span>' + DIAS[d.getDay()] + "</span><span>" + dd(d) + "</span></h2>" + (posts.length ? posts.map(cartao).join("") : '<div class="vazio">Nada agendado</div>') + manual + "</section>";
   }
   document.getElementById("grade").innerHTML = html;
