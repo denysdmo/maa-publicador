@@ -5,6 +5,7 @@ on:
   workflow_dispatch: {}
 permissions:
   contents: write
+  issues: write
 concurrency:
   group: publicador
   cancel-in-progress: false
@@ -21,7 +22,7 @@ jobs:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           TZ: America/Sao_Paulo
-        run: python publicador.py
+        run: python publicador.py | tee saida.txt
       - name: Salva o status da fila
         run: |
           if [ -n "$(git status --porcelain)" ]; then
@@ -30,4 +31,13 @@ jobs:
             git add -A
             git commit -m "fila: status atualizado"
             git push
+          fi
+      - name: Avisa se algum post falhou
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if grep -q "^FALHAS:" saida.txt; then
+            gh issue create --title "Post do Instagram NÃO saiu" --body "$(grep '^FALHAS:' saida.txt)
+
+          Veja a fila: https://github.com/${{ github.repository }}/blob/main/fila.csv"
           fi

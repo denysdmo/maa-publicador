@@ -1,0 +1,26 @@
+name: Aviso de revisao
+on:
+  push:
+    paths: ["revisao/**"]
+permissions:
+  contents: read
+  issues: write
+jobs:
+  avisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - name: Abre um aviso para cada revisão nova
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for f in $(git diff --name-only --diff-filter=A HEAD~1 HEAD -- revisao/); do
+            s=$(basename "$f" .md)
+            gh issue create --title "Revisão da semana $s: aguardando sua aprovação" \
+              --body "A semana de $s está pronta e NADA será publicado até você aprovar.
+
+          Confira aqui: https://github.com/${{ github.repository }}/blob/main/$f
+
+          Depois responda no chat do Claude: **aprovado**, ou diga o que mudar/vetar pelo número."
+          done
