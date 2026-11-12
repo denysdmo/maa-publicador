@@ -59,8 +59,18 @@ def jpeg(caminho):
     return saida
 
 
+REPO_RAW = "https://raw.githubusercontent.com/denysdmo/maa-publicador/main/"
+
+
 def sobe(caminho, tentativas=3):
-    """Envia para o Litterbox (expira em 24 h) e devolve a URL pública."""
+    """Devolve uma URL pública do arquivo.
+    Na nuvem (GitHub Actions): o arquivo já está no repositório PÚBLICO, em JPEG/MP4 -> link raw do GitHub.
+    No PC: envia para o Litterbox (expira em 24 h)."""
+    if os.environ.get("GITHUB_ACTIONS"):
+        rel = os.path.relpath(os.path.abspath(caminho), os.getcwd()).replace(os.sep, "/")
+        if not rel.lower().endswith((".jpg", ".jpeg", ".mp4", ".mov")):
+            raise RuntimeError("na nuvem a mídia precisa estar em JPEG ou MP4: " + rel)
+        return REPO_RAW + urllib.parse.quote(rel)
     caminho = jpeg(caminho)
     nome = os.path.basename(caminho)
     tipo = mimetypes.guess_type(nome)[0] or "application/octet-stream"

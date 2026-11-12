@@ -73,6 +73,12 @@ def main():
             ultima = saida[-1] if saida else ""
             if r.returncode == 0:
                 l["status"], l["resultado"] = "publicado", ultima.replace("publicado:", "").strip()
+                if NUVEM:  # repositório público: apaga a mídia já postada
+                    for a in l["arquivos"].split("|"):
+                        try:
+                            os.remove(caminho(a))
+                        except OSError:
+                            pass
             else:
                 l["status"], l["resultado"] = "erro", ultima[:300]
         falhas = [l for l in linhas if l.get("status") in ("erro", "atrasado") and l.get("_avisar")]

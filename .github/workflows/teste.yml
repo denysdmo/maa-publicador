@@ -11,4 +11,4 @@ jobs:
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
-        run: python instagram.py story midia/teste.png --teste
+        run: python instagram.py story midia/teste.jpg --teste

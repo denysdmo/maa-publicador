@@ -24,10 +24,10 @@ jobs:
         run: python publicador.py
       - name: Salva o status da fila
         run: |
-          if ! git diff --quiet fila.csv; then
+          if [ -n "$(git status --porcelain)" ]; then
             git config user.name "maa-publicador"
             git config user.email "actions@users.noreply.github.com"
-            git add fila.csv
+            git add -A
             git commit -m "fila: status atualizado"
             git push
           fi
