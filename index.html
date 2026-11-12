@@ -72,6 +72,12 @@
   .vbase { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 16px; padding-bottom: max(14px, env(safe-area-inset-bottom)); }
   .vbase .vcont { font-family: Montserrat, sans-serif; font-weight: 800; font-size: 13px; color: var(--suave); text-align: center; }
   .vbase button:disabled { opacity: 0.3; }
+  .vdecide { display: flex; gap: 10px; justify-content: center; padding: 10px 16px 0; }
+  .vdecide[hidden] { display: none; }
+  .vdecide button { font-size: 15px; padding: 12px 22px; }
+  button.aprova { background: var(--ok); border-color: var(--ok); color: #fff; }
+  button.veta { background: transparent; border-color: var(--erro); color: #ffb3b5; }
+  .versao { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 99px; background: var(--ciano); color: #04122B; font-size: 10px; font-weight: 900; letter-spacing: 0.5px; }
   @media (max-width: 900px) {
     main { grid-template-columns: 1fr; }
     .resumo { margin-left: 0; width: 100%; }
@@ -88,6 +94,7 @@
     <button id="prox">Próxima semana ›</button>
     <span class="semana" id="titulo"></span>
     <button id="revisar" class="destaque" hidden></button>
+    <button id="aprovartodos" class="aprova" hidden></button>
     <div class="resumo" id="resumo"></div>
   </div>
 </header>
@@ -100,6 +107,10 @@
   </div>
   <div class="vmidia" id="vmidia"></div>
   <div class="vlegenda" id="vlegenda"></div>
+  <div class="vdecide" id="vdecide" hidden>
+    <button class="aprova" id="vaprova">✅ Aprovar este</button>
+    <button class="veta" id="vveta">❌ Vetar</button>
+  </div>
   <div class="vbase">
     <button id="vant">‹ Anterior</button>
     <div class="vcont"><span id="vcont"></span><br><button id="vbaixar" class="destaque" style="margin-top:8px">⬇ Baixar</button></div>
@@ -164,12 +175,13 @@ function cartao(p) {
   const s = STATUS[p.status] || { cor: "var(--rasc)", txt: p.status || "—" };
   const h = String(p.data.getHours()).padStart(2, "0") + ":" + String(p.data.getMinutes()).padStart(2, "0");
   const n = (p.arquivos || "").split("|").filter((x) => x.trim()).length;
-  const tipo = p.cta ? "Story de CTA (manual)" : (TIPO[p.tipo] || p.tipo) + (p.tipo === "carrossel" ? " · " + n + " slides" : "");
+  const tipo = (TIPO[p.tipo] || p.tipo) + (p.tipo === "carrossel" ? " · " + n + " slides" : "");
   let st = s.txt;
   if (p.status === "publicado" && /^https?:/.test(p.resultado)) st = '<a href="' + p.resultado + '" target="_blank" rel="noopener">Publicado · ver ↗</a>';
   const nota = (p.status === "erro" || p.status === "atrasado") && p.resultado ? '<div class="nota">' + p.resultado.replace(/</g, "&lt;") + "</div>" : "";
   const abrir = p.status === "publicado" ? "" : '<div class="abrir">Toque para ver ›</div>';
-  return '<div class="post" data-i="' + fila.indexOf(p) + '" style="border-left-color:' + s.cor + '">' + mini(p) + '<div class="info"><div class="hora">' + h + '</div><div class="tipo">' + tipo + '</div><div class="status" style="color:' + s.cor + '">' + st + "</div>" + nota + abrir + "</div></div>";
+  const v = versao(p);
+  return '<div class="post" data-i="' + fila.indexOf(p) + '" style="border-left-color:' + s.cor + '">' + mini(p) + '<div class="info"><div class="hora">' + h + '</div><div class="tipo">' + tipo + (v ? '<span class="versao">VERSÃO ' + v + "</span>" : "") + '</div><div class="status" style="color:' + s.cor + '">' + st + "</div>" + nota + abrir + "</div></div>";
 }
 
 // arte do CTA do dia: mesma rotação do aviso do GitHub (cta.yml): 14 artes a partir de 12/11/2026
@@ -179,6 +191,19 @@ function ctaDoDia(d) {
   const n = String((dias % 14) + 1).padStart(2, "0");
   const data = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 20, 0);
   return { cta: true, data, tipo: "story", status: "manual", arquivos: "midia/cta/cta-" + n + ".jpg", legenda: "" };
+}
+
+// ---------------------------------------------------------------- versões e aprovação
+// versões: rascunhos com o mesmo horário e tipo (ex.: v1 e v2 de um story); aprovar um cancela o outro (aprovacao.py)
+function irmaos(p) { return fila.filter((o) => o !== p && o.status === "rascunho" && o.quando === p.quando && o.tipo === p.tipo); }
+function versao(p) { if (p.status !== "rascunho" || !irmaos(p).length) return 0; const m = (p.arquivos || "").match(/-v(\d+)\.\w+\s*($|\|)/); return m ? +m[1] : 1; }
+function primeiroArq(p) { return (p.arquivos || "").split("|")[0].trim(); }
+// abre um pedido (issue) já preenchido no GitHub; ao enviar, a nuvem agenda e responde em ~1 min
+function pedir(acao, itens) {
+  const linhas = itens.map((p) => acao + ": " + primeiroArq(p)).join("\n");
+  const titulo = (acao === "aprovar" ? "Aprova" + (itens.length > 1 ? "r " + itens.length + " posts" : "r post de " + dd(itens[0].data) + " " + hhmm(itens[0].data)) : "Aprovação: vetar " + itens.length + " post" + (itens.length > 1 ? "s" : ""));
+  const corpo = "Toque em **Submit new issue** (Enviar) para confirmar. Em cerca de 1 minuto a agenda atualiza.\n\n" + linhas;
+  window.open("https://github.com/denysdmo/maa-publicador/issues/new?title=" + encodeURIComponent(titulo) + "&body=" + encodeURIComponent(corpo), "_blank");
 }
 
 // ---------------------------------------------------------------- visor de mídia
@@ -202,7 +227,8 @@ async function mostrar() {
   const p = lista[pos];
   const s = p.cta ? { cor: "var(--ouro)", txt: "Você posta: sticker de LINK com meuarraisamador.com.br" } : STATUS[p.status] || { cor: "var(--rasc)", txt: p.status || "—" };
   const arqs = (p.arquivos || "").split("|").map((x) => x.trim()).filter(Boolean);
-  const tipo = (TIPO[p.tipo] || p.tipo) + (p.tipo === "carrossel" ? " · " + arqs.length + " slides (deslize)" : "");
+  const v = p.cta ? 0 : versao(p);
+  const tipo = (v ? "Versão " + v + " · " : "") + (p.cta ? "Story de CTA (manual)" : (TIPO[p.tipo] || p.tipo) + (p.tipo === "carrossel" ? " · " + arqs.length + " slides (deslize)" : ""));
   document.getElementById("vtitulo").innerHTML = '<div class="hora">' + nomeDia(p.data) + " " + dd(p.data) + " · " + hhmm(p.data) + '</div><div class="tipo">' + esc(tipo) + '</div><div class="status" style="color:' + s.cor + '">' + esc(s.txt) + "</div>";
   const m = document.getElementById("vmidia");
   if (p.status === "publicado") {
@@ -219,6 +245,8 @@ async function mostrar() {
   document.getElementById("vcont").textContent = pos + 1 + " de " + lista.length;
   document.getElementById("vant").disabled = pos === 0;
   document.getElementById("vprox").disabled = pos === lista.length - 1;
+  document.getElementById("vdecide").hidden = p.cta || p.status !== "rascunho";
+  document.getElementById("vaprova").textContent = v ? "✅ Escolher a versão " + v : "✅ Aprovar este";
   document.getElementById("vbaixar").hidden = p.status === "publicado" || !arqs.length;
   const leg = document.getElementById("vlegenda");
   leg.textContent = "";
@@ -251,6 +279,14 @@ document.getElementById("revisar").onclick = () => {
   if (r.length) abrirVisor(r, 0);
 };
 document.getElementById("vfechar").onclick = fecharVisor;
+document.getElementById("vaprova").onclick = () => pedir("aprovar", [lista[pos]]);
+document.getElementById("vveta").onclick = () => pedir("vetar", [lista[pos]]);
+document.getElementById("aprovartodos").onclick = () => {
+  const r = fila.filter((p) => p.status === "rascunho" && !versao(p)).sort((a, b) => a.data - b.data);
+  const comVersao = fila.filter((p) => p.status === "rascunho" && versao(p)).length;
+  if (!r.length) return;
+  if (confirm("Aprovar " + r.length + " rascunhos?" + (comVersao ? "\n\nOs " + comVersao + " que têm versão 1 e 2 ficam de fora: escolha a versão abrindo cada um." : ""))) pedir("aprovar", r);
+};
 // baixar a mídia aberta: no celular abre o menu de compartilhar ("Salvar imagem"); no computador, baixa o arquivo
 document.getElementById("vbaixar").onclick = async () => {
   const p = lista[pos];
@@ -299,6 +335,10 @@ function desenhar() {
   const rv = document.getElementById("revisar");
   rv.hidden = !rasc;
   rv.textContent = "▶ Revisar " + rasc + (rasc === 1 ? " rascunho" : " rascunhos");
+  const semVersao = fila.filter((p) => p.status === "rascunho" && !versao(p));
+  const at = document.getElementById("aprovartodos");
+  at.hidden = !semVersao.length;
+  at.textContent = "✅ Aprovar " + semVersao.length + (rasc > semVersao.length ? " (sem as versões)" : " (todos)");
   document.getElementById("resumo").innerHTML = ["publicado", "pendente", "rascunho", "erro"].map((k) => '<span class="chip"><i style="background:' + STATUS[k].cor + '"></i>' + STATUS[k].txt.split(" ")[0] + ": " + conta(k) + "</span>").join("");
   const hoje = new Date();
   let html = "";

@@ -1,0 +1,37 @@
+name: Aprovar pelo app
+# O botão "Aprovar"/"Vetar" da agenda abre um issue preenchido; este fluxo aplica na fila e fecha o issue.
+# Segurança: só age em issue aberto pelo DONO do repositório (ninguém mais consegue aprovar).
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: publicador
+  cancel-in-progress: false
+jobs:
+  aprovar:
+    if: github.event.issue.user.login == github.repository_owner && startsWith(github.event.issue.title, 'Aprova')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Aplica na fila
+        env:
+          CORPO: ${{ github.event.issue.body }}
+        run: printf '%s' "$CORPO" | python aprovacao.py > resumo.txt && cat resumo.txt
+      - name: Salva a fila
+        run: |
+          if [ -n "$(git status --porcelain fila.csv)" ]; then
+            git config user.name "maa-publicador"
+            git config user.email "actions@users.noreply.github.com"
+            git add fila.csv
+            git commit -m "fila: aprovação pelo app (#${{ github.event.issue.number }})"
+            git pull --rebase -q && git push
+          fi
+      - name: Responde e fecha o pedido
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} --body-file resumo.txt
+          gh issue close ${{ github.event.issue.number }} --repo ${{ github.repository }}
