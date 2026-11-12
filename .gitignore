@@ -1,0 +1,4 @@
+*.env
+.publicador.lock
+__pycache__/
+instagram-log.csv
