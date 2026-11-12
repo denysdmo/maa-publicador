@@ -49,6 +49,28 @@
   .manual .tipo { text-transform: none; letter-spacing: 0; }
   .vazio { color: var(--suave); font-size: 13px; padding: 6px 2px; }
   footer { max-width: 1400px; margin: 0 auto; padding: 0 16px 30px; color: var(--suave); font-size: 12px; }
+  .post:not(.manual) { cursor: pointer; }
+  .post:not(.manual):active { transform: scale(0.98); }
+  .abrir { margin-top: 4px; font-size: 11px; font-weight: 800; color: var(--ciano); }
+  button.destaque { background: var(--ouro); color: #04122B; border-color: var(--ouro); }
+  /* visor de mídia (12/11): toque num post para ver a arte inteira, o vídeo e a legenda */
+  #visor { position: fixed; inset: 0; z-index: 10; display: none; flex-direction: column; background: rgba(2,8,20,0.96); }
+  #visor.aberto { display: flex; }
+  .vtopo { display: flex; align-items: center; gap: 12px; padding: 12px 16px; padding-top: max(12px, env(safe-area-inset-top)); }
+  .vtopo .vt { flex: 1; min-width: 0; }
+  .vt .hora { font-size: 16px; }
+  .vfechar { font-size: 20px; line-height: 1; padding: 8px 14px; }
+  .vmidia { flex: 1; min-height: 0; display: flex; align-items: center; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 16px; }
+  .vmidia > * { flex: none; scroll-snap-align: center; height: 100%; max-width: calc(100vw - 32px); object-fit: contain; border-radius: 14px; background: #061A3A; }
+  .vmidia > :first-child { margin-left: auto; }
+  .vmidia > :last-child { margin-right: auto; }
+  .vmidia .aviso { height: auto; padding: 30px 24px; text-align: center; color: var(--suave); font-size: 15px; max-width: 420px; }
+  .vmidia .aviso a { color: var(--ciano); }
+  .vlegenda { max-height: 24vh; overflow-y: auto; margin: 10px 16px 0; padding: 12px 14px; border-radius: 12px; background: rgba(255,255,255,0.06); white-space: pre-wrap; font-size: 14px; line-height: 1.45; color: rgba(255,255,255,0.88); }
+  .vlegenda:empty { display: none; }
+  .vbase { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 16px; padding-bottom: max(14px, env(safe-area-inset-bottom)); }
+  .vbase .vcont { font-family: Montserrat, sans-serif; font-weight: 800; font-size: 13px; color: var(--suave); text-align: center; }
+  .vbase button:disabled { opacity: 0.3; }
   @media (max-width: 900px) {
     main { grid-template-columns: 1fr; }
     .resumo { margin-left: 0; width: 100%; }
@@ -64,11 +86,25 @@
     <button id="hoje">Hoje</button>
     <button id="prox">Próxima semana ›</button>
     <span class="semana" id="titulo"></span>
+    <button id="revisar" class="destaque" hidden></button>
     <div class="resumo" id="resumo"></div>
   </div>
 </header>
 <main id="grade"></main>
 <footer id="rodape"></footer>
+<div id="visor" role="dialog" aria-modal="true" aria-label="Mídia do post">
+  <div class="vtopo">
+    <div class="vt" id="vtitulo"></div>
+    <button class="vfechar" id="vfechar" aria-label="Fechar">✕</button>
+  </div>
+  <div class="vmidia" id="vmidia"></div>
+  <div class="vlegenda" id="vlegenda"></div>
+  <div class="vbase">
+    <button id="vant">‹ Anterior</button>
+    <div class="vcont" id="vcont"></div>
+    <button id="vprox">Próximo ›</button>
+  </div>
+</div>
 <script>
 const STATUS = {
   publicado: { cor: "var(--ok)", txt: "Publicado" },
@@ -108,7 +144,7 @@ async function carregar() {
   try {
     const r = await fetch("fila.csv?t=" + Date.now(), { cache: "no-store" });
     fila = lerCSV(await r.text()).map((p) => ({ ...p, data: new Date(p.quando) }));
-    document.getElementById("rodape").textContent = "Última leitura da fila: " + new Date().toLocaleTimeString("pt-BR") + " · " + fila.length + " itens na fila. Stories com sticker (quiz, enquete, caixinha) e o CTA de link das 20h são postados por você no app.";
+    document.getElementById("rodape").textContent = "Última leitura da fila: " + new Date().toLocaleTimeString("pt-BR") + " · " + fila.length + " itens na fila. Toque num post para ver a arte inteira, o vídeo e a legenda. Stories com sticker (quiz, enquete, caixinha) e o CTA de link das 20h são postados por você no app.";
   } catch (e) {
     document.getElementById("rodape").textContent = "Não consegui ler a fila agora (" + e + "). Tente recarregar.";
   }
@@ -131,14 +167,100 @@ function cartao(p) {
   let st = s.txt;
   if (p.status === "publicado" && /^https?:/.test(p.resultado)) st = '<a href="' + p.resultado + '" target="_blank" rel="noopener">Publicado · ver ↗</a>';
   const nota = (p.status === "erro" || p.status === "atrasado") && p.resultado ? '<div class="nota">' + p.resultado.replace(/</g, "&lt;") + "</div>" : "";
-  return '<div class="post" style="border-left-color:' + s.cor + '">' + mini(p) + '<div class="info"><div class="hora">' + h + '</div><div class="tipo">' + tipo + '</div><div class="status" style="color:' + s.cor + '">' + st + "</div>" + nota + "</div></div>";
+  const abrir = p.status === "publicado" ? "" : '<div class="abrir">Toque para ver ›</div>';
+  return '<div class="post" data-i="' + fila.indexOf(p) + '" style="border-left-color:' + s.cor + '">' + mini(p) + '<div class="info"><div class="hora">' + h + '</div><div class="tipo">' + tipo + '</div><div class="status" style="color:' + s.cor + '">' + st + "</div>" + nota + abrir + "</div></div>";
 }
+
+// ---------------------------------------------------------------- visor de mídia
+let lista = [], pos = 0;
+const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+function hhmm(d) { return String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0"); }
+function nomeDia(d) { return ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"][d.getDay()]; }
+
+function abrirVisor(itens, i) {
+  lista = itens; pos = i;
+  document.getElementById("visor").classList.add("aberto");
+  document.body.style.overflow = "hidden";
+  mostrar();
+}
+function fecharVisor() {
+  document.getElementById("visor").classList.remove("aberto");
+  document.body.style.overflow = "";
+  document.getElementById("vmidia").innerHTML = "";
+}
+async function mostrar() {
+  const p = lista[pos];
+  const s = STATUS[p.status] || { cor: "var(--rasc)", txt: p.status || "—" };
+  const arqs = (p.arquivos || "").split("|").map((x) => x.trim()).filter(Boolean);
+  const tipo = (TIPO[p.tipo] || p.tipo) + (p.tipo === "carrossel" ? " · " + arqs.length + " slides (deslize)" : "");
+  document.getElementById("vtitulo").innerHTML = '<div class="hora">' + nomeDia(p.data) + " " + dd(p.data) + " · " + hhmm(p.data) + '</div><div class="tipo">' + esc(tipo) + '</div><div class="status" style="color:' + s.cor + '">' + esc(s.txt) + "</div>";
+  const m = document.getElementById("vmidia");
+  if (p.status === "publicado") {
+    const link = /^https?:/.test(p.resultado) ? '<br><br><a href="' + esc(p.resultado) + '" target="_blank" rel="noopener">Ver no Instagram ↗</a>' : "";
+    m.innerHTML = '<div class="aviso">Já publicado. A mídia sai daqui depois de postada.' + link + "</div>";
+  } else if (!arqs.length) {
+    m.innerHTML = '<div class="aviso">Este item não tem mídia.</div>';
+  } else {
+    m.innerHTML = arqs.map((a) => /\.(mp4|mov)$/i.test(a)
+      ? '<video src="' + esc(a) + '" controls playsinline preload="metadata"></video>'
+      : '<img src="' + esc(a) + '" alt="">').join("");
+  }
+  m.scrollLeft = 0;
+  document.getElementById("vcont").textContent = pos + 1 + " de " + lista.length;
+  document.getElementById("vant").disabled = pos === 0;
+  document.getElementById("vprox").disabled = pos === lista.length - 1;
+  const leg = document.getElementById("vlegenda");
+  leg.textContent = "";
+  if (p.legenda) {
+    try {
+      const r = await fetch(p.legenda + "?t=" + Date.now(), { cache: "no-store" });
+      if (r.ok && lista[pos] === p) leg.textContent = (await r.text()).trim();
+    } catch (e) { /* sem legenda */ }
+  }
+}
+function passo(d) { const n = pos + d; if (n >= 0 && n < lista.length) { pos = n; mostrar(); } }
+
+document.getElementById("grade").addEventListener("click", (e) => {
+  const c = e.target.closest(".post[data-i]");
+  if (!c || e.target.closest("a")) return;
+  const p = fila[+c.dataset.i];
+  const fim = new Date(inicio); fim.setDate(fim.getDate() + 7);
+  const daSemana = fila.filter((x) => x.data >= inicio && x.data < fim).sort((a, b) => a.data - b.data);
+  abrirVisor(daSemana, daSemana.indexOf(p));
+});
+document.getElementById("revisar").onclick = () => {
+  const r = fila.filter((p) => p.status === "rascunho").sort((a, b) => a.data - b.data);
+  if (r.length) abrirVisor(r, 0);
+};
+document.getElementById("vfechar").onclick = fecharVisor;
+document.getElementById("vant").onclick = () => passo(-1);
+document.getElementById("vprox").onclick = () => passo(1);
+document.addEventListener("keydown", (e) => {
+  if (!document.getElementById("visor").classList.contains("aberto")) return;
+  if (e.key === "Escape") fecharVisor();
+  if (e.key === "ArrowLeft") passo(-1);
+  if (e.key === "ArrowRight") passo(1);
+});
+// deslizar para o lado troca de post (no carrossel, deslizar passa os slides; use os botões para trocar de post)
+let toque = null;
+const vm = document.getElementById("vmidia");
+vm.addEventListener("touchstart", (e) => { toque = [e.touches[0].clientX, e.touches[0].clientY]; }, { passive: true });
+vm.addEventListener("touchend", (e) => {
+  if (!toque || vm.children.length > 1) return;
+  const dx = e.changedTouches[0].clientX - toque[0], dy = e.changedTouches[0].clientY - toque[1];
+  if (Math.abs(dx) > 60 && Math.abs(dy) < 60) passo(dx < 0 ? 1 : -1);
+  toque = null;
+}, { passive: true });
 
 function desenhar() {
   const fim = new Date(inicio); fim.setDate(fim.getDate() + 7);
   document.getElementById("titulo").textContent = dd(inicio) + " a " + dd(new Date(fim.getTime() - 86400000));
   const daSemana = fila.filter((p) => p.data >= inicio && p.data < fim);
   const conta = (st) => daSemana.filter((p) => p.status === st).length;
+  const rasc = fila.filter((p) => p.status === "rascunho").length;
+  const rv = document.getElementById("revisar");
+  rv.hidden = !rasc;
+  rv.textContent = "▶ Revisar " + rasc + (rasc === 1 ? " rascunho" : " rascunhos");
   document.getElementById("resumo").innerHTML = ["publicado", "pendente", "rascunho", "erro"].map((k) => '<span class="chip"><i style="background:' + STATUS[k].cor + '"></i>' + STATUS[k].txt.split(" ")[0] + ": " + conta(k) + "</span>").join("");
   const hoje = new Date();
   let html = "";
