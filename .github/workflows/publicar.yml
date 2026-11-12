@@ -37,7 +37,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if grep -q "^FALHAS:" saida.txt; then
-            gh issue create --title "Post do Instagram NÃO saiu" --body "$(grep '^FALHAS:' saida.txt)
+            gh issue create --assignee denysdmo --title "Post do Instagram NÃO saiu" --body "@denysdmo $(grep '^FALHAS:' saida.txt)
 
           Veja a fila: https://github.com/${{ github.repository }}/blob/main/fila.csv"
           fi

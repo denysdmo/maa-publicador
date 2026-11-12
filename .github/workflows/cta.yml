@@ -18,7 +18,7 @@ jobs:
           dias=$(( ( $(TZ=America/Sao_Paulo date +%s) - $(date -d 2026-11-12 +%s) ) / 86400 ))
           n=$(printf %02d $(( dias % 14 + 1 )))
           img="https://raw.githubusercontent.com/${GH_REPO}/main/midia/cta/cta-$n.jpg"
-          gh issue create --title "Story de CTA de hoje ($(TZ=America/Sao_Paulo date +%d/%m))" --body "Poste no story e coloque o **sticker de LINK** com \`meuarraisamador.com.br\` no espaço da seta.
+          gh issue create --assignee denysdmo --title "Story de CTA de hoje ($(TZ=America/Sao_Paulo date +%d/%m))" --body "@denysdmo Poste no story e coloque o **sticker de LINK** com \`meuarraisamador.com.br\` no espaço da seta.
 
           <img src=\"$img\" width=\"300\">
 

@@ -17,8 +17,8 @@ jobs:
         run: |
           for f in $(git diff --name-only --diff-filter=A HEAD~1 HEAD -- revisao/); do
             s=$(basename "$f" .md)
-            gh issue create --title "Revisão da semana $s: aguardando sua aprovação" \
-              --body "A semana de $s está pronta e NADA será publicado até você aprovar.
+            gh issue create --assignee denysdmo --title "Revisão da semana $s: aguardando sua aprovação" \
+              --body "@denysdmo A semana de $s está pronta e NADA será publicado até você aprovar.
 
           Confira aqui: https://github.com/${{ github.repository }}/blob/main/$f
 
