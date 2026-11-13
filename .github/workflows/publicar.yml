@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: "*/10 * * * *"   # a cada 10 min (UTC); o GitHub pode atrasar alguns minutos
   workflow_dispatch: {}
+  # gatilho por push (13/11): o cron do GitHub chegou a ficar 4 h sem rodar. Um push em gatilho.txt (ou na fila)
+  # faz o publicador rodar na hora. Commits do próprio publicador (GITHUB_TOKEN) não disparam de novo.
+  push:
+    branches: [main]
+    paths: ["gatilho.txt", "fila.csv", ".github/workflows/publicar.yml"]
 permissions:
   contents: write
   issues: write
