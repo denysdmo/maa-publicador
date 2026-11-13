@@ -213,7 +213,7 @@ function ctaDoDia(d) {
 // ---------------------------------------------------------------- versões e aprovação
 // versões: rascunhos com o mesmo horário e tipo (ex.: v1 e v2 de um story); aprovar um cancela o outro (aprovacao.py)
 function irmaos(p) { return fila.filter((o) => o !== p && o.status === "rascunho" && o.quando === p.quando && o.tipo === p.tipo); }
-function versao(p) { if (p.status !== "rascunho" || !irmaos(p).length) return 0; const m = (p.arquivos || "").match(/-v(\d+)\.\w+\s*($|\|)/); return m ? +m[1] : 1; }
+function versao(p) { if (p.status !== "rascunho" || !irmaos(p).length) return 0; const m = (p.arquivos || "").match(/-v(\d+)[a-z]?\.\w+\s*($|\|)/); return m ? +m[1] : 1; }
 function primeiroArq(p) { return (p.arquivos || "").split("|")[0].trim(); }
 // abre um pedido (issue) já preenchido no GitHub; ao enviar, a nuvem agenda e responde em ~1 min
 // aprovação dentro do app: janela de confirmação e o issue é criado pela API (a Action de aprovação faz o resto).
