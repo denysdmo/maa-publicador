@@ -16,19 +16,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Aplica na fila
+      - name: Aplica na fila e salva (com nova tentativa se outro pedido salvar ao mesmo tempo)
         env:
           CORPO: ${{ github.event.issue.body }}
-        run: printf '%s' "$CORPO" | python aprovacao.py > resumo.txt && cat resumo.txt
-      - name: Salva a fila
         run: |
-          if [ -n "$(git status --porcelain fila.csv)" ]; then
-            git config user.name "maa-publicador"
-            git config user.email "actions@users.noreply.github.com"
+          git config user.name "maa-publicador"
+          git config user.email "actions@users.noreply.github.com"
+          for tentativa in 1 2 3 4 5 6; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            printf '%s' "$CORPO" | python aprovacao.py > resumo.txt
+            cat resumo.txt
+            [ -z "$(git status --porcelain fila.csv)" ] && exit 0
             git add fila.csv
-            git commit -m "fila: aprovação pelo app (#${{ github.event.issue.number }})"
-            git pull --rebase -q && git push
-          fi
+            git commit -q -m "fila: aprovação pelo app (#${{ github.event.issue.number }})"
+            git push -q origin HEAD:main && exit 0
+            echo "outro pedido salvou antes; tentando de novo ($tentativa)"
+            sleep $((tentativa * 4))
+          done
+          exit 1
       - name: Responde e fecha o pedido
         env:
           GH_TOKEN: ${{ github.token }}
