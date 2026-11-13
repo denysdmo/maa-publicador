@@ -89,6 +89,22 @@
   .vbase { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 16px; padding-bottom: max(14px, env(safe-area-inset-bottom)); }
   .vbase .vcont { font-family: Montserrat, sans-serif; font-weight: 800; font-size: 13px; color: var(--suave); text-align: center; }
   .vbase button:disabled { opacity: 0.3; }
+  /* métricas (13/11) */
+  #metricas { max-width: 1400px; margin: 0 auto; padding: 8px 16px 40px; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 14px; }
+  .kpi { background: rgba(10,42,94,0.55); border: 1px solid var(--linha); border-radius: 16px; padding: 14px; }
+  .kpi b { display: block; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 26px; color: var(--ouro); }
+  .kpi span { font-size: 12px; color: var(--suave); }
+  .bloco { background: rgba(10,42,94,0.55); border: 1px solid var(--linha); border-radius: 16px; padding: 14px; margin-bottom: 14px; }
+  .bloco h3 { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; margin: 0 0 10px; color: var(--suave); }
+  .linha-m { display: flex; gap: 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--linha); font-size: 13px; }
+  .linha-m:first-of-type { border-top: 0; }
+  .linha-m .n { font-family: Montserrat, sans-serif; font-weight: 900; color: var(--ouro); width: 22px; }
+  .linha-m .t { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .linha-m .t a { color: var(--texto); text-decoration: none; }
+  .linha-m .v { font-family: Montserrat, sans-serif; font-weight: 800; white-space: nowrap; }
+  .barra-m { height: 8px; border-radius: 99px; background: var(--ciano); }
+  .tag { font-size: 10px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; padding: 2px 7px; border-radius: 99px; background: rgba(255,255,255,0.1); margin-right: 6px; }
   .vdecide { display: flex; gap: 10px; justify-content: center; padding: 10px 16px 0; }
   .vdecide[hidden] { display: none; }
   .vdecide button { font-size: 15px; padding: 12px 22px; }
@@ -109,6 +125,7 @@
     <button id="ant">‹ Semana anterior</button>
     <button id="hoje">Hoje</button>
     <button id="prox">Próxima semana ›</button>
+    <button id="vermetricas">📊 Métricas</button>
     <span class="semana" id="titulo"></span>
     <button id="revisar" class="destaque" hidden></button>
     <button id="aprovartodos" class="aprova" hidden></button>
@@ -116,6 +133,7 @@
   </div>
 </header>
 <main id="grade"></main>
+<section id="metricas" hidden></section>
 <footer id="rodape"></footer>
 <div id="visor" role="dialog" aria-modal="true" aria-label="Mídia do post">
   <div class="vtopo">
@@ -409,6 +427,38 @@ function desenhar() {
 document.getElementById("ant").onclick = () => { inicio.setDate(inicio.getDate() - 7); desenhar(); };
 document.getElementById("prox").onclick = () => { inicio.setDate(inicio.getDate() + 7); desenhar(); };
 document.getElementById("hoje").onclick = () => { inicio = segunda(new Date()); desenhar(); };
+// ---------------------------------------------------------------- métricas
+const fmt = (n) => (n === null || n === undefined || n === "") ? "—" : Number(n).toLocaleString("pt-BR");
+async function mostrarMetricas() {
+  const el = document.getElementById("metricas");
+  let r;
+  try { r = await (await fetch("metricas/resumo.json?t=" + Date.now(), { cache: "no-store" })).json(); }
+  catch (e) { el.innerHTML = '<div class="bloco">As métricas ainda não foram coletadas.</div>'; return; }
+  const c = r.conta_28d || [];
+  const soma = (k, n) => c.slice(0, n).reduce((a, d) => a + (Number(d[k]) || 0), 0);
+  const kpis = [["Seguidores", fmt(r.seguidores)], ["Alcance (7 dias)", fmt(soma("reach", 7))], ["Novos seguidores (7 dias)", fmt(soma("follower_count", 7))], ["Visitas ao perfil (7 dias)", fmt(soma("profile_views", 7))], ["Cliques no link (7 dias)", fmt(soma("website_clicks", 7))]];
+  const lista = (itens, val) => itens.map((m, i) => '<div class="linha-m"><span class="n">' + (i + 1) + '</span><span class="t"><span class="tag">' + esc(m.formato) + "</span>" + '<a href="' + esc(m.link) + '" target="_blank" rel="noopener">' + esc(m.data.slice(8, 10) + "/" + m.data.slice(5, 7) + " · " + (m.legenda || "(sem legenda)")) + '</a></span><span class="v">' + val(m) + "</span></div>").join("");
+  const maxF = Math.max(1, ...Object.values(r.por_formato).map((f) => f.alcance));
+  const formatos = Object.entries(r.por_formato).sort((a, b) => b[1].alcance - a[1].alcance).map(([k, f]) => '<div class="linha-m"><span class="t"><span class="tag">' + esc(k) + "</span>" + f.posts + ' posts · salvos ' + fmt(f.salvos) + " · compart. " + fmt(f.compart) + '<div class="barra-m" style="width:' + (f.alcance / maxF * 100) + '%;margin-top:6px"></div></span><span class="v">' + fmt(f.alcance) + "</span></div>").join("");
+  const dias = Object.entries(r.por_dia).filter(([, d]) => d.posts).sort((a, b) => b[1].alcance - a[1].alcance).map(([k, d]) => '<div class="linha-m"><span class="t">' + k + " · " + d.posts + ' posts</span><span class="v">' + fmt(d.alcance) + "</span></div>").join("");
+  const horas = Object.entries(r.por_hora).filter(([, h]) => h.posts >= 2).sort((a, b) => b[1].alcance - a[1].alcance).slice(0, 6).map(([k, h]) => '<div class="linha-m"><span class="t">' + k + "h · " + h.posts + ' posts</span><span class="v">' + fmt(h.alcance) + "</span></div>").join("");
+  const st = r.stories_medias || {};
+  el.innerHTML = '<div class="sub" style="margin-bottom:10px">Atualizado em ' + new Date(r.atualizado).toLocaleString("pt-BR") + " · coleta automática a cada 3 h · alcance médio por publicação</div>"
+    + '<div class="kpis">' + kpis.map(([t, v]) => '<div class="kpi"><b>' + v + "</b><span>" + t + "</span></div>").join("") + "</div>"
+    + '<div class="bloco"><h3>Top 10 por alcance</h3>' + lista(r.top_alcance, (m) => fmt(m.reach) + " 👁") + "</div>"
+    + '<div class="bloco"><h3>Top 10 por engajamento (salvos e compartilhamentos pesam mais)</h3>' + lista(r.top_engajamento, (m) => m.taxa_engaj + "%") + "</div>"
+    + '<div class="bloco"><h3>Alcance médio por formato</h3>' + formatos + "</div>"
+    + '<div class="bloco"><h3>Melhores dias</h3>' + dias + "</div>"
+    + '<div class="bloco"><h3>Melhores horários</h3>' + horas + "</div>"
+    + '<div class="bloco"><h3>Stories (média)</h3><div class="linha-m"><span class="t">Alcance · respostas · saídas</span><span class="v">' + fmt(st.alcance) + " · " + fmt(st.respostas) + " · " + fmt(st.saidas) + "</span></div></div>";
+}
+document.getElementById("vermetricas").onclick = () => {
+  const m = document.getElementById("metricas"), g = document.getElementById("grade"), b = document.getElementById("vermetricas");
+  const ver = m.hidden;
+  m.hidden = !ver; g.hidden = ver;
+  b.textContent = ver ? "📅 Agenda" : "📊 Métricas";
+  if (ver) mostrarMetricas();
+};
 carregar();
 setInterval(carregar, 5 * 60 * 1000);
 </script>

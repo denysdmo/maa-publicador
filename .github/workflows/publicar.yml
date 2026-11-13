@@ -28,13 +28,31 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           TZ: America/Sao_Paulo
         run: python publicador.py | tee saida.txt
+      - name: Coleta métricas do Instagram (no máximo a cada 3 h)
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          TZ: America/Sao_Paulo
+        run: |
+          if python -c "import json,datetime,sys;a=datetime.datetime.fromisoformat(json.load(open('metricas/resumo.json'))['atualizado']);sys.exit(0 if (datetime.datetime.now(a.tzinfo)-a).total_seconds()>3*3600 else 1)" 2>/dev/null || [ ! -f metricas/resumo.json ]; then
+            python metricas.py || echo "métricas falharam (não bloqueia o publicador)"
+          fi
+      - name: Relatório de segunda (uma vez por semana)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TZ: America/Sao_Paulo
+        run: |
+          s=$(date +%G-%V)
+          if [ "$(date +%u)" = "1" ] && [ "$(date +%H)" -ge 9 ] && [ -f metricas/resumo.json ] && [ ! -f "metricas/relatorio-$s.md" ]; then
+            python relatorio.py > "metricas/relatorio-$s.md" && gh issue create --assignee denysdmo --title "Relatório do Instagram: semana $(date -d 'last sunday' +%d/%m)" --body-file "metricas/relatorio-$s.md" || true
+          fi
       - name: Salva o status da fila
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "maa-publicador"
             git config user.email "actions@users.noreply.github.com"
             git add -A
-            git commit -m "fila: status atualizado"
+            git commit -m "fila/métricas: atualizado"
             git push
           fi
       - name: Avisa se algum post falhou

@@ -1,0 +1,484 @@
+{
+ "atualizado": "2026-11-13T11:45-03:00",
+ "seguidores": 18507,
+ "publicacoes": 132,
+ "por_formato": {
+  "carrossel": {
+   "posts": 36,
+   "alcance": 319.7,
+   "salvos": 2.1,
+   "compart": 1.2,
+   "engaj": 2.8
+  },
+  "post": {
+   "posts": 15,
+   "alcance": 2807.8,
+   "salvos": 36.3,
+   "compart": 34.6,
+   "engaj": 5.4
+  },
+  "reel": {
+   "posts": 82,
+   "alcance": 8357.3,
+   "salvos": 65.4,
+   "compart": 123.9,
+   "engaj": 5.3
+  }
+ },
+ "por_dia": {
+  "seg": {
+   "posts": 24,
+   "alcance": 18782.0
+  },
+  "ter": {
+   "posts": 20,
+   "alcance": 1316.0
+  },
+  "qua": {
+   "posts": 20,
+   "alcance": 6282.7
+  },
+  "qui": {
+   "posts": 20,
+   "alcance": 3332.1
+  },
+  "sex": {
+   "posts": 29,
+   "alcance": 1879.3
+  },
+  "sáb": {
+   "posts": 9,
+   "alcance": 749.3
+  },
+  "dom": {
+   "posts": 11,
+   "alcance": 754.2
+  }
+ },
+ "por_hora": {
+  "09": {
+   "posts": 1,
+   "alcance": 185.0
+  },
+  "11": {
+   "posts": 10,
+   "alcance": 683.8
+  },
+  "12": {
+   "posts": 12,
+   "alcance": 503.9
+  },
+  "13": {
+   "posts": 40,
+   "alcance": 15143.6
+  },
+  "14": {
+   "posts": 14,
+   "alcance": 1825.1
+  },
+  "15": {
+   "posts": 9,
+   "alcance": 1179.2
+  },
+  "16": {
+   "posts": 8,
+   "alcance": 650.2
+  },
+  "17": {
+   "posts": 4,
+   "alcance": 2803.0
+  },
+  "18": {
+   "posts": 8,
+   "alcance": 838.2
+  },
+  "19": {
+   "posts": 18,
+   "alcance": 2885.8
+  },
+  "20": {
+   "posts": 6,
+   "alcance": 1395.2
+  },
+  "21": {
+   "posts": 1,
+   "alcance": 132.0
+  },
+  "22": {
+   "posts": 2,
+   "alcance": 188.0
+  }
+ },
+ "top_alcance": [
+  {
+   "data": "2026-08-03",
+   "formato": "reel",
+   "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador — e derruba muita gente.  Quer parar de cair ne",
+   "link": "https://www.instagram.com/reel/DblbEPHuHxB/",
+   "reach": 419037,
+   "saved": 2976,
+   "shares": 6435,
+   "taxa_engaj": 8.97
+  },
+  {
+   "data": "2026-08-05",
+   "formato": "reel",
+   "legenda": "Aprenda os sinais sonoros que mais caem na prova do Arrais-Amador! 🚤📢 (PARTE 1)  Quer estudar do jeito certo e aumentar suas chances de aprovação? Acesse a plat",
+   "link": "https://www.instagram.com/reel/Dbqkln-kZeu/",
+   "reach": 66247,
+   "saved": 653,
+   "shares": 1269,
+   "taxa_engaj": 12.19
+  },
+  {
+   "data": "2026-07-30",
+   "formato": "reel",
+   "legenda": "As boias sinalizadoras são um dos assuntos mais recorrentes na prova de Arrais! Caso queira se aprofundar mais e ficar cara a cara com a aprovação, clique no li",
+   "link": "https://www.instagram.com/reel/DbbH2_WhQ0H/",
+   "reach": 51731,
+   "saved": 544,
+   "shares": 755,
+   "taxa_engaj": 9.68
+  },
+  {
+   "data": "2026-07-08",
+   "formato": "post",
+   "legenda": "Aqui vai uma imagem que certamente vai te ajudar no exame.   Sempre tem questões sobre balizamento (IALA-B).  Conhecer os sinais náuticos é fundamental pra prov",
+   "link": "https://www.instagram.com/p/Daipt9guvrN/",
+   "reach": 28391,
+   "saved": 409,
+   "shares": 423,
+   "taxa_engaj": 10.01
+  },
+  {
+   "data": "2026-08-21",
+   "formato": "reel",
+   "legenda": "🚨 Isso cai na prova de Arrais-Amador e pouca gente sabe na hora H.  Salva esse vídeo pra revisar antes do exame 📌  Conteúdo completo (do jeito que cai na prova)",
+   "link": "https://www.instagram.com/reel/DcTxZaGkT_-/",
+   "reach": 15991,
+   "saved": 166,
+   "shares": 275,
+   "taxa_engaj": 11.81
+  },
+  {
+   "data": "2026-10-09",
+   "formato": "reel",
+   "legenda": "🚤 Você conhece esses sinais de navegação fluvial? Eles podem fazer a diferença na sua prova!  Estude com método e prepare-se para passar de primeira! ⚓  👉 Acess",
+   "link": "https://www.instagram.com/reel/DeSlfIkmzNn/",
+   "reach": 11765,
+   "saved": 96,
+   "shares": 175,
+   "taxa_engaj": 9.17
+  },
+  {
+   "data": "2026-08-12",
+   "formato": "reel",
+   "legenda": "🔥 Você sabe identificar as classes de incêndio que caem na prova de Arrais-Amador? Assista ao vídeo e aumente suas chances de aprovação! ⚓  📚 Estude com a plata",
+   "link": "https://www.instagram.com/reel/Db8va7EuAVa/",
+   "reach": 9889,
+   "saved": 120,
+   "shares": 316,
+   "taxa_engaj": 15.88
+  },
+  {
+   "data": "2026-08-07",
+   "formato": "reel",
+   "legenda": "Aprenda os sinais sonoros que mais caem na prova de Arrais-Amador! (Pt.2) 🚤📢  ⚓ Quer passar de primeira? Estude com a plataforma **Meu Arrais-Amador**. Acesse o",
+   "link": "https://www.instagram.com/reel/Dbv0YMnOoXY/",
+   "reach": 8763,
+   "saved": 105,
+   "shares": 114,
+   "taxa_engaj": 10.97
+  },
+  {
+   "data": "2026-11-09",
+   "formato": "reel",
+   "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
+   "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
+   "reach": 7794,
+   "saved": 76,
+   "shares": 151,
+   "taxa_engaj": 11.09
+  },
+  {
+   "data": "2026-08-25",
+   "formato": "reel",
+   "legenda": "⚓️ Você sabe o que acontece com o barco depois que a âncora é lançada? Isso cai muito na prova de Arrais!  Quer aprender isso e muito mais para a prova de Arrai",
+   "link": "https://www.instagram.com/reel/DceEk7dES96/",
+   "reach": 5473,
+   "saved": 72,
+   "shares": 67,
+   "taxa_engaj": 10.41
+  }
+ ],
+ "top_engajamento": [
+  {
+   "data": "2026-08-12",
+   "formato": "reel",
+   "legenda": "🔥 Você sabe identificar as classes de incêndio que caem na prova de Arrais-Amador? Assista ao vídeo e aumente suas chances de aprovação! ⚓  📚 Estude com a plata",
+   "link": "https://www.instagram.com/reel/Db8va7EuAVa/",
+   "reach": 9889,
+   "saved": 120,
+   "shares": 316,
+   "taxa_engaj": 15.88
+  },
+  {
+   "data": "2026-06-28",
+   "formato": "reel",
+   "legenda": "Sinal CANAL PREFERENCIAL A BORESTE  Faça um simulado GRÁTIS pelo link da BIO! @meuarraisamador",
+   "link": "https://www.instagram.com/reel/DaI7vQNO8XA/",
+   "reach": 1245,
+   "saved": 14,
+   "shares": 32,
+   "taxa_engaj": 14.9
+  },
+  {
+   "data": "2026-07-06",
+   "formato": "carrossel",
+   "legenda": "IMAGENS QUE VÃO TE SALVAR NA PROVA DE ARRAIS-AMADOR  Acesse o link da bio e faça uma demonstração GRÁTIS da plataforma com questões de prova!",
+   "link": "https://www.instagram.com/p/DadX1QZG18T/",
+   "reach": 654,
+   "saved": 19,
+   "shares": 11,
+   "taxa_engaj": 14.37
+  },
+  {
+   "data": "2026-10-12",
+   "formato": "reel",
+   "legenda": "🌦️ Saber identificar as nuvens pode fazer a diferença na sua navegação e na prova de Arrais-Amador! 🚤 Aprenda meteorologia náutica com o Meu Arrais-Amador. Aces",
+   "link": "https://www.instagram.com/reel/DeaXab_uApx/",
+   "reach": 3607,
+   "saved": 38,
+   "shares": 91,
+   "taxa_engaj": 13.02
+  },
+  {
+   "data": "2026-04-01",
+   "formato": "reel",
+   "legenda": "Se você acha que estudar pra Arrais Amador é só “dar uma lida”, tá perdendo tempo… ⛵📚  Aqui na Meu Arrais-Amador, a gente segue um ciclo de estudos estratégico ",
+   "link": "https://www.instagram.com/reel/DWmJhFBEd8-/",
+   "reach": 639,
+   "saved": 12,
+   "shares": 13,
+   "taxa_engaj": 12.21
+  },
+  {
+   "data": "2026-08-05",
+   "formato": "reel",
+   "legenda": "Aprenda os sinais sonoros que mais caem na prova do Arrais-Amador! 🚤📢 (PARTE 1)  Quer estudar do jeito certo e aumentar suas chances de aprovação? Acesse a plat",
+   "link": "https://www.instagram.com/reel/Dbqkln-kZeu/",
+   "reach": 66247,
+   "saved": 653,
+   "shares": 1269,
+   "taxa_engaj": 12.19
+  },
+  {
+   "data": "2026-08-21",
+   "formato": "reel",
+   "legenda": "🚨 Isso cai na prova de Arrais-Amador e pouca gente sabe na hora H.  Salva esse vídeo pra revisar antes do exame 📌  Conteúdo completo (do jeito que cai na prova)",
+   "link": "https://www.instagram.com/reel/DcTxZaGkT_-/",
+   "reach": 15991,
+   "saved": 166,
+   "shares": 275,
+   "taxa_engaj": 11.81
+  },
+  {
+   "data": "2026-11-09",
+   "formato": "reel",
+   "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
+   "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
+   "reach": 7794,
+   "saved": 76,
+   "shares": 151,
+   "taxa_engaj": 11.09
+  },
+  {
+   "data": "2026-08-07",
+   "formato": "reel",
+   "legenda": "Aprenda os sinais sonoros que mais caem na prova de Arrais-Amador! (Pt.2) 🚤📢  ⚓ Quer passar de primeira? Estude com a plataforma **Meu Arrais-Amador**. Acesse o",
+   "link": "https://www.instagram.com/reel/Dbv0YMnOoXY/",
+   "reach": 8763,
+   "saved": 105,
+   "shares": 114,
+   "taxa_engaj": 10.97
+  },
+  {
+   "data": "2026-07-22",
+   "formato": "post",
+   "legenda": "Uma das maiores dúvidas quando se fala de prova de Arrais-Amador e Motonauta é sobre as classes de fogo, o que não é só um conteúdo para a prova, mas também par",
+   "link": "https://www.instagram.com/p/DbGwAbJuzLC/",
+   "reach": 1702,
+   "saved": 21,
+   "shares": 34,
+   "taxa_engaj": 10.61
+  }
+ ],
+ "stories_medias": {
+  "alcance": 28.2,
+  "respostas": 0.0,
+  "saidas": 7.0
+ },
+ "conta_28d": [
+  {
+   "data": "2026-11-13",
+   "reach": 1744,
+   "follower_count": 0,
+   "profile_views": 17,
+   "website_clicks": 2,
+   "accounts_engaged": 45
+  },
+  {
+   "data": "2026-11-12",
+   "reach": 4496,
+   "follower_count": 0,
+   "profile_views": 61,
+   "website_clicks": 12,
+   "accounts_engaged": 136
+  },
+  {
+   "data": "2026-11-11",
+   "reach": 5506,
+   "follower_count": 33,
+   "profile_views": 54,
+   "website_clicks": 8,
+   "accounts_engaged": 128
+  },
+  {
+   "data": "2026-11-10",
+   "reach": 7144,
+   "follower_count": 72,
+   "profile_views": 73,
+   "website_clicks": 14,
+   "accounts_engaged": 338
+  },
+  {
+   "data": "2026-11-09",
+   "reach": 6833,
+   "follower_count": 40,
+   "profile_views": 79,
+   "website_clicks": 13,
+   "accounts_engaged": 337
+  },
+  {
+   "data": "2026-11-08",
+   "reach": 11731,
+   "follower_count": 35,
+   "profile_views": 49,
+   "website_clicks": 10,
+   "accounts_engaged": 129
+  },
+  {
+   "data": "2026-11-07",
+   "reach": 22709,
+   "follower_count": 31,
+   "profile_views": 46,
+   "website_clicks": 7,
+   "accounts_engaged": 108
+  },
+  {
+   "data": "2026-11-06",
+   "reach": 3360,
+   "follower_count": 22
+  },
+  {
+   "data": "2026-11-05",
+   "reach": 5347,
+   "follower_count": 40
+  },
+  {
+   "data": "2026-11-04",
+   "reach": 2704,
+   "follower_count": 19
+  },
+  {
+   "data": "2026-11-03",
+   "reach": 3444,
+   "follower_count": 30
+  },
+  {
+   "data": "2026-11-02",
+   "reach": 3538,
+   "follower_count": 39
+  },
+  {
+   "data": "2026-11-01",
+   "reach": 3607,
+   "follower_count": 27
+  },
+  {
+   "data": "2026-10-31",
+   "reach": 2549,
+   "follower_count": 25
+  },
+  {
+   "data": "2026-10-30",
+   "reach": 3023,
+   "follower_count": 19
+  },
+  {
+   "data": "2026-10-29",
+   "reach": 3642,
+   "follower_count": 30
+  },
+  {
+   "data": "2026-10-28",
+   "reach": 4332,
+   "follower_count": 31
+  },
+  {
+   "data": "2026-10-27",
+   "reach": 2937,
+   "follower_count": 14
+  },
+  {
+   "data": "2026-10-26",
+   "reach": 2525,
+   "follower_count": 32
+  },
+  {
+   "data": "2026-10-25",
+   "reach": 2184,
+   "follower_count": 29
+  },
+  {
+   "data": "2026-10-24",
+   "reach": 2504,
+   "follower_count": 28
+  },
+  {
+   "data": "2026-10-23",
+   "reach": 2491,
+   "follower_count": 24
+  },
+  {
+   "data": "2026-10-22",
+   "reach": 1833,
+   "follower_count": 31
+  },
+  {
+   "data": "2026-10-21",
+   "reach": 2207,
+   "follower_count": 32
+  },
+  {
+   "data": "2026-10-20",
+   "reach": 2414,
+   "follower_count": 38
+  },
+  {
+   "data": "2026-10-19",
+   "reach": 4324,
+   "follower_count": 64
+  },
+  {
+   "data": "2026-10-18",
+   "reach": 2652,
+   "follower_count": 42
+  },
+  {
+   "data": "2026-10-17",
+   "reach": 2017,
+   "follower_count": 44
+  }
+ ]
+}
