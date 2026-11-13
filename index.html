@@ -24,11 +24,25 @@
   h1 { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 26px; margin: 0; letter-spacing: -0.5px; }
   h1 span { color: var(--ouro); }
   .sub { color: var(--suave); font-size: 14px; margin-top: 4px; }
-  .barra { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 16px; }
+  [hidden] { display: none !important; }
+  .topo { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
+  .abas { display: flex; background: rgba(255,255,255,0.08); border-radius: 999px; padding: 4px; }
+  .aba { background: transparent; border: 0; padding: 10px 18px; font-size: 14px; }
+  .aba.ativa { background: var(--ouro); color: #04122B; }
+  .navsem { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 16px; }
+  .seta { width: 46px; height: 46px; padding: 0; font-size: 26px; line-height: 1; }
+  .semtxt { display: flex; flex-direction: column; align-items: center; min-width: 170px; }
+  .semtxt b { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 18px; }
+  .link { background: none; border: 0; padding: 4px 0 0; color: var(--ciano); font-size: 12px; }
+  .pend { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-top: 14px; padding: 12px 14px; border-radius: 16px; border: 1px solid var(--ouro); background: rgba(226,179,60,0.10); }
+  .pendtxt b { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 18px; color: var(--ouro); margin-right: 6px; }
+  .pendtxt span { font-size: 14px; }
+  .pendbot { display: flex; flex-wrap: wrap; gap: 8px; }
+  #ctrlAgenda .resumo { justify-content: center; margin: 12px 0 0; }
   button { font-family: Montserrat, sans-serif; font-weight: 800; font-size: 13px; color: var(--texto); background: var(--painel); border: 1px solid var(--linha); border-radius: 999px; padding: 9px 16px; cursor: pointer; }
   button:hover { border-color: var(--ciano); }
   .semana { font-family: Montserrat, sans-serif; font-weight: 800; font-size: 15px; margin: 0 6px; }
-  .resumo { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+  .resumo { display: flex; flex-wrap: wrap; gap: 8px; }
   .chip { display: inline-flex; align-items: center; gap: 6px; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; background: rgba(255,255,255,0.08); }
   .chip i { width: 8px; height: 8px; border-radius: 99px; display: inline-block; }
   main { max-width: 1400px; margin: 0 auto; padding: 8px 16px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
@@ -113,22 +127,29 @@
   .versao { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 99px; background: var(--ciano); color: #04122B; font-size: 10px; font-weight: 900; letter-spacing: 0.5px; }
   @media (max-width: 900px) {
     main { grid-template-columns: 1fr; }
-    .resumo { margin-left: 0; width: 100%; }
+    .topo { justify-content: center; } .topo h1 { width: 100%; text-align: center; font-size: 22px; }
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Agenda do Instagram · <span>@meuarraisamador</span></h1>
-  <div class="sub">Atualiza sozinha a partir da fila de publicação. Horários de Brasília.</div>
-  <div class="barra">
-    <button id="ant">‹ Semana anterior</button>
-    <button id="hoje">Hoje</button>
-    <button id="prox">Próxima semana ›</button>
-    <button id="vermetricas">📊 Métricas</button>
-    <span class="semana" id="titulo"></span>
-    <button id="revisar" class="destaque" hidden></button>
-    <button id="aprovartodos" class="aprova" hidden></button>
+  <div class="topo">
+    <h1>Agenda <span>@meuarraisamador</span></h1>
+    <nav class="abas" role="tablist">
+      <button id="abaAgenda" class="aba ativa" role="tab">📅 Agenda</button>
+      <button id="abaMetricas" class="aba" role="tab">📊 Métricas</button>
+    </nav>
+  </div>
+  <div id="ctrlAgenda">
+    <div class="navsem">
+      <button id="ant" class="seta" aria-label="Semana anterior">‹</button>
+      <div class="semtxt"><b id="titulo"></b><button id="hoje" class="link" hidden>↩ voltar para esta semana</button></div>
+      <button id="prox" class="seta" aria-label="Próxima semana">›</button>
+    </div>
+    <div class="pend" id="pend" hidden>
+      <div class="pendtxt"><b id="pendn"></b><span>esperando sua aprovação</span></div>
+      <div class="pendbot"><button id="revisar" class="destaque">▶ Ver um por um</button><button id="aprovartodos" class="aprova"></button></div>
+    </div>
     <div class="resumo" id="resumo"></div>
   </div>
 </header>
@@ -405,12 +426,13 @@ function desenhar() {
   const conta = (st) => daSemana.filter((p) => p.status === st).length;
   const rasc = fila.filter((p) => p.status === "rascunho").length;
   const rv = document.getElementById("revisar");
-  rv.hidden = !rasc;
-  rv.textContent = "▶ Revisar " + rasc + (rasc === 1 ? " rascunho" : " rascunhos");
+  document.getElementById("pend").hidden = !rasc;
+  document.getElementById("pendn").textContent = rasc + (rasc === 1 ? " post" : " posts");
+  document.getElementById("hoje").hidden = mesmoDia(inicio, segunda(new Date()));
   const semVersao = fila.filter((p) => p.status === "rascunho" && !versao(p));
   const at = document.getElementById("aprovartodos");
   at.hidden = !semVersao.length;
-  at.textContent = "✅ Aprovar " + semVersao.length + (rasc > semVersao.length ? " (sem as versões)" : " (todos)");
+  at.textContent = rasc > semVersao.length ? "✅ Aprovar " + semVersao.length + " (as versões 1/2 você escolhe)" : "✅ Aprovar todos";
   document.getElementById("resumo").innerHTML = ["publicado", "pendente", "rascunho", "erro"].map((k) => '<span class="chip"><i style="background:' + STATUS[k].cor + '"></i>' + STATUS[k].txt.split(" ")[0] + ": " + conta(k) + "</span>").join("");
   const hoje = new Date();
   let html = "";
@@ -452,13 +474,19 @@ async function mostrarMetricas() {
     + '<div class="bloco"><h3>Melhores horários</h3>' + horas + "</div>"
     + '<div class="bloco"><h3>Stories (média)</h3><div class="linha-m"><span class="t">Alcance · respostas · saídas</span><span class="v">' + fmt(st.alcance) + " · " + fmt(st.respostas) + " · " + fmt(st.saidas) + "</span></div></div>";
 }
-document.getElementById("vermetricas").onclick = () => {
-  const m = document.getElementById("metricas"), g = document.getElementById("grade"), b = document.getElementById("vermetricas");
-  const ver = m.hidden;
-  m.hidden = !ver; g.hidden = ver;
-  b.textContent = ver ? "📅 Agenda" : "📊 Métricas";
-  if (ver) mostrarMetricas();
-};
+function aba(qual) {
+  const met = qual === "metricas";
+  document.getElementById("metricas").hidden = !met;
+  document.getElementById("grade").hidden = met;
+  document.getElementById("ctrlAgenda").hidden = met;
+  document.getElementById("rodape").hidden = met;
+  document.getElementById("abaAgenda").classList.toggle("ativa", !met);
+  document.getElementById("abaMetricas").classList.toggle("ativa", met);
+  if (met) mostrarMetricas();
+  window.scrollTo(0, 0);
+}
+document.getElementById("abaAgenda").onclick = () => aba("agenda");
+document.getElementById("abaMetricas").onclick = () => aba("metricas");
 carregar();
 setInterval(carregar, 5 * 60 * 1000);
 </script>
