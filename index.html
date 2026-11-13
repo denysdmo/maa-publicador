@@ -75,6 +75,16 @@
   .vcopiar:hover { background: #2A6FD6; }
   .vcopiar svg { width: 18px !important; height: 18px !important; min-width: 18px; flex: none; margin: 0; }
   .vcopiar.ok { background: #22B573; }
+  #confirma { position: fixed; inset: 0; z-index: 9999; display: none; align-items: center; justify-content: center; background: rgba(2,9,21,0.72); padding: 16px; }
+  #confirma.aberto { display: flex; }
+  #confirma .caixa { width: 100%; max-width: 360px; background: #0B1D3A; border: 1px solid rgba(255,255,255,0.14); border-radius: 18px; padding: 22px 20px; text-align: center; color: #fff; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+  #confirma .tit { font-family: Montserrat, sans-serif; font-weight: 800; font-size: 18px; }
+  #confirma .sub { margin-top: 8px; font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.4; }
+  #confirma .botoes { display: flex; gap: 10px; margin-top: 18px; }
+  #confirma .botoes button { flex: 1; padding: 13px 10px; border: 0; border-radius: 12px; font-weight: 800; font-size: 15px; cursor: pointer; }
+  #confirma .sim { background: #22B573; color: #fff; } #confirma .nao { background: rgba(255,255,255,0.12); color: #fff; }
+  #confirma input { width: 100%; box-sizing: border-box; margin-top: 12px; padding: 11px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: #061A3A; color: #fff; font-size: 14px; }
+  #confirma a { color: #3EE6FF; }
   .vbase { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 16px; padding-bottom: max(14px, env(safe-area-inset-bottom)); }
   .vbase .vcont { font-family: Montserrat, sans-serif; font-weight: 800; font-size: 13px; color: var(--suave); text-align: center; }
   .vbase button:disabled { opacity: 0.3; }
@@ -205,11 +215,41 @@ function irmaos(p) { return fila.filter((o) => o !== p && o.status === "rascunho
 function versao(p) { if (p.status !== "rascunho" || !irmaos(p).length) return 0; const m = (p.arquivos || "").match(/-v(\d+)\.\w+\s*($|\|)/); return m ? +m[1] : 1; }
 function primeiroArq(p) { return (p.arquivos || "").split("|")[0].trim(); }
 // abre um pedido (issue) já preenchido no GitHub; ao enviar, a nuvem agenda e responde em ~1 min
+// aprovação dentro do app: janela de confirmação e o issue é criado pela API (a Action de aprovação faz o resto).
+// A chave (token do GitHub só com permissão de Issues neste repositório) fica guardada neste aparelho.
+const CHAVE = "maa-chave-github";
+function lerChave() { try { return localStorage.getItem(CHAVE) || ""; } catch (e) { return ""; } }
 function pedir(acao, itens) {
   const linhas = itens.map((p) => acao + ": " + primeiroArq(p)).join("\n");
   const titulo = (acao === "aprovar" ? "Aprova" + (itens.length > 1 ? "r " + itens.length + " posts" : "r post de " + dd(itens[0].data) + " " + hhmm(itens[0].data)) : "Aprovação: vetar " + itens.length + " post" + (itens.length > 1 ? "s" : ""));
-  const corpo = "Toque em **Submit new issue** (Enviar) para confirmar. Em cerca de 1 minuto a agenda atualiza.\n\n" + linhas;
-  window.open("https://github.com/denysdmo/maa-publicador/issues/new?title=" + encodeURIComponent(titulo) + "&body=" + encodeURIComponent(corpo), "_blank");
+  const cx = document.getElementById("confirma");
+  const precisaChave = !lerChave();
+  document.getElementById("ctit").textContent = acao === "aprovar" ? (itens.length > 1 ? "Aprovar " + itens.length + " posts?" : "Aprovar este post?") : (itens.length > 1 ? "Vetar " + itens.length + " posts?" : "Vetar este post?");
+  document.getElementById("csub").innerHTML = itens.length === 1 ? esc(nomeDia(itens[0].data) + " " + dd(itens[0].data) + " · " + hhmm(itens[0].data)) : "";
+  if (precisaChave) document.getElementById("csub").innerHTML += '<br><br>Primeira vez neste aparelho: cole a chave do GitHub. <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Criar chave</a> (repositório maa-publicador, permissão Issues: leitura e escrita).';
+  document.getElementById("cchave").hidden = !precisaChave;
+  const sim = document.getElementById("csim"); sim.hidden = false; sim.disabled = false;
+  sim.textContent = acao === "aprovar" ? "Aprovar" : "Vetar";
+  document.getElementById("cnao").textContent = acao === "aprovar" ? "Não aprovar" : "Cancelar";
+  cx.classList.add("aberto");
+  document.getElementById("cnao").onclick = () => cx.classList.remove("aberto");
+  sim.onclick = async () => {
+    let chave = lerChave();
+    if (!chave) { chave = document.getElementById("cinput").value.trim(); if (!chave) return; try { localStorage.setItem(CHAVE, chave); } catch (e) {} }
+    sim.disabled = true; sim.textContent = "Enviando…";
+    try {
+      const r = await fetch("https://api.github.com/repos/denysdmo/maa-publicador/issues", { method: "POST", headers: { Authorization: "Bearer " + chave, Accept: "application/vnd.github+json" }, body: JSON.stringify({ title: titulo, body: "Enviado pelo app.\n\n" + linhas }) });
+      if (r.status === 401 || r.status === 403 || r.status === 404) { try { localStorage.removeItem(CHAVE); } catch (e) {} throw new Error("chave"); }
+      if (!r.ok) throw new Error("http " + r.status);
+      document.getElementById("ctit").textContent = acao === "aprovar" ? "✅ Aprovado" : "❌ Vetado";
+      document.getElementById("csub").textContent = "A agenda atualiza em cerca de 1 minuto.";
+      document.getElementById("cchave").hidden = true;
+      setTimeout(() => { cx.classList.remove("aberto"); location.reload(); }, 60000);
+      sim.hidden = true; document.getElementById("cnao").textContent = "Fechar";
+    } catch (e) {
+      document.getElementById("csub").textContent = e.message === "chave" ? "A chave não funcionou. Toque de novo e cole uma chave válida." : "Não consegui enviar agora. Tente de novo.";
+    } finally { sim.disabled = false; if (!sim.hidden) sim.textContent = acao === "aprovar" ? "Aprovar" : "Vetar"; }
+  };
 }
 
 // ---------------------------------------------------------------- visor de mídia
@@ -371,5 +411,6 @@ document.getElementById("hoje").onclick = () => { inicio = segunda(new Date()); 
 carregar();
 setInterval(carregar, 5 * 60 * 1000);
 </script>
+<div id="confirma" role="dialog" aria-modal="true"><div class="caixa"><div class="tit" id="ctit"></div><div class="sub" id="csub"></div><div id="cchave" hidden><input id="cinput" type="password" placeholder="Cole a chave do GitHub (uma vez só)" autocomplete="off"></div><div class="botoes"><button class="sim" id="csim">Aprovar</button><button class="nao" id="cnao">Não aprovar</button></div></div></div>
 </body>
 </html>
