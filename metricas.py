@@ -147,13 +147,14 @@ def coleta_conta(tudo=False):
     """Um dia por linha (horário de Brasília). Histórico acumula: na 1ª vez (ou --tudo) busca 90 dias; depois, os 4 últimos."""
     antigas = ler("conta.csv", "data")
     fim = int(time.time())
+    completos = len([l for l in antigas.values() if str(l.get("views", "")) != ""])
+    dias = 90 if (tudo or completos < 20) else 4
     # novos seguidores por dia (série; a API dá até 30 dias)
     serie = get(f"{UID}/insights", metric="follower_count", period="day", since=fim - 29 * 86400, until=fim)
     for d in serie.get("data", []):
         for v in d.get("values", []):
             dia = (datetime.datetime.fromisoformat(v["end_time"].replace("+0000", "+00:00")) - datetime.timedelta(days=1)).astimezone(FUSO).strftime("%Y-%m-%d")
             antigas.setdefault(dia, {"data": dia})["follower_count"] = v["value"]
-    dias = 90 if (tudo or len(antigas) < 20) else 4
     hoje = datetime.datetime.now(FUSO).replace(hour=0, minute=0, second=0, microsecond=0)
     for k in range(dias):
         ini = hoje - datetime.timedelta(days=k)
