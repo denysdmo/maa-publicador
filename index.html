@@ -107,6 +107,7 @@
   </div>
   <div class="vmidia" id="vmidia"></div>
   <div class="vlegenda" id="vlegenda"></div>
+  <button id="vcopiar" class="destaque" style="margin:8px 16px 0" hidden>📋 Copiar legenda</button>
   <div class="vdecide" id="vdecide" hidden>
     <button class="aprova" id="vaprova">✅ Aprovar este</button>
     <button class="veta" id="vveta">❌ Vetar</button>
@@ -250,10 +251,12 @@ async function mostrar() {
   document.getElementById("vbaixar").hidden = p.status === "publicado" || !arqs.length;
   const leg = document.getElementById("vlegenda");
   leg.textContent = "";
+  document.getElementById("vcopiar").hidden = true;
   if (p.legenda) {
     try {
       const r = await fetch(p.legenda + "?t=" + Date.now(), { cache: "no-store" });
       if (r.ok && lista[pos] === p) leg.textContent = (await r.text()).trim();
+      document.getElementById("vcopiar").hidden = !leg.textContent;
     } catch (e) { /* sem legenda */ }
   }
 }
@@ -306,6 +309,11 @@ document.getElementById("vbaixar").onclick = async () => {
     if (e && e.name === "AbortError") return;
     window.open(arqs[0], "_blank");
   }
+};
+document.getElementById("vcopiar").onclick = async (e) => {
+  const txt = document.getElementById("vlegenda").textContent;
+  try { await navigator.clipboard.writeText(txt); } catch (err) { const r = document.createRange(); r.selectNodeContents(document.getElementById("vlegenda")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand("copy"); }
+  e.target.textContent = "✅ Legenda copiada"; setTimeout(() => (e.target.textContent = "📋 Copiar legenda"), 2000);
 };
 document.getElementById("vant").onclick = () => passo(-1);
 document.getElementById("vprox").onclick = () => passo(1);
