@@ -1,10 +1,10 @@
-﻿quando,tipo,arquivos,legenda,status,resultado
+quando,tipo,arquivos,legenda,status,resultado
 2026-11-12T08:00,story,midia/2026-11-12/1-segunda-manha-2-macete.jpg,,publicado,https://www.instagram.com/stories/meuarraisamador/4028750453231876168
 2026-11-12T08:01,story,midia/2026-11-12/2-terca-manha-1-mito.jpg,,publicado,https://www.instagram.com/stories/meuarraisamador/4028750549105299335
 2026-11-12T19:30,story,midia/2026-11-12/4-quinta-manha-1-checklist.jpg,,publicado,https://www.instagram.com/stories/meuarraisamador/4029136486259990095
 2026-11-13T08:00,story,midia/2026-11-13/1-sexta-manha-1-quiz.jpg,,publicado,https://www.instagram.com/stories/meuarraisamador/4029480670107492774
 2026-11-13T08:01,story,midia/2026-11-13/1-sexta-manha-2-plano.jpg,,publicado,https://www.instagram.com/stories/meuarraisamador/4029480738482826683
-2026-11-13T18:30,reel,midia/2026-11-13/reel3d-luzes.mp4,midia/2026-11-13/reel3d-luzes-legenda.txt,manual,Você posta pelo app: baixe o vídeo (já com música) e cole a legenda
+2026-11-13T13:30,reel,midia/2026-11-13/reel3d-luzes.mp4,midia/2026-11-13/reel3d-luzes-legenda.txt,manual,Você posta pelo app: baixe o vídeo (já com música) e cole a legenda
 2026-11-13T19:00,story,midia/2026-11-13/1-sexta-noite-1-resposta.jpg,,pendente,
 2026-11-13T19:01,story,midia/2026-11-13/1-sexta-noite-2-macete.jpg,,pendente,
 2026-11-13T19:02,story,midia/2026-11-13/1-sexta-noite-3-aprovado.jpg,,pendente,
@@ -28,7 +28,7 @@
 2026-11-17T08:00,story,midia/2026-11-16/2-terca-manha-1-macete.jpg,,rascunho,
 2026-11-17T09:00,story,midia/2026-11-16/2-terca-manha-2-plano.jpg,,rascunho,
 2026-11-17T18:00,story,midia/2026-11-16/2-terca-noite-1-certo-errado.jpg,,rascunho,
-2026-11-17T19:00,reel,midia/2026-11-16/reels-reel3d-1.mp4,midia/2026-11-16/legendas-reel3d-1.txt,rascunho,
+2026-11-17T13:30,reel,midia/2026-11-16/reels-reel3d-1.mp4,midia/2026-11-16/legendas-reel3d-1.txt,rascunho,
 2026-11-18T09:00,story,midia/2026-11-16/3-quarta-manha-2-macete.jpg,,rascunho,
 2026-11-18T12:00,post,midia/2026-11-16/post-post-1-hemorragia.jpg,midia/2026-11-16/legendas-post-1.txt,rascunho,
 2026-11-18T18:00,story,midia/2026-11-16/3-quarta-noite-1-resposta.jpg,,rascunho,
@@ -36,7 +36,7 @@
 2026-11-19T12:00,carrossel,midia/2026-11-16/carrossel-2-slide-1.jpg | midia/2026-11-16/carrossel-2-slide-2.jpg | midia/2026-11-16/carrossel-2-slide-3.jpg | midia/2026-11-16/carrossel-2-slide-4.jpg | midia/2026-11-16/carrossel-2-slide-5.jpg | midia/2026-11-16/carrossel-2-slide-6.jpg | midia/2026-11-16/carrossel-2-slide-7.jpg,midia/2026-11-16/legendas-carrossel-2.txt,rascunho,
 2026-11-19T18:00,story,midia/2026-11-16/4-quinta-noite-1-macete.jpg,,rascunho,
 2026-11-20T18:00,story,midia/2026-11-16/5-sexta-noite-1-resposta.jpg,,rascunho,
-2026-11-20T19:00,reel,midia/2026-11-16/reels-reel3d-2.mp4,midia/2026-11-16/legendas-reel3d-2.txt,rascunho,
+2026-11-20T13:30,reel,midia/2026-11-16/reels-reel3d-2.mp4,midia/2026-11-16/legendas-reel3d-2.txt,rascunho,
 2026-11-21T09:00,story,midia/2026-11-16/6-sabado-manha-1-macete.jpg,,rascunho,
 2026-11-21T12:00,post,midia/2026-11-16/post-post-2-canal-estreito.jpg,midia/2026-11-16/legendas-post-2.txt,rascunho,
 2026-11-21T18:00,story,midia/2026-11-16/6-sabado-noite-1-checklist.jpg,,rascunho,
