@@ -317,8 +317,8 @@ document.getElementById("vbaixar").onclick = async () => {
 };
 document.getElementById("vcopiar").onclick = async (e) => {
   const txt = document.getElementById("vlegenda").textContent;
-  try { await navigator.clipboard.writeText(txt); } catch (err) { const r = document.createRange(); r.selectNodeContents(document.getElementById("vlegenda")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand("copy"); }
   const b = e.currentTarget; b.classList.add("ok"); b.title = "Legenda copiada"; setTimeout(() => { b.classList.remove("ok"); b.title = "Copiar legenda"; }, 1500);
+  try { await navigator.clipboard.writeText(txt); } catch (err) { const r = document.createRange(); r.selectNodeContents(document.getElementById("vlegenda")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand("copy"); }
 };
 document.getElementById("vant").onclick = () => passo(-1);
 document.getElementById("vprox").onclick = () => passo(1);
