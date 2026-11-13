@@ -394,7 +394,9 @@ document.getElementById("aprovartodos").onclick = () => {
   const r = fila.filter((p) => p.status === "rascunho" && !versao(p)).sort((a, b) => a.data - b.data);
   const comVersao = fila.filter((p) => p.status === "rascunho" && versao(p)).length;
   if (!r.length) return;
-  if (confirm("Aprovar " + r.length + " rascunhos?" + (comVersao ? "\n\nOs " + comVersao + " que têm versão 1 e 2 ficam de fora: escolha a versão abrindo cada um." : ""))) pedir("aprovar", r);
+  // sem confirm() do navegador: se ele for bloqueado ("não mostrar mais diálogos"), o botão parecia morto (13/11)
+  pedir("aprovar", r);
+  if (comVersao) document.getElementById("csub").innerHTML += "<br>Os " + comVersao + " que têm versão 1 e 2 ficam de fora: escolha a versão abrindo cada um.";
 };
 // baixar a mídia aberta: no celular abre o menu de compartilhar ("Salvar imagem"); no computador, baixa o arquivo
 document.getElementById("vbaixar").onclick = async () => {
