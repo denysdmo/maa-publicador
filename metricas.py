@@ -139,28 +139,32 @@ def coleta_stories():
     return linhas
 
 
-def coleta_conta():
+DIARIAS = ["views", "reach", "profile_views", "website_clicks", "accounts_engaged", "total_interactions", "likes", "comments", "shares", "saves", "replies", "follows_and_unfollows"]
+CAMPOS_C = ["data", "follower_count"] + DIARIAS
+
+
+def coleta_conta(tudo=False):
+    """Um dia por linha (horário de Brasília). Histórico acumula: na 1ª vez (ou --tudo) busca 90 dias; depois, os 4 últimos."""
     antigas = ler("conta.csv", "data")
     fim = int(time.time())
-    ini = fim - 28 * 86400
-    serie = get(f"{UID}/insights", metric="reach,follower_count", period="day", since=ini, until=fim)
-    por_dia = {}
+    # novos seguidores por dia (série; a API dá até 30 dias)
+    serie = get(f"{UID}/insights", metric="follower_count", period="day", since=fim - 29 * 86400, until=fim)
     for d in serie.get("data", []):
         for v in d.get("values", []):
-            dia = v["end_time"][:10]
-            por_dia.setdefault(dia, {"data": dia})[d["name"]] = v["value"]
-    # totais do dia (visitas ao perfil, cliques no link) — métrica de total, um dia por chamada (últimos 7 dias)
-    for k in range(7):
-        a = fim - (k + 1) * 86400
-        t = get(f"{UID}/insights", metric="profile_views,website_clicks,accounts_engaged", period="day", metric_type="total_value", since=a, until=a + 86400)
-        dia = datetime.datetime.fromtimestamp(a + 86400, FUSO).strftime("%Y-%m-%d")
+            dia = (datetime.datetime.fromisoformat(v["end_time"].replace("+0000", "+00:00")) - datetime.timedelta(days=1)).astimezone(FUSO).strftime("%Y-%m-%d")
+            antigas.setdefault(dia, {"data": dia})["follower_count"] = v["value"]
+    dias = 90 if (tudo or len(antigas) < 20) else 4
+    hoje = datetime.datetime.now(FUSO).replace(hour=0, minute=0, second=0, microsecond=0)
+    for k in range(dias):
+        ini = hoje - datetime.timedelta(days=k)
+        a = int(ini.timestamp())
+        t = get(f"{UID}/insights", metric=",".join(DIARIAS), period="day", metric_type="total_value", since=a, until=min(a + 86400, fim))
+        dia = ini.strftime("%Y-%m-%d")
         for d in t.get("data", []):
-            por_dia.setdefault(dia, {"data": dia})[d["name"]] = d.get("total_value", {}).get("value", "")
-    for dia, v in por_dia.items():
-        antigas.setdefault(dia, {}).update(v)
+            antigas.setdefault(dia, {"data": dia})[d["name"]] = d.get("total_value", {}).get("value", "")
     perfil = get(UID, fields="followers_count,media_count")
     linhas = sorted(antigas.values(), key=lambda x: x["data"], reverse=True)
-    gravar("conta.csv", linhas, ["data", "reach", "follower_count", "profile_views", "website_clicks", "accounts_engaged"])
+    gravar("conta.csv", linhas, CAMPOS_C)
     return linhas, perfil
 
 
@@ -195,7 +199,8 @@ def resumo(midias, stories, conta, perfil):
         "top_alcance": [{k: m.get(k) for k in ("data", "formato", "legenda", "link", "reach", "saved", "shares", "taxa_engaj")} for m in top],
         "top_engajamento": [{k: m.get(k) for k in ("data", "formato", "legenda", "link", "reach", "saved", "shares", "taxa_engaj")} for m in top_engaj],
         "stories_medias": {"alcance": media(stories, "reach"), "respostas": media(stories, "replies"), "saidas": media(stories, "saidas")},
-        "conta_28d": conta[:28],
+        "conta": conta[:400],
+        "publicacoes_por_dia": {d: len([m for m in midias if m["data"] == d]) for d in sorted({m["data"] for m in midias})[-400:]},
     }
     with open(os.path.join(PASTA, "resumo.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
@@ -206,6 +211,6 @@ if __name__ == "__main__":
     tudo = "--tudo" in sys.argv
     m = coleta_midias(tudo)
     s = coleta_stories()
-    c, p = coleta_conta()
+    c, p = coleta_conta(tudo)
     r = resumo(m, s, c, p)
     print(f"ok: {len(m)} publicações, {len(s)} stories, {len(c)} dias; seguidores {r['seguidores']}")

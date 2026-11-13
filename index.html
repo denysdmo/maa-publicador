@@ -118,6 +118,16 @@
   .linha-m .t a { color: var(--texto); text-decoration: none; }
   .linha-m .v { font-family: Montserrat, sans-serif; font-weight: 800; white-space: nowrap; }
   .barra-m { height: 8px; border-radius: 99px; background: var(--ciano); }
+  .periodos { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .periodos button { padding: 8px 14px; }
+  .periodos button.ativa { background: var(--ouro); color: #04122B; border-color: var(--ouro); }
+  table.cresc { width: 100%; border-collapse: collapse; font-size: 14px; }
+  table.cresc th { text-align: right; font-family: Montserrat, sans-serif; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--suave); padding: 6px 4px; }
+  table.cresc th:first-child, table.cresc td:first-child { text-align: left; }
+  table.cresc td { text-align: right; padding: 9px 4px; border-top: 1px solid var(--linha); white-space: nowrap; }
+  table.cresc td:first-child { white-space: normal; }
+  table.cresc td.v { font-family: Montserrat, sans-serif; font-weight: 900; }
+  .sobe { color: var(--ok); font-weight: 800; } .desce { color: var(--erro); font-weight: 800; }
   .tag { font-size: 10px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; padding: 2px 7px; border-radius: 99px; background: rgba(255,255,255,0.1); margin-right: 6px; }
   .vdecide { display: flex; gap: 10px; justify-content: center; padding: 10px 16px 0; }
   .vdecide[hidden] { display: none; }
@@ -450,13 +460,40 @@ document.getElementById("ant").onclick = () => { inicio.setDate(inicio.getDate()
 document.getElementById("prox").onclick = () => { inicio.setDate(inicio.getDate() + 7); desenhar(); };
 document.getElementById("hoje").onclick = () => { inicio = segunda(new Date()); desenhar(); };
 // ---------------------------------------------------------------- métricas
+let periodo = 7;
+const METRICAS_C = [
+  ["views", "Visualizações (posts, reels e stories)"], ["reach", "Contas alcançadas"], ["profile_views", "Visitas ao perfil"],
+  ["website_clicks", "Cliques no link da bio"], ["follower_count", "Novos seguidores"], ["accounts_engaged", "Contas que interagiram"],
+  ["total_interactions", "Interações"], ["likes", "Curtidas"], ["comments", "Comentários"], ["shares", "Compartilhamentos"],
+  ["saves", "Salvamentos"], ["replies", "Respostas aos stories"], ["_posts", "Publicações no feed"],
+];
+function tabelaCrescimento(r, c) {
+  const hoje = new Date(); hoje.setHours(0, 0, 0, 0);
+  const iso = (d) => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  const dias = (de, ate) => { const out = []; for (let k = de; k < ate; k++) { const d = new Date(hoje); d.setDate(d.getDate() - k); out.push(iso(d)); } return out; };
+  const atual = dias(0, periodo), ant = dias(periodo, 2 * periodo);
+  const porDia = Object.fromEntries(c.map((l) => [l.data, l]));
+  const ppd = r.publicacoes_por_dia || {};
+  const soma = (ds, k) => { let t = 0, tem = 0; ds.forEach((d) => { const v = k === "_posts" ? ppd[d] : porDia[d] && porDia[d][k]; if (v !== undefined && v !== "" && v !== null) { t += Number(v) || 0; tem++; } else if (k === "_posts" && porDia[d]) tem++; }); return tem ? t : null; };
+  const cobertura = (ds) => ds.filter((d) => porDia[d]).length;
+  const linhas = METRICAS_C.map(([k, nome]) => {
+    const a = soma(atual, k), b = cobertura(ant) >= periodo * 0.8 ? soma(ant, k) : null;
+    let varia = "—";
+    if (a !== null && b) { const p = ((a - b) / b) * 100; varia = '<span class="' + (p >= 0 ? "sobe" : "desce") + '">' + (p >= 0 ? "▲ " : "▼ ") + Math.abs(p).toFixed(0) + "%</span>"; }
+    return "<tr><td>" + nome + '</td><td class="v">' + fmt(a) + "</td><td>" + fmt(b) + "</td><td>" + varia + "</td></tr>";
+  }).join("");
+  const desde = c.length ? c[c.length - 1].data.split("-").reverse().join("/") : "—";
+  document.getElementById("tabcresc").innerHTML = '<table class="cresc"><tr><th>Métrica</th><th>Últimos ' + periodo + ' dias</th><th>' + periodo + ' dias antes</th><th>Variação</th></tr>' + linhas + "</table>"
+    + '<div class="sub" style="margin-top:8px">Dados diários desde ' + desde + ". O histórico cresce a cada coleta; períodos sem dados suficientes mostram —.</div>";
+}
 const fmt = (n) => (n === null || n === undefined || n === "") ? "—" : Number(n).toLocaleString("pt-BR");
 async function mostrarMetricas() {
   const el = document.getElementById("metricas");
   let r;
   try { r = await (await fetch("metricas/resumo.json?t=" + Date.now(), { cache: "no-store" })).json(); }
   catch (e) { el.innerHTML = '<div class="bloco">As métricas ainda não foram coletadas.</div>'; return; }
-  const c = r.conta_28d || [];
+  const c = r.conta || r.conta_28d || [];
+  window._resumo = r;
   const soma = (k, n) => c.slice(0, n).reduce((a, d) => a + (Number(d[k]) || 0), 0);
   const kpis = [["Seguidores", fmt(r.seguidores)], ["Alcance (7 dias)", fmt(soma("reach", 7))], ["Novos seguidores (7 dias)", fmt(soma("follower_count", 7))], ["Visitas ao perfil (7 dias)", fmt(soma("profile_views", 7))], ["Cliques no link (7 dias)", fmt(soma("website_clicks", 7))]];
   const lista = (itens, val) => itens.map((m, i) => '<div class="linha-m"><span class="n">' + (i + 1) + '</span><span class="t"><span class="tag">' + esc(m.formato) + "</span>" + '<a href="' + esc(m.link) + '" target="_blank" rel="noopener">' + esc(m.data.slice(8, 10) + "/" + m.data.slice(5, 7) + " · " + (m.legenda || "(sem legenda)")) + '</a></span><span class="v">' + val(m) + "</span></div>").join("");
@@ -465,7 +502,8 @@ async function mostrarMetricas() {
   const dias = Object.entries(r.por_dia).filter(([, d]) => d.posts).sort((a, b) => b[1].alcance - a[1].alcance).map(([k, d]) => '<div class="linha-m"><span class="t">' + k + " · " + d.posts + ' posts</span><span class="v">' + fmt(d.alcance) + "</span></div>").join("");
   const horas = Object.entries(r.por_hora).filter(([, h]) => h.posts >= 2).sort((a, b) => b[1].alcance - a[1].alcance).slice(0, 6).map(([k, h]) => '<div class="linha-m"><span class="t">' + k + "h · " + h.posts + ' posts</span><span class="v">' + fmt(h.alcance) + "</span></div>").join("");
   const st = r.stories_medias || {};
-  el.innerHTML = '<div class="sub" style="margin-bottom:10px">Atualizado em ' + new Date(r.atualizado).toLocaleString("pt-BR") + " · coleta automática a cada 3 h · alcance médio por publicação</div>"
+  el.innerHTML = '<div class="bloco"><h3>Crescimento</h3><div class="periodos" id="periodos">' + [7, 14, 30, 90].map((d) => '<button data-d="' + d + '"' + (d === periodo ? ' class="ativa"' : "") + ">" + d + " dias</button>").join("") + '</div><div id="tabcresc"></div></div>'
+    + '<div class="sub" style="margin-bottom:10px">Atualizado em ' + new Date(r.atualizado).toLocaleString("pt-BR") + " · coleta automática a cada 3 h · alcance médio por publicação</div>"
     + '<div class="kpis">' + kpis.map(([t, v]) => '<div class="kpi"><b>' + v + "</b><span>" + t + "</span></div>").join("") + "</div>"
     + '<div class="bloco"><h3>Top 10 por alcance</h3>' + lista(r.top_alcance, (m) => fmt(m.reach) + " 👁") + "</div>"
     + '<div class="bloco"><h3>Top 10 por engajamento (salvos e compartilhamentos pesam mais)</h3>' + lista(r.top_engajamento, (m) => m.taxa_engaj + "%") + "</div>"
@@ -473,6 +511,8 @@ async function mostrarMetricas() {
     + '<div class="bloco"><h3>Melhores dias</h3>' + dias + "</div>"
     + '<div class="bloco"><h3>Melhores horários</h3>' + horas + "</div>"
     + '<div class="bloco"><h3>Stories (média)</h3><div class="linha-m"><span class="t">Alcance · respostas · saídas</span><span class="v">' + fmt(st.alcance) + " · " + fmt(st.respostas) + " · " + fmt(st.saidas) + "</span></div></div>";
+  document.getElementById("periodos").onclick = (e) => { const b = e.target.closest("button[data-d]"); if (b) { periodo = +b.dataset.d; mostrarMetricas(); } };
+  tabelaCrescimento(r, c);
 }
 function aba(qual) {
   const met = qual === "metricas";
