@@ -69,6 +69,11 @@
   .vmidia .aviso a { color: var(--ciano); }
   .vlegenda { max-height: 24vh; overflow-y: auto; margin: 10px 16px 0; padding: 12px 14px; border-radius: 12px; background: rgba(255,255,255,0.06); white-space: pre-wrap; font-size: 14px; line-height: 1.45; color: rgba(255,255,255,0.88); }
   .vlegenda:empty { display: none; }
+  .vlegwrap { position: relative; }
+  .vlegwrap .vlegenda { padding-right: 46px; }
+  .vcopiar { position: absolute; top: 6px; right: 22px; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 8px; background: rgba(255,255,255,0.12); color: #fff; cursor: pointer; }
+  .vcopiar:hover { background: rgba(255,255,255,0.22); }
+  .vcopiar.ok { background: #22B573; }
   .vbase { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 16px; padding-bottom: max(14px, env(safe-area-inset-bottom)); }
   .vbase .vcont { font-family: Montserrat, sans-serif; font-weight: 800; font-size: 13px; color: var(--suave); text-align: center; }
   .vbase button:disabled { opacity: 0.3; }
@@ -106,8 +111,7 @@
     <button class="vfechar" id="vfechar" aria-label="Fechar">✕</button>
   </div>
   <div class="vmidia" id="vmidia"></div>
-  <div class="vlegenda" id="vlegenda"></div>
-  <button id="vcopiar" class="destaque" style="margin:8px 16px 0" hidden>📋 Copiar legenda</button>
+  <div class="vlegwrap"><div class="vlegenda" id="vlegenda"></div><button id="vcopiar" class="vcopiar" title="Copiar legenda" aria-label="Copiar legenda" hidden><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button></div>
   <div class="vdecide" id="vdecide" hidden>
     <button class="aprova" id="vaprova">✅ Aprovar este</button>
     <button class="veta" id="vveta">❌ Vetar</button>
@@ -313,7 +317,7 @@ document.getElementById("vbaixar").onclick = async () => {
 document.getElementById("vcopiar").onclick = async (e) => {
   const txt = document.getElementById("vlegenda").textContent;
   try { await navigator.clipboard.writeText(txt); } catch (err) { const r = document.createRange(); r.selectNodeContents(document.getElementById("vlegenda")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand("copy"); }
-  e.target.textContent = "✅ Legenda copiada"; setTimeout(() => (e.target.textContent = "📋 Copiar legenda"), 2000);
+  const b = e.currentTarget; b.classList.add("ok"); b.title = "Legenda copiada"; setTimeout(() => { b.classList.remove("ok"); b.title = "Copiar legenda"; }, 1500);
 };
 document.getElementById("vant").onclick = () => passo(-1);
 document.getElementById("vprox").onclick = () => passo(1);
