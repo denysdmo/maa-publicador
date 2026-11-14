@@ -74,7 +74,9 @@ def origem(src):
 
 # ---------------------------------------------------------------- Kiwify
 def kiwify():
-    cid, sec, conta = (os.environ.get(k, "").strip() for k in ("KIWIFY_CLIENT_ID", "KIWIFY_CLIENT_SECRET", "KIWIFY_ACCOUNT_ID"))
+    pega = lambda *ks: next((os.environ.get(k, "").strip() for k in ks if os.environ.get(k, "").strip()), "")
+    # aceita os dois jeitos de nomear (o Denys criou CLIENT_SECRET_KIWIFY e ACCOUNT_ID_KIWIFY)
+    cid, sec, conta = pega("KIWIFY_CLIENT_ID", "CLIENT_ID_KIWIFY"), pega("KIWIFY_CLIENT_SECRET", "CLIENT_SECRET_KIWIFY"), pega("KIWIFY_ACCOUNT_ID", "ACCOUNT_ID_KIWIFY")
     if not (cid and sec and conta):
         return {"status": "falta_chave"}
     base = "https://public-api.kiwify.com/v1"
