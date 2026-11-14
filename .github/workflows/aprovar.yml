@@ -7,8 +7,10 @@ on:
 permissions:
   contents: write
   issues: write
+# cada pedido na sua própria fila (14/11): no grupo "publicador" o GitHub DESCARTAVA pedidos enfileirados quando você
+# aprovava vários em sequência (só o último esperando sobrevive). Conflito de gravação é resolvido pelo laço abaixo.
 concurrency:
-  group: publicador
+  group: aprovar-${{ github.event.issue.number }}
   cancel-in-progress: false
 jobs:
   aprovar:
