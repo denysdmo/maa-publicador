@@ -148,12 +148,12 @@ def vturb():
     ids = [x.strip() for x in os.environ.get("VTURB_PLAYER_ID", "").split(",") if x.strip()]
     if not ids:
         # sem player escolhido: os 5 com mais plays nos últimos 30 dias
-        r = post("/events/total_by_company_players", {"events": ["started"], "start_date": (fim - datetime.timedelta(days=29)).isoformat(), "end_date": fim_s})
+        r = post("/events/total_by_company_players", {"events": ["started"], "start_date": (fim - datetime.timedelta(days=29)).isoformat() + " 00:00:00", "end_date": fim_s})
         ids = [x["player_id"] for x in sorted(r, key=lambda x: -n(x.get("total"))) if n(x.get("total")) > 0][:5]
     dias, origens, janelas, curva = {}, {}, {}, None
     for pid in ids:
         dur = int(n((players.get(pid) or {}).get("duration"))) or 600
-        base_q = {"player_id": pid, "start_date": ini.isoformat(), "end_date": fim_s, "timezone": TZ, "video_duration": dur}
+        base_q = {"player_id": pid, "start_date": ini.isoformat() + " 00:00:00", "end_date": fim_s, "timezone": TZ, "video_duration": dur}
         pdias = {}
         for s in post("/sessions/stats_by_day", base_q):
             d = str(s.get("date_key"))[:10]
@@ -175,7 +175,7 @@ def vturb():
         except RuntimeError as e:
             print("vturb origem:", e)
         for j in JANELAS:
-            q = {"player_id": pid, "video_duration": dur, "timezone": TZ, "start_date": (fim - datetime.timedelta(days=j - 1)).isoformat(), "end_date": fim_s}
+            q = {"player_id": pid, "video_duration": dur, "timezone": TZ, "start_date": (fim - datetime.timedelta(days=j - 1)).isoformat() + " 00:00:00", "end_date": fim_s}
             e = post("/times/user_engagement", q)
             w = janelas.setdefault(str(j), {"seg_x_plays": 0.0, "plays": 0, "ret_x_plays": 0.0})
             pl = sum(v for d, v in pdias.items() if d >= q["start_date"][:10])
