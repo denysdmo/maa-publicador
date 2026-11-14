@@ -694,7 +694,7 @@ function semanaISO(d) { const x = new Date(Date.UTC(d.getFullYear(), d.getMonth(
 function lerLS(k, pad) { try { return localStorage.getItem(k) || pad; } catch (e) { return pad; } }
 function gravarLS(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
 function blocoUTM() {
-  const base = lerLS("maa_link_bio", "https://meuarraisamador.com.br/");
+  const base = lerLS("maa_link_bio", "https://meuarraisamador.com.br/rvd");
   const sem = semanaISO(new Date());
   const hojeS = new Date().toISOString().slice(0, 10);
   const links = [["Link da bio (troque toda segunda)", "bio", sem], ["Figurinha de link nos stories", "story", sem + "&utm_content=" + hojeS], ["Resposta no direct", "dm", sem]];
