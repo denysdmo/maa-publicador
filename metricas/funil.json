@@ -1,9 +1,2665 @@
 {
- "atualizado": "2026-11-14T17:11-03:00",
+ "atualizado": "2026-11-14T17:17-03:00",
  "vturb": {
   "status": "falta_chave"
  },
  "kiwify": {
-  "status": "falta_chave"
+  "status": "ok",
+  "vendas_lidas": 281,
+  "dias": [
+   {
+    "data": "2026-11-14",
+    "vendas": 2,
+    "bruto": 394.0,
+    "liquido": 353.6,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-11-13",
+    "vendas": 6,
+    "bruto": 1276.98,
+    "liquido": 1060.8,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 1,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-11-12",
+    "vendas": 2,
+    "bruto": 407.91,
+    "liquido": 353.6,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-11-11",
+    "vendas": 1,
+    "bruto": 197.0,
+    "liquido": 176.8,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-11-10",
+    "vendas": 4,
+    "bruto": 835.49,
+    "liquido": 707.2,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-11-09",
+    "vendas": 6,
+    "bruto": 1199.48,
+    "liquido": 1060.8,
+    "ig_vendas": 4,
+    "ig_liquido": 707.2,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-11-08",
+    "vendas": 2,
+    "bruto": 441.49,
+    "liquido": 353.6,
+    "ig_vendas": 2,
+    "ig_liquido": 353.6,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-11-07",
+    "vendas": 5,
+    "bruto": 1006.1,
+    "liquido": 884.0,
+    "ig_vendas": 2,
+    "ig_liquido": 353.6,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-11-06",
+    "vendas": 0,
+    "bruto": 0.0,
+    "liquido": 0.0,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 1,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-11-04",
+    "vendas": 4,
+    "bruto": 835.49,
+    "liquido": 707.2,
+    "ig_vendas": 1,
+    "ig_liquido": 176.8,
+    "pendentes": 1,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-11-03",
+    "vendas": 4,
+    "bruto": 852.97,
+    "liquido": 707.2,
+    "ig_vendas": 2,
+    "ig_liquido": 353.6,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-11-02",
+    "vendas": 1,
+    "bruto": 197.0,
+    "liquido": 176.8,
+    "ig_vendas": 1,
+    "ig_liquido": 176.8,
+    "pendentes": 1,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-11-01",
+    "vendas": 1,
+    "bruto": 197.0,
+    "liquido": 176.8,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-31",
+    "vendas": 1,
+    "bruto": 197.0,
+    "liquido": 176.8,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-30",
+    "vendas": 1,
+    "bruto": 197.0,
+    "liquido": 176.8,
+    "ig_vendas": 1,
+    "ig_liquido": 176.8,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-29",
+    "vendas": 2,
+    "bruto": 441.49,
+    "liquido": 353.6,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-28",
+    "vendas": 2,
+    "bruto": 394.0,
+    "liquido": 353.6,
+    "ig_vendas": 1,
+    "ig_liquido": 176.8,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-27",
+    "vendas": 2,
+    "bruto": 394.0,
+    "liquido": 353.6,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-26",
+    "vendas": 0,
+    "bruto": 0.0,
+    "liquido": 0.0,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 1,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-25",
+    "vendas": 4,
+    "bruto": 168.0,
+    "liquido": 150.4,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-23",
+    "vendas": 5,
+    "bruto": 365.0,
+    "liquido": 324.71,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-22",
+    "vendas": 0,
+    "bruto": 0.0,
+    "liquido": 0.0,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 5,
+    "devolvidas": 1,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-21",
+    "vendas": 0,
+    "bruto": 0.0,
+    "liquido": 0.0,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 1
+   },
+   {
+    "data": "2026-10-19",
+    "vendas": 2,
+    "bruto": 194.0,
+    "liquido": 171.58,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 1
+   },
+   {
+    "data": "2026-10-17",
+    "vendas": 4,
+    "bruto": 168.0,
+    "liquido": 150.4,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-16",
+    "vendas": 1,
+    "bruto": 97.0,
+    "liquido": 85.79,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 3,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-14",
+    "vendas": 3,
+    "bruto": 231.0,
+    "liquido": 205.25,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 14,
+    "devolvidas": 0,
+    "recusadas": 3
+   },
+   {
+    "data": "2026-10-13",
+    "vendas": 6,
+    "bruto": 402.12,
+    "liquido": 340.18,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-12",
+    "vendas": 4,
+    "bruto": 168.0,
+    "liquido": 150.4,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-08",
+    "vendas": 4,
+    "bruto": 168.0,
+    "liquido": 150.4,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-07",
+    "vendas": 0,
+    "bruto": 0.0,
+    "liquido": 0.0,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 1,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-06",
+    "vendas": 5,
+    "bruto": 276.86,
+    "liquido": 236.19,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-10-05",
+    "vendas": 2,
+    "bruto": 200.85,
+    "liquido": 171.58,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 2,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-30",
+    "vendas": 1,
+    "bruto": 97.0,
+    "liquido": 85.79,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-29",
+    "vendas": 2,
+    "bruto": 194.0,
+    "liquido": 171.58,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 1
+   },
+   {
+    "data": "2026-09-28",
+    "vendas": 1,
+    "bruto": 97.0,
+    "liquido": 85.79,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 1,
+    "devolvidas": 0,
+    "recusadas": 1
+   },
+   {
+    "data": "2026-09-27",
+    "vendas": 6,
+    "bruto": 301.91,
+    "liquido": 251.66,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 2,
+    "devolvidas": 0,
+    "recusadas": 3
+   },
+   {
+    "data": "2026-09-25",
+    "vendas": 4,
+    "bruto": 168.0,
+    "liquido": 150.4,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-23",
+    "vendas": 4,
+    "bruto": 179.86,
+    "liquido": 150.4,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-22",
+    "vendas": 4,
+    "bruto": 168.0,
+    "liquido": 150.4,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 1,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-21",
+    "vendas": 5,
+    "bruto": 205.0,
+    "liquido": 184.07,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 1,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-20",
+    "vendas": 4,
+    "bruto": 334.85,
+    "liquido": 291.04,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-17",
+    "vendas": 2,
+    "bruto": 140.85,
+    "liquido": 119.46,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 4,
+    "devolvidas": 0,
+    "recusadas": 6
+   },
+   {
+    "data": "2026-09-16",
+    "vendas": 2,
+    "bruto": 200.85,
+    "liquido": 154.42,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 3,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-15",
+    "vendas": 1,
+    "bruto": 97.0,
+    "liquido": 85.79,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-14",
+    "vendas": 3,
+    "bruto": 219.05,
+    "liquido": 169.89,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-13",
+    "vendas": 7,
+    "bruto": 319.0,
+    "liquido": 285.33,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-12",
+    "vendas": 2,
+    "bruto": 134.0,
+    "liquido": 119.46,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 4,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-11",
+    "vendas": 3,
+    "bruto": 291.0,
+    "liquido": 257.37,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 5,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-10",
+    "vendas": 5,
+    "bruto": 265.0,
+    "liquido": 236.19,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 4,
+    "devolvidas": 0,
+    "recusadas": 4
+   },
+   {
+    "data": "2026-09-09",
+    "vendas": 6,
+    "bruto": 362.0,
+    "liquido": 321.98,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-08",
+    "vendas": 2,
+    "bruto": 134.0,
+    "liquido": 119.46,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-07",
+    "vendas": 4,
+    "bruto": 248.0,
+    "liquido": 220.72,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-06",
+    "vendas": 1,
+    "bruto": 97.0,
+    "liquido": 85.79,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 2,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-04",
+    "vendas": 1,
+    "bruto": 97.0,
+    "liquido": 85.79,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-02",
+    "vendas": 1,
+    "bruto": 97.0,
+    "liquido": 68.63,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-09-01",
+    "vendas": 2,
+    "bruto": 194.0,
+    "liquido": 171.58,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 1,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-08-31",
+    "vendas": 1,
+    "bruto": 97.0,
+    "liquido": 85.79,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 1,
+    "recusadas": 1
+   },
+   {
+    "data": "2026-08-29",
+    "vendas": 9,
+    "bruto": 433.0,
+    "liquido": 386.59,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-08-27",
+    "vendas": 1,
+    "bruto": 103.85,
+    "liquido": 85.79,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-08-25",
+    "vendas": 5,
+    "bruto": 345.0,
+    "liquido": 306.51,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-08-24",
+    "vendas": 3,
+    "bruto": 291.0,
+    "liquido": 257.37,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-08-23",
+    "vendas": 1,
+    "bruto": 97.0,
+    "liquido": 85.79,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-08-22",
+    "vendas": 3,
+    "bruto": 151.0,
+    "liquido": 134.93,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 4,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-08-19",
+    "vendas": 5,
+    "bruto": 265.0,
+    "liquido": 236.19,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-08-18",
+    "vendas": 6,
+    "bruto": 391.46,
+    "liquido": 340.18,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 1,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
+   {
+    "data": "2026-08-17",
+    "vendas": 1,
+    "bruto": 97.0,
+    "liquido": 85.79,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 1,
+    "devolvidas": 0,
+    "recusadas": 0
+   }
+  ],
+  "por_origem": {
+   "2026-11-14": {
+    "sem UTM": [
+     1,
+     176.8
+    ],
+    "fb": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-13": {
+    "v3_89eddfc2-edac-40ca-bbaf-f5c4d8f2a304_6aeefbce882703ca9fa7658f_990_t-10_h-1_s-1": [
+     1,
+     176.8
+    ],
+    "fb": [
+     4,
+     707.2
+    ],
+    "sem UTM": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-12": {
+    "fb": [
+     2,
+     353.6
+    ]
+   },
+   "2026-11-11": {
+    "fb": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-10": {
+    "facebook_mobile_feed": [
+     1,
+     176.8
+    ],
+    "sem UTM": [
+     1,
+     176.8
+    ],
+    "facebook_stories": [
+     1,
+     176.8
+    ],
+    "facebook_mobile_reels": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-09": {
+    "sem UTM": [
+     1,
+     176.8
+    ],
+    "instagram": [
+     4,
+     707.2
+    ],
+    "facebook_desktop_feed": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-08": {
+    "instagram": [
+     2,
+     353.6
+    ]
+   },
+   "2026-11-07": {
+    "facebook_mobile_reels": [
+     1,
+     176.8
+    ],
+    "sem UTM": [
+     2,
+     353.6
+    ],
+    "instagram": [
+     2,
+     353.6
+    ]
+   },
+   "2026-11-04": {
+    "sem UTM": [
+     3,
+     530.4
+    ],
+    "instagram": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-03": {
+    "sem UTM": [
+     1,
+     176.8
+    ],
+    "instagram": [
+     2,
+     353.6
+    ],
+    "facebook_mobile_reels": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-02": {
+    "instagram": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-01": {
+    "sem UTM": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-31": {
+    "sem UTM": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-30": {
+    "instagram": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-29": {
+    "sem UTM": [
+     2,
+     353.6
+    ]
+   },
+   "2026-10-28": {
+    "sem UTM": [
+     1,
+     176.8
+    ],
+    "instagram": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-27": {
+    "sem UTM": [
+     2,
+     353.6
+    ]
+   },
+   "2026-10-25": {
+    "sem UTM": [
+     4,
+     150.4
+    ]
+   },
+   "2026-10-23": {
+    "sem UTM": [
+     5,
+     324.71
+    ]
+   },
+   "2026-10-19": {
+    "sem UTM": [
+     2,
+     171.58
+    ]
+   },
+   "2026-10-17": {
+    "sem UTM": [
+     4,
+     150.4
+    ]
+   },
+   "2026-10-16": {
+    "sem UTM": [
+     1,
+     85.79
+    ]
+   },
+   "2026-10-14": {
+    "sem UTM": [
+     3,
+     205.25
+    ]
+   },
+   "2026-10-13": {
+    "sem UTM": [
+     6,
+     340.18
+    ]
+   },
+   "2026-10-12": {
+    "sem UTM": [
+     4,
+     150.4
+    ]
+   },
+   "2026-10-08": {
+    "sem UTM": [
+     4,
+     150.4
+    ]
+   },
+   "2026-10-06": {
+    "sem UTM": [
+     5,
+     236.19
+    ]
+   },
+   "2026-10-05": {
+    "sem UTM": [
+     2,
+     171.58
+    ]
+   },
+   "2026-09-30": {
+    "sem UTM": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-29": {
+    "sem UTM": [
+     2,
+     171.58
+    ]
+   },
+   "2026-09-28": {
+    "sem UTM": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-27": {
+    "sem UTM": [
+     6,
+     251.66
+    ]
+   },
+   "2026-09-25": {
+    "sem UTM": [
+     4,
+     150.4
+    ]
+   },
+   "2026-09-23": {
+    "sem UTM": [
+     4,
+     150.4
+    ]
+   },
+   "2026-09-22": {
+    "sem UTM": [
+     4,
+     150.4
+    ]
+   },
+   "2026-09-21": {
+    "sem UTM": [
+     5,
+     184.07
+    ]
+   },
+   "2026-09-20": {
+    "sem UTM": [
+     4,
+     291.04
+    ]
+   },
+   "2026-09-17": {
+    "sem UTM": [
+     2,
+     119.46
+    ]
+   },
+   "2026-09-16": {
+    "sem UTM": [
+     2,
+     154.42
+    ]
+   },
+   "2026-09-15": {
+    "sem UTM": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-14": {
+    "sem UTM": [
+     3,
+     169.89
+    ]
+   },
+   "2026-09-13": {
+    "sem UTM": [
+     7,
+     285.33
+    ]
+   },
+   "2026-09-12": {
+    "sem UTM": [
+     2,
+     119.46
+    ]
+   },
+   "2026-09-11": {
+    "sem UTM": [
+     3,
+     257.37
+    ]
+   },
+   "2026-09-10": {
+    "sem UTM": [
+     5,
+     236.19
+    ]
+   },
+   "2026-09-09": {
+    "sem UTM": [
+     6,
+     321.98
+    ]
+   },
+   "2026-09-08": {
+    "sem UTM": [
+     2,
+     119.46
+    ]
+   },
+   "2026-09-07": {
+    "sem UTM": [
+     4,
+     220.72
+    ]
+   },
+   "2026-09-06": {
+    "sem UTM": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-04": {
+    "sem UTM": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-02": {
+    "sem UTM": [
+     1,
+     68.63
+    ]
+   },
+   "2026-09-01": {
+    "sem UTM": [
+     2,
+     171.58
+    ]
+   },
+   "2026-08-31": {
+    "sem UTM": [
+     1,
+     85.79
+    ]
+   },
+   "2026-08-29": {
+    "sem UTM": [
+     9,
+     386.59
+    ]
+   },
+   "2026-08-27": {
+    "sem UTM": [
+     1,
+     85.79
+    ]
+   },
+   "2026-08-25": {
+    "sem UTM": [
+     5,
+     306.51
+    ]
+   },
+   "2026-08-24": {
+    "sem UTM": [
+     3,
+     257.37
+    ]
+   },
+   "2026-08-23": {
+    "sem UTM": [
+     1,
+     85.79
+    ]
+   },
+   "2026-08-22": {
+    "sem UTM": [
+     3,
+     134.93
+    ]
+   },
+   "2026-08-19": {
+    "sem UTM": [
+     5,
+     236.19
+    ]
+   },
+   "2026-08-18": {
+    "sem UTM": [
+     6,
+     340.18
+    ]
+   },
+   "2026-08-17": {
+    "sem UTM": [
+     1,
+     85.79
+    ]
+   }
+  },
+  "por_campanha": {
+   "2026-11-14": {
+    "-": [
+     1,
+     176.8
+    ],
+    "Campanha RVD 2|120252199169690190": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-13": {
+    "-": [
+     2,
+     353.6
+    ],
+    "RVD - CBO|120252058419090190": [
+     3,
+     530.4
+    ],
+    "Campanha RVD 2|120252199169690190": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-12": {
+    "RVD - CBO|120252058419090190": [
+     2,
+     353.6
+    ]
+   },
+   "2026-11-11": {
+    "RVD - CBO|120252058419090190": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-10": {
+    "Campanha RVD 2": [
+     1,
+     176.8
+    ],
+    "-": [
+     1,
+     176.8
+    ],
+    "RVD - CBO": [
+     2,
+     353.6
+    ]
+   },
+   "2026-11-09": {
+    "-": [
+     1,
+     176.8
+    ],
+    "RVD - CBO": [
+     4,
+     707.2
+    ],
+    "Campanha RVD 2": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-08": {
+    "RVD - CBO": [
+     2,
+     353.6
+    ]
+   },
+   "2026-11-07": {
+    "Campanha RVD 2": [
+     1,
+     176.8
+    ],
+    "-": [
+     2,
+     353.6
+    ],
+    "RVD - CBO": [
+     2,
+     353.6
+    ]
+   },
+   "2026-11-04": {
+    "-": [
+     3,
+     530.4
+    ],
+    "RVD - CBO": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-03": {
+    "-": [
+     1,
+     176.8
+    ],
+    "RVD - CBO": [
+     3,
+     530.4
+    ]
+   },
+   "2026-11-02": {
+    "RVD - CBO": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-01": {
+    "-": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-31": {
+    "-": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-30": {
+    "RVD - CBO": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-29": {
+    "-": [
+     2,
+     353.6
+    ]
+   },
+   "2026-10-28": {
+    "-": [
+     1,
+     176.8
+    ],
+    "Campanha RVD": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-27": {
+    "-": [
+     2,
+     353.6
+    ]
+   },
+   "2026-10-25": {
+    "-": [
+     4,
+     150.4
+    ]
+   },
+   "2026-10-23": {
+    "-": [
+     5,
+     324.71
+    ]
+   },
+   "2026-10-19": {
+    "-": [
+     2,
+     171.58
+    ]
+   },
+   "2026-10-17": {
+    "-": [
+     4,
+     150.4
+    ]
+   },
+   "2026-10-16": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-10-14": {
+    "-": [
+     3,
+     205.25
+    ]
+   },
+   "2026-10-13": {
+    "-": [
+     6,
+     340.18
+    ]
+   },
+   "2026-10-12": {
+    "-": [
+     4,
+     150.4
+    ]
+   },
+   "2026-10-08": {
+    "-": [
+     4,
+     150.4
+    ]
+   },
+   "2026-10-06": {
+    "-": [
+     5,
+     236.19
+    ]
+   },
+   "2026-10-05": {
+    "-": [
+     2,
+     171.58
+    ]
+   },
+   "2026-09-30": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-29": {
+    "-": [
+     2,
+     171.58
+    ]
+   },
+   "2026-09-28": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-27": {
+    "-": [
+     6,
+     251.66
+    ]
+   },
+   "2026-09-25": {
+    "-": [
+     4,
+     150.4
+    ]
+   },
+   "2026-09-23": {
+    "-": [
+     4,
+     150.4
+    ]
+   },
+   "2026-09-22": {
+    "-": [
+     4,
+     150.4
+    ]
+   },
+   "2026-09-21": {
+    "-": [
+     5,
+     184.07
+    ]
+   },
+   "2026-09-20": {
+    "-": [
+     4,
+     291.04
+    ]
+   },
+   "2026-09-17": {
+    "-": [
+     2,
+     119.46
+    ]
+   },
+   "2026-09-16": {
+    "-": [
+     2,
+     154.42
+    ]
+   },
+   "2026-09-15": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-14": {
+    "-": [
+     3,
+     169.89
+    ]
+   },
+   "2026-09-13": {
+    "-": [
+     7,
+     285.33
+    ]
+   },
+   "2026-09-12": {
+    "-": [
+     2,
+     119.46
+    ]
+   },
+   "2026-09-11": {
+    "-": [
+     3,
+     257.37
+    ]
+   },
+   "2026-09-10": {
+    "-": [
+     5,
+     236.19
+    ]
+   },
+   "2026-09-09": {
+    "-": [
+     6,
+     321.98
+    ]
+   },
+   "2026-09-08": {
+    "-": [
+     2,
+     119.46
+    ]
+   },
+   "2026-09-07": {
+    "-": [
+     4,
+     220.72
+    ]
+   },
+   "2026-09-06": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-04": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-02": {
+    "-": [
+     1,
+     68.63
+    ]
+   },
+   "2026-09-01": {
+    "-": [
+     2,
+     171.58
+    ]
+   },
+   "2026-08-31": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-08-29": {
+    "-": [
+     9,
+     386.59
+    ]
+   },
+   "2026-08-27": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-08-25": {
+    "-": [
+     5,
+     306.51
+    ]
+   },
+   "2026-08-24": {
+    "-": [
+     3,
+     257.37
+    ]
+   },
+   "2026-08-23": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-08-22": {
+    "-": [
+     3,
+     134.93
+    ]
+   },
+   "2026-08-19": {
+    "-": [
+     5,
+     236.19
+    ]
+   },
+   "2026-08-18": {
+    "-": [
+     6,
+     340.18
+    ]
+   },
+   "2026-08-17": {
+    "-": [
+     1,
+     85.79
+    ]
+   }
+  },
+  "por_meio": {
+   "2026-11-14": {
+    "-": [
+     1,
+     176.8
+    ],
+    "04 vídeos|120252199169740190": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-13": {
+    "-": [
+     2,
+     353.6
+    ],
+    "VD01 / VD02 / VD04|120252058419120190": [
+     2,
+     353.6
+    ],
+    "VD01 — Cópia|120252058419120190": [
+     1,
+     176.8
+    ],
+    "04 vídeos|120252199169740190": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-12": {
+    "VD01 — Cópia|120252058419120190": [
+     1,
+     176.8
+    ],
+    "VD01 / VD02 / VD04|120252058419120190": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-11": {
+    "VD01 / VD02 / VD04|120252058419120190": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-10": {
+    "Estudou muito": [
+     1,
+     176.8
+    ],
+    "-": [
+     1,
+     176.8
+    ],
+    "VD01 / VD02 / VD04": [
+     1,
+     176.8
+    ],
+    "VD01 — Cópia": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-09": {
+    "-": [
+     1,
+     176.8
+    ],
+    "VD01 / VD02 / VD04": [
+     2,
+     353.6
+    ],
+    "VD01 — Cópia": [
+     2,
+     353.6
+    ],
+    "Estudou muito": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-08": {
+    "VD01 — Cópia": [
+     2,
+     353.6
+    ]
+   },
+   "2026-11-07": {
+    "Seu Antonio": [
+     1,
+     176.8
+    ],
+    "-": [
+     2,
+     353.6
+    ],
+    "VD01 — Cópia": [
+     2,
+     353.6
+    ]
+   },
+   "2026-11-04": {
+    "-": [
+     3,
+     530.4
+    ],
+    "VD01 — Cópia": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-03": {
+    "-": [
+     1,
+     176.8
+    ],
+    "VD01 / VD02 / VD04": [
+     1,
+     176.8
+    ],
+    "VD01 — Cópia": [
+     2,
+     353.6
+    ]
+   },
+   "2026-11-02": {
+    "VD01 / VD02 / VD04": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-01": {
+    "-": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-31": {
+    "-": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-30": {
+    "VD01 / VD02 / VD04": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-29": {
+    "-": [
+     2,
+     353.6
+    ]
+   },
+   "2026-10-28": {
+    "-": [
+     1,
+     176.8
+    ],
+    "VD03": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-27": {
+    "-": [
+     2,
+     353.6
+    ]
+   },
+   "2026-10-25": {
+    "-": [
+     4,
+     150.4
+    ]
+   },
+   "2026-10-23": {
+    "-": [
+     5,
+     324.71
+    ]
+   },
+   "2026-10-19": {
+    "-": [
+     2,
+     171.58
+    ]
+   },
+   "2026-10-17": {
+    "-": [
+     4,
+     150.4
+    ]
+   },
+   "2026-10-16": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-10-14": {
+    "-": [
+     3,
+     205.25
+    ]
+   },
+   "2026-10-13": {
+    "-": [
+     6,
+     340.18
+    ]
+   },
+   "2026-10-12": {
+    "-": [
+     4,
+     150.4
+    ]
+   },
+   "2026-10-08": {
+    "-": [
+     4,
+     150.4
+    ]
+   },
+   "2026-10-06": {
+    "-": [
+     5,
+     236.19
+    ]
+   },
+   "2026-10-05": {
+    "-": [
+     2,
+     171.58
+    ]
+   },
+   "2026-09-30": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-29": {
+    "-": [
+     2,
+     171.58
+    ]
+   },
+   "2026-09-28": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-27": {
+    "-": [
+     6,
+     251.66
+    ]
+   },
+   "2026-09-25": {
+    "-": [
+     4,
+     150.4
+    ]
+   },
+   "2026-09-23": {
+    "-": [
+     4,
+     150.4
+    ]
+   },
+   "2026-09-22": {
+    "-": [
+     4,
+     150.4
+    ]
+   },
+   "2026-09-21": {
+    "-": [
+     5,
+     184.07
+    ]
+   },
+   "2026-09-20": {
+    "-": [
+     4,
+     291.04
+    ]
+   },
+   "2026-09-17": {
+    "-": [
+     2,
+     119.46
+    ]
+   },
+   "2026-09-16": {
+    "-": [
+     2,
+     154.42
+    ]
+   },
+   "2026-09-15": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-14": {
+    "-": [
+     3,
+     169.89
+    ]
+   },
+   "2026-09-13": {
+    "-": [
+     7,
+     285.33
+    ]
+   },
+   "2026-09-12": {
+    "-": [
+     2,
+     119.46
+    ]
+   },
+   "2026-09-11": {
+    "-": [
+     3,
+     257.37
+    ]
+   },
+   "2026-09-10": {
+    "-": [
+     5,
+     236.19
+    ]
+   },
+   "2026-09-09": {
+    "-": [
+     6,
+     321.98
+    ]
+   },
+   "2026-09-08": {
+    "-": [
+     2,
+     119.46
+    ]
+   },
+   "2026-09-07": {
+    "-": [
+     4,
+     220.72
+    ]
+   },
+   "2026-09-06": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-04": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-02": {
+    "-": [
+     1,
+     68.63
+    ]
+   },
+   "2026-09-01": {
+    "-": [
+     2,
+     171.58
+    ]
+   },
+   "2026-08-31": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-08-29": {
+    "-": [
+     9,
+     386.59
+    ]
+   },
+   "2026-08-27": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-08-25": {
+    "-": [
+     5,
+     306.51
+    ]
+   },
+   "2026-08-24": {
+    "-": [
+     3,
+     257.37
+    ]
+   },
+   "2026-08-23": {
+    "-": [
+     1,
+     85.79
+    ]
+   },
+   "2026-08-22": {
+    "-": [
+     3,
+     134.93
+    ]
+   },
+   "2026-08-19": {
+    "-": [
+     5,
+     236.19
+    ]
+   },
+   "2026-08-18": {
+    "-": [
+     6,
+     340.18
+    ]
+   },
+   "2026-08-17": {
+    "-": [
+     1,
+     85.79
+    ]
+   }
+  },
+  "produtos": {
+   "2026-11-14": {
+    "Meu Arrais-Amador": [
+     2,
+     353.6
+    ]
+   },
+   "2026-11-13": {
+    "Meu Arrais-Amador": [
+     6,
+     1060.8
+    ]
+   },
+   "2026-11-12": {
+    "Meu Arrais-Amador": [
+     2,
+     353.6
+    ]
+   },
+   "2026-11-11": {
+    "Meu Arrais-Amador": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-10": {
+    "Meu Arrais-Amador": [
+     4,
+     707.2
+    ]
+   },
+   "2026-11-09": {
+    "Meu Arrais-Amador": [
+     6,
+     1060.8
+    ]
+   },
+   "2026-11-08": {
+    "Meu Arrais-Amador": [
+     2,
+     353.6
+    ]
+   },
+   "2026-11-07": {
+    "Meu Arrais-Amador": [
+     5,
+     884.0
+    ]
+   },
+   "2026-11-04": {
+    "Meu Arrais-Amador": [
+     4,
+     707.2
+    ]
+   },
+   "2026-11-03": {
+    "Meu Arrais-Amador": [
+     4,
+     707.2
+    ]
+   },
+   "2026-11-02": {
+    "Meu Arrais-Amador": [
+     1,
+     176.8
+    ]
+   },
+   "2026-11-01": {
+    "Meu Arrais-Amador": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-31": {
+    "Meu Arrais-Amador": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-30": {
+    "Meu Arrais-Amador": [
+     1,
+     176.8
+    ]
+   },
+   "2026-10-29": {
+    "Meu Arrais-Amador": [
+     2,
+     353.6
+    ]
+   },
+   "2026-10-28": {
+    "Meu Arrais-Amador": [
+     2,
+     353.6
+    ]
+   },
+   "2026-10-27": {
+    "Meu Arrais-Amador": [
+     2,
+     353.6
+    ]
+   },
+   "2026-10-25": {
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ],
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ],
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ]
+   },
+   "2026-10-23": {
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     2,
+     67.34
+    ],
+    "Meu Arrais-Amador": [
+     3,
+     257.37
+    ]
+   },
+   "2026-10-19": {
+    "Meu Arrais-Amador": [
+     2,
+     171.58
+    ]
+   },
+   "2026-10-17": {
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ],
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ]
+   },
+   "2026-10-16": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ]
+   },
+   "2026-10-14": {
+    "Meu Arrais-Amador": [
+     2,
+     171.58
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ]
+   },
+   "2026-10-13": {
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     2,
+     67.34
+    ],
+    "Meu Arrais-Amador": [
+     3,
+     257.37
+    ]
+   },
+   "2026-10-12": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ],
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ]
+   },
+   "2026-10-08": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ],
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ]
+   },
+   "2026-10-06": {
+    "Meu Arrais-Amador": [
+     2,
+     171.58
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ],
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ]
+   },
+   "2026-10-05": {
+    "Meu Arrais-Amador": [
+     2,
+     171.58
+    ]
+   },
+   "2026-09-30": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-29": {
+    "Meu Arrais-Amador": [
+     2,
+     171.58
+    ]
+   },
+   "2026-09-28": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-27": {
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     2,
+     30.94
+    ],
+    "Meu Arrais-Amador": [
+     2,
+     171.58
+    ],
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ]
+   },
+   "2026-09-25": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ],
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ]
+   },
+   "2026-09-23": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ],
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ]
+   },
+   "2026-09-22": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ],
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ]
+   },
+   "2026-09-21": {
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     2,
+     67.34
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ],
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ],
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-20": {
+    "Meu Arrais-Amador": [
+     3,
+     257.37
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ]
+   },
+   "2026-09-17": {
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ],
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-16": {
+    "Meu Arrais-Amador": [
+     2,
+     154.42
+    ]
+   },
+   "2026-09-15": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-14": {
+    "Meu Arrais-Amador": [
+     2,
+     154.42
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ]
+   },
+   "2026-09-13": {
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     2,
+     30.94
+    ],
+    "Meu Arrais-Amador": [
+     2,
+     171.58
+    ],
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     2,
+     67.34
+    ]
+   },
+   "2026-09-12": {
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ],
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-11": {
+    "Meu Arrais-Amador": [
+     3,
+     257.37
+    ]
+   },
+   "2026-09-10": {
+    "Meu Arrais-Amador": [
+     2,
+     171.58
+    ],
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ]
+   },
+   "2026-09-09": {
+    "Meu Arrais-Amador": [
+     3,
+     257.37
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ],
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ]
+   },
+   "2026-09-08": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ]
+   },
+   "2026-09-07": {
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ],
+    "Meu Arrais-Amador": [
+     2,
+     171.58
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ]
+   },
+   "2026-09-06": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-04": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ]
+   },
+   "2026-09-02": {
+    "Meu Arrais-Amador": [
+     1,
+     68.63
+    ]
+   },
+   "2026-09-01": {
+    "Meu Arrais-Amador": [
+     2,
+     171.58
+    ]
+   },
+   "2026-08-31": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ]
+   },
+   "2026-08-29": {
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     2,
+     30.94
+    ],
+    "Meteorologia Náutica Simplificada": [
+     2,
+     30.94
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     2,
+     67.34
+    ],
+    "Meu Arrais-Amador": [
+     3,
+     257.37
+    ]
+   },
+   "2026-08-27": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ]
+   },
+   "2026-08-25": {
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ],
+    "Meu Arrais-Amador": [
+     3,
+     257.37
+    ],
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ]
+   },
+   "2026-08-24": {
+    "Meu Arrais-Amador": [
+     3,
+     257.37
+    ]
+   },
+   "2026-08-23": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ]
+   },
+   "2026-08-22": {
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ],
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ]
+   },
+   "2026-08-19": {
+    "Meu Arrais-Amador": [
+     2,
+     171.58
+    ],
+    "Meteorologia Náutica Simplificada": [
+     1,
+     15.47
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     1,
+     33.67
+    ]
+   },
+   "2026-08-18": {
+    "Meu Arrais-Amador": [
+     3,
+     257.37
+    ],
+    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
+     2,
+     67.34
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ]
+   },
+   "2026-08-17": {
+    "Meu Arrais-Amador": [
+     1,
+     85.79
+    ]
+   }
+  }
  }
 }
