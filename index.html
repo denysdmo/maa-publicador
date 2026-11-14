@@ -110,6 +110,9 @@
   .vbase .vcont { font-family: Montserrat, sans-serif; font-weight: 800; font-size: 13px; color: var(--suave); text-align: center; }
   .vbase button:disabled { opacity: 0.3; }
   /* relatório da semana (14/11) */
+  .subabas { display: flex; gap: 8px; margin-bottom: 12px; }
+  .subabas button { flex: 1; padding: 11px 10px; border-radius: 14px; font-weight: 900; }
+  .subabas button.ativa { background: var(--ouro); color: #04122B; border-color: var(--ouro); }
   .rel .rtopo { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
   .rel .rtopo b { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 16px; }
   .rel .rtopo button { padding: 6px 12px; }
@@ -520,7 +523,7 @@ document.getElementById("ant").onclick = () => { inicio.setDate(inicio.getDate()
 document.getElementById("prox").onclick = () => { inicio.setDate(inicio.getDate() + 7); desenhar(); };
 document.getElementById("hoje").onclick = () => { inicio = segunda(new Date()); desenhar(); };
 // ---------------------------------------------------------------- métricas
-let periodo = 7;
+let periodo = 7, subMet = "geral";
 const METRICAS_C = [
   ["views", "Visualizações (posts, reels e stories)"], ["reach", "Contas alcançadas"], ["profile_views", "Visitas ao perfil"],
   ["website_clicks", "Cliques no link da bio"], ["follower_count", "Novos seguidores"], ["accounts_engaged", "Contas que interagiram"],
@@ -641,7 +644,10 @@ async function mostrarMetricas() {
   const dias = Object.entries(r.por_dia).filter(([, d]) => d.posts).sort((a, b) => b[1].alcance - a[1].alcance).map(([k, d]) => '<div class="linha-m"><span class="t">' + k + " · " + d.posts + ' posts</span><span class="v">' + fmt(d.alcance) + "</span></div>").join("");
   const horas = Object.entries(r.por_hora).filter(([, h]) => h.posts >= 2).sort((a, b) => b[1].alcance - a[1].alcance).slice(0, 6).map(([k, h]) => '<div class="linha-m"><span class="t">' + k + "h · " + h.posts + ' posts</span><span class="v">' + fmt(h.alcance) + "</span></div>").join("");
   const st = r.stories_medias || {};
-  el.innerHTML = '<div class="bloco rel" id="relatorio"></div><div class="bloco"><h3>Crescimento do perfil</h3><div class="periodos" id="periodos">' + [1, 3, 7, 14, 30, 90].map((d) => '<button data-d="' + d + '"' + (d === periodo ? ' class="ativa"' : "") + ">" + (d === 1 ? "Hoje" : d + " dias") + "</button>").join("") + '</div><div id="tabcresc"></div></div>'
+  // sub-abas das métricas (14/11): "Visão geral" (gráfico e rankings) e "Relatório da semana"
+  el.innerHTML = '<nav class="subabas"><button data-s="geral"' + (subMet === "geral" ? ' class="ativa"' : "") + '>📈 Visão geral</button><button data-s="relatorio"' + (subMet === "relatorio" ? ' class="ativa"' : "") + ">📝 Relatório</button></nav>"
+    + '<div id="mRel"' + (subMet === "relatorio" ? "" : " hidden") + '><div class="bloco rel" id="relatorio"></div></div>'
+    + '<div id="mGeral"' + (subMet === "geral" ? "" : " hidden") + '><div class="bloco"><h3>Crescimento do perfil</h3><div class="periodos" id="periodos">' + [1, 3, 7, 14, 30, 90].map((d) => '<button data-d="' + d + '"' + (d === periodo ? ' class="ativa"' : "") + ">" + (d === 1 ? "Hoje" : d + " dias") + "</button>").join("") + '</div><div id="tabcresc"></div></div>'
     + '<div class="sub" style="margin-bottom:10px">Atualizado em ' + new Date(r.atualizado).toLocaleString("pt-BR") + " · coleta automática a cada 3 h · alcance médio por publicação</div>"
     + '<div class="kpis">' + kpis.map(([t, v]) => '<div class="kpi"><b>' + v + "</b><span>" + t + "</span></div>").join("") + "</div>"
     + '<div class="bloco"><h3>Top 10 por alcance</h3>' + lista(r.top_alcance, (m) => fmt(m.reach) + " 👁") + "</div>"
@@ -649,7 +655,16 @@ async function mostrarMetricas() {
     + '<div class="bloco"><h3>Alcance médio por formato</h3>' + formatos + "</div>"
     + '<div class="bloco"><h3>Melhores dias</h3>' + dias + "</div>"
     + '<div class="bloco"><h3>Melhores horários</h3>' + horas + "</div>"
-    + '<div class="bloco"><h3>Stories (média)</h3><div class="linha-m"><span class="t">Alcance · respostas · saídas</span><span class="v">' + fmt(st.alcance) + " · " + fmt(st.respostas) + " · " + fmt(st.saidas) + "</span></div></div>";
+    + '<div class="bloco"><h3>Stories (média)</h3><div class="linha-m"><span class="t">Alcance · respostas · saídas</span><span class="v">' + fmt(st.alcance) + " · " + fmt(st.respostas) + " · " + fmt(st.saidas) + "</span></div></div></div>";
+  el.querySelector(".subabas").onclick = (e) => {
+    const b = e.target.closest("button[data-s]");
+    if (!b) return;
+    subMet = b.dataset.s;
+    el.querySelectorAll(".subabas button").forEach((x) => x.classList.toggle("ativa", x === b));
+    document.getElementById("mRel").hidden = subMet !== "relatorio";
+    document.getElementById("mGeral").hidden = subMet !== "geral";
+    window.scrollTo(0, 0);
+  };
   document.getElementById("periodos").onclick = (e) => { const b = e.target.closest("button[data-d]"); if (b) { periodo = +b.dataset.d; mostrarMetricas(); } };
   tabelaCrescimento(r, c);
   blocoRelatorio();
