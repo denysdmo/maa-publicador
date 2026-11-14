@@ -1,11 +1,11 @@
 {
- "atualizado": "2026-11-14T13:10-03:00",
- "seguidores": 18521,
+ "atualizado": "2026-11-14T16:11-03:00",
+ "seguidores": 18522,
  "publicacoes": 134,
  "por_formato": {
   "carrossel": {
    "posts": 37,
-   "alcance": 321.3,
+   "alcance": 321.9,
    "salvos": 2.1,
    "compart": 1.3,
    "engaj": 3.0
@@ -19,7 +19,7 @@
   },
   "reel": {
    "posts": 83,
-   "alcance": 8269.1,
+   "alcance": 8270.0,
    "salvos": 64.7,
    "compart": 122.7,
    "engaj": 5.2
@@ -28,7 +28,7 @@
  "por_dia": {
   "seg": {
    "posts": 24,
-   "alcance": 18798.3
+   "alcance": 18800.4
   },
   "ter": {
    "posts": 20,
@@ -44,15 +44,15 @@
   },
   "sex": {
    "posts": 31,
-   "alcance": 1785.2
+   "alcance": 1786.4
   },
   "sáb": {
    "posts": 9,
-   "alcance": 753.3
+   "alcance": 753.6
   },
   "dom": {
    "posts": 11,
-   "alcance": 757.7
+   "alcance": 758.1
   }
  },
  "por_hora": {
@@ -66,11 +66,11 @@
   },
   "12": {
    "posts": 13,
-   "alcance": 488.5
+   "alcance": 489.8
   },
   "13": {
    "posts": 40,
-   "alcance": 15147.3
+   "alcance": 15147.5
   },
   "14": {
    "posts": 14,
@@ -78,27 +78,27 @@
   },
   "15": {
    "posts": 9,
-   "alcance": 1180.2
+   "alcance": 1180.3
   },
   "16": {
    "posts": 8,
-   "alcance": 654.1
+   "alcance": 654.2
   },
   "17": {
    "posts": 4,
-   "alcance": 2891.2
+   "alcance": 2903.8
   },
   "18": {
    "posts": 9,
-   "alcance": 795.3
+   "alcance": 797.3
   },
   "19": {
    "posts": 18,
-   "alcance": 2889.3
+   "alcance": 2889.4
   },
   "20": {
    "posts": 6,
-   "alcance": 1400.3
+   "alcance": 1400.5
   },
   "21": {
    "posts": 1,
@@ -195,10 +195,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 8140,
+   "reach": 8189,
    "saved": 81,
-   "shares": 174,
-   "taxa_engaj": 11.69
+   "shares": 175,
+   "taxa_engaj": 11.66
   },
   {
    "data": "2026-08-25",
@@ -287,10 +287,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 8140,
+   "reach": 8189,
    "saved": 81,
-   "shares": 174,
-   "taxa_engaj": 11.69
+   "shares": 175,
+   "taxa_engaj": 11.66
   },
   {
    "data": "2026-08-07",
@@ -314,24 +314,24 @@
   }
  ],
  "stories_medias": {
-  "alcance": 40.1,
+  "alcance": 42.8,
   "respostas": 0.0,
-  "saidas": 6.9
+  "saidas": 7.1
  },
  "conta": [
   {
    "data": "2026-11-14",
    "follower_count": "",
-   "views": 2614,
-   "reach": 1604,
-   "profile_views": 20,
+   "views": 3581,
+   "reach": 2085,
+   "profile_views": 29,
    "website_clicks": 1,
-   "accounts_engaged": 27,
-   "total_interactions": 56,
-   "likes": 23,
+   "accounts_engaged": 33,
+   "total_interactions": 66,
+   "likes": 28,
    "comments": 0,
-   "shares": 14,
-   "saves": 3,
+   "shares": 16,
+   "saves": 4,
    "replies": 0,
    "follows_and_unfollows": ""
   },
@@ -353,7 +353,7 @@
   },
   {
    "data": "2026-11-12",
-   "follower_count": 0,
+   "follower_count": 29,
    "views": 8998,
    "reach": 4496,
    "profile_views": 61,
