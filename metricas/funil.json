@@ -1,7 +1,8 @@
 {
- "atualizado": "2026-11-14T17:17-03:00",
+ "atualizado": "2026-11-14T17:19-03:00",
  "vturb": {
-  "status": "falta_chave"
+  "status": "erro",
+  "erro": "HTTP 400 [\"Start date must be a valid datetime with hours, minutes, and seconds\"]"
  },
  "kiwify": {
   "status": "ok",
