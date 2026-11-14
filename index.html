@@ -128,6 +128,20 @@
   .resp { margin-top: 12px; } .resp summary { cursor: pointer; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 14px; color: var(--ouro); padding: 6px 0; }
   .resp h4 { font-family: Montserrat, sans-serif; font-size: 14px; margin: 14px 0 4px; color: #fff; } .resp p, .resp li { font-size: 14px; line-height: 1.5; color: rgba(255,255,255,0.9); }
   .resp ul, .resp ol { padding-left: 18px; margin: 4px 0; }
+  /* funil de vendas (14/11): Instagram -> VTurb -> Kiwify */
+  .funil { display: flex; flex-direction: column; gap: 6px; }
+  .fpasso { position: relative; border-radius: 12px; padding: 10px 12px; background: rgba(255,255,255,0.05); overflow: hidden; }
+  .fpasso .fb { position: absolute; left: 0; top: 0; bottom: 0; background: rgba(226,179,60,0.22); border-right: 3px solid var(--ouro); }
+  .fpasso .fl { position: relative; display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .fpasso .fl span { font-size: 13px; } .fpasso .fl b { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 18px; }
+  .ftaxa { text-align: center; font-size: 12px; font-weight: 800; color: var(--ciano); }
+  .passos-cfg ol { padding-left: 20px; margin: 6px 0; } .passos-cfg li { margin: 6px 0; font-size: 14px; line-height: 1.45; }
+  .passos-cfg code, .utm code { background: rgba(255,255,255,0.1); padding: 1px 5px; border-radius: 5px; font-size: 12.5px; word-break: break-all; }
+  .utm input { width: 100%; box-sizing: border-box; padding: 10px; border-radius: 10px; border: 1px solid var(--linha); background: #061A3A; color: #fff; font-size: 13px; margin: 6px 0; }
+  .utm .ulink { display: flex; gap: 8px; align-items: center; margin: 8px 0; } .utm .ulink code { flex: 1; }
+  .aviso-cfg { border: 1px dashed var(--ouro); }
+  .passos-cfg a { color: var(--ciano); }
+  #mVen .kpi b { font-size: 19px; overflow-wrap: anywhere; }
   /* métricas (13/11) */
   #metricas { max-width: 1400px; margin: 0 auto; padding: 8px 16px 40px; }
   .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 14px; }
@@ -645,7 +659,8 @@ async function mostrarMetricas() {
   const horas = Object.entries(r.por_hora).filter(([, h]) => h.posts >= 2).sort((a, b) => b[1].alcance - a[1].alcance).slice(0, 6).map(([k, h]) => '<div class="linha-m"><span class="t">' + k + "h · " + h.posts + ' posts</span><span class="v">' + fmt(h.alcance) + "</span></div>").join("");
   const st = r.stories_medias || {};
   // sub-abas das métricas (14/11): "Visão geral" (gráfico e rankings) e "Relatório da semana"
-  el.innerHTML = '<nav class="subabas"><button data-s="geral"' + (subMet === "geral" ? ' class="ativa"' : "") + '>📈 Visão geral</button><button data-s="relatorio"' + (subMet === "relatorio" ? ' class="ativa"' : "") + ">📝 Relatório</button></nav>"
+  el.innerHTML = '<nav class="subabas"><button data-s="geral"' + (subMet === "geral" ? ' class="ativa"' : "") + '>📈 Visão geral</button><button data-s="relatorio"' + (subMet === "relatorio" ? ' class="ativa"' : "") + ">📝 Relatório</button>" + '<button data-s="vendas"' + (subMet === "vendas" ? ' class="ativa"' : "") + ">💰 Vendas</button></nav>"
+    + '<div id="mVen"' + (subMet === "vendas" ? "" : " hidden") + "></div>"
     + '<div id="mRel"' + (subMet === "relatorio" ? "" : " hidden") + '><div class="bloco rel" id="relatorio"></div></div>'
     + '<div id="mGeral"' + (subMet === "geral" ? "" : " hidden") + '><div class="bloco"><h3>Crescimento do perfil</h3><div class="periodos" id="periodos">' + [1, 3, 7, 14, 30, 90].map((d) => '<button data-d="' + d + '"' + (d === periodo ? ' class="ativa"' : "") + ">" + (d === 1 ? "Hoje" : d + " dias") + "</button>").join("") + '</div><div id="tabcresc"></div></div>'
     + '<div class="sub" style="margin-bottom:10px">Atualizado em ' + new Date(r.atualizado).toLocaleString("pt-BR") + " · coleta automática a cada 3 h · alcance médio por publicação</div>"
@@ -663,11 +678,88 @@ async function mostrarMetricas() {
     el.querySelectorAll(".subabas button").forEach((x) => x.classList.toggle("ativa", x === b));
     document.getElementById("mRel").hidden = subMet !== "relatorio";
     document.getElementById("mGeral").hidden = subMet !== "geral";
+    document.getElementById("mVen").hidden = subMet !== "vendas";
     window.scrollTo(0, 0);
   };
   document.getElementById("periodos").onclick = (e) => { const b = e.target.closest("button[data-d]"); if (b) { periodo = +b.dataset.d; mostrarMetricas(); } };
   tabelaCrescimento(r, c);
   blocoRelatorio();
+  blocoVendas(c);
+}
+// ---------------------------------------------------------------- vendas (14/11): Instagram -> VTurb -> Kiwify
+let periodoV = 7;
+const BRL = (v) => (Number(v) || 0).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+const pct = (a, b) => b ? (a / b * 100).toLocaleString("pt-BR", { maximumFractionDigits: 1 }) + "%" : "—";
+function semanaISO(d) { const x = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())); const dia = x.getUTCDay() || 7; x.setUTCDate(x.getUTCDate() + 4 - dia); const a = new Date(Date.UTC(x.getUTCFullYear(), 0, 1)); return x.getUTCFullYear() + "-s" + String(Math.ceil(((x - a) / 864e5 + 1) / 7)).padStart(2, "0"); }
+function lerLS(k, pad) { try { return localStorage.getItem(k) || pad; } catch (e) { return pad; } }
+function gravarLS(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+function blocoUTM() {
+  const base = lerLS("maa_link_bio", "https://meuarraisamador.com.br/");
+  const sem = semanaISO(new Date());
+  const hojeS = new Date().toISOString().slice(0, 10);
+  const links = [["Link da bio (troque toda segunda)", "bio", sem], ["Figurinha de link nos stories", "story", sem + "&utm_content=" + hojeS], ["Resposta no direct", "dm", sem]];
+  const monta = (m, c) => { const u = base.trim(); return u + (u.includes("?") ? "&" : "?") + "utm_source=instagram&utm_medium=" + m + "&utm_campaign=" + c; };
+  return '<div class="bloco utm"><h3>Links com UTM (para a venda contar como Instagram)</h3><div class="sub">Endereço da página do vídeo (confira e corrija se for outro):</div>'
+    + '<input id="linkBio" value="' + esc(base) + '" inputmode="url" autocomplete="off">'
+    + links.map(([t, m, c]) => '<div class="sub" style="margin-top:8px">' + t + '</div><div class="ulink"><code>' + esc(monta(m, c)) + '</code><button class="copiar" data-u="' + esc(monta(m, c)) + '">Copiar</button></div>').join("")
+    + '<div class="sub" style="margin-top:8px">Padrão: <code>utm_source=instagram</code> · <code>utm_medium</code> = bio, story ou dm · <code>utm_campaign</code> = semana (' + sem + ').</div></div>';
+}
+function passosConfig(f) {
+  const vt = (f.vturb || {}).status, kw = (f.kiwify || {}).status;
+  if (vt === "ok" && kw === "ok") return "";
+  const segredos = '<a href="https://github.com/denysdmo/maa-publicador/settings/secrets/actions/new" target="_blank" rel="noopener">GitHub › Secrets › New repository secret</a>';
+  let h = '<div class="bloco passos-cfg aviso-cfg"><h3>⚙️ Falta ligar ' + [vt !== "ok" ? "o VTurb" : "", kw !== "ok" ? "o Kiwify" : ""].filter(Boolean).join(" e ") + "</h3>";
+  if (kw !== "ok") h += '<b>Kiwify</b>' + (kw === "erro" ? ' <span style="color:var(--erro)">(deu erro: ' + esc(f.kiwify.erro || "") + ")</span>" : "") + '<ol><li>No Kiwify, abra <b>Apps › API › Criar API Key</b>.</li><li>Na janela que abrir, copie o <b>Client ID</b>, o <b>Client Secret</b> (aparece uma vez só) e o <b>Account ID</b>.</li><li>Abra ' + segredos + ' e crie três segredos, um para cada: <code>KIWIFY_CLIENT_ID</code>, <code>KIWIFY_CLIENT_SECRET</code> e <code>KIWIFY_ACCOUNT_ID</code>.</li></ol>';
+  if (vt !== "ok") h += '<b>VTurb</b>' + (vt === "erro" ? ' <span style="color:var(--erro)">(deu erro: ' + esc(f.vturb.erro || "") + ")</span>" : "") + '<ol><li>No VTurb, abra <b>Configurações › API</b> e gere o token da API de Analytics.</li><li>Em ' + segredos + ', crie <code>VTURB_TOKEN</code> com ele.</li><li>Opcional: crie <code>VTURB_PLAYER_ID</code> com o id do vídeo da página da bio (sem ele, o app soma os 5 vídeos mais vistos).</li><li>No player do VTurb, ligue a opção de <b>passar as UTMs para o link do botão</b>, para o checkout do Kiwify receber a origem.</li></ol>';
+  return h + '<div class="sub">Depois de colar, o app atualiza sozinho em até 10 minutos. Nunca mande as chaves por mensagem.</div></div>';
+}
+function curvaSVG(cv) {
+  if (!cv || !cv.pontos || cv.pontos.length < 2) return "";
+  const W = 320, H = 120, max = Math.max(...cv.pontos.map((p) => p[0])) || 1;
+  const pts = cv.pontos.map((p) => (p[0] / max * W).toFixed(1) + "," + (H - p[1] / 100 * H).toFixed(1)).join(" ");
+  const min = (s) => Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+  return '<svg viewBox="0 0 ' + W + " " + (H + 16) + '" style="width:100%;height:auto;display:block;margin-top:8px"><polyline points="0,' + H + " " + pts + " " + W + "," + H + '" fill="rgba(226,179,60,0.18)" stroke="none"/><polyline points="' + pts + '" fill="none" stroke="#E2B33C" stroke-width="2.5"/>'
+    + '<text x="0" y="' + (H + 13) + '" fill="rgba(255,255,255,.7)" font-size="10">0:00</text><text x="' + W + '" y="' + (H + 13) + '" fill="rgba(255,255,255,.7)" font-size="10" text-anchor="end">' + min(max) + "</text></svg>"
+    + '<div class="sub">Quem ainda está assistindo em cada ponto do vídeo (últimos 30 dias · ' + esc(cv.player || "") + ")</div>";
+}
+async function blocoVendas(conta) {
+  const el = document.getElementById("mVen");
+  let f;
+  try { f = await (await fetch("metricas/funil.json?t=" + Date.now(), { cache: "no-store" })).json(); } catch (e) { f = { vturb: {}, kiwify: {} }; }
+  const D = periodoV, ini = new Date(); ini.setDate(ini.getDate() - (D - 1));
+  const corte = ini.getFullYear() + "-" + String(ini.getMonth() + 1).padStart(2, "0") + "-" + String(ini.getDate()).padStart(2, "0");
+  const noPer = (ls) => (ls || []).filter((d) => d.data >= corte);
+  const some = (ls, k) => ls.reduce((a, d) => a + (Number(d[k]) || 0), 0);
+  const kw = f.kiwify || {}, vt = f.vturb || {};
+  const kd = noPer(kw.dias), vd = noPer(vt.dias);
+  const juntaMapa = (m) => { const out = {}; Object.entries(m || {}).forEach(([d, x]) => { if (d >= corte) Object.entries(x).forEach(([k, a]) => { const o = out[k] = out[k] || [0, 0, 0]; a.forEach((v, i) => o[i] += v); }); }); return out; };
+  const vend = some(kd, "vendas"), liq = some(kd, "liquido"), bru = some(kd, "bruto"), igV = some(kd, "ig_vendas"), igL = some(kd, "ig_liquido");
+  const plays = some(vd, "plays"), clq = some(vd, "cliques"), jan = (vt.janelas || {})[String(D)] || {};
+  const origV = juntaMapa(vt.por_origem), ig = origV.instagram || [0, 0, 0];
+  const cliquesBio = some((conta || []).filter((d) => d.data >= corte), "website_clicks");
+  const okK = kw.status === "ok", okV = vt.status === "ok";
+  const kpis = [["Vendas", okK ? fmt(vend) : "—"], ["Faturamento líquido", okK ? BRL(liq) : "—"], ["Faturamento bruto", okK ? BRL(bru) : "—"], ["Ticket médio", okK && vend ? BRL(bru / vend) : "—"],
+    ["Vendas do Instagram", okK ? fmt(igV) + " · " + BRL(igL) : "—"], ["Plays do vídeo", okV ? fmt(plays) : "—"], ["Minutos assistidos", okV ? fmt(jan.minutos) : "—"],
+    ["Tempo médio por play", okV ? Math.floor((jan.tempo_medio_s || 0) / 60) + "min " + ((jan.tempo_medio_s || 0) % 60) + "s" : "—"], ["Retenção média", okV ? (jan.retencao || 0) + "%" : "—"], ["Cliques no botão", okV ? fmt(clq) : "—"]];
+  const passoF = (rot, v, topo) => '<div class="fpasso"><div class="fb" style="width:' + (topo ? Math.max(2, v / topo * 100) : 0) + '%"></div><div class="fl"><span>' + rot + "</span><b>" + fmt(v) + "</b></div></div>";
+  const taxa = (a, b) => '<div class="ftaxa">↓ ' + pct(a, b) + "</div>";
+  const funil = (titulo, etapas) => { const topo = Math.max(1, ...etapas.map((e) => e[1])); return '<div class="bloco"><h3>' + titulo + '</h3><div class="funil">' + etapas.map((e, i) => (i ? taxa(e[1], etapas[i - 1][1]) : "") + passoF(e[0], e[1], topo)).join("") + '</div><div class="sub" style="margin-top:8px">Do primeiro passo até a compra: <b>' + pct(etapas[etapas.length - 1][1], etapas[0][1]) + "</b></div></div>"; };
+  const tabela = (titulo, mapa, rotV) => { const ls = Object.entries(juntaMapa(mapa)).sort((a, b) => b[1][1] - a[1][1]).slice(0, 8); return ls.length ? '<div class="bloco"><h3>' + titulo + "</h3>" + ls.map(([k, a]) => '<div class="linha-m"><span class="t">' + esc(k) + '</span><span class="v">' + rotV(a) + "</span></div>").join("") + "</div>" : ""; };
+  el.innerHTML = passosConfig(f)
+    + '<div class="bloco"><h3>Vendas e vídeo</h3><div class="periodos" id="periodosV">' + [1, 3, 7, 14, 30, 90].map((d) => '<button data-d="' + d + '"' + (d === D ? ' class="ativa"' : "") + ">" + (d === 1 ? "Hoje" : d + " dias") + "</button>").join("") + "</div>"
+    + '<div class="sub" style="margin-top:6px">' + (f.atualizado ? "Atualizado em " + new Date(f.atualizado).toLocaleString("pt-BR") + " · " : "") + "VTurb e Kiwify a cada 3 h</div></div>"
+    + '<div class="kpis">' + kpis.map(([t, v]) => '<div class="kpi"><b>' + v + "</b><span>" + t + "</span></div>").join("") + "</div>"
+    + funil("Funil do Instagram", [["Cliques no link da bio", cliquesBio], ["Plays do vídeo vindos do Instagram", ig[0]], ["Cliques no botão de compra", ig[1]], ["Compras no Kiwify com UTM do Instagram", igV]])
+    + funil("Funil geral (todas as origens)", [["Plays do vídeo", plays], ["Cliques no botão de compra", clq], ["Compras no Kiwify", vend]])
+    + (okV && vt.curva ? '<div class="bloco"><h3>Retenção do vídeo</h3>' + curvaSVG(vt.curva) + "</div>" : "")
+    + tabela("Vendas por origem (utm_source)", kw.por_origem, (a) => a[0] + " · " + BRL(a[1]))
+    + tabela("Vendas por campanha (utm_campaign)", kw.por_campanha, (a) => a[0] + " · " + BRL(a[1]))
+    + tabela("Vendas por canal (utm_medium)", kw.por_meio, (a) => a[0] + " · " + BRL(a[1]))
+    + tabela("Plays por origem no VTurb", vt.por_origem, (a) => fmt(a[0]) + " plays · " + fmt(a[1]) + " cliques")
+    + blocoUTM();
+  document.getElementById("periodosV").onclick = (e) => { const b = e.target.closest("button[data-d]"); if (b) { periodoV = +b.dataset.d; blocoVendas(conta); } };
+  document.getElementById("linkBio").onchange = (e) => { gravarLS("maa_link_bio", e.target.value.trim()); blocoVendas(conta); };
+  el.querySelectorAll(".copiar").forEach((b) => b.onclick = async () => { try { await navigator.clipboard.writeText(b.dataset.u); b.textContent = "Copiado ✓"; } catch (e) { prompt("Copie o link:", b.dataset.u); } });
 }
 function aba(qual) {
   const met = qual === "metricas";

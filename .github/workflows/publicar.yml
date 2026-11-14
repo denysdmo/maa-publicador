@@ -37,6 +37,18 @@ jobs:
           if python -c "import json,datetime,sys;a=datetime.datetime.fromisoformat(json.load(open('metricas/resumo.json'))['atualizado']);sys.exit(0 if (datetime.datetime.now(a.tzinfo)-a).total_seconds()>3*3600 else 1)" 2>/dev/null || [ ! -f metricas/resumo.json ]; then
             python metricas.py || echo "métricas falharam (não bloqueia o publicador)"
           fi
+      - name: Coleta o funil de vendas, VTurb e Kiwify (no máximo a cada 3 h)
+        env:
+          VTURB_TOKEN: ${{ secrets.VTURB_TOKEN }}
+          VTURB_PLAYER_ID: ${{ secrets.VTURB_PLAYER_ID }}
+          KIWIFY_CLIENT_ID: ${{ secrets.KIWIFY_CLIENT_ID }}
+          KIWIFY_CLIENT_SECRET: ${{ secrets.KIWIFY_CLIENT_SECRET }}
+          KIWIFY_ACCOUNT_ID: ${{ secrets.KIWIFY_ACCOUNT_ID }}
+          TZ: America/Sao_Paulo
+        run: |
+          if python -c "import json,datetime,sys;j=json.load(open('metricas/funil.json'));a=datetime.datetime.fromisoformat(j['atualizado']);sys.exit(0 if (datetime.datetime.now(a.tzinfo)-a).total_seconds()>3*3600 or any(j[k].get('status')!='ok' for k in ('vturb','kiwify')) else 1)" 2>/dev/null || [ ! -f metricas/funil.json ]; then
+            python vendas.py || echo "funil falhou (não bloqueia o publicador)"
+          fi
       - name: Relatório de segunda (uma vez por semana)
         env:
           GH_TOKEN: ${{ github.token }}
