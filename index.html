@@ -109,6 +109,22 @@
   .vbase { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 16px; padding-bottom: max(14px, env(safe-area-inset-bottom)); }
   .vbase .vcont { font-family: Montserrat, sans-serif; font-weight: 800; font-size: 13px; color: var(--suave); text-align: center; }
   .vbase button:disabled { opacity: 0.3; }
+  /* relatório da semana (14/11) */
+  .rel .rtopo { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+  .rel .rtopo b { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 16px; }
+  .rel .rtopo button { padding: 6px 12px; }
+  .rnums { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; margin-bottom: 12px; }
+  .rnum { border-radius: 12px; padding: 9px 11px; background: rgba(255,255,255,0.05); }
+  .rnum span { display: block; font-size: 11px; color: var(--suave); }
+  .rnum b { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 18px; }
+  .rnum i { font-style: normal; font-size: 12px; font-weight: 800; margin-left: 6px; }
+  .rsec { margin-top: 12px; padding: 10px 12px; border-radius: 12px; background: rgba(255,255,255,0.04); border-left: 5px solid var(--suave); }
+  .rsec h4 { margin: 0 0 6px; font-family: Montserrat, sans-serif; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
+  .rsec ul, .rsec ol { margin: 0; padding-left: 18px; } .rsec li { margin: 5px 0; font-size: 14px; line-height: 1.45; }
+  .rsec.certo { border-left-color: var(--st-agendado); } .rsec.errado { border-left-color: var(--erro); } .rsec.passos { border-left-color: var(--ouro); } .rsec.audit { border-left-color: var(--t-story); }
+  .resp { margin-top: 12px; } .resp summary { cursor: pointer; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 14px; color: var(--ouro); padding: 6px 0; }
+  .resp h4 { font-family: Montserrat, sans-serif; font-size: 14px; margin: 14px 0 4px; color: #fff; } .resp p, .resp li { font-size: 14px; line-height: 1.5; color: rgba(255,255,255,0.9); }
+  .resp ul, .resp ol { padding-left: 18px; margin: 4px 0; }
   /* métricas (13/11) */
   #metricas { max-width: 1400px; margin: 0 auto; padding: 8px 16px 40px; }
   .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 14px; }
@@ -553,6 +569,55 @@ function tabelaCrescimento(r, c) {
   document.querySelectorAll(".mcard").forEach((b) => (b.onclick = () => { metricaSel = b.dataset.k; tabelaCrescimento(r, c); }));
 }
 const fmt = (n) => (n === null || n === undefined || n === "") ? "—" : Number(n).toLocaleString("pt-BR");
+
+// ---------------------------------------------------------------- relatório da semana (14/11)
+let relSem = 0, relIndice = null;
+function mdHtml(t) {
+  const inl = (x) => esc(x).replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
+  let html = "", lista = "";
+  const fecha = () => { if (lista) { html += "</" + lista + ">"; lista = ""; } };
+  for (const l of t.split(String.fromCharCode(10)).map((x) => x.trim() ? x.replace(/ +$/, "") : "")) {
+    let m;
+    if ((m = l.match(/^#{1,3}\s+(.*)/))) { fecha(); html += "<h4>" + inl(m[1]) + "</h4>"; }
+    else if ((m = l.match(/^\s*[-*]\s+(.*)/))) { if (lista !== "ul") { fecha(); html += "<ul>"; lista = "ul"; } html += "<li>" + inl(m[1]) + "</li>"; }
+    else if ((m = l.match(/^\s*\d+\.\s+(.*)/))) { if (lista !== "ol") { fecha(); html += "<ol>"; lista = "ol"; } html += "<li>" + inl(m[1]) + "</li>"; }
+    else if (l.trim()) { fecha(); html += "<p>" + inl(l) + "</p>"; }
+  }
+  fecha();
+  return html;
+}
+async function blocoRelatorio() {
+  const el = document.getElementById("relatorio");
+  if (!el) return;
+  try { if (!relIndice) relIndice = await (await fetch("metricas/relatorios/indice.json?t=" + Date.now(), { cache: "no-store" })).json(); }
+  catch (e) { relIndice = []; }
+  if (!relIndice.length) { el.innerHTML = "<h3>Relatório da semana</h3><div class=\"sub\">O primeiro relatório sai na segunda de manhã.</div>"; return; }
+  relSem = Math.max(0, Math.min(relSem, relIndice.length - 1));
+  const w = relIndice[relSem];
+  let r;
+  try { r = await (await fetch("metricas/relatorios/" + w.ini + ".json?t=" + Date.now(), { cache: "no-store" })).json(); }
+  catch (e) { el.innerHTML = "<h3>Relatório da semana</h3><div class=\"sub\">Não consegui abrir este relatório.</div>"; return; }
+  let esp = "";
+  if (w.especialista) {
+    try { esp = await (await fetch("metricas/relatorios/" + w.ini + "-especialista.md?t=" + Date.now(), { cache: "no-store" })).text(); } catch (e) {}
+  }
+  const d = (iso) => iso.slice(8, 10) + "/" + iso.slice(5, 7);
+  const lst = (a) => "<ul>" + a.map((t) => "<li>" + esc(t).replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>") + "</li>").join("") + "</ul>";
+  const nums = r.numeros.map((x) => {
+    const dl = x.delta === null || x.delta === undefined ? "" : '<i class="' + (x.delta >= 0 ? "sobe" : "desce") + '">' + (x.delta >= 0 ? "▲ " : "▼ ") + Math.abs(x.delta) + "%</i>";
+    return '<div class="rnum"><span>' + esc(x.rotulo) + "</span><b>" + fmt(x.valor) + "</b>" + dl + "</div>";
+  }).join("");
+  el.innerHTML = '<h3>Relatório da semana</h3><div class="rtopo"><button id="relAnt"' + (relSem >= relIndice.length - 1 ? " disabled" : "") + '>‹</button><b>' + d(r.semana.ini) + " a " + d(r.semana.fim) + '</b><button id="relProx"' + (relSem === 0 ? " disabled" : "") + ">›</button></div>"
+    + '<div class="rnums">' + nums + "</div>"
+    + '<div class="rsec certo"><h4>✅ O que deu certo</h4>' + lst(r.certo) + "</div>"
+    + '<div class="rsec errado"><h4>⚠️ O que deu errado</h4>' + lst(r.errado) + "</div>"
+    + '<div class="rsec passos"><h4>➡️ Próximos passos</h4>' + lst(r.passos) + "</div>"
+    + '<div class="rsec audit"><h4>🔎 Auditoria</h4>' + lst(r.auditoria) + "</div>"
+    + (esp ? '<details class="resp" open><summary>📝 Análise do especialista</summary>' + mdHtml(esp) + "</details>" : '<div class="sub" style="margin-top:10px">A análise escrita do especialista entra na rodada de sexta.</div>')
+    + '<div class="sub" style="margin-top:8px">Comparações com a semana anterior · gerado em ' + new Date(r.gerado).toLocaleString("pt-BR") + "</div>";
+  document.getElementById("relAnt").onclick = () => { relSem++; blocoRelatorio(); };
+  document.getElementById("relProx").onclick = () => { relSem--; blocoRelatorio(); };
+}
 async function mostrarMetricas() {
   const el = document.getElementById("metricas");
   let r;
@@ -568,7 +633,7 @@ async function mostrarMetricas() {
   const dias = Object.entries(r.por_dia).filter(([, d]) => d.posts).sort((a, b) => b[1].alcance - a[1].alcance).map(([k, d]) => '<div class="linha-m"><span class="t">' + k + " · " + d.posts + ' posts</span><span class="v">' + fmt(d.alcance) + "</span></div>").join("");
   const horas = Object.entries(r.por_hora).filter(([, h]) => h.posts >= 2).sort((a, b) => b[1].alcance - a[1].alcance).slice(0, 6).map(([k, h]) => '<div class="linha-m"><span class="t">' + k + "h · " + h.posts + ' posts</span><span class="v">' + fmt(h.alcance) + "</span></div>").join("");
   const st = r.stories_medias || {};
-  el.innerHTML = '<div class="bloco"><h3>Crescimento do perfil</h3><div class="periodos" id="periodos">' + [7, 14, 30, 90].map((d) => '<button data-d="' + d + '"' + (d === periodo ? ' class="ativa"' : "") + ">" + d + " dias</button>").join("") + '</div><div id="tabcresc"></div></div>'
+  el.innerHTML = '<div class="bloco rel" id="relatorio"></div><div class="bloco"><h3>Crescimento do perfil</h3><div class="periodos" id="periodos">' + [7, 14, 30, 90].map((d) => '<button data-d="' + d + '"' + (d === periodo ? ' class="ativa"' : "") + ">" + d + " dias</button>").join("") + '</div><div id="tabcresc"></div></div>'
     + '<div class="sub" style="margin-bottom:10px">Atualizado em ' + new Date(r.atualizado).toLocaleString("pt-BR") + " · coleta automática a cada 3 h · alcance médio por publicação</div>"
     + '<div class="kpis">' + kpis.map(([t, v]) => '<div class="kpi"><b>' + v + "</b><span>" + t + "</span></div>").join("") + "</div>"
     + '<div class="bloco"><h3>Top 10 por alcance</h3>' + lista(r.top_alcance, (m) => fmt(m.reach) + " 👁") + "</div>"
@@ -579,6 +644,7 @@ async function mostrarMetricas() {
     + '<div class="bloco"><h3>Stories (média)</h3><div class="linha-m"><span class="t">Alcance · respostas · saídas</span><span class="v">' + fmt(st.alcance) + " · " + fmt(st.respostas) + " · " + fmt(st.saidas) + "</span></div></div>";
   document.getElementById("periodos").onclick = (e) => { const b = e.target.closest("button[data-d]"); if (b) { periodo = +b.dataset.d; mostrarMetricas(); } };
   tabelaCrescimento(r, c);
+  blocoRelatorio();
 }
 function aba(qual) {
   const met = qual === "metricas";

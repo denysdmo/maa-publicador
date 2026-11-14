@@ -1,0 +1,133 @@
+{
+ "semana": {
+  "ini": "2026-11-09",
+  "fim": "2026-11-15"
+ },
+ "gerado": "2026-11-14T12:31-03:00",
+ "seguidores": 18522,
+ "numeros": [
+  {
+   "rotulo": "Novos seguidores",
+   "valor": 139,
+   "antes": 217,
+   "delta": -36
+  },
+  {
+   "rotulo": "Alcance da conta",
+   "valor": 30292,
+   "antes": 52833,
+   "delta": -43
+  },
+  {
+   "rotulo": "Visualizações",
+   "valor": 53845,
+   "antes": 65818,
+   "delta": -18
+  },
+  {
+   "rotulo": "Visitas ao perfil",
+   "valor": 353,
+   "antes": 319,
+   "delta": 11
+  },
+  {
+   "rotulo": "Cliques no link da bio",
+   "valor": 58,
+   "antes": 57,
+   "delta": 2
+  },
+  {
+   "rotulo": "Compartilhamentos",
+   "valor": 243,
+   "antes": 122,
+   "delta": 99
+  },
+  {
+   "rotulo": "Salvamentos",
+   "valor": 130,
+   "antes": 78,
+   "delta": 67
+  },
+  {
+   "rotulo": "Publicações no feed",
+   "valor": 4,
+   "antes": 2,
+   "delta": 100
+  },
+  {
+   "rotulo": "Stories publicados",
+   "valor": 10,
+   "antes": null,
+   "delta": null
+  }
+ ],
+ "certo": [
+  "**Reel de segunda 09/11 (17:23)** chegou a **8080 contas**, 13.2× a mediana dos últimos 30 dias (611). Tema: “Quem tem a preferência no canal”.",
+  "Mais **enviado** da semana: Reel de segunda 09/11 (17:23), 174 compartilhamentos (2.2% do alcance). É o sinal que mais leva o perfil a quem ainda não segue.",
+  "Mais **salvo**: Reel de segunda 09/11 (17:23), 81 salvamentos (1.0% do alcance): conteúdo que a pessoa guarda para estudar.",
+  "**Compartilhamentos** subiu 99% em relação à semana anterior (122 → 243).",
+  "**Salvamentos** subiu 67% em relação à semana anterior (78 → 130)."
+ ],
+ "errado": [
+  "**Reel de terça 10/11 (20:35)** ficou abaixo: 215 contas (0.4× a mediana). Tema: “Acesse o link na bio e prepare-se pra passar de primeira na prova de Arrais-Amad”.",
+  "**Carrossel de sexta 13/11 (12:01)** ficou abaixo: 292 contas (0.5× a mediana). Tema: “Entrando no porto, a boia encarnada fica de que lado”.",
+  "**Novos seguidores** caiu 36% (217 → 139).",
+  "**Alcance da conta** caiu 43% (52833 → 30292).",
+  "3 story(s) com muita saída (mais de 20% de quem viu saiu da sequência): rever o que vem antes deles."
+ ],
+ "passos": [
+  "Repetir o **molde** do campeão (Reel, “Quem tem a preferência no canal”) com **outro ângulo** ou outro tema da prova. Repostar igual não funciona.",
+  "Manter o carro-chefe no horário de melhor média: **13h** (15147 de alcance médio em 40 posts).",
+  "Formato com melhor alcance médio: **Reel** (8267). Garanta pelo menos 2 por semana.",
+  "Seguidores andando devagar: abrir uma **série** (“Pegadinha da semana nº X”) para quem gostou de uma peça ir atrás da próxima."
+ ],
+ "auditoria": [
+  "Planejado na fila: **23** peças (1 carrossel, 1 reel, 21 story).",
+  "Publicadas: **11** · agendadas: 7 · sem aprovação: 0 · canceladas/vetadas: 4 · falhas: 0.",
+  "Publicações medidas no feed: 4 · stories medidos: 10 (stories só têm números por 24 h).",
+  "Mediana de alcance do feed nos últimos 30 dias: **611** contas (régua usada acima).",
+  "Métricas atualizadas em 2026-11-14 10:01."
+ ],
+ "top": [
+  {
+   "data": "2026-11-09",
+   "hora": "17:23",
+   "formato": "reel",
+   "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
+   "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
+   "reach": "8080",
+   "saved": "81",
+   "shares": "174"
+  },
+  {
+   "data": "2026-11-13",
+   "hora": "18:30",
+   "formato": "reel",
+   "legenda": "Lancha com menos de 12 metros: quais luzes ela pode exibir no lugar do conjunto padrão? Essa pegadinha derruba muita gente na prova de Arrais-Amador.  O mastro ",
+   "link": "https://www.instagram.com/reel/DfsmbgWthsA/",
+   "reach": "407",
+   "saved": "1",
+   "shares": "2"
+  },
+  {
+   "data": "2026-11-13",
+   "hora": "12:01",
+   "formato": "carrossel",
+   "legenda": "Entrando no porto, a boia encarnada fica de que lado? É uma das pegadinhas que mais derrubam candidato na prova de Arrais-Amador.  No Brasil vale o sistema IALA",
+   "link": "https://www.instagram.com/p/Dfr59xdF9nh/",
+   "reach": "292",
+   "saved": "2",
+   "shares": "3"
+  },
+  {
+   "data": "2026-11-10",
+   "hora": "20:35",
+   "formato": "reel",
+   "legenda": "Acesse o link na bio e prepare-se pra passar de primeira na prova de Arrais-Amador e Motonauta! 🚤🌊",
+   "link": "https://www.instagram.com/reel/DflF8NVOdSy/",
+   "reach": "215",
+   "saved": "0",
+   "shares": "0"
+  }
+ ]
+}

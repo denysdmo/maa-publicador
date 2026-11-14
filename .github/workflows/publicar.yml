@@ -44,7 +44,7 @@ jobs:
         run: |
           s=$(date +%G-%V)
           if [ "$(date +%u)" = "1" ] && [ "$(date +%H)" -ge 9 ] && [ -f metricas/resumo.json ] && [ ! -f "metricas/relatorio-$s.md" ]; then
-            python relatorio.py > "metricas/relatorio-$s.md" && gh issue create --assignee denysdmo --title "Relatório do Instagram: semana $(date -d 'last sunday' +%d/%m)" --body-file "metricas/relatorio-$s.md" || true
+            python relatorio.py --salvar > "metricas/relatorio-$s.md" && gh issue create --assignee denysdmo --title "Relatório do Instagram: semana $(date -d 'last sunday' +%d/%m)" --body-file "metricas/relatorio-$s.md" || true
           fi
       - name: Salva o status da fila
         run: |
