@@ -17,6 +17,7 @@
     --fundo: #04122B; --painel: #0A2A5E; --cartao: #0E2350; --linha: rgba(127,178,255,0.18);
     --texto: #FFFFFF; --suave: rgba(255,255,255,0.7); --ouro: #E2B33C; --ciano: #3EE6FF;
     --ok: #22B573; --pend: #4FA3E0; --rasc: #8A93A6; --erro: #E5484D; --canc: #5B6478;
+    --st-agendado: #2BD47D; --st-aguarda: #FFB020; --st-publicado: #9DB4D6; /* status bem diferentes (14/11) */
     --t-story: #3EE6FF; --t-post: #B48CFF; --t-carrossel: #FF9F43; --t-reel: #FF5C8A; /* faixa lateral = tipo (14/11) */
   }
   * { box-sizing: border-box; }
@@ -60,6 +61,9 @@
   .tipo { font-weight: 800; font-size: 12px; color: var(--suave); text-transform: uppercase; letter-spacing: 1px; }
   .status { margin-top: 4px; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
   .status a { color: var(--ciano); text-decoration: none; }
+  .pill { display: inline-block; padding: 3px 9px; border-radius: 99px; color: #04122B; font-size: 10px; font-weight: 900; letter-spacing: 0.8px; }
+  .post.aguarda { box-shadow: inset 0 0 0 2px rgba(255,176,32,0.75); }
+  .post.agendado { box-shadow: inset 0 0 0 1px rgba(43,212,125,0.35); }
   .nota { font-size: 11px; color: var(--suave); margin-top: 3px; word-break: break-word; }
   .manual { border-left: 7px dashed var(--t-story); background: linear-gradient(90deg, rgba(62,230,255,0.16), rgba(62,230,255,0.04) 60%); padding: 6px 10px; }
   .manual { display: flex; gap: 10px; cursor: pointer; }
@@ -204,9 +208,9 @@
 </div>
 <script>
 const STATUS = {
-  publicado: { cor: "var(--ok)", txt: "Publicado" },
-  pendente: { cor: "var(--pend)", txt: "Agendado" },
-  rascunho: { cor: "var(--rasc)", txt: "Aguardando sua aprovação" },
+  publicado: { cor: "var(--st-publicado)", txt: "Publicado", ic: "✔ " },
+  pendente: { cor: "var(--st-agendado)", txt: "Agendado", ic: "✓ " },
+  rascunho: { cor: "var(--st-aguarda)", txt: "Aguardando sua aprovação", ic: "⏳ " },
   erro: { cor: "var(--erro)", txt: "Falhou" },
   atrasado: { cor: "var(--erro)", txt: "Não saiu (atrasado)" },
   cancelado: { cor: "var(--canc)", txt: "Cancelado" },
@@ -265,13 +269,14 @@ function cartao(p) {
   const h = String(p.data.getHours()).padStart(2, "0") + ":" + String(p.data.getMinutes()).padStart(2, "0");
   const n = (p.arquivos || "").split("|").filter((x) => x.trim()).length;
   const tipo = etqTipo(p.tipo) + (p.tipo === "carrossel" ? n + " slides" : "");
-  let st = s.txt;
-  if (p.status === "publicado" && /^https?:/.test(p.resultado)) st = '<a href="' + p.resultado + '" target="_blank" rel="noopener">Publicado · ver ↗</a>';
+  let st = '<span class="pill" style="background:' + s.cor + '">' + (s.ic || "") + s.txt + "</span>";
+  if (p.status === "publicado" && /^https?:/.test(p.resultado)) st += ' <a href="' + p.resultado + '" target="_blank" rel="noopener">ver ↗</a>';
   const nota = (p.status === "erro" || p.status === "atrasado") && p.resultado ? '<div class="nota">' + p.resultado.replace(/</g, "&lt;") + "</div>" : "";
   const abrir = p.status === "publicado" ? "" : '<div class="abrir">Toque para ver ›</div>';
   const v = versao(p);
   const cancela = p.status === "pendente" ? '<button class="cancela" data-cancela="' + fila.indexOf(p) + '">↩ Cancelar agendamento</button>' : "";
-  return '<div class="post" data-i="' + fila.indexOf(p) + '" style="border-left-color:' + corTipo(p.tipo) + ';background:' + fundoTipo(p.tipo) + '">' + mini(p) + '<div class="info"><div class="hora">' + h + '</div><div class="tipo">' + tipo + (v ? '<span class="versao">VERSÃO ' + v + "</span>" : "") + '</div><div class="status" style="color:' + s.cor + '">' + st + "</div>" + nota + abrir + cancela + "</div></div>";
+  const classe = p.status === "rascunho" ? " aguarda" : p.status === "pendente" ? " agendado" : "";
+  return '<div class="post' + classe + '" data-i="' + fila.indexOf(p) + '" style="border-left-color:' + corTipo(p.tipo) + ';background:' + fundoTipo(p.tipo) + '">' + mini(p) + '<div class="info"><div class="hora">' + h + '</div><div class="tipo">' + tipo + (v ? '<span class="versao">VERSÃO ' + v + "</span>" : "") + '</div><div class="status">' + st + "</div>" + nota + abrir + cancela + "</div></div>";
 }
 
 // arte do CTA do dia: mesma rotação do aviso do GitHub (cta.yml): 14 artes a partir de 12/11/2026
@@ -356,7 +361,7 @@ async function mostrar() {
   const arqs = (p.arquivos || "").split("|").map((x) => x.trim()).filter(Boolean);
   const v = p.cta ? 0 : versao(p);
   const tipo = (v ? "Versão " + v + " · " : "") + (p.cta ? "Story de CTA (manual)" : (TIPO[p.tipo] || p.tipo) + (p.tipo === "carrossel" ? " · " + arqs.length + " slides (deslize)" : ""));
-  document.getElementById("vtitulo").innerHTML = '<div class="hora">' + nomeDia(p.data) + " " + dd(p.data) + " · " + hhmm(p.data) + '</div><div class="tipo">' + esc(tipo) + '</div><div class="status" style="color:' + s.cor + '">' + esc(s.txt) + "</div>";
+  document.getElementById("vtitulo").innerHTML = '<div class="hora">' + nomeDia(p.data) + " " + dd(p.data) + " · " + hhmm(p.data) + '</div><div class="tipo">' + esc(tipo) + '</div><div class="status">' + (p.cta ? '<span style="color:' + s.cor + '">' + esc(s.txt) + "</span>" : '<span class="pill" style="background:' + s.cor + '">' + (s.ic || "") + esc(s.txt) + "</span>") + "</div>";
   const m = document.getElementById("vmidia");
   if (p.status === "publicado") {
     const link = /^https?:/.test(p.resultado) ? '<br><br><a href="' + esc(p.resultado) + '" target="_blank" rel="noopener">Ver no Instagram ↗</a>' : "";
