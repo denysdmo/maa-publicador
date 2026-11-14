@@ -697,12 +697,13 @@ function blocoUTM() {
   const base = lerLS("maa_link_bio", "https://meuarraisamador.com.br/rvd");
   const sem = semanaISO(new Date());
   const hojeS = new Date().toISOString().slice(0, 10);
-  const links = [["Link da bio (troque toda segunda)", "bio", sem], ["Figurinha de link nos stories", "story", sem + "&utm_content=" + hojeS], ["Resposta no direct", "dm", sem]];
+  // 14/11: campanha fixa "perfil" (o Denys não quer trocar o link toda semana; o app já separa por data)
+  const links = [["Link da bio (fixo, não precisa trocar)", "bio", "perfil"], ["Figurinha de link nos stories", "story", "perfil&utm_content=" + hojeS], ["Resposta no direct", "dm", "perfil"]];
   const monta = (m, c) => { const u = base.trim(); return u + (u.includes("?") ? "&" : "?") + "utm_source=instagram&utm_medium=" + m + "&utm_campaign=" + c; };
   return '<div class="bloco utm"><h3>Links com UTM (para a venda contar como Instagram)</h3><div class="sub">Endereço da página do vídeo (confira e corrija se for outro):</div>'
     + '<input id="linkBio" value="' + esc(base) + '" inputmode="url" autocomplete="off">'
     + links.map(([t, m, c]) => '<div class="sub" style="margin-top:8px">' + t + '</div><div class="ulink"><code>' + esc(monta(m, c)) + '</code><button class="copiar" data-u="' + esc(monta(m, c)) + '">Copiar</button></div>').join("")
-    + '<div class="sub" style="margin-top:8px">Padrão: <code>utm_source=instagram</code> · <code>utm_medium</code> = bio, story ou dm · <code>utm_campaign</code> = semana (' + sem + ').</div></div>';
+    + '<div class="sub" style="margin-top:8px">Padrão: <code>utm_source=instagram</code> · <code>utm_medium</code> = bio, story ou dm · <code>utm_campaign=perfil</code>.</div></div>';
 }
 function passosConfig(f) {
   const vt = (f.vturb || {}).status, kw = (f.kiwify || {}).status;
