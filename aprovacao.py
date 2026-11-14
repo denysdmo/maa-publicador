@@ -2,9 +2,12 @@
 (botão "Aprovar" / "Vetar" da agenda). O corpo do issue traz uma linha por post:
     aprovar: midia/2026-11-13/1-sexta-manha-1-quiz.jpg
     vetar: midia/2026-11-13/2-sabado-manha-2-quiz.jpg
-O post é achado pelo primeiro arquivo da linha em fila.csv. Só mexe em quem está "rascunho":
-  aprovar → "pendente" (agendado; o publicador posta no horário)
-  vetar   → "cancelado"
+    cancelar: midia/2026-11-16/3-quarta-manha-1-quiz.jpg
+O post é achado pelo primeiro arquivo da linha em fila.csv.
+  aprovar  → só "rascunho" vira "pendente" (agendado; o publicador posta no horário)
+  vetar    → só "rascunho" vira "cancelado"
+  cancelar → só "pendente" volta a "rascunho" (botão "Cancelar agendamento", 14/11/2026); a outra versão que tinha
+             sido cancelada por causa dessa aprovação também volta a "rascunho"
 Versões: se dois rascunhos têm o mesmo horário e o mesmo tipo (ex.: v1 e v2 de um story), aprovar um cancela o outro.
 Imprime o resumo (vai para o comentário do issue)."""
 import csv, os, re, sys
@@ -14,7 +17,7 @@ FILA = os.path.join(AQUI, "fila.csv")
 CAMPOS = ["quando", "tipo", "arquivos", "legenda", "status", "resultado"]
 
 corpo = sys.stdin.read()
-pedidos = [(m.group(1).lower(), m.group(2).strip()) for m in re.finditer(r"^\s*(aprovar|vetar)\s*:\s*(\S+)\s*$", corpo, re.M | re.I)]
+pedidos = [(m.group(1).lower(), m.group(2).strip()) for m in re.finditer(r"^\s*(aprovar|vetar|cancelar)\s*:\s*(\S+)\s*$", corpo, re.M | re.I)]
 with open(FILA, encoding="utf-8-sig", newline="") as f:
     linhas = list(csv.DictReader(f))
 primeiro = lambda l: l["arquivos"].split("|")[0].strip()
@@ -24,6 +27,17 @@ for acao, arq in pedidos:
     l = next((x for x in linhas if primeiro(x) == arq), None)
     if not l:
         saida.append(f"- ⚠️ não achei `{arq}` na fila")
+        continue
+    if acao == "cancelar":
+        if l["status"] != "pendente":
+            saida.append(f"- {nome(l)}: estava **{l['status']}** (não agendado), não mudei")
+            continue
+        l["status"], l["resultado"] = "rascunho", ""
+        saida.append(f"- ↩️ {nome(l)}: agendamento cancelado, voltou para aprovação")
+        for o in linhas:
+            if o is not l and o["status"] == "cancelado" and o["resultado"] == "outra versão foi aprovada" and o["quando"] == l["quando"] and o["tipo"] == l["tipo"]:
+                o["status"], o["resultado"] = "rascunho", ""
+                saida.append(f"  - a outra versão ({os.path.basename(primeiro(o))}) também voltou para aprovação")
         continue
     if l["status"] != "rascunho":
         saida.append(f"- {nome(l)}: já estava **{l['status']}**, não mudei")

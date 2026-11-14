@@ -17,6 +17,7 @@
     --fundo: #04122B; --painel: #0A2A5E; --cartao: #0E2350; --linha: rgba(127,178,255,0.18);
     --texto: #FFFFFF; --suave: rgba(255,255,255,0.7); --ouro: #E2B33C; --ciano: #3EE6FF;
     --ok: #22B573; --pend: #4FA3E0; --rasc: #8A93A6; --erro: #E5484D; --canc: #5B6478;
+    --t-story: #3EE6FF; --t-post: #B48CFF; --t-carrossel: #FF9F43; --t-reel: #FF5C8A; /* faixa lateral = tipo (14/11) */
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: radial-gradient(ellipse 120% 60% at 50% 0%, #12407F 0%, var(--fundo) 60%); background-attachment: fixed; color: var(--texto); font-family: Nunito, system-ui, sans-serif; min-height: 100vh; }
@@ -59,7 +60,7 @@
   .status { margin-top: 4px; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
   .status a { color: var(--ciano); text-decoration: none; }
   .nota { font-size: 11px; color: var(--suave); margin-top: 3px; word-break: break-word; }
-  .manual { border-left-color: var(--ouro); background: rgba(226,179,60,0.10); padding: 6px 10px; }
+  .manual { border-left: 4px dashed var(--t-story); background: rgba(62,230,255,0.06); padding: 6px 10px; }
   .manual { display: flex; gap: 10px; cursor: pointer; }
   .manual .tipo { text-transform: none; letter-spacing: 0; }
   .vazio { color: var(--suave); font-size: 13px; padding: 6px 2px; }
@@ -145,6 +146,10 @@
   .vdecide button { font-size: 15px; padding: 12px 22px; }
   button.aprova { background: var(--ok); border-color: var(--ok); color: #fff; }
   button.veta { background: transparent; border-color: var(--erro); color: #ffb3b5; }
+  button.cancela { background: transparent; border-color: rgba(255,255,255,0.35); color: #fff; }
+  .post button.cancela { margin-top: 6px; padding: 5px 10px; font-size: 12px; border-radius: 99px; }
+  .tipos { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; font-size: 12px; color: var(--suave); }
+  .tipos i { display: inline-block; width: 4px; height: 14px; border-radius: 2px; margin-right: 6px; vertical-align: -2px; }
   .versao { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 99px; background: var(--ciano); color: #04122B; font-size: 10px; font-weight: 900; letter-spacing: 0.5px; }
   @media (max-width: 900px) {
     main { grid-template-columns: 1fr; }
@@ -172,6 +177,7 @@
       <div class="pendbot"><button id="revisar" class="destaque">▶ Ver um por um</button><button id="aprovartodos" class="aprova"></button></div>
     </div>
     <div class="resumo" id="resumo"></div>
+    <div class="tipos" id="tipos"></div>
   </div>
 </header>
 <main id="grade"></main>
@@ -187,6 +193,7 @@
   <div class="vdecide" id="vdecide" hidden>
     <button class="aprova" id="vaprova">✅ Aprovar este</button>
     <button class="veta" id="vveta">❌ Vetar</button>
+    <button class="cancela" id="vcancela">↩ Cancelar agendamento</button>
   </div>
   <div class="vbase">
     <button id="vant">‹ Anterior</button>
@@ -204,6 +211,7 @@ const STATUS = {
   cancelado: { cor: "var(--canc)", txt: "Cancelado" },
 };
 const TIPO = { story: "Story", post: "Post", carrossel: "Carrossel", reel: "Reel" };
+const corTipo = (t) => "var(--t-" + (TIPO[t] ? t : "post") + ")";
 const DIAS = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
 let fila = [];
 let inicio = segunda(new Date());
@@ -258,7 +266,8 @@ function cartao(p) {
   const nota = (p.status === "erro" || p.status === "atrasado") && p.resultado ? '<div class="nota">' + p.resultado.replace(/</g, "&lt;") + "</div>" : "";
   const abrir = p.status === "publicado" ? "" : '<div class="abrir">Toque para ver ›</div>';
   const v = versao(p);
-  return '<div class="post" data-i="' + fila.indexOf(p) + '" style="border-left-color:' + s.cor + '">' + mini(p) + '<div class="info"><div class="hora">' + h + '</div><div class="tipo">' + tipo + (v ? '<span class="versao">VERSÃO ' + v + "</span>" : "") + '</div><div class="status" style="color:' + s.cor + '">' + st + "</div>" + nota + abrir + "</div></div>";
+  const cancela = p.status === "pendente" ? '<button class="cancela" data-cancela="' + fila.indexOf(p) + '">↩ Cancelar agendamento</button>' : "";
+  return '<div class="post" data-i="' + fila.indexOf(p) + '" style="border-left-color:' + corTipo(p.tipo) + '">' + mini(p) + '<div class="info"><div class="hora">' + h + '</div><div class="tipo">' + tipo + (v ? '<span class="versao">VERSÃO ' + v + "</span>" : "") + '</div><div class="status" style="color:' + s.cor + '">' + st + "</div>" + nota + abrir + cancela + "</div></div>";
 }
 
 // arte do CTA do dia: mesma rotação do aviso do GitHub (cta.yml): 14 artes a partir de 12/11/2026
@@ -282,16 +291,23 @@ const CHAVE = "maa-chave-github";
 function lerChave() { try { return localStorage.getItem(CHAVE) || ""; } catch (e) { return ""; } }
 function pedir(acao, itens) {
   const linhas = itens.map((p) => acao + ": " + primeiroArq(p)).join("\n");
-  const titulo = (acao === "aprovar" ? "Aprova" + (itens.length > 1 ? "r " + itens.length + " posts" : "r post de " + dd(itens[0].data) + " " + hhmm(itens[0].data)) : "Aprovação: vetar " + itens.length + " post" + (itens.length > 1 ? "s" : ""));
+  const titulo = acao === "aprovar" ? "Aprova" + (itens.length > 1 ? "r " + itens.length + " posts" : "r post de " + dd(itens[0].data) + " " + hhmm(itens[0].data))
+    : acao === "cancelar" ? "Aprovação: cancelar agendamento de " + dd(itens[0].data) + " " + hhmm(itens[0].data)
+    : "Aprovação: vetar " + itens.length + " post" + (itens.length > 1 ? "s" : "");
+  const T = {
+    aprovar: { tit: itens.length > 1 ? "Aprovar " + itens.length + " posts?" : "Aprovar este post?", sim: "Aprovar", nao: "Não aprovar", ok: "✅ Aprovado" },
+    vetar: { tit: itens.length > 1 ? "Vetar " + itens.length + " posts?" : "Vetar este post?", sim: "Vetar", nao: "Cancelar", ok: "❌ Vetado" },
+    cancelar: { tit: "Cancelar o agendamento?", sim: "Cancelar agendamento", nao: "Voltar", ok: "↩ Agendamento cancelado" },
+  }[acao];
   const cx = document.getElementById("confirma");
   const precisaChave = !lerChave();
-  document.getElementById("ctit").textContent = acao === "aprovar" ? (itens.length > 1 ? "Aprovar " + itens.length + " posts?" : "Aprovar este post?") : (itens.length > 1 ? "Vetar " + itens.length + " posts?" : "Vetar este post?");
-  document.getElementById("csub").innerHTML = itens.length === 1 ? esc(nomeDia(itens[0].data) + " " + dd(itens[0].data) + " · " + hhmm(itens[0].data)) : "";
+  document.getElementById("ctit").textContent = T.tit;
+  document.getElementById("csub").innerHTML = (itens.length === 1 ? esc(nomeDia(itens[0].data) + " " + dd(itens[0].data) + " · " + hhmm(itens[0].data)) : "") + (acao === "cancelar" ? "<br>Ele não será postado e volta para “Aguardando sua aprovação”." : "");
   if (precisaChave) document.getElementById("csub").innerHTML += '<br><br>Primeira vez neste aparelho: cole a chave do GitHub. <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Criar chave</a> (repositório maa-publicador, permissão Issues: leitura e escrita).';
   document.getElementById("cchave").hidden = !precisaChave;
   const sim = document.getElementById("csim"); sim.hidden = false; sim.disabled = false;
-  sim.textContent = acao === "aprovar" ? "Aprovar" : "Vetar";
-  document.getElementById("cnao").textContent = acao === "aprovar" ? "Não aprovar" : "Cancelar";
+  sim.textContent = T.sim;
+  document.getElementById("cnao").textContent = T.nao;
   cx.classList.add("aberto");
   document.getElementById("cnao").onclick = () => cx.classList.remove("aberto");
   sim.onclick = async () => {
@@ -302,14 +318,14 @@ function pedir(acao, itens) {
       const r = await fetch("https://api.github.com/repos/denysdmo/maa-publicador/issues", { method: "POST", headers: { Authorization: "Bearer " + chave, Accept: "application/vnd.github+json" }, body: JSON.stringify({ title: titulo, body: "Enviado pelo app.\n\n" + linhas }) });
       if (r.status === 401 || r.status === 403 || r.status === 404) { try { localStorage.removeItem(CHAVE); } catch (e) {} throw new Error("chave"); }
       if (!r.ok) throw new Error("http " + r.status);
-      document.getElementById("ctit").textContent = acao === "aprovar" ? "✅ Aprovado" : "❌ Vetado";
+      document.getElementById("ctit").textContent = T.ok;
       document.getElementById("csub").textContent = "A agenda atualiza em cerca de 1 minuto.";
       document.getElementById("cchave").hidden = true;
       setTimeout(() => { cx.classList.remove("aberto"); location.reload(); }, 60000);
       sim.hidden = true; document.getElementById("cnao").textContent = "Fechar";
     } catch (e) {
       document.getElementById("csub").textContent = e.message === "chave" ? "A chave não funcionou. Toque de novo e cole uma chave válida." : "Não consegui enviar agora. Tente de novo.";
-    } finally { sim.disabled = false; if (!sim.hidden) sim.textContent = acao === "aprovar" ? "Aprovar" : "Vetar"; }
+    } finally { sim.disabled = false; if (!sim.hidden) sim.textContent = T.sim; }
   };
 }
 
@@ -352,7 +368,9 @@ async function mostrar() {
   document.getElementById("vcont").textContent = pos + 1 + " de " + lista.length;
   document.getElementById("vant").disabled = pos === 0;
   document.getElementById("vprox").disabled = pos === lista.length - 1;
-  document.getElementById("vdecide").hidden = p.cta || p.status !== "rascunho";
+  document.getElementById("vdecide").hidden = p.cta || (p.status !== "rascunho" && p.status !== "pendente");
+  document.getElementById("vaprova").hidden = document.getElementById("vveta").hidden = p.status !== "rascunho";
+  document.getElementById("vcancela").hidden = p.status !== "pendente";
   document.getElementById("vaprova").textContent = v ? "✅ Escolher a versão " + v : "✅ Aprovar este";
   document.getElementById("vbaixar").hidden = p.status === "publicado" || !arqs.length;
   const leg = document.getElementById("vlegenda");
@@ -376,6 +394,8 @@ document.getElementById("grade").addEventListener("click", (e) => {
     if (c) abrirVisor([c], 0);
     return;
   }
+  const bc = e.target.closest("button[data-cancela]");
+  if (bc) { pedir("cancelar", [fila[+bc.dataset.cancela]]); return; }
   const c = e.target.closest(".post[data-i]");
   if (!c || e.target.closest("a")) return;
   const p = fila[+c.dataset.i];
@@ -390,6 +410,7 @@ document.getElementById("revisar").onclick = () => {
 document.getElementById("vfechar").onclick = fecharVisor;
 document.getElementById("vaprova").onclick = () => pedir("aprovar", [lista[pos]]);
 document.getElementById("vveta").onclick = () => pedir("vetar", [lista[pos]]);
+document.getElementById("vcancela").onclick = () => pedir("cancelar", [lista[pos]]);
 document.getElementById("aprovartodos").onclick = () => {
   const r = fila.filter((p) => p.status === "rascunho" && !versao(p)).sort((a, b) => a.data - b.data);
   const comVersao = fila.filter((p) => p.status === "rascunho" && versao(p)).length;
@@ -456,6 +477,7 @@ function desenhar() {
   const at = document.getElementById("aprovartodos");
   at.hidden = !semVersao.length;
   at.textContent = rasc > semVersao.length ? "✅ Aprovar " + semVersao.length + " (as versões 1/2 você escolhe)" : "✅ Aprovar todos";
+  document.getElementById("tipos").innerHTML = ["story", "post", "carrossel", "reel"].map((t) => '<span><i style="background:' + corTipo(t) + '"></i>' + TIPO[t] + "</span>").join("");
   document.getElementById("resumo").innerHTML = ["publicado", "pendente", "rascunho", "erro"].map((k) => '<span class="chip"><i style="background:' + STATUS[k].cor + '"></i>' + STATUS[k].txt.split(" ")[0] + ": " + conta(k) + "</span>").join("");
   const hoje = new Date();
   let html = "";
