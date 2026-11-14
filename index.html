@@ -51,7 +51,8 @@
   .dia.hoje { border-color: var(--ouro); box-shadow: 0 0 0 1px var(--ouro) inset; }
   .dia h2 { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin: 2px 2px 10px; color: var(--suave); display: flex; justify-content: space-between; }
   .dia.hoje h2 { color: var(--ouro); }
-  .post { display: flex; gap: 10px; background: var(--cartao); border-radius: 12px; padding: 8px; margin-bottom: 8px; border-left: 4px solid var(--rasc); }
+  .post { display: flex; gap: 10px; background: var(--cartao); border-radius: 12px; padding: 8px; margin-bottom: 8px; border-left: 7px solid var(--rasc); }
+  .etq { display: inline-block; padding: 2px 8px; border-radius: 99px; color: #04122B; font-size: 10px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; margin-right: 6px; vertical-align: 1px; }
   .post .mini { flex: none; width: 54px; height: 72px; border-radius: 8px; background: #061A3A center/cover no-repeat; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--suave); }
   .post .mini video { width: 100%; height: 100%; object-fit: cover; }
   .post .info { min-width: 0; flex: 1; }
@@ -60,7 +61,7 @@
   .status { margin-top: 4px; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
   .status a { color: var(--ciano); text-decoration: none; }
   .nota { font-size: 11px; color: var(--suave); margin-top: 3px; word-break: break-word; }
-  .manual { border-left: 4px dashed var(--t-story); background: rgba(62,230,255,0.06); padding: 6px 10px; }
+  .manual { border-left: 7px dashed var(--t-story); background: linear-gradient(90deg, rgba(62,230,255,0.16), rgba(62,230,255,0.04) 60%); padding: 6px 10px; }
   .manual { display: flex; gap: 10px; cursor: pointer; }
   .manual .tipo { text-transform: none; letter-spacing: 0; }
   .vazio { color: var(--suave); font-size: 13px; padding: 6px 2px; }
@@ -148,8 +149,8 @@
   button.veta { background: transparent; border-color: var(--erro); color: #ffb3b5; }
   button.cancela { background: transparent; border-color: rgba(255,255,255,0.35); color: #fff; }
   .post button.cancela { margin-top: 6px; padding: 5px 10px; font-size: 12px; border-radius: 99px; }
-  .tipos { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; font-size: 12px; color: var(--suave); }
-  .tipos i { display: inline-block; width: 4px; height: 14px; border-radius: 2px; margin-right: 6px; vertical-align: -2px; }
+  .tipos { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tipos .etq { font-size: 11px; padding: 4px 12px; }
   .versao { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 99px; background: var(--ciano); color: #04122B; font-size: 10px; font-weight: 900; letter-spacing: 0.5px; }
   @media (max-width: 900px) {
     main { grid-template-columns: 1fr; }
@@ -212,6 +213,9 @@ const STATUS = {
 };
 const TIPO = { story: "Story", post: "Post", carrossel: "Carrossel", reel: "Reel" };
 const corTipo = (t) => "var(--t-" + (TIPO[t] ? t : "post") + ")";
+const RGB = { story: "62,230,255", post: "180,140,255", carrossel: "255,159,67", reel: "255,92,138" };
+const fundoTipo = (t) => "linear-gradient(90deg, rgba(" + (RGB[t] || RGB.post) + ",0.20), rgba(" + (RGB[t] || RGB.post) + ",0.04) 60%), var(--cartao)";
+const etqTipo = (t, txt) => '<span class="etq" style="background:' + corTipo(t) + '">' + (txt || TIPO[t] || t) + "</span>";
 const DIAS = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
 let fila = [];
 let inicio = segunda(new Date());
@@ -260,14 +264,14 @@ function cartao(p) {
   const s = STATUS[p.status] || { cor: "var(--rasc)", txt: p.status || "—" };
   const h = String(p.data.getHours()).padStart(2, "0") + ":" + String(p.data.getMinutes()).padStart(2, "0");
   const n = (p.arquivos || "").split("|").filter((x) => x.trim()).length;
-  const tipo = (TIPO[p.tipo] || p.tipo) + (p.tipo === "carrossel" ? " · " + n + " slides" : "");
+  const tipo = etqTipo(p.tipo) + (p.tipo === "carrossel" ? n + " slides" : "");
   let st = s.txt;
   if (p.status === "publicado" && /^https?:/.test(p.resultado)) st = '<a href="' + p.resultado + '" target="_blank" rel="noopener">Publicado · ver ↗</a>';
   const nota = (p.status === "erro" || p.status === "atrasado") && p.resultado ? '<div class="nota">' + p.resultado.replace(/</g, "&lt;") + "</div>" : "";
   const abrir = p.status === "publicado" ? "" : '<div class="abrir">Toque para ver ›</div>';
   const v = versao(p);
   const cancela = p.status === "pendente" ? '<button class="cancela" data-cancela="' + fila.indexOf(p) + '">↩ Cancelar agendamento</button>' : "";
-  return '<div class="post" data-i="' + fila.indexOf(p) + '" style="border-left-color:' + corTipo(p.tipo) + '">' + mini(p) + '<div class="info"><div class="hora">' + h + '</div><div class="tipo">' + tipo + (v ? '<span class="versao">VERSÃO ' + v + "</span>" : "") + '</div><div class="status" style="color:' + s.cor + '">' + st + "</div>" + nota + abrir + cancela + "</div></div>";
+  return '<div class="post" data-i="' + fila.indexOf(p) + '" style="border-left-color:' + corTipo(p.tipo) + ';background:' + fundoTipo(p.tipo) + '">' + mini(p) + '<div class="info"><div class="hora">' + h + '</div><div class="tipo">' + tipo + (v ? '<span class="versao">VERSÃO ' + v + "</span>" : "") + '</div><div class="status" style="color:' + s.cor + '">' + st + "</div>" + nota + abrir + cancela + "</div></div>";
 }
 
 // arte do CTA do dia: mesma rotação do aviso do GitHub (cta.yml): 14 artes a partir de 12/11/2026
@@ -477,7 +481,7 @@ function desenhar() {
   const at = document.getElementById("aprovartodos");
   at.hidden = !semVersao.length;
   at.textContent = rasc > semVersao.length ? "✅ Aprovar " + semVersao.length + " (as versões 1/2 você escolhe)" : "✅ Aprovar todos";
-  document.getElementById("tipos").innerHTML = ["story", "post", "carrossel", "reel"].map((t) => '<span><i style="background:' + corTipo(t) + '"></i>' + TIPO[t] + "</span>").join("");
+  document.getElementById("tipos").innerHTML = ["story", "post", "carrossel", "reel"].map((t) => etqTipo(t)).join("");
   document.getElementById("resumo").innerHTML = ["publicado", "pendente", "rascunho", "erro"].map((k) => '<span class="chip"><i style="background:' + STATUS[k].cor + '"></i>' + STATUS[k].txt.split(" ")[0] + ": " + conta(k) + "</span>").join("");
   const hoje = new Date();
   let html = "";
@@ -485,7 +489,7 @@ function desenhar() {
     const d = new Date(inicio); d.setDate(d.getDate() + i);
     const posts = daSemana.filter((p) => mesmoDia(p.data, d)).sort((a, b) => a.data - b.data);
     const c = ctaDoDia(d);
-    const manual = '<div class="post manual" data-cta="' + i + '">' + (c ? '<div class="mini" style="background-image:url(' + c.arquivos + ')"></div>' : "") + '<div class="info"><div class="hora">20:00 · CTA com link</div><div class="tipo">Você posta no app, com o sticker de link</div>' + (c ? '<div class="abrir">Toque para ver e baixar ›</div>' : "") + "</div></div>";
+    const manual = '<div class="post manual" data-cta="' + i + '">' + (c ? '<div class="mini" style="background-image:url(' + c.arquivos + ')"></div>' : "") + '<div class="info"><div class="hora">20:00 · CTA com link</div><div class="tipo">' + etqTipo("story") + 'Você posta, com o sticker de link</div>' + (c ? '<div class="abrir">Toque para ver e baixar ›</div>' : "") + "</div></div>";
     html += '<section class="dia' + (mesmoDia(d, hoje) ? " hoje" : "") + '"><h2><span>' + DIAS[d.getDay()] + "</span><span>" + dd(d) + "</span></h2>" + (posts.length ? posts.map(cartao).join("") : '<div class="vazio">Nada agendado</div>') + manual + "</section>";
   }
   document.getElementById("grade").innerHTML = html;
