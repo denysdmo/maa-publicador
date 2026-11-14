@@ -124,6 +124,7 @@
   .rsec { margin-top: 12px; padding: 10px 12px; border-radius: 12px; background: rgba(255,255,255,0.04); border-left: 5px solid var(--suave); }
   .rsec h4 { margin: 0 0 6px; font-family: Montserrat, sans-serif; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
   .rsec ul, .rsec ol { margin: 0; padding-left: 18px; } .rsec li { margin: 5px 0; font-size: 14px; line-height: 1.45; }
+  .rbase { margin-top: 4px; font-size: 12.5px; line-height: 1.4; color: var(--sub, #9DB4D6); background: rgba(255,255,255,0.05); border-radius: 6px; padding: 4px 7px; }
   .rsec.certo { border-left-color: var(--st-agendado); } .rsec.errado { border-left-color: var(--erro); } .rsec.passos { border-left-color: var(--ouro); } .rsec.audit { border-left-color: var(--t-story); }
   .resp { margin-top: 12px; } .resp summary { cursor: pointer; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 14px; color: var(--ouro); padding: 6px 0; }
   .resp h4 { font-family: Montserrat, sans-serif; font-size: 14px; margin: 14px 0 4px; color: #fff; } .resp p, .resp li { font-size: 14px; line-height: 1.5; color: rgba(255,255,255,0.9); }
@@ -627,7 +628,9 @@ async function blocoRelatorio() {
     try { esp = await (await fetch("metricas/relatorios/" + w.ini + "-especialista.md?t=" + Date.now(), { cache: "no-store" })).text(); } catch (e) {}
   }
   const d = (iso) => iso.slice(8, 10) + "/" + iso.slice(5, 7);
-  const lst = (a) => "<ul>" + a.map((t) => "<li>" + esc(t).replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>") + "</li>").join("") + "</ul>";
+  const neg = (t) => esc(t).replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
+  // passo = {acao, base} (14/11: toda decisão com embasamento); textos antigos continuam strings
+  const lst = (a) => "<ul>" + a.map((t) => "<li>" + (t && typeof t === "object" ? neg(t.acao) + '<div class="rbase">📊 <b>Base:</b> ' + neg(t.base) + "</div>" : neg(t)) + "</li>").join("") + "</ul>";
   const nums = r.numeros.map((x) => {
     const dl = x.delta === null || x.delta === undefined ? "" : '<i class="' + (x.delta >= 0 ? "sobe" : "desce") + '">' + (x.delta >= 0 ? "▲ " : "▼ ") + Math.abs(x.delta) + "%</i>";
     return '<div class="rnum"><span>' + esc(x.rotulo) + "</span><b>" + fmt(x.valor) + "</b>" + dl + "</div>";

@@ -112,30 +112,49 @@ if num["Cliques no link da bio"]["valor"] == 0 and num["Visitas ao perfil"]["val
     errado.append("Ninguém clicou no link da bio mesmo com visitas ao perfil: o caminho até a venda está travado.")
 
 # ------------------------------------------------------------------ próximos passos (regras de especialista)
+# 14/11/2026, pedido do Denys: "nunca faça algo aleatório, a próxima decisão tem que ter embasamento". Cada passo é
+# {acao, base}: base = os números desta conta que justificam a decisão (valor, comparação e tamanho da amostra) e a
+# regra usada. Passo sem número que o sustente não entra; quando a amostra é pequena, ele vira TESTE com o que medir.
 passos = []
+P = lambda acao, base: passos.append({"acao": acao, "base": base})
+reels_m = [l for l in m if l["formato"] == "reel"]
 if ordem and n(ordem[0]["reach"]) / med >= 1.3:
-    passos.append(f"Repetir o **molde** do campeão ({FORMATO.get(ordem[0]['formato'], ordem[0]['formato'])}, “{tema(ordem[0])}”) com **outro ângulo** ou outro tema da prova. Repostar igual não funciona.")
+    c0 = ordem[0]
+    P(f"Repetir o **molde** do campeão ({FORMATO.get(c0['formato'], c0['formato'])}, “{tema(c0)}”) com **outro ângulo** ou outro tema da prova.",
+      f"{int(n(c0['reach']))} contas = {n(c0['reach']) / med:.1f}× a mediana de 30 dias ({int(med)}); {int(n(c0.get('shares')))} envios e {int(n(c0.get('saved')))} salvamentos. Regra: o que passa de 1,3× a mediana vira molde; repostar igual divide o público.")
 ph = {h: v for h, v in (resumo.get("por_hora") or {}).items() if v.get("posts", 0) >= 3}
-pf = resumo.get("por_formato") or {}
-if ph:
-    h = max(ph, key=lambda k: ph[k]["alcance"])
-    passos.append(f"Manter o carro-chefe no horário de melhor média: **{h}h** ({int(ph[h]['alcance'])} de alcance médio em {ph[h]['posts']} posts).")
-if pf:
-    f = max(pf, key=lambda k: pf[k]["alcance"])
-    passos.append(f"Formato com melhor alcance médio: **{FORMATO.get(f, f)}** ({int(pf[f]['alcance'])}). Garanta pelo menos 2 por semana.")
+pf = {f: v for f, v in (resumo.get("por_formato") or {}).items() if v.get("posts", 0) >= 3}
+if len(ph) >= 2:
+    h = max(ph, key=lambda k: ph[k]["alcance"]); o = sorted(ph, key=lambda k: -ph[k]["alcance"])[1]
+    P(f"Manter o carro-chefe às **{h}h**.",
+      f"Alcance médio às {h}h: {int(ph[h]['alcance'])} em {ph[h]['posts']} posts, contra {int(ph[o]['alcance'])} às {o}h (2º melhor, {ph[o]['posts']} posts). Só comparo horários com 3 posts ou mais.")
+if len(pf) >= 2:
+    f = max(pf, key=lambda k: pf[k]["alcance"]); o = sorted(pf, key=lambda k: -pf[k]["alcance"])[1]
+    P(f"Garantir pelo menos 2 **{FORMATO.get(f, f)}s** por semana.",
+      f"Alcance médio de {FORMATO.get(f, f)}: {int(pf[f]['alcance'])} ({pf[f]['posts']} peças), contra {int(pf[o]['alcance'])} de {FORMATO.get(o, o)} ({pf[o]['posts']} peças).")
 tx_comp = soma(m, "shares") / max(1, soma(m, "reach")) * 100
 if m and tx_comp < 1:
-    passos.append(f"Compartilhamento baixo ({tx_comp:.1f}% do alcance): colocar no **meio** dos reels o “manda pra quem vai fazer a prova” e pegadinhas para testar o amigo.")
-if num["Visitas ao perfil"]["valor"] and num["Cliques no link da bio"]["valor"] / max(1, num["Visitas ao perfil"]["valor"]) < 0.1:
-    passos.append("Menos de 10% das visitas ao perfil clicam no link: reforçar o CTA da bio e o 2º CTA na legenda (“questões assim, com explicação, no link da bio”).")
-if num["Novos seguidores"]["valor"] <= max(5, num["Novos seguidores"]["antes"] * 0.8):
-    passos.append("Seguidores andando devagar: abrir uma **série** (“Pegadinha da semana nº X”) para quem gostou de uma peça ir atrás da próxima.")
+    P("Colocar no **meio** dos reels o “manda pra quem vai fazer a prova” e pegadinhas para testar o amigo (teste: medir os envios do próximo reel).",
+      f"Envios = {tx_comp:.1f}% do alcance do feed na semana ({int(soma(m, 'shares'))} de {int(soma(m, 'reach'))}), abaixo da meta de 1%. Envio é o sinal que mais leva o perfil a quem não segue.")
+vis, cli = num["Visitas ao perfil"]["valor"], num["Cliques no link da bio"]["valor"]
+if vis >= 30 and cli / vis < 0.1:
+    P("Reforçar o CTA da bio e o 2º CTA na legenda (“questões assim, com explicação, no link da bio”).",
+      f"{cli} cliques no link em {vis} visitas ao perfil ({cli / vis * 100:.0f}%), abaixo da meta de 10%.")
+seg = num["Novos seguidores"]
+if seg["antes"] and seg["valor"] <= seg["antes"] * 0.8:
+    P("Testar uma **série** (“Pegadinha da semana nº X”) para quem gostou de uma peça ir atrás da próxima; medir seguidores na semana do teste.",
+      f"Novos seguidores: {seg['valor']} contra {seg['antes']} na semana anterior ({seg['delta']}%).")
 if perdidos:
-    passos.append("Aprovar a semana até domingo à noite no app (botão **Aprovar todos**) para nada ficar parado.")
+    P("Aprovar a semana até domingo à noite no app (botão **Aprovar todos**).", f"{len(perdidos)} peça(s) desta semana não saíram por falta de aprovação.")
 if falhas:
-    passos.append("Conferir as falhas de publicação (aviso no GitHub) e reagendar o que não saiu.")
+    P("Conferir as falhas de publicação (aviso no GitHub) e reagendar o que não saiu.", f"{len(falhas)} falha(s) de publicação registradas na fila nesta semana.")
 if not passos:
-    passos.append("Semana estável: manter o plano e testar 1 variável (gancho ou horário) no reel de maior alcance.")
+    P("Manter o plano e testar **1 variável** (gancho ou horário) no próximo reel.",
+      f"Nenhum gatilho de mudança: nenhuma peça passou de 1,3× nem caiu abaixo de 0,6× a mediana ({int(med)}), sem falhas e sem queda de seguidores. Mudar sem sinal seria aleatório; o teste isola 1 variável para ter base na próxima semana.")
+if len(reels_m) < 3:
+    auditoria_amostra = f"Amostra pequena: {len(reels_m)} reel(s) medidos na semana. Conclusões sobre formato só valem a partir de 3."
+else:
+    auditoria_amostra = None
 
 # ------------------------------------------------------------------ auditoria
 cont = lambda st: len([l for l in f_sem if l["status"] == st])
@@ -149,6 +168,8 @@ auditoria = [
     f"Mediana de alcance do feed nos últimos 30 dias: **{int(med)}** contas (régua usada acima).",
     f"Métricas atualizadas em {resumo.get('atualizado', '—')[:16].replace('T', ' ')}.",
 ]
+if auditoria_amostra:
+    auditoria.append(auditoria_amostra)
 if not c:
     auditoria.append("⚠️ Sem dados de conta para esta semana (a coleta ainda não rodou).")
 
@@ -179,6 +200,6 @@ def seta(x):
 md = [f"## Semana de {ini:%d/%m} a {fim:%d/%m}", "", f"Seguidores hoje: **{rel['seguidores']}**", ""]
 md += [f"- {x['rotulo']}: **{x['valor']}**{seta(x)}" for x in numeros] + [""]
 for titulo, k in (("✅ O que deu certo", "certo"), ("⚠️ O que deu errado", "errado"), ("➡️ Próximos passos", "passos"), ("🔎 Auditoria", "auditoria")):
-    md += [f"### {titulo}", ""] + [f"- {t}" for t in rel[k]] + [""]
+    md += [f"### {titulo}", ""] + [f"- {t['acao']}\n  - Base: {t['base']}" if isinstance(t, dict) else f"- {t}" for t in rel[k]] + [""]
 md.append("O relatório completo, com a análise do especialista, está na aba **Métricas** do app: https://denysdmo.github.io/maa-publicador/")
 print("\n".join(md))
