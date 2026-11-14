@@ -1,8 +1,1046 @@
 {
- "atualizado": "2026-11-14T17:19-03:00",
+ "atualizado": "2026-11-14T17:20-03:00",
  "vturb": {
-  "status": "erro",
-  "erro": "HTTP 400 [\"Start date must be a valid datetime with hours, minutes, and seconds\"]"
+  "status": "ok",
+  "players": [
+   {
+    "id": "6add517c76c006ae2950898e",
+    "nome": "VSL 1 - Definitivo.mp4"
+   },
+   {
+    "id": "6add51c5284cf97cef0a30d8",
+    "nome": "VSL 2 - Definitiva.mp4"
+   },
+   {
+    "id": "6aeefc59f5414e63722357f9",
+    "nome": "VSL Lead Ântonio.mp4"
+   },
+   {
+    "id": "6add524ac568899fb6587547",
+    "nome": "VSL 4 - Definitiva.mp4"
+   },
+   {
+    "id": "6aeefbce882703ca9fa7658f",
+    "nome": "VSL Lead Cansado.mp4"
+   }
+  ],
+  "dias": [
+   {
+    "data": "2026-11-14",
+    "plays": 47,
+    "views": 67,
+    "finalizados": 4,
+    "cliques": 2,
+    "acima_pitch": 13,
+    "conversoes": 1
+   },
+   {
+    "data": "2026-11-13",
+    "plays": 68,
+    "views": 105,
+    "finalizados": 7,
+    "cliques": 9,
+    "acima_pitch": 13,
+    "conversoes": 5
+   },
+   {
+    "data": "2026-11-12",
+    "plays": 44,
+    "views": 66,
+    "finalizados": 8,
+    "cliques": 6,
+    "acima_pitch": 10,
+    "conversoes": 2
+   },
+   {
+    "data": "2026-11-11",
+    "plays": 30,
+    "views": 49,
+    "finalizados": 4,
+    "cliques": 2,
+    "acima_pitch": 9,
+    "conversoes": 1
+   },
+   {
+    "data": "2026-11-10",
+    "plays": 45,
+    "views": 73,
+    "finalizados": 2,
+    "cliques": 13,
+    "acima_pitch": 11,
+    "conversoes": 3
+   },
+   {
+    "data": "2026-11-09",
+    "plays": 47,
+    "views": 65,
+    "finalizados": 5,
+    "cliques": 11,
+    "acima_pitch": 12,
+    "conversoes": 5
+   },
+   {
+    "data": "2026-11-08",
+    "plays": 31,
+    "views": 59,
+    "finalizados": 3,
+    "cliques": 2,
+    "acima_pitch": 4,
+    "conversoes": 2
+   },
+   {
+    "data": "2026-11-07",
+    "plays": 48,
+    "views": 77,
+    "finalizados": 0,
+    "cliques": 4,
+    "acima_pitch": 5,
+    "conversoes": 3
+   },
+   {
+    "data": "2026-11-06",
+    "plays": 19,
+    "views": 32,
+    "finalizados": 2,
+    "cliques": 3,
+    "acima_pitch": 4,
+    "conversoes": 0
+   },
+   {
+    "data": "2026-11-05",
+    "plays": 36,
+    "views": 49,
+    "finalizados": 1,
+    "cliques": 2,
+    "acima_pitch": 4,
+    "conversoes": 0
+   },
+   {
+    "data": "2026-11-04",
+    "plays": 27,
+    "views": 42,
+    "finalizados": 2,
+    "cliques": 7,
+    "acima_pitch": 8,
+    "conversoes": 1
+   },
+   {
+    "data": "2026-11-03",
+    "plays": 21,
+    "views": 36,
+    "finalizados": 1,
+    "cliques": 4,
+    "acima_pitch": 7,
+    "conversoes": 2
+   },
+   {
+    "data": "2026-11-02",
+    "plays": 16,
+    "views": 23,
+    "finalizados": 1,
+    "cliques": 5,
+    "acima_pitch": 6,
+    "conversoes": 1
+   },
+   {
+    "data": "2026-11-01",
+    "plays": 17,
+    "views": 29,
+    "finalizados": 0,
+    "cliques": 3,
+    "acima_pitch": 3,
+    "conversoes": 0
+   },
+   {
+    "data": "2026-10-31",
+    "plays": 13,
+    "views": 19,
+    "finalizados": 1,
+    "cliques": 2,
+    "acima_pitch": 2,
+    "conversoes": 0
+   },
+   {
+    "data": "2026-10-30",
+    "plays": 14,
+    "views": 21,
+    "finalizados": 0,
+    "cliques": 3,
+    "acima_pitch": 4,
+    "conversoes": 0
+   },
+   {
+    "data": "2026-10-29",
+    "plays": 9,
+    "views": 11,
+    "finalizados": 1,
+    "cliques": 1,
+    "acima_pitch": 1,
+    "conversoes": 0
+   },
+   {
+    "data": "2026-10-28",
+    "plays": 14,
+    "views": 22,
+    "finalizados": 3,
+    "cliques": 3,
+    "acima_pitch": 4,
+    "conversoes": 0
+   },
+   {
+    "data": "2026-10-27",
+    "plays": 7,
+    "views": 15,
+    "finalizados": 0,
+    "cliques": 0,
+    "acima_pitch": 0,
+    "conversoes": 0
+   },
+   {
+    "data": "2026-10-26",
+    "plays": 11,
+    "views": 15,
+    "finalizados": 0,
+    "cliques": 1,
+    "acima_pitch": 1,
+    "conversoes": 0
+   },
+   {
+    "data": "2026-10-25",
+    "plays": 0,
+    "views": 0,
+    "finalizados": 0,
+    "cliques": 0,
+    "acima_pitch": 0,
+    "conversoes": 0
+   },
+   {
+    "data": "2026-10-24",
+    "plays": 0,
+    "views": 0,
+    "finalizados": 0,
+    "cliques": 0,
+    "acima_pitch": 0,
+    "conversoes": 0
+   }
+  ],
+  "por_origem": {
+   "2026-10-24": {
+    "sem UTM": [
+     0,
+     0,
+     0
+    ]
+   },
+   "2026-10-25": {
+    "sem UTM": [
+     0,
+     0,
+     0
+    ]
+   },
+   "2026-10-26": {
+    "instagram": [
+     3,
+     0,
+     0
+    ],
+    "facebook_mobile_reels": [
+     2,
+     0,
+     0
+    ],
+    "fb": [
+     1,
+     0,
+     0
+    ]
+   },
+   "2026-10-27": {
+    "instagram": [
+     3,
+     0,
+     0
+    ],
+    "facebook_stories": [
+     1,
+     0,
+     0
+    ],
+    "facebook_mobile_reels": [
+     3,
+     0,
+     0
+    ],
+    "facebook_mobile_feed": [
+     0,
+     0,
+     0
+    ]
+   },
+   "2026-10-28": {
+    "instagram": [
+     6,
+     1,
+     0
+    ],
+    "facebook_mobile_feed": [
+     3,
+     1,
+     0
+    ],
+    "facebook_mobile_reels": [
+     3,
+     0,
+     0
+    ]
+   },
+   "2026-10-29": {
+    "instagram": [
+     6,
+     0,
+     0
+    ],
+    "facebook_stories": [
+     1,
+     0,
+     0
+    ]
+   },
+   "2026-10-30": {
+    "facebook_notification": [
+     1,
+     0,
+     0
+    ],
+    "instagram": [
+     10,
+     3,
+     0
+    ],
+    "facebook_mobile_reels": [
+     1,
+     0,
+     0
+    ],
+    "facebook_mobile_feed": [
+     1,
+     0,
+     0
+    ]
+   },
+   "2026-10-31": {
+    "instagram": [
+     7,
+     1,
+     0
+    ],
+    "facebook_mobile_reels": [
+     4,
+     1,
+     0
+    ],
+    "whatsapp_status": [
+     0,
+     0,
+     0
+    ],
+    "facebook_mobile_feed": [
+     1,
+     0,
+     0
+    ]
+   },
+   "2026-11-01": {
+    "instagram": [
+     13,
+     3,
+     0
+    ],
+    "facebook_mobile_feed": [
+     3,
+     0,
+     0
+    ],
+    "fb": [
+     0,
+     0,
+     0
+    ],
+    "facebook_mobile_reels": [
+     1,
+     0,
+     0
+    ],
+    "sem UTM": [
+     0,
+     0,
+     0
+    ]
+   },
+   "2026-11-02": {
+    "instagram": [
+     13,
+     5,
+     1
+    ],
+    "facebook_stories": [
+     1,
+     0,
+     0
+    ],
+    "facebook_mobile_reels": [
+     1,
+     0,
+     0
+    ],
+    "facebook_mobile_feed": [
+     1,
+     0,
+     0
+    ],
+    "sem UTM": [
+     0,
+     0,
+     0
+    ]
+   },
+   "2026-11-03": {
+    "instagram": [
+     14,
+     2,
+     1
+    ],
+    "facebook_mobile_feed": [
+     4,
+     0,
+     0
+    ],
+    "facebook_mobile_reels": [
+     2,
+     2,
+     1
+    ],
+    "facebook_instream_video": [
+     0,
+     0,
+     0
+    ],
+    "fb": [
+     1,
+     0,
+     0
+    ]
+   },
+   "2026-11-04": {
+    "facebook_instream_video": [
+     2,
+     0,
+     0
+    ],
+    "instagram": [
+     18,
+     5,
+     1
+    ],
+    "facebook_mobile_feed": [
+     3,
+     2,
+     0
+    ],
+    "facebook_mobile_reels": [
+     3,
+     0,
+     0
+    ]
+   },
+   "2026-11-05": {
+    "facebook_mobile_feed": [
+     6,
+     1,
+     0
+    ],
+    "instagram": [
+     24,
+     1,
+     0
+    ],
+    "facebook_mobile_reels": [
+     5,
+     0,
+     0
+    ],
+    "fb": [
+     1,
+     0,
+     0
+    ],
+    "facebook_instream_video": [
+     1,
+     0,
+     0
+    ]
+   },
+   "2026-11-06": {
+    "fb": [
+     3,
+     1,
+     0
+    ],
+    "instagram": [
+     10,
+     2,
+     0
+    ],
+    "facebook_mobile_reels": [
+     2,
+     0,
+     0
+    ],
+    "facebook_mobile_feed": [
+     3,
+     0,
+     0
+    ],
+    "sem UTM": [
+     0,
+     0,
+     0
+    ]
+   },
+   "2026-11-07": {
+    "facebook_instream_video": [
+     4,
+     0,
+     0
+    ],
+    "facebook_mobile_reels": [
+     5,
+     0,
+     0
+    ],
+    "instagram": [
+     18,
+     3,
+     2
+    ],
+    "facebook_mobile_feed": [
+     13,
+     1,
+     1
+    ],
+    "facebook_stories": [
+     4,
+     0,
+     0
+    ],
+    "fb": [
+     2,
+     0,
+     0
+    ]
+   },
+   "2026-11-08": {
+    "facebook_instream_video": [
+     2,
+     0,
+     0
+    ],
+    "facebook_mobile_feed": [
+     9,
+     0,
+     0
+    ],
+    "instagram": [
+     19,
+     2,
+     2
+    ],
+    "facebook_stories": [
+     0,
+     0,
+     0
+    ],
+    "fb": [
+     1,
+     0,
+     0
+    ]
+   },
+   "2026-11-09": {
+    "facebook_mobile_reels": [
+     2,
+     0,
+     0
+    ],
+    "instagram": [
+     33,
+     10,
+     4
+    ],
+    "facebook_mobile_feed": [
+     8,
+     0,
+     0
+    ],
+    "facebook_instream_video": [
+     2,
+     0,
+     0
+    ],
+    "fb": [
+     1,
+     0,
+     0
+    ],
+    "facebook_desktop_feed": [
+     1,
+     1,
+     1
+    ]
+   },
+   "2026-11-10": {
+    "instagram": [
+     17,
+     3,
+     0
+    ],
+    "facebook_mobile_reels": [
+     4,
+     1,
+     1
+    ],
+    "fb": [
+     8,
+     3,
+     0
+    ],
+    "facebook_instream_video": [
+     1,
+     1,
+     0
+    ],
+    "facebook_mobile_feed": [
+     10,
+     2,
+     1
+    ],
+    "facebook_desktop_feed": [
+     2,
+     1,
+     0
+    ],
+    "facebook_stories": [
+     1,
+     1,
+     1
+    ]
+   },
+   "2026-11-11": {
+    "fb": [
+     30,
+     2,
+     1
+    ],
+    "facebook_stories": [
+     0,
+     0,
+     0
+    ]
+   },
+   "2026-11-12": {
+    "fb": [
+     43,
+     5,
+     2
+    ]
+   },
+   "2026-11-13": {
+    "fb": [
+     62,
+     8,
+     4
+    ],
+    "sem UTM": [
+     0,
+     0,
+     0
+    ],
+    "instagram": [
+     3,
+     1,
+     0
+    ]
+   },
+   "2026-11-14": {
+    "fb": [
+     43,
+     3,
+     1
+    ],
+    "instagram": [
+     3,
+     1,
+     0
+    ],
+    "sem UTM": [
+     0,
+     0,
+     0
+    ],
+    "teste_asi": [
+     1,
+     0,
+     0
+    ]
+   }
+  },
+  "janelas": {
+   "1": {
+    "tempo_medio_s": 326,
+    "retencao": 29.9,
+    "minutos": 255
+   },
+   "3": {
+    "tempo_medio_s": 305,
+    "retencao": 28.2,
+    "minutos": 809
+   },
+   "7": {
+    "tempo_medio_s": 305,
+    "retencao": 27.4,
+    "minutos": 1585
+   },
+   "14": {
+    "tempo_medio_s": 310,
+    "retencao": 27.0,
+    "minutos": 2563
+   },
+   "30": {
+    "tempo_medio_s": 311,
+    "retencao": 26.8,
+    "minutos": 2923
+   },
+   "90": {
+    "tempo_medio_s": 311,
+    "retencao": 26.8,
+    "minutos": 2923
+   }
+  },
+  "curva": {
+   "player": "VSL 1 - Definitivo.mp4",
+   "duracao": 1231,
+   "pontos": [
+    [
+     0,
+     100.0
+    ],
+    [
+     5,
+     42.9
+    ],
+    [
+     10,
+     7.1
+    ],
+    [
+     15,
+     25.0
+    ],
+    [
+     20,
+     21.4
+    ],
+    [
+     25,
+     14.3
+    ],
+    [
+     30,
+     14.3
+    ],
+    [
+     35,
+     3.6
+    ],
+    [
+     40,
+     7.1
+    ],
+    [
+     45,
+     14.3
+    ],
+    [
+     50,
+     7.1
+    ],
+    [
+     55,
+     7.1
+    ],
+    [
+     65,
+     3.6
+    ],
+    [
+     70,
+     10.7
+    ],
+    [
+     75,
+     3.6
+    ],
+    [
+     80,
+     10.7
+    ],
+    [
+     85,
+     10.7
+    ],
+    [
+     90,
+     10.7
+    ],
+    [
+     95,
+     3.6
+    ],
+    [
+     100,
+     7.1
+    ],
+    [
+     105,
+     7.1
+    ],
+    [
+     110,
+     7.1
+    ],
+    [
+     120,
+     3.6
+    ],
+    [
+     140,
+     3.6
+    ],
+    [
+     145,
+     7.1
+    ],
+    [
+     150,
+     3.6
+    ],
+    [
+     155,
+     3.6
+    ],
+    [
+     165,
+     7.1
+    ],
+    [
+     190,
+     7.1
+    ],
+    [
+     220,
+     3.6
+    ],
+    [
+     250,
+     3.6
+    ],
+    [
+     255,
+     3.6
+    ],
+    [
+     275,
+     3.6
+    ],
+    [
+     285,
+     7.1
+    ],
+    [
+     295,
+     7.1
+    ],
+    [
+     300,
+     3.6
+    ],
+    [
+     335,
+     3.6
+    ],
+    [
+     340,
+     3.6
+    ],
+    [
+     415,
+     3.6
+    ],
+    [
+     425,
+     3.6
+    ],
+    [
+     435,
+     3.6
+    ],
+    [
+     440,
+     3.6
+    ],
+    [
+     445,
+     3.6
+    ],
+    [
+     475,
+     3.6
+    ],
+    [
+     485,
+     3.6
+    ],
+    [
+     495,
+     3.6
+    ],
+    [
+     610,
+     3.6
+    ],
+    [
+     615,
+     3.6
+    ],
+    [
+     635,
+     3.6
+    ],
+    [
+     640,
+     3.6
+    ],
+    [
+     655,
+     3.6
+    ],
+    [
+     695,
+     3.6
+    ],
+    [
+     825,
+     3.6
+    ],
+    [
+     885,
+     7.1
+    ],
+    [
+     890,
+     10.7
+    ],
+    [
+     905,
+     7.1
+    ],
+    [
+     910,
+     3.6
+    ],
+    [
+     915,
+     3.6
+    ],
+    [
+     925,
+     3.6
+    ],
+    [
+     950,
+     3.6
+    ],
+    [
+     955,
+     3.6
+    ],
+    [
+     980,
+     3.6
+    ],
+    [
+     1025,
+     7.1
+    ],
+    [
+     1070,
+     3.6
+    ],
+    [
+     1080,
+     3.6
+    ],
+    [
+     1090,
+     3.6
+    ],
+    [
+     1130,
+     3.6
+    ],
+    [
+     1135,
+     3.6
+    ],
+    [
+     1145,
+     3.6
+    ],
+    [
+     1155,
+     3.6
+    ],
+    [
+     1165,
+     3.6
+    ],
+    [
+     1195,
+     3.6
+    ],
+    [
+     1205,
+     3.6
+    ],
+    [
+     1215,
+     3.6
+    ],
+    [
+     1220,
+     3.6
+    ],
+    [
+     1225,
+     3.6
+    ],
+    [
+     1232,
+     57.1
+    ]
+   ]
+  }
  },
  "kiwify": {
   "status": "ok",
