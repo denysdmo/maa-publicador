@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-15T14:40-03:00",
+ "atualizado": "2026-11-15T17:40-03:00",
  "vturb": {
   "status": "ok",
   "players": [
@@ -27,8 +27,8 @@
   "dias": [
    {
     "data": "2026-11-15",
-    "plays": 63,
-    "views": 95,
+    "plays": 70,
+    "views": 107,
     "finalizados": 4,
     "cliques": 1,
     "acima_pitch": 7,
@@ -705,7 +705,7 @@
    },
    "2026-11-15": {
     "fb": [
-     57,
+     65,
      1,
      0
     ],
@@ -723,34 +723,34 @@
   },
   "janelas": {
    "1": {
-    "tempo_medio_s": 193,
-    "retencao": 18.6,
-    "minutos": 203
+    "tempo_medio_s": 176,
+    "retencao": 17.0,
+    "minutos": 206
    },
    "3": {
-    "tempo_medio_s": 251,
-    "retencao": 23.6,
-    "minutos": 782
+    "tempo_medio_s": 243,
+    "retencao": 22.9,
+    "minutos": 784
    },
    "7": {
-    "tempo_medio_s": 293,
-    "retencao": 26.8,
-    "minutos": 1721
+    "tempo_medio_s": 287,
+    "retencao": 26.3,
+    "minutos": 1722
    },
    "14": {
-    "tempo_medio_s": 295,
-    "retencao": 25.9,
-    "minutos": 2707
+    "tempo_medio_s": 291,
+    "retencao": 25.6,
+    "minutos": 2708
    },
    "30": {
-    "tempo_medio_s": 297,
-    "retencao": 25.9,
-    "minutos": 3151
+    "tempo_medio_s": 294,
+    "retencao": 25.6,
+    "minutos": 3152
    },
    "90": {
-    "tempo_medio_s": 297,
-    "retencao": 25.9,
-    "minutos": 3151
+    "tempo_medio_s": 294,
+    "retencao": 25.6,
+    "minutos": 3152
    }
   },
   "curva": {
@@ -763,23 +763,23 @@
     ],
     [
      10,
-     8.8
+     8.6
     ],
     [
      20,
-     20.6
+     20.0
     ],
     [
      30,
-     11.8
+     11.4
     ],
     [
      40,
-     5.9
+     5.7
     ],
     [
      50,
-     5.9
+     5.7
     ],
     [
      60,
@@ -787,27 +787,27 @@
     ],
     [
      70,
-     8.8
+     8.6
     ],
     [
      80,
-     14.7
+     14.3
     ],
     [
      90,
-     8.8
+     8.6
     ],
     [
      100,
-     5.9
+     5.7
     ],
     [
      110,
-     5.9
+     5.7
     ],
     [
      120,
-     5.9
+     5.7
     ],
     [
      140,
@@ -819,7 +819,7 @@
     ],
     [
      165,
-     5.9
+     5.7
     ],
     [
      220,
@@ -831,7 +831,7 @@
     ],
     [
      285,
-     5.9
+     5.7
     ],
     [
      300,
@@ -875,7 +875,7 @@
     ],
     [
      890,
-     8.8
+     8.6
     ],
     [
      910,
@@ -891,7 +891,7 @@
     ],
     [
      1025,
-     5.9
+     5.7
     ],
     [
      1090,
