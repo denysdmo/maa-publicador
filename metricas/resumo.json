@@ -1,11 +1,11 @@
 {
- "atualizado": "2026-11-15T17:01-03:00",
- "seguidores": 18558,
+ "atualizado": "2026-11-15T20:11-03:00",
+ "seguidores": 18566,
  "publicacoes": 134,
  "por_formato": {
   "carrossel": {
    "posts": 37,
-   "alcance": 325.4,
+   "alcance": 326.3,
    "salvos": 2.2,
    "compart": 1.3,
    "engaj": 3.0
@@ -19,24 +19,24 @@
   },
   "reel": {
    "posts": 83,
-   "alcance": 8276.1,
+   "alcance": 8277.8,
    "salvos": 64.7,
    "compart": 122.9,
-   "engaj": 5.3
+   "engaj": 5.2
   }
  },
  "por_dia": {
   "seg": {
    "posts": 24,
-   "alcance": 18814.3
+   "alcance": 18819.0
   },
   "ter": {
    "posts": 20,
-   "alcance": 1319.7
+   "alcance": 1319.8
   },
   "qua": {
    "posts": 20,
-   "alcance": 6285.5
+   "alcance": 6285.9
   },
   "qui": {
    "posts": 20,
@@ -44,15 +44,15 @@
   },
   "sex": {
    "posts": 31,
-   "alcance": 1794.0
+   "alcance": 1795.2
   },
   "sáb": {
    "posts": 9,
-   "alcance": 755.4
+   "alcance": 756.0
   },
   "dom": {
    "posts": 11,
-   "alcance": 759.7
+   "alcance": 760.0
   }
  },
  "por_hora": {
@@ -66,39 +66,39 @@
   },
   "12": {
    "posts": 13,
-   "alcance": 498.3
+   "alcance": 500.5
   },
   "13": {
    "posts": 40,
-   "alcance": 15148.9
+   "alcance": 15149.0
   },
   "14": {
    "posts": 14,
-   "alcance": 1827.8
+   "alcance": 1827.9
   },
   "15": {
    "posts": 9,
-   "alcance": 1180.6
+   "alcance": 1180.8
   },
   "16": {
    "posts": 8,
-   "alcance": 654.9
+   "alcance": 655.8
   },
   "17": {
    "posts": 4,
-   "alcance": 2984.8
+   "alcance": 3012.2
   },
   "18": {
    "posts": 9,
-   "alcance": 809.0
+   "alcance": 810.2
   },
   "19": {
    "posts": 18,
-   "alcance": 2890.3
+   "alcance": 2890.4
   },
   "20": {
    "posts": 6,
-   "alcance": 1402.3
+   "alcance": 1402.7
   },
   "21": {
    "posts": 1,
@@ -165,10 +165,10 @@
    "formato": "reel",
    "legenda": "🚤 Você conhece esses sinais de navegação fluvial? Eles podem fazer a diferença na sua prova!  Estude com método e prepare-se para passar de primeira! ⚓  👉 Acess",
    "link": "https://www.instagram.com/reel/DeSlfIkmzNn/",
-   "reach": 11829,
+   "reach": 11830,
    "saved": 96,
-   "shares": 178,
-   "taxa_engaj": 9.22
+   "shares": 179,
+   "taxa_engaj": 9.25
   },
   {
    "data": "2026-08-12",
@@ -195,10 +195,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 8510,
+   "reach": 8620,
    "saved": 83,
-   "shares": 184,
-   "taxa_engaj": 11.75
+   "shares": 186,
+   "taxa_engaj": 11.69
   },
   {
    "data": "2026-08-25",
@@ -287,10 +287,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 8510,
+   "reach": 8620,
    "saved": 83,
-   "shares": 184,
-   "taxa_engaj": 11.75
+   "shares": 186,
+   "taxa_engaj": 11.69
   },
   {
    "data": "2026-08-07",
@@ -314,24 +314,24 @@
   }
  ],
  "stories_medias": {
-  "alcance": 48.9,
+  "alcance": 39.1,
   "respostas": 0.0,
-  "saidas": 6.1
+  "saidas": 5.7
  },
  "conta": [
   {
    "data": "2026-11-15",
    "follower_count": "",
-   "views": 6311,
-   "reach": 3515,
-   "profile_views": 36,
+   "views": 8170,
+   "reach": 4451,
+   "profile_views": 43,
    "website_clicks": 8,
-   "accounts_engaged": 88,
-   "total_interactions": 126,
-   "likes": 89,
+   "accounts_engaged": 114,
+   "total_interactions": 161,
+   "likes": 115,
    "comments": 2,
-   "shares": 10,
-   "saves": 14,
+   "shares": 14,
+   "saves": 15,
    "replies": 0,
    "follows_and_unfollows": ""
   },
@@ -354,7 +354,7 @@
   {
    "data": "2026-11-13",
    "follower_count": 23,
-   "views": 10932,
+   "views": 10933,
    "reach": 5222,
    "profile_views": 72,
    "website_clicks": 10,
