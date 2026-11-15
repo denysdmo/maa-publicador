@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-15T02:21-03:00",
+ "atualizado": "2026-11-15T05:30-03:00",
  "vturb": {
   "status": "ok",
   "players": [
@@ -27,8 +27,8 @@
   "dias": [
    {
     "data": "2026-11-15",
-    "plays": 3,
-    "views": 6,
+    "plays": 4,
+    "views": 8,
     "finalizados": 0,
     "cliques": 0,
     "acima_pitch": 0,
@@ -718,34 +718,34 @@
   },
   "janelas": {
    "1": {
-    "tempo_medio_s": 40,
-    "retencao": 3.2,
-    "minutos": 2
+    "tempo_medio_s": 39,
+    "retencao": 3.3,
+    "minutos": 3
    },
    "3": {
     "tempo_medio_s": 273,
     "retencao": 25.5,
-    "minutos": 578
+    "minutos": 582
    },
    "7": {
     "tempo_medio_s": 311,
     "retencao": 28.2,
-    "minutos": 1516
+    "minutos": 1522
    },
    "14": {
     "tempo_medio_s": 306,
     "retencao": 26.7,
-    "minutos": 2504
+    "minutos": 2509
    },
    "30": {
     "tempo_medio_s": 307,
     "retencao": 26.5,
-    "minutos": 2948
+    "minutos": 2953
    },
    "90": {
     "tempo_medio_s": 307,
     "retencao": 26.5,
-    "minutos": 2948
+    "minutos": 2953
    }
   },
   "curva": {
