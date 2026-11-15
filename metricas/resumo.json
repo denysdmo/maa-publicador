@@ -1,14 +1,14 @@
 {
- "atualizado": "2026-11-14T19:21-03:00",
- "seguidores": 18524,
+ "atualizado": "2026-11-14T22:31-03:00",
+ "seguidores": 18528,
  "publicacoes": 134,
  "por_formato": {
   "carrossel": {
    "posts": 37,
-   "alcance": 322.4,
+   "alcance": 323.0,
    "salvos": 2.2,
    "compart": 1.3,
-   "engaj": 3.0
+   "engaj": 2.9
   },
   "post": {
    "posts": 15,
@@ -19,7 +19,7 @@
   },
   "reel": {
    "posts": 83,
-   "alcance": 8270.7,
+   "alcance": 8271.7,
    "salvos": 64.7,
    "compart": 122.8,
    "engaj": 5.3
@@ -28,7 +28,7 @@
  "por_dia": {
   "seg": {
    "posts": 24,
-   "alcance": 18802.1
+   "alcance": 18804.4
   },
   "ter": {
    "posts": 20,
@@ -36,7 +36,7 @@
   },
   "qua": {
    "posts": 20,
-   "alcance": 6284.8
+   "alcance": 6285.0
   },
   "qui": {
    "posts": 20,
@@ -44,15 +44,15 @@
   },
   "sex": {
    "posts": 31,
-   "alcance": 1787.4
+   "alcance": 1788.8
   },
   "sáb": {
    "posts": 9,
-   "alcance": 754.0
+   "alcance": 754.4
   },
   "dom": {
    "posts": 11,
-   "alcance": 758.3
+   "alcance": 758.5
   }
  },
  "por_hora": {
@@ -66,11 +66,11 @@
   },
   "12": {
    "posts": 13,
-   "alcance": 491.4
+   "alcance": 493.0
   },
   "13": {
    "posts": 40,
-   "alcance": 15147.5
+   "alcance": 15147.7
   },
   "14": {
    "posts": 14,
@@ -86,11 +86,11 @@
   },
   "17": {
    "posts": 4,
-   "alcance": 2913.8
+   "alcance": 2927.8
   },
   "18": {
    "posts": 9,
-   "alcance": 798.7
+   "alcance": 801.7
   },
   "19": {
    "posts": 18,
@@ -195,10 +195,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 8229,
+   "reach": 8285,
    "saved": 81,
    "shares": 182,
-   "taxa_engaj": 11.88
+   "taxa_engaj": 11.85
   },
   {
    "data": "2026-08-25",
@@ -277,10 +277,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 8229,
+   "reach": 8285,
    "saved": 81,
    "shares": 182,
-   "taxa_engaj": 11.88
+   "taxa_engaj": 11.85
   },
   {
    "data": "2026-08-21",
@@ -314,24 +314,24 @@
   }
  ],
  "stories_medias": {
-  "alcance": 44.8,
+  "alcance": 37.7,
   "respostas": 0.0,
-  "saidas": 6.6
+  "saidas": 5.7
  },
  "conta": [
   {
    "data": "2026-11-14",
    "follower_count": "",
-   "views": 4532,
-   "reach": 2556,
-   "profile_views": 36,
-   "website_clicks": 5,
-   "accounts_engaged": 50,
-   "total_interactions": 96,
-   "likes": 40,
+   "views": 5171,
+   "reach": 2863,
+   "profile_views": 39,
+   "website_clicks": 6,
+   "accounts_engaged": 68,
+   "total_interactions": 117,
+   "likes": 60,
    "comments": 0,
    "shares": 23,
-   "saves": 8,
+   "saves": 9,
    "replies": 0,
    "follows_and_unfollows": ""
   },
