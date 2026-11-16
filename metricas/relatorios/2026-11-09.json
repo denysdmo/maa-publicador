@@ -3,50 +3,50 @@
   "ini": "2026-11-09",
   "fim": "2026-11-15"
  },
- "gerado": "2026-11-14T20:00-03:00",
- "seguidores": 18524,
+ "gerado": "2026-11-16T09:03-03:00",
+ "seguidores": 18585,
  "numeros": [
   {
    "rotulo": "Novos seguidores",
-   "valor": 168,
+   "valor": 191,
    "antes": 217,
-   "delta": -23
+   "delta": -12
   },
   {
    "rotulo": "Alcance da conta",
-   "valor": 31757,
+   "valor": 38377,
    "antes": 52833,
-   "delta": -40
+   "delta": -27
   },
   {
    "rotulo": "Visualizações",
-   "valor": 56750,
+   "valor": 69639,
    "antes": 65818,
-   "delta": -14
+   "delta": 6
   },
   {
    "rotulo": "Visitas ao perfil",
-   "valor": 375,
+   "valor": 447,
    "antes": 319,
-   "delta": 18
+   "delta": 40
   },
   {
    "rotulo": "Cliques no link da bio",
-   "valor": 62,
+   "valor": 74,
    "antes": 57,
-   "delta": 9
+   "delta": 30
   },
   {
    "rotulo": "Compartilhamentos",
-   "valor": 260,
+   "valor": 291,
    "antes": 122,
-   "delta": 113
+   "delta": 139
   },
   {
    "rotulo": "Salvamentos",
-   "valor": 136,
+   "valor": 165,
    "antes": 78,
-   "delta": 74
+   "delta": 112
   },
   {
    "rotulo": "Publicações no feed",
@@ -56,50 +56,45 @@
   },
   {
    "rotulo": "Stories publicados",
-   "valor": 13,
+   "valor": 23,
    "antes": null,
    "delta": null
   }
  ],
  "certo": [
-  "**Reel de segunda 09/11 (17:23)** chegou a **8229 contas**, 13.5× a mediana dos últimos 30 dias (611). Tema: “Quem tem a preferência no canal”.",
-  "Mais **enviado** da semana: Reel de segunda 09/11 (17:23), 182 compartilhamentos (2.2% do alcance). É o sinal que mais leva o perfil a quem ainda não segue.",
-  "Mais **salvo**: Carrossel de sexta 13/11 (12:01), 4 salvamentos (1.2% do alcance): conteúdo que a pessoa guarda para estudar.",
-  "**Visitas ao perfil** subiu 18% em relação à semana anterior (319 → 375).",
-  "**Compartilhamentos** subiu 113% em relação à semana anterior (122 → 260).",
-  "**Salvamentos** subiu 74% em relação à semana anterior (78 → 136)."
+  "**Reel de segunda 09/11 (17:23)** chegou a **8750 contas**, 14.2× a mediana dos últimos 30 dias (616). Tema: “Quem tem a preferência no canal”.",
+  "Mais **enviado** da semana: Reel de segunda 09/11 (17:23), 193 compartilhamentos (2.2% do alcance). É o sinal que mais leva o perfil a quem ainda não segue.",
+  "Mais **salvo**: Carrossel de sexta 13/11 (12:01), 7 salvamentos (1.3% do alcance): conteúdo que a pessoa guarda para estudar.",
+  "**Visitas ao perfil** subiu 40% em relação à semana anterior (319 → 447).",
+  "**Cliques no link da bio** subiu 30% em relação à semana anterior (57 → 74).",
+  "**Compartilhamentos** subiu 139% em relação à semana anterior (122 → 291).",
+  "**Salvamentos** subiu 112% em relação à semana anterior (78 → 165)."
  ],
  "errado": [
-  "**Reel de terça 10/11 (20:35)** ficou abaixo: 219 contas (0.4× a mediana). Tema: “Acesse o link na bio e prepare-se pra passar de primeira na prova de Arrais-Amad”.",
-  "**Carrossel de sexta 13/11 (12:01)** ficou abaixo: 341 contas (0.6× a mediana). Tema: “Entrando no porto, a boia encarnada fica de que lado”.",
-  "**Novos seguidores** caiu 23% (217 → 168).",
-  "**Alcance da conta** caiu 40% (52833 → 31757).",
+  "**Reel de terça 10/11 (20:35)** ficou abaixo: 234 contas (0.4× a mediana). Tema: “Acesse o link na bio e prepare-se pra passar de primeira na prova de Arrais-Amad”.",
+  "**Alcance da conta** caiu 27% (52833 → 38377).",
   "3 story(s) com muita saída (mais de 20% de quem viu saiu da sequência): rever o que vem antes deles."
  ],
  "passos": [
   {
    "acao": "Repetir o **molde** do campeão (Reel, “Quem tem a preferência no canal”) com **outro ângulo** ou outro tema da prova.",
-   "base": "8229 contas = 13.5× a mediana de 30 dias (611); 182 envios e 81 salvamentos. Regra: o que passa de 1,3× a mediana vira molde; repostar igual divide o público."
+   "base": "8750 contas = 14.2× a mediana de 30 dias (616); 193 envios e 86 salvamentos. Regra: o que passa de 1,3× a mediana vira molde; repostar igual divide o público."
   },
   {
    "acao": "Manter o carro-chefe às **13h**.",
-   "base": "Alcance médio às 13h: 15147 em 40 posts, contra 2913 às 17h (2º melhor, 4 posts). Só comparo horários com 3 posts ou mais."
+   "base": "Alcance médio às 13h: 15150 em 40 posts, contra 3044 às 17h (2º melhor, 4 posts). Só comparo horários com 3 posts ou mais."
   },
   {
    "acao": "Garantir pelo menos 2 **Reels** por semana.",
-   "base": "Alcance médio de Reel: 8270 (83 peças), contra 2807 de Post (15 peças)."
-  },
-  {
-   "acao": "Testar uma **série** (“Pegadinha da semana nº X”) para quem gostou de uma peça ir atrás da próxima; medir seguidores na semana do teste.",
-   "base": "Novos seguidores: 168 contra 217 na semana anterior (-23%)."
+   "base": "Alcance médio de Reel: 8281 (83 peças), contra 2807 de Post (15 peças)."
   }
  ],
  "auditoria": [
   "Planejado na fila: **23** peças (1 carrossel, 1 reel, 21 story).",
-  "Publicadas: **14** · agendadas: 4 · sem aprovação: 0 · canceladas/vetadas: 4 · falhas: 0.",
-  "Publicações medidas no feed: 4 · stories medidos: 13 (stories só têm números por 24 h).",
-  "Mediana de alcance do feed nos últimos 30 dias: **611** contas (régua usada acima).",
-  "Métricas atualizadas em 2026-11-14 19:21."
+  "Publicadas: **18** · agendadas: 0 · sem aprovação: 0 · canceladas/vetadas: 4 · falhas: 0.",
+  "Publicações medidas no feed: 4 · stories medidos: 23 (stories só têm números por 24 h).",
+  "Mediana de alcance do feed nos últimos 30 dias: **616** contas (régua usada acima).",
+  "Métricas atualizadas em 2026-11-16 08:31."
  ],
  "top": [
   {
@@ -108,9 +103,9 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": "8229",
-   "saved": "81",
-   "shares": "182"
+   "reach": "8750",
+   "saved": "86",
+   "shares": "193"
   },
   {
    "data": "2026-11-13",
@@ -118,8 +113,8 @@
    "formato": "reel",
    "legenda": "Lancha com menos de 12 metros: quais luzes ela pode exibir no lugar do conjunto padrão? Essa pegadinha derruba muita gente na prova de Arrais-Amador.  O mastro ",
    "link": "https://www.instagram.com/reel/DfsmbgWthsA/",
-   "reach": "457",
-   "saved": "1",
+   "reach": "583",
+   "saved": "2",
    "shares": "3"
   },
   {
@@ -128,9 +123,9 @@
    "formato": "carrossel",
    "legenda": "Entrando no porto, a boia encarnada fica de que lado? É uma das pegadinhas que mais derrubam candidato na prova de Arrais-Amador.  No Brasil vale o sistema IALA",
    "link": "https://www.instagram.com/p/Dfr59xdF9nh/",
-   "reach": "341",
-   "saved": "4",
-   "shares": "3"
+   "reach": "543",
+   "saved": "7",
+   "shares": "5"
   },
   {
    "data": "2026-11-10",
@@ -138,7 +133,7 @@
    "formato": "reel",
    "legenda": "Acesse o link na bio e prepare-se pra passar de primeira na prova de Arrais-Amador e Motonauta! 🚤🌊",
    "link": "https://www.instagram.com/reel/DflF8NVOdSy/",
-   "reach": "219",
+   "reach": "234",
    "saved": "0",
    "shares": "0"
   }
