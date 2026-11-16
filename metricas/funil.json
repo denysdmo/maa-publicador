@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-15T23:50-03:00",
+ "atualizado": "2026-11-16T02:51-03:00",
  "vturb": {
   "status": "ok",
   "players": [
@@ -25,6 +25,15 @@
    }
   ],
   "dias": [
+   {
+    "data": "2026-11-16",
+    "plays": 1,
+    "views": 2,
+    "finalizados": 0,
+    "cliques": 0,
+    "acima_pitch": 0,
+    "conversoes": 0
+   },
    {
     "data": "2026-11-15",
     "plays": 104,
@@ -249,13 +258,13 @@
     ]
    },
    "2026-10-26": {
-    "instagram": [
-     3,
+    "facebook_mobile_reels": [
+     2,
      0,
      0
     ],
-    "facebook_mobile_reels": [
-     2,
+    "instagram": [
+     3,
      0,
      0
     ],
@@ -317,14 +326,14 @@
     ]
    },
    "2026-10-30": {
-    "instagram": [
-     10,
-     3,
-     0
-    ],
     "facebook_notification": [
      1,
      0,
+     0
+    ],
+    "instagram": [
+     10,
+     3,
      0
     ],
     "facebook_mobile_reels": [
@@ -447,13 +456,13 @@
      5,
      1
     ],
-    "facebook_instream_video": [
-     2,
+    "facebook_mobile_reels": [
+     3,
      0,
      0
     ],
-    "facebook_mobile_reels": [
-     3,
+    "facebook_instream_video": [
+     2,
      0,
      0
     ],
@@ -501,13 +510,13 @@
      2,
      0
     ],
-    "facebook_mobile_feed": [
-     3,
+    "facebook_mobile_reels": [
+     2,
      0,
      0
     ],
-    "facebook_mobile_reels": [
-     2,
+    "facebook_mobile_feed": [
+     3,
      0,
      0
     ],
@@ -528,15 +537,15 @@
      0,
      0
     ],
-    "instagram": [
-     18,
-     3,
-     2
-    ],
     "facebook_mobile_feed": [
      13,
      1,
      1
+    ],
+    "instagram": [
+     18,
+     3,
+     2
     ],
     "facebook_stories": [
      4,
@@ -555,11 +564,6 @@
      0,
      0
     ],
-    "facebook_stories": [
-     0,
-     0,
-     0
-    ],
     "facebook_mobile_feed": [
      9,
      0,
@@ -569,6 +573,11 @@
      19,
      2,
      2
+    ],
+    "facebook_stories": [
+     0,
+     0,
+     0
     ],
     "fb": [
      1,
@@ -719,38 +728,50 @@
      0,
      0
     ]
+   },
+   "2026-11-16": {
+    "fb": [
+     1,
+     0,
+     0
+    ],
+    "sem UTM": [
+     0,
+     0,
+     0
+    ]
    }
   },
   "janelas": {
    "1": {
-    "tempo_medio_s": 195,
-    "retencao": 18.8,
-    "minutos": 339
+    "tempo_medio_s": 205,
+    "retencao": 16.6,
+    "minutos": 3
    },
    "3": {
-    "tempo_medio_s": 242,
-    "retencao": 22.8,
-    "minutos": 919
+    "tempo_medio_s": 233,
+    "retencao": 21.9,
+    "minutos": 624
    },
    "7": {
-    "tempo_medio_s": 283,
-    "retencao": 26.0,
-    "minutos": 1858
+    "tempo_medio_s": 275,
+    "retencao": 25.2,
+    "minutos": 1596
    },
    "14": {
-    "tempo_medio_s": 288,
-    "retencao": 25.5,
-    "minutos": 2844
+    "tempo_medio_s": 280,
+    "retencao": 24.9,
+    "minutos": 2695
    },
    "30": {
     "tempo_medio_s": 291,
     "retencao": 25.4,
-    "minutos": 3288
+    "minutos": 3291
    },
    "90": {
     "tempo_medio_s": 291,
     "retencao": 25.4,
-    "minutos": 3288
+    "minutos": 3291
    }
   },
   "curva": {
@@ -822,111 +843,111 @@
      5.6
     ],
     [
-     220,
+     205,
      2.8
     ],
     [
-     255,
+     250,
      2.8
     ],
     [
-     275,
+     270,
      2.8
     ],
     [
-     295,
+     285,
      5.6
     ],
     [
-     335,
+     300,
      2.8
     ],
     [
-     415,
+     340,
      2.8
     ],
     [
-     435,
-     2.8
-    ],
-    [
-     445,
-     2.8
-    ],
-    [
-     485,
-     2.8
-    ],
-    [
-     520,
-     2.8
-    ],
-    [
-     615,
-     2.8
-    ],
-    [
-     640,
-     2.8
-    ],
-    [
-     695,
-     2.8
-    ],
-    [
-     885,
+     425,
      5.6
     ],
     [
-     905,
+     440,
+     2.8
+    ],
+    [
+     475,
+     2.8
+    ],
+    [
+     495,
+     2.8
+    ],
+    [
+     610,
+     2.8
+    ],
+    [
+     635,
+     2.8
+    ],
+    [
+     655,
+     2.8
+    ],
+    [
+     825,
+     2.8
+    ],
+    [
+     890,
+     8.3
+    ],
+    [
+     910,
+     2.8
+    ],
+    [
+     925,
+     2.8
+    ],
+    [
+     955,
+     2.8
+    ],
+    [
+     1025,
      5.6
     ],
     [
-     915,
+     1090,
      2.8
     ],
     [
-     950,
+     1135,
      2.8
     ],
     [
-     980,
+     1155,
      2.8
     ],
     [
-     1080,
+     1195,
      2.8
     ],
     [
-     1130,
+     1215,
      2.8
     ],
     [
-     1145,
+     1225,
      2.8
-    ],
-    [
-     1165,
-     2.8
-    ],
-    [
-     1205,
-     2.8
-    ],
-    [
-     1220,
-     2.8
-    ],
-    [
-     1232,
-     52.8
     ]
    ]
   }
  },
  "kiwify": {
   "status": "ok",
-  "vendas_lidas": 281,
+  "vendas_lidas": 275,
   "dias": [
    {
     "data": "2026-11-15",
@@ -1656,9 +1677,9 @@
    },
    {
     "data": "2026-08-18",
-    "vendas": 6,
-    "bruto": 391.46,
-    "liquido": 340.18,
+    "vendas": 0,
+    "bruto": 0.0,
+    "liquido": 0.0,
     "ig_vendas": 0,
     "ig_liquido": 0.0,
     "pendentes": 1,
@@ -2088,12 +2109,6 @@
      5,
      236.19
     ]
-   },
-   "2026-08-18": {
-    "sem UTM": [
-     6,
-     340.18
-    ]
    }
   },
   "por_campanha": {
@@ -2513,12 +2528,6 @@
     "-": [
      5,
      236.19
-    ]
-   },
-   "2026-08-18": {
-    "-": [
-     6,
-     340.18
     ]
    }
   },
@@ -2959,12 +2968,6 @@
     "-": [
      5,
      236.19
-    ]
-   },
-   "2026-08-18": {
-    "-": [
-     6,
-     340.18
     ]
    }
   },
@@ -3573,20 +3576,6 @@
     "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
      1,
      33.67
-    ]
-   },
-   "2026-08-18": {
-    "Meu Arrais-Amador": [
-     3,
-     257.37
-    ],
-    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
-     2,
-     67.34
-    ],
-    "Mapas Mentais para Exame de Arrais-Amador": [
-     1,
-     15.47
     ]
    }
   }
