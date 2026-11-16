@@ -1,14 +1,14 @@
 {
- "atualizado": "2026-11-16T11:33-03:00",
- "seguidores": 18591,
- "publicacoes": 134,
+ "atualizado": "2026-11-16T14:35-03:00",
+ "seguidores": 18604,
+ "publicacoes": 136,
  "por_formato": {
   "carrossel": {
-   "posts": 37,
-   "alcance": 329.6,
+   "posts": 38,
+   "alcance": 326.2,
    "salvos": 2.3,
    "compart": 1.3,
-   "engaj": 3.0
+   "engaj": 3.1
   },
   "post": {
    "posts": 15,
@@ -18,33 +18,33 @@
    "engaj": 5.4
   },
   "reel": {
-   "posts": 83,
-   "alcance": 8282.4,
-   "salvos": 64.8,
-   "compart": 123.0,
-   "engaj": 5.2
+   "posts": 84,
+   "alcance": 8196.3,
+   "salvos": 64.5,
+   "compart": 121.6,
+   "engaj": 5.4
   }
  },
  "por_dia": {
   "seg": {
-   "posts": 24,
-   "alcance": 18827.7
+   "posts": 26,
+   "alcance": 17423.7
   },
   "ter": {
    "posts": 20,
-   "alcance": 1321.0
+   "alcance": 1321.6
   },
   "qua": {
    "posts": 20,
-   "alcance": 6287.1
+   "alcance": 6287.2
   },
   "qui": {
    "posts": 20,
-   "alcance": 3333.1
+   "alcance": 3333.2
   },
   "sex": {
    "posts": 31,
-   "alcance": 1802.5
+   "alcance": 1805.1
   },
   "sáb": {
    "posts": 9,
@@ -52,7 +52,7 @@
   },
   "dom": {
    "posts": 11,
-   "alcance": 760.8
+   "alcance": 761.3
   }
  },
  "por_hora": {
@@ -65,40 +65,40 @@
    "alcance": 683.8
   },
   "12": {
-   "posts": 13,
-   "alcance": 509.2
+   "posts": 14,
+   "alcance": 486.4
   },
   "13": {
-   "posts": 40,
-   "alcance": 15150.0
+   "posts": 41,
+   "alcance": 14804.0
   },
   "14": {
    "posts": 14,
-   "alcance": 1828.5
+   "alcance": 1828.8
   },
   "15": {
    "posts": 9,
-   "alcance": 1180.8
+   "alcance": 1180.9
   },
   "16": {
    "posts": 8,
-   "alcance": 657.5
+   "alcance": 657.8
   },
   "17": {
    "posts": 4,
-   "alcance": 3064.0
+   "alcance": 3081.2
   },
   "18": {
    "posts": 9,
-   "alcance": 815.7
+   "alcance": 817.2
   },
   "19": {
    "posts": 18,
-   "alcance": 2893.6
+   "alcance": 2893.9
   },
   "20": {
    "posts": 6,
-   "alcance": 1405.2
+   "alcance": 1405.8
   },
   "21": {
    "posts": 1,
@@ -165,10 +165,10 @@
    "formato": "reel",
    "legenda": "🚤 Você conhece esses sinais de navegação fluvial? Eles podem fazer a diferença na sua prova!  Estude com método e prepare-se para passar de primeira! ⚓  👉 Acess",
    "link": "https://www.instagram.com/reel/DeSlfIkmzNn/",
-   "reach": 11882,
-   "saved": 97,
+   "reach": 11885,
+   "saved": 98,
    "shares": 181,
-   "taxa_engaj": 9.3
+   "taxa_engaj": 9.33
   },
   {
    "data": "2026-08-12",
@@ -185,10 +185,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 8827,
-   "saved": 87,
+   "reach": 8896,
+   "saved": 88,
    "shares": 193,
-   "taxa_engaj": 11.82
+   "taxa_engaj": 11.76
   },
   {
    "data": "2026-08-07",
@@ -223,6 +223,16 @@
    "taxa_engaj": "15.88"
   },
   {
+   "data": "2026-11-16",
+   "formato": "reel",
+   "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
+   "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
+   "reach": 939,
+   "saved": 36,
+   "shares": 0,
+   "taxa_engaj": 15.18
+  },
+  {
    "data": "2026-06-28",
    "formato": "reel",
    "legenda": "Sinal CANAL PREFERENCIAL A BORESTE  Faça um simulado GRÁTIS pelo link da BIO! @meuarraisamador",
@@ -250,7 +260,7 @@
    "reach": 3618,
    "saved": 38,
    "shares": 91,
-   "taxa_engaj": 12.99
+   "taxa_engaj": 13.0
   },
   {
    "data": "2026-04-01",
@@ -273,16 +283,6 @@
    "taxa_engaj": "12.19"
   },
   {
-   "data": "2026-11-09",
-   "formato": "reel",
-   "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
-   "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 8827,
-   "saved": 87,
-   "shares": 193,
-   "taxa_engaj": 11.82
-  },
-  {
    "data": "2026-08-21",
    "formato": "reel",
    "legenda": "🚨 Isso cai na prova de Arrais-Amador e pouca gente sabe na hora H.  Salva esse vídeo pra revisar antes do exame 📌  Conteúdo completo (do jeito que cai na prova)",
@@ -293,6 +293,16 @@
    "taxa_engaj": "11.81"
   },
   {
+   "data": "2026-11-09",
+   "formato": "reel",
+   "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
+   "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
+   "reach": 8896,
+   "saved": 88,
+   "shares": 193,
+   "taxa_engaj": 11.76
+  },
+  {
    "data": "2026-08-07",
    "formato": "reel",
    "legenda": "Aprenda os sinais sonoros que mais caem na prova de Arrais-Amador! (Pt.2) 🚤📢  ⚓ Quer passar de primeira? Estude com a plataforma **Meu Arrais-Amador**. Acesse o",
@@ -301,37 +311,27 @@
    "saved": "105",
    "shares": "114",
    "taxa_engaj": "10.97"
-  },
-  {
-   "data": "2026-07-22",
-   "formato": "post",
-   "legenda": "Uma das maiores dúvidas quando se fala de prova de Arrais-Amador e Motonauta é sobre as classes de fogo, o que não é só um conteúdo para a prova, mas também par",
-   "link": "https://www.instagram.com/p/DbGwAbJuzLC/",
-   "reach": "1702",
-   "saved": "21",
-   "shares": "34",
-   "taxa_engaj": "10.61"
   }
  ],
  "stories_medias": {
-  "alcance": 50.6,
+  "alcance": 53.5,
   "respostas": 0.0,
-  "saidas": 5.3
+  "saidas": 5.7
  },
  "conta": [
   {
    "data": "2026-11-16",
    "follower_count": "",
-   "views": 3139,
-   "reach": 1867,
-   "profile_views": 20,
-   "website_clicks": 7,
-   "accounts_engaged": 50,
-   "total_interactions": 67,
-   "likes": 43,
+   "views": 7310,
+   "reach": 3376,
+   "profile_views": 45,
+   "website_clicks": 10,
+   "accounts_engaged": 179,
+   "total_interactions": 314,
+   "likes": 197,
    "comments": 2,
-   "shares": 6,
-   "saves": 8,
+   "shares": 31,
+   "saves": 46,
    "replies": 0,
    "follows_and_unfollows": ""
   },
@@ -1927,6 +1927,7 @@
   "2026-11-06": 1,
   "2026-11-09": 1,
   "2026-11-10": 1,
-  "2026-11-13": 2
+  "2026-11-13": 2,
+  "2026-11-16": 2
  }
 }
