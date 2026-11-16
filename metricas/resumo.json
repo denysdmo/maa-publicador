@@ -1,11 +1,11 @@
 {
- "atualizado": "2026-11-16T05:22-03:00",
- "seguidores": 18574,
+ "atualizado": "2026-11-16T08:31-03:00",
+ "seguidores": 18585,
  "publicacoes": 134,
  "por_formato": {
   "carrossel": {
    "posts": 37,
-   "alcance": 327.9,
+   "alcance": 328.7,
    "salvos": 2.2,
    "compart": 1.3,
    "engaj": 3.0
@@ -19,24 +19,24 @@
   },
   "reel": {
    "posts": 83,
-   "alcance": 8280.3,
+   "alcance": 8281.2,
    "salvos": 64.8,
    "compart": 123.0,
-   "engaj": 5.2
+   "engaj": 5.3
   }
  },
  "por_dia": {
   "seg": {
    "posts": 24,
-   "alcance": 18823.8
+   "alcance": 18824.5
   },
   "ter": {
    "posts": 20,
-   "alcance": 1320.5
+   "alcance": 1320.8
   },
   "qua": {
    "posts": 20,
-   "alcance": 6286.9
+   "alcance": 6287.1
   },
   "qui": {
    "posts": 20,
@@ -44,11 +44,11 @@
   },
   "sex": {
    "posts": 31,
-   "alcance": 1798.5
+   "alcance": 1800.9
   },
   "sáb": {
    "posts": 9,
-   "alcance": 756.8
+   "alcance": 757.0
   },
   "dom": {
    "posts": 11,
@@ -66,15 +66,15 @@
   },
   "12": {
    "posts": 13,
-   "alcance": 504.8
+   "alcance": 506.9
   },
   "13": {
    "posts": 40,
-   "alcance": 15149.9
+   "alcance": 15150.0
   },
   "14": {
    "posts": 14,
-   "alcance": 1828.1
+   "alcance": 1828.2
   },
   "15": {
    "posts": 9,
@@ -82,23 +82,23 @@
   },
   "16": {
    "posts": 8,
-   "alcance": 657.1
+   "alcance": 657.5
   },
   "17": {
    "posts": 4,
-   "alcance": 3041.0
+   "alcance": 3044.8
   },
   "18": {
    "posts": 9,
-   "alcance": 814.1
+   "alcance": 814.6
   },
   "19": {
    "posts": 18,
-   "alcance": 2890.7
+   "alcance": 2893.1
   },
   "20": {
    "posts": 6,
-   "alcance": 1404.0
+   "alcance": 1405.0
   },
   "21": {
    "posts": 1,
@@ -165,10 +165,10 @@
    "formato": "reel",
    "legenda": "🚤 Você conhece esses sinais de navegação fluvial? Eles podem fazer a diferença na sua prova!  Estude com método e prepare-se para passar de primeira! ⚓  👉 Acess",
    "link": "https://www.instagram.com/reel/DeSlfIkmzNn/",
-   "reach": 11830,
+   "reach": 11874,
    "saved": 97,
    "shares": 181,
-   "taxa_engaj": 9.33
+   "taxa_engaj": 9.31
   },
   {
    "data": "2026-08-12",
@@ -195,10 +195,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 8735,
-   "saved": 85,
-   "shares": 190,
-   "taxa_engaj": 11.76
+   "reach": 8750,
+   "saved": 86,
+   "shares": 193,
+   "taxa_engaj": 11.89
   },
   {
    "data": "2026-08-25",
@@ -273,6 +273,16 @@
    "taxa_engaj": "12.19"
   },
   {
+   "data": "2026-11-09",
+   "formato": "reel",
+   "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
+   "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
+   "reach": 8750,
+   "saved": 86,
+   "shares": 193,
+   "taxa_engaj": 11.89
+  },
+  {
    "data": "2026-08-21",
    "formato": "reel",
    "legenda": "🚨 Isso cai na prova de Arrais-Amador e pouca gente sabe na hora H.  Salva esse vídeo pra revisar antes do exame 📌  Conteúdo completo (do jeito que cai na prova)",
@@ -281,16 +291,6 @@
    "saved": "166",
    "shares": "275",
    "taxa_engaj": "11.81"
-  },
-  {
-   "data": "2026-11-09",
-   "formato": "reel",
-   "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
-   "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 8735,
-   "saved": 85,
-   "shares": 190,
-   "taxa_engaj": 11.76
   },
   {
    "data": "2026-08-07",
@@ -314,30 +314,31 @@
   }
  ],
  "stories_medias": {
-  "alcance": 46.1,
+  "alcance": 49.6,
   "respostas": 0.0,
-  "saidas": 5.2
+  "saidas": 5.3
  },
  "conta": [
   {
    "data": "2026-11-16",
-   "views": 17,
-   "reach": 2,
-   "profile_views": 0,
-   "website_clicks": 0,
-   "accounts_engaged": 0,
-   "total_interactions": 0,
-   "likes": 0,
+   "follower_count": "",
+   "views": 1502,
+   "reach": 942,
+   "profile_views": 10,
+   "website_clicks": 3,
+   "accounts_engaged": 23,
+   "total_interactions": 37,
+   "likes": 24,
    "comments": 0,
-   "shares": 0,
-   "saves": 0,
+   "shares": 5,
+   "saves": 2,
    "replies": 0,
    "follows_and_unfollows": ""
   },
   {
    "data": "2026-11-15",
    "follower_count": 0,
-   "views": 10899,
+   "views": 10901,
    "reach": 5564,
    "profile_views": 59,
    "website_clicks": 11,
