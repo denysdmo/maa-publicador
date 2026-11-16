@@ -1,13 +1,13 @@
 {
- "atualizado": "2026-11-16T17:41-03:00",
- "seguidores": 18708,
+ "atualizado": "2026-11-16T20:51-03:00",
+ "seguidores": 18915,
  "publicacoes": 136,
  "por_formato": {
   "carrossel": {
    "posts": 38,
-   "alcance": 329.8,
+   "alcance": 334.5,
    "salvos": 2.3,
-   "compart": 1.4,
+   "compart": 1.5,
    "engaj": 3.1
   },
   "post": {
@@ -19,40 +19,40 @@
   },
   "reel": {
    "posts": 84,
-   "alcance": 8293.8,
-   "salvos": 65.6,
-   "compart": 122.9,
+   "alcance": 8469.7,
+   "salvos": 67.2,
+   "compart": 124.1,
    "engaj": 5.3
   }
  },
  "por_dia": {
   "seg": {
    "posts": 26,
-   "alcance": 17729.9
+   "alcance": 18290.6
   },
   "ter": {
    "posts": 20,
-   "alcance": 1323.3
+   "alcance": 1324.4
   },
   "qua": {
    "posts": 20,
-   "alcance": 6289.1
+   "alcance": 6291.2
   },
   "qui": {
    "posts": 20,
-   "alcance": 3333.6
+   "alcance": 3333.7
   },
   "sex": {
    "posts": 31,
-   "alcance": 1812.3
+   "alcance": 1820.4
   },
   "sáb": {
    "posts": 9,
-   "alcance": 758.8
+   "alcance": 760.4
   },
   "dom": {
    "posts": 11,
-   "alcance": 765.8
+   "alcance": 770.0
   }
  },
  "por_hora": {
@@ -66,15 +66,15 @@
   },
   "12": {
    "posts": 14,
-   "alcance": 496.0
+   "alcance": 508.1
   },
   "13": {
    "posts": 41,
-   "alcance": 14995.7
+   "alcance": 15346.8
   },
   "14": {
    "posts": 14,
-   "alcance": 1829.7
+   "alcance": 1830.2
   },
   "15": {
    "posts": 9,
@@ -82,23 +82,23 @@
   },
   "16": {
    "posts": 8,
-   "alcance": 660.5
+   "alcance": 664.0
   },
   "17": {
    "posts": 4,
-   "alcance": 3114.0
+   "alcance": 3173.5
   },
   "18": {
    "posts": 9,
-   "alcance": 821.3
+   "alcance": 826.6
   },
   "19": {
    "posts": 18,
-   "alcance": 2899.1
+   "alcance": 2901.1
   },
   "20": {
    "posts": 6,
-   "alcance": 1411.8
+   "alcance": 1417.3
   },
   "21": {
    "posts": 1,
@@ -151,6 +151,16 @@
    "taxa_engaj": "10.01"
   },
   {
+   "data": "2026-11-16",
+   "formato": "reel",
+   "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
+   "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
+   "reach": 22917,
+   "saved": 258,
+   "shares": 198,
+   "taxa_engaj": 8.02
+  },
+  {
    "data": "2026-08-21",
    "formato": "reel",
    "legenda": "🚨 Isso cai na prova de Arrais-Amador e pouca gente sabe na hora H.  Salva esse vídeo pra revisar antes do exame 📌  Conteúdo completo (do jeito que cai na prova)",
@@ -165,10 +175,10 @@
    "formato": "reel",
    "legenda": "🚤 Você conhece esses sinais de navegação fluvial? Eles podem fazer a diferença na sua prova!  Estude com método e prepare-se para passar de primeira! ⚓  👉 Acess",
    "link": "https://www.instagram.com/reel/DeSlfIkmzNn/",
-   "reach": 11963,
+   "reach": 11993,
    "saved": 99,
    "shares": 182,
-   "taxa_engaj": 9.32
+   "taxa_engaj": 9.31
   },
   {
    "data": "2026-08-12",
@@ -185,10 +195,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 9027,
-   "saved": 91,
-   "shares": 194,
-   "taxa_engaj": 11.77
+   "reach": 9264,
+   "saved": 92,
+   "shares": 204,
+   "taxa_engaj": 11.93
   },
   {
    "data": "2026-08-07",
@@ -199,16 +209,6 @@
    "saved": "105",
    "shares": "114",
    "taxa_engaj": "10.97"
-  },
-  {
-   "data": "2026-11-16",
-   "formato": "reel",
-   "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
-   "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
-   "reach": 8666,
-   "saved": 124,
-   "shares": 110,
-   "taxa_engaj": 10.18
   }
  ],
  "top_engajamento": [
@@ -247,10 +247,10 @@
    "formato": "reel",
    "legenda": "🌦️ Saber identificar as nuvens pode fazer a diferença na sua navegação e na prova de Arrais-Amador! 🚤 Aprenda meteorologia náutica com o Meu Arrais-Amador. Aces",
    "link": "https://www.instagram.com/reel/DeaXab_uApx/",
-   "reach": 3630,
+   "reach": 3648,
    "saved": 38,
    "shares": 91,
-   "taxa_engaj": 12.99
+   "taxa_engaj": 12.94
   },
   {
    "data": "2026-04-01",
@@ -273,6 +273,16 @@
    "taxa_engaj": "12.19"
   },
   {
+   "data": "2026-11-09",
+   "formato": "reel",
+   "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
+   "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
+   "reach": 9264,
+   "saved": 92,
+   "shares": 204,
+   "taxa_engaj": 11.93
+  },
+  {
    "data": "2026-08-21",
    "formato": "reel",
    "legenda": "🚨 Isso cai na prova de Arrais-Amador e pouca gente sabe na hora H.  Salva esse vídeo pra revisar antes do exame 📌  Conteúdo completo (do jeito que cai na prova)",
@@ -281,16 +291,6 @@
    "saved": "166",
    "shares": "275",
    "taxa_engaj": "11.81"
-  },
-  {
-   "data": "2026-11-09",
-   "formato": "reel",
-   "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
-   "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 9027,
-   "saved": 91,
-   "shares": 194,
-   "taxa_engaj": 11.77
   },
   {
    "data": "2026-08-07",
@@ -314,31 +314,31 @@
   }
  ],
  "stories_medias": {
-  "alcance": 59.5,
-  "respostas": 0.0,
-  "saidas": 6.1
+  "alcance": 60.2,
+  "respostas": 0.1,
+  "saidas": 6.5
  },
  "conta": [
   {
    "data": "2026-11-16",
    "follower_count": "",
-   "views": 17615,
-   "reach": 11675,
-   "profile_views": 114,
-   "website_clicks": 19,
-   "accounts_engaged": 794,
-   "total_interactions": 1201,
-   "likes": 723,
-   "comments": 2,
-   "shares": 137,
-   "saves": 141,
-   "replies": 1,
+   "views": 36987,
+   "reach": 26424,
+   "profile_views": 191,
+   "website_clicks": 26,
+   "accounts_engaged": 1772,
+   "total_interactions": 2599,
+   "likes": 1601,
+   "comments": 5,
+   "shares": 310,
+   "saves": 279,
+   "replies": 2,
    "follows_and_unfollows": ""
   },
   {
    "data": "2026-11-15",
    "follower_count": 0,
-   "views": 10906,
+   "views": 10908,
    "reach": 5564,
    "profile_views": 59,
    "website_clicks": 11,
@@ -354,7 +354,7 @@
   {
    "data": "2026-11-14",
    "follower_count": 51,
-   "views": 6520,
+   "views": 6521,
    "reach": 3612,
    "profile_views": 49,
    "website_clicks": 6,
