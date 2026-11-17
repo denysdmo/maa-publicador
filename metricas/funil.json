@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-17T15:41-03:00",
+ "atualizado": "2026-11-17T18:51-03:00",
  "vturb": {
   "status": "ok",
   "players": [
@@ -27,8 +27,8 @@
   "dias": [
    {
     "data": "2026-11-17",
-    "plays": 63,
-    "views": 86,
+    "plays": 67,
+    "views": 100,
     "finalizados": 4,
     "cliques": 4,
     "acima_pitch": 9,
@@ -284,6 +284,11 @@
     ]
    },
    "2026-10-27": {
+    "instagram": [
+     3,
+     0,
+     0
+    ],
     "facebook_mobile_reels": [
      3,
      0,
@@ -294,11 +299,6 @@
      0,
      0
     ],
-    "instagram": [
-     3,
-     0,
-     0
-    ],
     "facebook_mobile_feed": [
      0,
      0,
@@ -306,13 +306,13 @@
     ]
    },
    "2026-10-28": {
-    "facebook_mobile_feed": [
-     3,
+    "instagram": [
+     6,
      1,
      0
     ],
-    "instagram": [
-     6,
+    "facebook_mobile_feed": [
+     3,
      1,
      0
     ],
@@ -335,14 +335,14 @@
     ]
    },
    "2026-10-30": {
-    "facebook_mobile_feed": [
-     1,
-     0,
-     0
-    ],
     "instagram": [
      10,
      3,
+     0
+    ],
+    "facebook_mobile_feed": [
+     1,
+     0,
      0
     ],
     "facebook_notification": [
@@ -406,11 +406,6 @@
     ]
    },
    "2026-11-02": {
-    "instagram": [
-     13,
-     5,
-     1
-    ],
     "facebook_mobile_reels": [
      1,
      0,
@@ -420,6 +415,11 @@
      1,
      0,
      0
+    ],
+    "instagram": [
+     13,
+     5,
+     1
     ],
     "facebook_mobile_feed": [
      1,
@@ -438,15 +438,15 @@
      2,
      1
     ],
-    "facebook_mobile_reels": [
-     2,
-     2,
-     1
-    ],
     "facebook_mobile_feed": [
      4,
      0,
      0
+    ],
+    "facebook_mobile_reels": [
+     2,
+     2,
+     1
     ],
     "facebook_instream_video": [
      0,
@@ -465,15 +465,15 @@
      2,
      0
     ],
-    "facebook_mobile_reels": [
-     3,
-     0,
-     0
-    ],
     "instagram": [
      18,
      5,
      1
+    ],
+    "facebook_mobile_reels": [
+     3,
+     0,
+     0
     ],
     "facebook_instream_video": [
      2,
@@ -482,24 +482,24 @@
     ]
    },
    "2026-11-05": {
+    "instagram": [
+     24,
+     1,
+     0
+    ],
     "fb": [
      1,
+     0,
+     0
+    ],
+    "facebook_mobile_reels": [
+     5,
      0,
      0
     ],
     "facebook_mobile_feed": [
      6,
      1,
-     0
-    ],
-    "instagram": [
-     24,
-     1,
-     0
-    ],
-    "facebook_mobile_reels": [
-     5,
-     0,
      0
     ],
     "facebook_instream_video": [
@@ -509,11 +509,6 @@
     ]
    },
    "2026-11-06": {
-    "instagram": [
-     10,
-     2,
-     0
-    ],
     "facebook_mobile_feed": [
      3,
      0,
@@ -522,6 +517,11 @@
     "fb": [
      3,
      1,
+     0
+    ],
+    "instagram": [
+     10,
+     2,
      0
     ],
     "facebook_mobile_reels": [
@@ -536,15 +536,20 @@
     ]
    },
    "2026-11-07": {
-    "facebook_mobile_reels": [
-     5,
-     0,
-     0
-    ],
     "instagram": [
      18,
      3,
      2
+    ],
+    "facebook_stories": [
+     4,
+     0,
+     0
+    ],
+    "facebook_mobile_reels": [
+     5,
+     0,
+     0
     ],
     "facebook_mobile_feed": [
      13,
@@ -556,11 +561,6 @@
      0,
      0
     ],
-    "facebook_stories": [
-     4,
-     0,
-     0
-    ],
     "fb": [
      2,
      0,
@@ -568,11 +568,6 @@
     ]
    },
    "2026-11-08": {
-    "facebook_mobile_feed": [
-     9,
-     0,
-     0
-    ],
     "instagram": [
      19,
      2,
@@ -588,6 +583,11 @@
      0,
      0
     ],
+    "facebook_mobile_feed": [
+     9,
+     0,
+     0
+    ],
     "fb": [
      1,
      0,
@@ -595,17 +595,17 @@
     ]
    },
    "2026-11-09": {
+    "facebook_mobile_reels": [
+     2,
+     0,
+     0
+    ],
     "facebook_mobile_feed": [
      8,
      0,
      0
     ],
     "fb": [
-     2,
-     0,
-     0
-    ],
-    "facebook_mobile_reels": [
      2,
      0,
      0
@@ -627,6 +627,11 @@
     ]
    },
    "2026-11-10": {
+    "facebook_instream_video": [
+     1,
+     1,
+     0
+    ],
     "instagram": [
      17,
      3,
@@ -640,11 +645,6 @@
     "fb": [
      8,
      3,
-     0
-    ],
-    "facebook_instream_video": [
-     1,
-     1,
      0
     ],
     "facebook_mobile_reels": [
@@ -739,15 +739,15 @@
     ]
    },
    "2026-11-16": {
-    "fb": [
-     76,
-     6,
-     1
-    ],
     "instagram": [
-     24,
+     23,
      1,
      0
+    ],
+    "fb": [
+     77,
+     6,
+     1
     ],
     "sem UTM": [
      0,
@@ -756,15 +756,15 @@
     ]
    },
    "2026-11-17": {
-    "fb": [
-     39,
-     2,
-     2
-    ],
     "instagram": [
-     22,
+     23,
      2,
      1
+    ],
+    "fb": [
+     44,
+     2,
+     2
     ],
     "sem UTM": [
      0,
@@ -775,34 +775,34 @@
   },
   "janelas": {
    "1": {
-    "tempo_medio_s": 207,
-    "retencao": 19.7,
-    "minutos": 218
+    "tempo_medio_s": 194,
+    "retencao": 18.4,
+    "minutos": 217
    },
    "3": {
-    "tempo_medio_s": 207,
-    "retencao": 19.6,
-    "minutos": 934
+    "tempo_medio_s": 204,
+    "retencao": 19.3,
+    "minutos": 933
    },
    "7": {
-    "tempo_medio_s": 250,
-    "retencao": 23.3,
-    "minutos": 1953
+    "tempo_medio_s": 247,
+    "retencao": 23.0,
+    "minutos": 1951
    },
    "14": {
-    "tempo_medio_s": 261,
-    "retencao": 23.5,
-    "minutos": 3138
+    "tempo_medio_s": 259,
+    "retencao": 23.4,
+    "minutos": 3135
    },
    "30": {
-    "tempo_medio_s": 277,
-    "retencao": 24.5,
-    "minutos": 3897
+    "tempo_medio_s": 275,
+    "retencao": 24.3,
+    "minutos": 3893
    },
    "90": {
-    "tempo_medio_s": 277,
-    "retencao": 24.5,
-    "minutos": 3897
+    "tempo_medio_s": 275,
+    "retencao": 24.3,
+    "minutos": 3893
    }
   },
   "curva": {
@@ -3330,13 +3330,13 @@
     ]
    },
    "2026-09-27": {
-    "Meu Arrais-Amador": [
-     2,
-     171.58
-    ],
     "Mapas Mentais para Exame de Arrais-Amador": [
      2,
      30.94
+    ],
+    "Meu Arrais-Amador": [
+     2,
+     171.58
     ],
     "Meteorologia Náutica Simplificada": [
      1,
