@@ -19,7 +19,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
+      # 18/11: sempre a main MAIS NOVA (não o commit que disparou o run). Um run que esperava na fila pegava a fila
+      # antiga, sem o "publicado" do run anterior, e postava o mesmo story de novo.
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - name: Instala ffmpeg
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
       - name: Publica o que venceu
@@ -67,7 +71,13 @@ jobs:
             git config user.email "actions@users.noreply.github.com"
             git add -A
             git commit -m "fila/métricas: atualizado"
-            git push
+            # 18/11: se alguém (ex.: o gatilho do PC) empurrou nesse meio-tempo, o push era recusado e o "publicado"
+            # se perdia -> o próximo run postava de novo (story saiu 3x). Agora rebase e tenta de novo.
+            for i in 1 2 3 4 5 6; do
+              git pull --rebase -X theirs -q origin main && git push && exit 0
+              sleep $((i*5))
+            done
+            echo "NÃO consegui salvar a fila" >&2; exit 1
           fi
       - name: Avisa se algum post falhou
         env:
