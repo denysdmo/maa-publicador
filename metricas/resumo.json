@@ -1,11 +1,11 @@
 {
- "atualizado": "2026-11-18T01:17-03:00",
- "seguidores": 19878,
+ "atualizado": "2026-11-18T04:30-03:00",
+ "seguidores": 19888,
  "publicacoes": 137,
  "por_formato": {
   "carrossel": {
    "posts": 38,
-   "alcance": 377.6,
+   "alcance": 378.2,
    "salvos": 2.8,
    "compart": 2.0,
    "engaj": 3.1
@@ -19,20 +19,20 @@
   },
   "reel": {
    "posts": 85,
-   "alcance": 8948.8,
+   "alcance": 8952.4,
    "salvos": 72.4,
-   "compart": 130.3,
+   "compart": 130.4,
    "engaj": 5.4
   }
  },
  "por_dia": {
   "seg": {
    "posts": 26,
-   "alcance": 20049.2
+   "alcance": 20058.6
   },
   "ter": {
    "posts": 21,
-   "alcance": 1355.9
+   "alcance": 1358.5
   },
   "qua": {
    "posts": 20,
@@ -40,11 +40,11 @@
   },
   "qui": {
    "posts": 20,
-   "alcance": 3335.6
+   "alcance": 3335.7
   },
   "sex": {
    "posts": 31,
-   "alcance": 1898.4
+   "alcance": 1899.3
   },
   "sáb": {
    "posts": 9,
@@ -66,15 +66,15 @@
   },
   "12": {
    "posts": 14,
-   "alcance": 614.2
+   "alcance": 615.6
   },
   "13": {
    "posts": 42,
-   "alcance": 16034.7
+   "alcance": 16039.3
   },
   "14": {
    "posts": 14,
-   "alcance": 1838.2
+   "alcance": 1838.4
   },
   "15": {
    "posts": 9,
@@ -82,23 +82,23 @@
   },
   "16": {
    "posts": 8,
-   "alcance": 683.0
+   "alcance": 683.1
   },
   "17": {
    "posts": 4,
-   "alcance": 4089.5
+   "alcance": 4114.8
   },
   "18": {
    "posts": 9,
-   "alcance": 867.8
+   "alcance": 868.1
   },
   "19": {
    "posts": 18,
-   "alcance": 2929.7
+   "alcance": 2929.9
   },
   "20": {
    "posts": 6,
-   "alcance": 1463.3
+   "alcance": 1463.8
   },
   "21": {
    "posts": 1,
@@ -135,10 +135,10 @@
    "formato": "reel",
    "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
    "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
-   "reach": 64575,
-   "saved": 678,
-   "shares": 756,
-   "taxa_engaj": 8.88
+   "reach": 64714,
+   "saved": 681,
+   "shares": 760,
+   "taxa_engaj": 8.9
   },
   {
    "data": "2026-07-30",
@@ -175,20 +175,20 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 12911,
-   "saved": 133,
+   "reach": 13012,
+   "saved": 134,
    "shares": 257,
-   "taxa_engaj": 11.67
+   "taxa_engaj": 11.6
   },
   {
    "data": "2026-10-09",
    "formato": "reel",
    "legenda": "🚤 Você conhece esses sinais de navegação fluvial? Eles podem fazer a diferença na sua prova!  Estude com método e prepare-se para passar de primeira! ⚓  👉 Acess",
    "link": "https://www.instagram.com/reel/DeSlfIkmzNn/",
-   "reach": 12424,
+   "reach": 12426,
    "saved": 105,
-   "shares": 199,
-   "taxa_engaj": 9.65
+   "shares": 200,
+   "taxa_engaj": 9.69
   },
   {
    "data": "2026-08-12",
@@ -287,10 +287,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 12911,
-   "saved": 133,
+   "reach": 13012,
+   "saved": 134,
    "shares": 257,
-   "taxa_engaj": 11.67
+   "taxa_engaj": 11.6
   },
   {
    "data": "2026-08-07",
@@ -314,25 +314,25 @@
   }
  ],
  "stories_medias": {
-  "alcance": 72.8,
+  "alcance": 73.3,
   "respostas": 0.3,
-  "saidas": 8.9
+  "saidas": 9.0
  },
  "conta": [
   {
    "data": "2026-11-17",
    "follower_count": "",
-   "views": 52857,
-   "reach": 33346,
-   "profile_views": 337,
+   "views": 53576,
+   "reach": 33919,
+   "profile_views": 343,
    "website_clicks": 39,
-   "accounts_engaged": 2480,
-   "total_interactions": 3817,
-   "likes": 2417,
+   "accounts_engaged": 2494,
+   "total_interactions": 3861,
+   "likes": 2444,
    "comments": 11,
-   "shares": 449,
-   "saves": 371,
-   "replies": 3,
+   "shares": 453,
+   "saves": 377,
+   "replies": 4,
    "follows_and_unfollows": ""
   },
   {
@@ -785,7 +785,7 @@
   },
   {
    "data": "2026-10-19",
-   "follower_count": 38,
+   "follower_count": "38",
    "views": "7303",
    "reach": "4324",
    "profile_views": "66",
