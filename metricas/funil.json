@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-18T23:21-03:00",
+ "atualizado": "2026-11-19T02:31-03:00",
  "vturb": {
   "status": "ok",
   "players": [
@@ -26,9 +26,18 @@
   ],
   "dias": [
    {
+    "data": "2026-11-19",
+    "plays": 3,
+    "views": 4,
+    "finalizados": 0,
+    "cliques": 1,
+    "acima_pitch": 2,
+    "conversoes": 0
+   },
+   {
     "data": "2026-11-18",
-    "plays": 84,
-    "views": 132,
+    "plays": 86,
+    "views": 134,
     "finalizados": 5,
     "cliques": 4,
     "acima_pitch": 10,
@@ -276,13 +285,13 @@
     ]
    },
    "2026-10-26": {
-    "instagram": [
-     3,
+    "facebook_mobile_reels": [
+     2,
      0,
      0
     ],
-    "facebook_mobile_reels": [
-     2,
+    "instagram": [
+     3,
      0,
      0
     ],
@@ -344,14 +353,14 @@
     ]
    },
    "2026-10-30": {
-    "facebook_mobile_feed": [
-     1,
-     0,
-     0
-    ],
     "instagram": [
      10,
      3,
+     0
+    ],
+    "facebook_mobile_feed": [
+     1,
+     0,
      0
     ],
     "facebook_mobile_reels": [
@@ -388,14 +397,14 @@
     ]
    },
    "2026-11-01": {
-    "instagram": [
-     13,
-     3,
-     0
-    ],
     "facebook_mobile_feed": [
      3,
      0,
+     0
+    ],
+    "instagram": [
+     13,
+     3,
      0
     ],
     "fb": [
@@ -415,6 +424,11 @@
     ]
    },
    "2026-11-02": {
+    "instagram": [
+     13,
+     5,
+     1
+    ],
     "facebook_mobile_reels": [
      1,
      0,
@@ -424,11 +438,6 @@
      1,
      0,
      0
-    ],
-    "instagram": [
-     13,
-     5,
-     1
     ],
     "facebook_mobile_feed": [
      1,
@@ -447,15 +456,15 @@
      2,
      1
     ],
-    "facebook_mobile_feed": [
-     4,
-     0,
-     0
-    ],
     "facebook_mobile_reels": [
      2,
      2,
      1
+    ],
+    "facebook_mobile_feed": [
+     4,
+     0,
+     0
     ],
     "facebook_instream_video": [
      0,
@@ -474,8 +483,8 @@
      2,
      0
     ],
-    "facebook_instream_video": [
-     2,
+    "facebook_mobile_reels": [
+     3,
      0,
      0
     ],
@@ -484,31 +493,31 @@
      5,
      1
     ],
-    "facebook_mobile_reels": [
-     3,
+    "facebook_instream_video": [
+     2,
      0,
      0
     ]
    },
    "2026-11-05": {
+    "fb": [
+     1,
+     0,
+     0
+    ],
     "instagram": [
      24,
+     1,
+     0
+    ],
+    "facebook_mobile_feed": [
+     6,
      1,
      0
     ],
     "facebook_mobile_reels": [
      5,
      0,
-     0
-    ],
-    "fb": [
-     1,
-     0,
-     0
-    ],
-    "facebook_mobile_feed": [
-     6,
-     1,
      0
     ],
     "facebook_instream_video": [
@@ -518,14 +527,14 @@
     ]
    },
    "2026-11-06": {
-    "facebook_mobile_feed": [
-     3,
+    "facebook_mobile_reels": [
+     2,
      0,
      0
     ],
-    "instagram": [
-     10,
-     2,
+    "facebook_mobile_feed": [
+     3,
+     0,
      0
     ],
     "fb": [
@@ -533,9 +542,9 @@
      1,
      0
     ],
-    "facebook_mobile_reels": [
+    "instagram": [
+     10,
      2,
-     0,
      0
     ],
     "sem UTM": [
@@ -545,23 +554,13 @@
     ]
    },
    "2026-11-07": {
-    "facebook_mobile_feed": [
-     13,
-     1,
-     1
-    ],
-    "facebook_mobile_reels": [
-     5,
-     0,
-     0
-    ],
     "instagram": [
      18,
      3,
      2
     ],
-    "facebook_instream_video": [
-     4,
+    "facebook_mobile_reels": [
+     5,
      0,
      0
     ],
@@ -569,6 +568,16 @@
      4,
      0,
      0
+    ],
+    "facebook_instream_video": [
+     4,
+     0,
+     0
+    ],
+    "facebook_mobile_feed": [
+     13,
+     1,
+     1
     ],
     "fb": [
      2,
@@ -577,8 +586,8 @@
     ]
    },
    "2026-11-08": {
-    "facebook_mobile_feed": [
-     9,
+    "facebook_instream_video": [
+     2,
      0,
      0
     ],
@@ -587,15 +596,15 @@
      0,
      0
     ],
-    "facebook_instream_video": [
-     2,
-     0,
-     0
-    ],
     "instagram": [
      19,
      2,
      2
+    ],
+    "facebook_mobile_feed": [
+     9,
+     0,
+     0
     ],
     "fb": [
      1,
@@ -636,9 +645,9 @@
     ]
    },
    "2026-11-10": {
-    "instagram": [
-     17,
-     3,
+    "facebook_instream_video": [
+     1,
+     1,
      0
     ],
     "fb": [
@@ -651,9 +660,9 @@
      1,
      1
     ],
-    "facebook_instream_video": [
-     1,
-     1,
+    "instagram": [
+     17,
+     3,
      0
     ],
     "facebook_mobile_feed": [
@@ -731,15 +740,15 @@
     ]
    },
    "2026-11-15": {
-    "fb": [
-     92,
-     2,
-     1
-    ],
     "instagram": [
      7,
      0,
      0
+    ],
+    "fb": [
+     92,
+     2,
+     1
     ],
     "sem UTM": [
      0,
@@ -748,15 +757,15 @@
     ]
    },
    "2026-11-16": {
-    "fb": [
-     79,
-     7,
-     1
-    ],
     "instagram": [
      21,
      0,
      0
+    ],
+    "fb": [
+     79,
+     7,
+     1
     ],
     "sem UTM": [
      0,
@@ -765,20 +774,20 @@
     ]
    },
    "2026-11-17": {
-    "instagram": [
-     31,
+    "fb": [
+     64,
      3,
-     2
+     3
     ],
     "facebook_mobile_reels": [
      0,
      0,
      0
     ],
-    "fb": [
-     64,
+    "instagram": [
+     31,
      3,
-     3
+     2
     ],
     "sem UTM": [
      0,
@@ -787,17 +796,29 @@
     ]
    },
    "2026-11-18": {
+    "fb": [
+     69,
+     3,
+     0
+    ],
     "instagram": [
      16,
      1,
      1
     ],
+    "facebook_mobile_feed": [
+     0,
+     0,
+     0
+    ]
+   },
+   "2026-11-19": {
     "fb": [
-     67,
      3,
+     1,
      0
     ],
-    "facebook_mobile_feed": [
+    "sem UTM": [
      0,
      0,
      0
@@ -806,34 +827,34 @@
   },
   "janelas": {
    "1": {
-    "tempo_medio_s": 182,
-    "retencao": 16.9,
-    "minutos": 255
+    "tempo_medio_s": 635,
+    "retencao": 51.7,
+    "minutos": 32
    },
    "3": {
-    "tempo_medio_s": 202,
-    "retencao": 19.0,
-    "minutos": 976
+    "tempo_medio_s": 196,
+    "retencao": 18.3,
+    "minutos": 622
    },
    "7": {
-    "tempo_medio_s": 229,
-    "retencao": 21.4,
-    "minutos": 2142
+    "tempo_medio_s": 220,
+    "retencao": 20.6,
+    "minutos": 1915
    },
    "14": {
-    "tempo_medio_s": 242,
-    "retencao": 22.1,
-    "minutos": 3300
+    "tempo_medio_s": 244,
+    "retencao": 22.3,
+    "minutos": 3201
    },
    "30": {
-    "tempo_medio_s": 264,
-    "retencao": 23.4,
-    "minutos": 4256
+    "tempo_medio_s": 265,
+    "retencao": 23.5,
+    "minutos": 4289
    },
    "90": {
-    "tempo_medio_s": 264,
-    "retencao": 23.4,
-    "minutos": 4256
+    "tempo_medio_s": 265,
+    "retencao": 23.5,
+    "minutos": 4289
    }
   },
   "curva": {
@@ -978,6 +999,10 @@
     ],
     [
      915,
+     1.6
+    ],
+    [
+     935,
      1.6
     ],
     [
