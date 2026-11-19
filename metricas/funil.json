@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-19T08:41-03:00",
+ "atualizado": "2026-11-19T11:51-03:00",
  "vturb": {
   "status": "ok",
   "players": [
@@ -27,8 +27,8 @@
   "dias": [
    {
     "data": "2026-11-19",
-    "plays": 16,
-    "views": 22,
+    "plays": 22,
+    "views": 30,
     "finalizados": 2,
     "cliques": 1,
     "acima_pitch": 5,
@@ -285,13 +285,13 @@
     ]
    },
    "2026-10-26": {
-    "instagram": [
-     3,
+    "facebook_mobile_reels": [
+     2,
      0,
      0
     ],
-    "facebook_mobile_reels": [
-     2,
+    "instagram": [
+     3,
      0,
      0
     ],
@@ -302,12 +302,12 @@
     ]
    },
    "2026-10-27": {
-    "facebook_mobile_reels": [
+    "instagram": [
      3,
      0,
      0
     ],
-    "instagram": [
+    "facebook_mobile_reels": [
      3,
      0,
      0
@@ -363,12 +363,12 @@
      0,
      0
     ],
-    "facebook_mobile_reels": [
+    "facebook_mobile_feed": [
      1,
      0,
      0
     ],
-    "facebook_mobile_feed": [
+    "facebook_mobile_reels": [
      1,
      0,
      0
@@ -397,14 +397,14 @@
     ]
    },
    "2026-11-01": {
-    "instagram": [
-     13,
-     3,
-     0
-    ],
     "facebook_mobile_feed": [
      3,
      0,
+     0
+    ],
+    "instagram": [
+     13,
+     3,
      0
     ],
     "fb": [
@@ -429,15 +429,15 @@
      0,
      0
     ],
-    "instagram": [
-     13,
-     5,
-     1
-    ],
     "facebook_mobile_reels": [
      1,
      0,
      0
+    ],
+    "instagram": [
+     13,
+     5,
+     1
     ],
     "facebook_mobile_feed": [
      1,
@@ -451,20 +451,20 @@
     ]
    },
    "2026-11-03": {
-    "facebook_mobile_feed": [
-     4,
-     0,
-     0
+    "facebook_mobile_reels": [
+     2,
+     2,
+     1
     ],
     "instagram": [
      14,
      2,
      1
     ],
-    "facebook_mobile_reels": [
-     2,
-     2,
-     1
+    "facebook_mobile_feed": [
+     4,
+     0,
+     0
     ],
     "facebook_instream_video": [
      0,
@@ -478,24 +478,24 @@
     ]
    },
    "2026-11-04": {
+    "facebook_mobile_feed": [
+     3,
+     2,
+     0
+    ],
     "instagram": [
      18,
      5,
      1
-    ],
-    "facebook_instream_video": [
-     2,
-     0,
-     0
     ],
     "facebook_mobile_reels": [
      3,
      0,
      0
     ],
-    "facebook_mobile_feed": [
-     3,
+    "facebook_instream_video": [
      2,
+     0,
      0
     ]
    },
@@ -503,6 +503,11 @@
     "instagram": [
      24,
      1,
+     0
+    ],
+    "facebook_mobile_reels": [
+     5,
+     0,
      0
     ],
     "fb": [
@@ -515,11 +520,6 @@
      1,
      0
     ],
-    "facebook_mobile_reels": [
-     5,
-     0,
-     0
-    ],
     "facebook_instream_video": [
      1,
      0,
@@ -527,14 +527,14 @@
     ]
    },
    "2026-11-06": {
+    "facebook_mobile_feed": [
+     3,
+     0,
+     0
+    ],
     "instagram": [
      10,
      2,
-     0
-    ],
-    "facebook_mobile_reels": [
-     2,
-     0,
      0
     ],
     "fb": [
@@ -542,8 +542,8 @@
      1,
      0
     ],
-    "facebook_mobile_feed": [
-     3,
+    "facebook_mobile_reels": [
+     2,
      0,
      0
     ],
@@ -554,17 +554,17 @@
     ]
    },
    "2026-11-07": {
-    "facebook_mobile_reels": [
-     5,
-     0,
-     0
-    ],
-    "facebook_stories": [
+    "facebook_instream_video": [
      4,
      0,
      0
     ],
-    "facebook_instream_video": [
+    "instagram": [
+     18,
+     3,
+     2
+    ],
+    "facebook_stories": [
      4,
      0,
      0
@@ -574,10 +574,10 @@
      1,
      1
     ],
-    "instagram": [
-     18,
-     3,
-     2
+    "facebook_mobile_reels": [
+     5,
+     0,
+     0
     ],
     "fb": [
      2,
@@ -586,13 +586,18 @@
     ]
    },
    "2026-11-08": {
-    "facebook_instream_video": [
+    "instagram": [
+     19,
      2,
-     0,
-     0
+     2
     ],
     "facebook_stories": [
      0,
+     0,
+     0
+    ],
+    "facebook_instream_video": [
+     2,
      0,
      0
     ],
@@ -601,11 +606,6 @@
      0,
      0
     ],
-    "instagram": [
-     19,
-     2,
-     2
-    ],
     "fb": [
      1,
      0,
@@ -613,6 +613,11 @@
     ]
    },
    "2026-11-09": {
+    "facebook_mobile_feed": [
+     8,
+     0,
+     0
+    ],
     "facebook_mobile_reels": [
      2,
      0,
@@ -628,11 +633,6 @@
      10,
      4
     ],
-    "facebook_mobile_feed": [
-     8,
-     0,
-     0
-    ],
     "facebook_desktop_feed": [
      1,
      1,
@@ -645,30 +645,30 @@
     ]
    },
    "2026-11-10": {
+    "facebook_mobile_reels": [
+     4,
+     1,
+     1
+    ],
     "instagram": [
      17,
      3,
      0
     ],
-    "fb": [
-     8,
-     3,
-     0
+    "facebook_mobile_feed": [
+     10,
+     2,
+     1
     ],
     "facebook_instream_video": [
      1,
      1,
      0
     ],
-    "facebook_mobile_reels": [
-     4,
-     1,
-     1
-    ],
-    "facebook_mobile_feed": [
-     10,
-     2,
-     1
+    "fb": [
+     8,
+     3,
+     0
     ],
     "facebook_stories": [
      1,
@@ -701,15 +701,15 @@
     ]
    },
    "2026-11-13": {
-    "instagram": [
-     5,
-     2,
-     0
-    ],
     "fb": [
      60,
      7,
      4
+    ],
+    "instagram": [
+     5,
+     2,
+     0
     ],
     "sem UTM": [
      0,
@@ -757,15 +757,15 @@
     ]
    },
    "2026-11-16": {
-    "instagram": [
-     21,
-     0,
-     0
-    ],
     "fb": [
      79,
      7,
      1
+    ],
+    "instagram": [
+     21,
+     0,
+     0
     ],
     "sem UTM": [
      0,
@@ -774,11 +774,6 @@
     ]
    },
    "2026-11-17": {
-    "instagram": [
-     31,
-     3,
-     2
-    ],
     "facebook_mobile_reels": [
      0,
      0,
@@ -788,6 +783,11 @@
      64,
      3,
      3
+    ],
+    "instagram": [
+     31,
+     3,
+     2
     ],
     "sem UTM": [
      0,
@@ -813,48 +813,48 @@
     ]
    },
    "2026-11-19": {
+    "fb": [
+     17,
+     1,
+     0
+    ],
     "instagram": [
      5,
      0,
-     0
-    ],
-    "fb": [
-     12,
-     1,
      0
     ]
    }
   },
   "janelas": {
    "1": {
-    "tempo_medio_s": 365,
-    "retencao": 31.8,
-    "minutos": 97
+    "tempo_medio_s": 325,
+    "retencao": 29.2,
+    "minutos": 119
    },
    "3": {
-    "tempo_medio_s": 203,
-    "retencao": 18.9,
-    "minutos": 690
+    "tempo_medio_s": 204,
+    "retencao": 19.1,
+    "minutos": 714
    },
    "7": {
     "tempo_medio_s": 222,
     "retencao": 20.8,
-    "minutos": 1982
+    "minutos": 2001
    },
    "14": {
     "tempo_medio_s": 245,
     "retencao": 22.4,
-    "minutos": 3268
+    "minutos": 3288
    },
    "30": {
     "tempo_medio_s": 265,
     "retencao": 23.5,
-    "minutos": 4355
+    "minutos": 4375
    },
    "90": {
     "tempo_medio_s": 265,
     "retencao": 23.5,
-    "minutos": 4355
+    "minutos": 4375
    }
   },
   "curva": {
@@ -867,23 +867,23 @@
     ],
     [
      10,
-     8.2
+     8.1
     ],
     [
      20,
-     16.4
+     16.1
     ],
     [
      30,
-     11.5
+     11.3
     ],
     [
      40,
-     3.3
+     3.2
     ],
     [
      50,
-     4.9
+     4.8
     ],
     [
      60,
@@ -891,35 +891,35 @@
     ],
     [
      70,
-     4.9
+     4.8
     ],
     [
      80,
-     8.2
+     8.1
     ],
     [
      90,
-     6.6
+     6.5
     ],
     [
      100,
-     6.6
+     6.5
     ],
     [
      110,
-     3.3
+     3.2
     ],
     [
      120,
-     6.6
+     6.5
     ],
     [
      140,
-     4.9
+     4.8
     ],
     [
      150,
-     4.9
+     4.8
     ],
     [
      160,
@@ -947,11 +947,11 @@
     ],
     [
      285,
-     3.3
+     3.2
     ],
     [
      300,
-     3.3
+     3.2
     ],
     [
      340,
@@ -959,7 +959,7 @@
     ],
     [
      425,
-     3.3
+     3.2
     ],
     [
      440,
@@ -991,11 +991,11 @@
     ],
     [
      885,
-     3.3
+     3.2
     ],
     [
      905,
-     3.3
+     3.2
     ],
     [
      915,
