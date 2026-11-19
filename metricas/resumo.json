@@ -1,11 +1,11 @@
 {
- "atualizado": "2026-11-19T02:31-03:00",
- "seguidores": 20176,
+ "atualizado": "2026-11-19T05:34-03:00",
+ "seguidores": 20184,
  "publicacoes": 138,
  "por_formato": {
   "carrossel": {
    "posts": 38,
-   "alcance": 397.5,
+   "alcance": 397.9,
    "salvos": 3.1,
    "compart": 2.2,
    "engaj": 3.2
@@ -19,8 +19,8 @@
   },
   "reel": {
    "posts": 85,
-   "alcance": 9057.8,
-   "salvos": 73.6,
+   "alcance": 9059.3,
+   "salvos": 73.7,
    "compart": 132.3,
    "engaj": 5.4
   }
@@ -28,7 +28,7 @@
  "por_dia": {
   "seg": {
    "posts": 26,
-   "alcance": 20352.1
+   "alcance": 20356.9
   },
   "ter": {
    "posts": 21,
@@ -36,7 +36,7 @@
   },
   "qua": {
    "posts": 21,
-   "alcance": 6018.9
+   "alcance": 6019.1
   },
   "qui": {
    "posts": 20,
@@ -44,15 +44,15 @@
   },
   "sex": {
    "posts": 31,
-   "alcance": 1938.5
+   "alcance": 1938.9
   },
   "sáb": {
    "posts": 9,
-   "alcance": 784.1
+   "alcance": 784.2
   },
   "dom": {
    "posts": 11,
-   "alcance": 802.0
+   "alcance": 802.3
   }
  },
  "por_hora": {
@@ -66,11 +66,11 @@
   },
   "12": {
    "posts": 15,
-   "alcance": 635.6
+   "alcance": 636.5
   },
   "13": {
    "posts": 42,
-   "alcance": 16155.1
+   "alcance": 16155.3
   },
   "14": {
    "posts": 14,
@@ -82,11 +82,11 @@
   },
   "16": {
    "posts": 8,
-   "alcance": 689.9
+   "alcance": 690.2
   },
   "17": {
    "posts": 4,
-   "alcance": 4987.5
+   "alcance": 5018.5
   },
   "18": {
    "posts": 9,
@@ -126,9 +126,9 @@
    "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
    "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
    "reach": 68739,
-   "saved": 738,
-   "shares": 842,
-   "taxa_engaj": 9.2
+   "saved": 743,
+   "shares": 843,
+   "taxa_engaj": 9.22
   },
   {
    "data": "2026-08-05",
@@ -165,10 +165,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 16500,
-   "saved": 157,
+   "reach": 16624,
+   "saved": 160,
    "shares": 325,
-   "taxa_engaj": 11.45
+   "taxa_engaj": 11.41
   },
   {
    "data": "2026-08-21",
@@ -287,10 +287,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 16500,
-   "saved": 157,
+   "reach": 16624,
+   "saved": 160,
    "shares": 325,
-   "taxa_engaj": 11.45
+   "taxa_engaj": 11.41
   },
   {
    "data": "2026-08-07",
@@ -314,24 +314,39 @@
   }
  ],
  "stories_medias": {
-  "alcance": 78.4,
+  "alcance": 76.5,
   "respostas": 0.3,
   "saidas": 9.8
  },
  "conta": [
   {
+   "data": "2026-11-19",
+   "views": 52,
+   "reach": 62,
+   "profile_views": 0,
+   "website_clicks": 0,
+   "accounts_engaged": 6,
+   "total_interactions": 9,
+   "likes": 5,
+   "comments": 0,
+   "shares": 1,
+   "saves": 1,
+   "replies": 0,
+   "follows_and_unfollows": ""
+  },
+  {
    "data": "2026-11-18",
-   "follower_count": "",
-   "views": 21920,
-   "reach": 13634,
-   "profile_views": 170,
+   "follower_count": 0,
+   "views": 22319,
+   "reach": 13762,
+   "profile_views": 174,
    "website_clicks": 25,
-   "accounts_engaged": 937,
-   "total_interactions": 1546,
-   "likes": 986,
+   "accounts_engaged": 955,
+   "total_interactions": 1571,
+   "likes": 1001,
    "comments": 7,
-   "shares": 194,
-   "saves": 138,
+   "shares": 195,
+   "saves": 145,
    "replies": 0,
    "follows_and_unfollows": ""
   },
@@ -785,7 +800,7 @@
   },
   {
    "data": "2026-10-20",
-   "follower_count": 32,
+   "follower_count": "32",
    "views": "4519",
    "reach": "2414",
    "profile_views": "37",
