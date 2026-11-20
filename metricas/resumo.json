@@ -1,11 +1,11 @@
 {
- "atualizado": "2026-11-20T03:20-03:00",
- "seguidores": 20383,
+ "atualizado": "2026-11-20T06:25-03:00",
+ "seguidores": 20389,
  "publicacoes": 140,
  "por_formato": {
   "carrossel": {
    "posts": 39,
-   "alcance": 423.1,
+   "alcance": 425.3,
    "salvos": 3.4,
    "compart": 2.4,
    "engaj": 3.3
@@ -19,20 +19,20 @@
   },
   "reel": {
    "posts": 86,
-   "alcance": 9071.9,
-   "salvos": 74.1,
-   "compart": 132.2,
+   "alcance": 9075.7,
+   "salvos": 74.2,
+   "compart": 132.3,
    "engaj": 5.4
   }
  },
  "por_dia": {
   "seg": {
    "posts": 26,
-   "alcance": 20565.8
+   "alcance": 20568.1
   },
   "ter": {
    "posts": 21,
-   "alcance": 1394.3
+   "alcance": 1394.6
   },
   "qua": {
    "posts": 21,
@@ -40,11 +40,11 @@
   },
   "qui": {
    "posts": 22,
-   "alcance": 3261.9
+   "alcance": 3277.0
   },
   "sex": {
    "posts": 31,
-   "alcance": 1962.4
+   "alcance": 1962.9
   },
   "sáb": {
    "posts": 9,
@@ -66,11 +66,11 @@
   },
   "12": {
    "posts": 16,
-   "alcance": 684.9
+   "alcance": 690.4
   },
   "13": {
    "posts": 43,
-   "alcance": 15949.3
+   "alcance": 15955.6
   },
   "14": {
    "posts": 14,
@@ -86,15 +86,15 @@
   },
   "17": {
    "posts": 4,
-   "alcance": 5637.2
+   "alcance": 5650.2
   },
   "18": {
    "posts": 9,
-   "alcance": 895.6
+   "alcance": 896.0
   },
   "19": {
    "posts": 18,
-   "alcance": 2958.8
+   "alcance": 2958.9
   },
   "20": {
    "posts": 6,
@@ -125,10 +125,10 @@
    "formato": "reel",
    "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
    "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
-   "reach": 71595,
-   "saved": 785,
-   "shares": 901,
-   "taxa_engaj": 9.38
+   "reach": 71602,
+   "saved": 786,
+   "shares": 905,
+   "taxa_engaj": 9.41
   },
   {
    "data": "2026-08-05",
@@ -165,10 +165,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 19095,
+   "reach": 19147,
    "saved": 183,
-   "shares": 346,
-   "taxa_engaj": 10.95
+   "shares": 349,
+   "taxa_engaj": 10.97
   },
   {
    "data": "2026-08-21",
@@ -185,10 +185,10 @@
    "formato": "reel",
    "legenda": "🚤 Você conhece esses sinais de navegação fluvial? Eles podem fazer a diferença na sua prova!  Estude com método e prepare-se para passar de primeira! ⚓  👉 Acess",
    "link": "https://www.instagram.com/reel/DeSlfIkmzNn/",
-   "reach": 12911,
+   "reach": 12914,
    "saved": 118,
    "shares": 204,
-   "taxa_engaj": 9.77
+   "taxa_engaj": 9.76
   },
   {
    "data": "2026-08-12",
@@ -250,7 +250,7 @@
    "reach": 3802,
    "saved": 39,
    "shares": 92,
-   "taxa_engaj": 12.66
+   "taxa_engaj": 12.68
   },
   {
    "data": "2026-04-01",
@@ -283,6 +283,16 @@
    "taxa_engaj": "11.81"
   },
   {
+   "data": "2026-11-09",
+   "formato": "reel",
+   "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
+   "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
+   "reach": 19147,
+   "saved": 183,
+   "shares": 349,
+   "taxa_engaj": 10.97
+  },
+  {
    "data": "2026-08-07",
    "formato": "reel",
    "legenda": "Aprenda os sinais sonoros que mais caem na prova de Arrais-Amador! (Pt.2) 🚤📢  ⚓ Quer passar de primeira? Estude com a plataforma **Meu Arrais-Amador**. Acesse o",
@@ -291,16 +301,6 @@
    "saved": "105",
    "shares": "114",
    "taxa_engaj": "10.97"
-  },
-  {
-   "data": "2026-11-09",
-   "formato": "reel",
-   "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
-   "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 19095,
-   "saved": 183,
-   "shares": 346,
-   "taxa_engaj": 10.95
   },
   {
    "data": "2026-07-22",
@@ -314,24 +314,39 @@
   }
  ],
  "stories_medias": {
-  "alcance": 79.3,
+  "alcance": 79.7,
   "respostas": 0.3,
-  "saidas": 10.3
+  "saidas": 10.4
  },
  "conta": [
   {
+   "data": "2026-11-20",
+   "views": 511,
+   "reach": 341,
+   "profile_views": 1,
+   "website_clicks": 0,
+   "accounts_engaged": 22,
+   "total_interactions": 34,
+   "likes": 15,
+   "comments": 0,
+   "shares": 8,
+   "saves": 2,
+   "replies": 0,
+   "follows_and_unfollows": ""
+  },
+  {
    "data": "2026-11-19",
-   "follower_count": "",
-   "views": 22529,
-   "reach": 11990,
+   "follower_count": 0,
+   "views": 22873,
+   "reach": 12218,
    "profile_views": 154,
    "website_clicks": 38,
-   "accounts_engaged": 831,
-   "total_interactions": 1363,
-   "likes": 837,
+   "accounts_engaged": 844,
+   "total_interactions": 1379,
+   "likes": 850,
    "comments": 10,
-   "shares": 171,
-   "saves": 141,
+   "shares": 172,
+   "saves": 142,
    "replies": 1,
    "follows_and_unfollows": ""
   },
@@ -785,7 +800,7 @@
   },
   {
    "data": "2026-10-21",
-   "follower_count": 31,
+   "follower_count": "31",
    "views": "4099",
    "reach": "2207",
    "profile_views": "35",
