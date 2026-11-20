@@ -1,58 +1,58 @@
 {
- "atualizado": "2026-11-19T18:01-03:00",
- "seguidores": 20316,
+ "atualizado": "2026-11-19T21:11-03:00",
+ "seguidores": 20346,
  "publicacoes": 140,
  "por_formato": {
   "carrossel": {
    "posts": 39,
-   "alcance": 407.9,
+   "alcance": 413.6,
    "salvos": 3.3,
-   "compart": 2.2,
+   "compart": 2.3,
    "engaj": 3.3
   },
   "post": {
    "posts": 16,
-   "alcance": 2649.1,
+   "alcance": 2650.1,
    "salvos": 34.1,
    "compart": 32.5,
    "engaj": 5.3
   },
   "reel": {
    "posts": 86,
-   "alcance": 9026.0,
-   "salvos": 73.6,
-   "compart": 131.7,
+   "alcance": 9046.4,
+   "salvos": 73.9,
+   "compart": 131.9,
    "engaj": 5.4
   }
  },
  "por_dia": {
   "seg": {
    "posts": 26,
-   "alcance": 20486.2
+   "alcance": 20519.9
   },
   "ter": {
    "posts": 21,
-   "alcance": 1391.5
+   "alcance": 1392.5
   },
   "qua": {
    "posts": 21,
-   "alcance": 6023.7
+   "alcance": 6025.0
   },
   "qui": {
    "posts": 22,
-   "alcance": 3166.7
+   "alcance": 3208.8
   },
   "sex": {
    "posts": 31,
-   "alcance": 1954.0
+   "alcance": 1958.2
   },
   "sáb": {
    "posts": 9,
-   "alcance": 785.4
+   "alcance": 786.9
   },
   "dom": {
    "posts": 11,
-   "alcance": 804.9
+   "alcance": 805.4
   }
  },
  "por_hora": {
@@ -66,11 +66,11 @@
   },
   "12": {
    "posts": 16,
-   "alcance": 647.0
+   "alcance": 661.9
   },
   "13": {
    "posts": 43,
-   "alcance": 15877.8
+   "alcance": 15907.6
   },
   "14": {
    "posts": 14,
@@ -82,23 +82,23 @@
   },
   "16": {
    "posts": 8,
-   "alcance": 693.5
+   "alcance": 694.4
   },
   "17": {
    "posts": 4,
-   "alcance": 5456.2
+   "alcance": 5555.0
   },
   "18": {
    "posts": 9,
-   "alcance": 889.6
+   "alcance": 892.9
   },
   "19": {
    "posts": 18,
-   "alcance": 2955.0
+   "alcance": 2957.4
   },
   "20": {
    "posts": 6,
-   "alcance": 1483.5
+   "alcance": 1484.0
   },
   "21": {
    "posts": 1,
@@ -125,10 +125,10 @@
    "formato": "reel",
    "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
    "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
-   "reach": 70295,
-   "saved": 771,
-   "shares": 883,
-   "taxa_engaj": 9.38
+   "reach": 70770,
+   "saved": 773,
+   "shares": 887,
+   "taxa_engaj": 9.36
   },
   {
    "data": "2026-08-05",
@@ -165,10 +165,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 18372,
-   "saved": 175,
-   "shares": 340,
-   "taxa_engaj": 11.11
+   "reach": 18767,
+   "saved": 180,
+   "shares": 342,
+   "taxa_engaj": 11.02
   },
   {
    "data": "2026-08-21",
@@ -185,10 +185,10 @@
    "formato": "reel",
    "legenda": "🚤 Você conhece esses sinais de navegação fluvial? Eles podem fazer a diferença na sua prova!  Estude com método e prepare-se para passar de primeira! ⚓  👉 Acess",
    "link": "https://www.instagram.com/reel/DeSlfIkmzNn/",
-   "reach": 12847,
+   "reach": 12890,
    "saved": 117,
    "shares": 204,
-   "taxa_engaj": 9.78
+   "taxa_engaj": 9.76
   },
   {
    "data": "2026-08-12",
@@ -249,8 +249,8 @@
    "link": "https://www.instagram.com/reel/DeaXab_uApx/",
    "reach": 3795,
    "saved": 39,
-   "shares": 91,
-   "taxa_engaj": 12.6
+   "shares": 92,
+   "taxa_engaj": 12.69
   },
   {
    "data": "2026-04-01",
@@ -287,10 +287,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 18372,
-   "saved": 175,
-   "shares": 340,
-   "taxa_engaj": 11.11
+   "reach": 18767,
+   "saved": 180,
+   "shares": 342,
+   "taxa_engaj": 11.02
   },
   {
    "data": "2026-08-07",
@@ -314,24 +314,24 @@
   }
  ],
  "stories_medias": {
-  "alcance": 79.4,
+  "alcance": 77.5,
   "respostas": 0.2,
-  "saidas": 10.3
+  "saidas": 10.0
  },
  "conta": [
   {
    "data": "2026-11-19",
    "follower_count": "",
-   "views": 14075,
-   "reach": 7756,
-   "profile_views": 87,
-   "website_clicks": 17,
-   "accounts_engaged": 535,
-   "total_interactions": 864,
-   "likes": 532,
-   "comments": 8,
-   "shares": 110,
-   "saves": 84,
+   "views": 17910,
+   "reach": 9725,
+   "profile_views": 117,
+   "website_clicks": 37,
+   "accounts_engaged": 690,
+   "total_interactions": 1100,
+   "likes": 675,
+   "comments": 10,
+   "shares": 140,
+   "saves": 111,
    "replies": 0,
    "follows_and_unfollows": ""
   },
