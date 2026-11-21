@@ -1,25 +1,25 @@
 {
- "atualizado": "2026-11-21T01:11-03:00",
+ "atualizado": "2026-11-21T04:21-03:00",
  "seguidores": 20572,
  "publicacoes": 141,
  "por_formato": {
   "carrossel": {
    "posts": 39,
-   "alcance": 458.1,
+   "alcance": 458.9,
    "salvos": 3.7,
    "compart": 2.6,
    "engaj": 3.2
   },
   "post": {
    "posts": 16,
-   "alcance": 2652.2,
+   "alcance": 2652.4,
    "salvos": 34.1,
    "compart": 32.5,
    "engaj": 5.3
   },
   "reel": {
    "posts": 87,
-   "alcance": 9092.5,
+   "alcance": 9093.6,
    "salvos": 74.3,
    "compart": 132.1,
    "engaj": 5.4
@@ -28,7 +28,7 @@
  "por_dia": {
   "seg": {
    "posts": 26,
-   "alcance": 20725.2
+   "alcance": 20726.1
   },
   "ter": {
    "posts": 21,
@@ -36,15 +36,15 @@
   },
   "qua": {
    "posts": 21,
-   "alcance": 6029.9
+   "alcance": 6030.2
   },
   "qui": {
    "posts": 22,
-   "alcance": 3525.8
+   "alcance": 3528.0
   },
   "sex": {
    "posts": 32,
-   "alcance": 1965.2
+   "alcance": 1966.7
   },
   "sáb": {
    "posts": 9,
@@ -66,11 +66,11 @@
   },
   "12": {
    "posts": 16,
-   "alcance": 771.9
+   "alcance": 773.9
   },
   "13": {
    "posts": 44,
-   "alcance": 15798.9
+   "alcance": 15800.5
   },
   "14": {
    "posts": 14,
@@ -82,11 +82,11 @@
   },
   "16": {
    "posts": 8,
-   "alcance": 700.6
+   "alcance": 701.1
   },
   "17": {
    "posts": 4,
-   "alcance": 5954.8
+   "alcance": 5960.8
   },
   "18": {
    "posts": 9,
@@ -127,8 +127,8 @@
    "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
    "reach": 74370,
    "saved": 816,
-   "shares": 952,
-   "taxa_engaj": 9.48
+   "shares": 954,
+   "taxa_engaj": 9.49
   },
   {
    "data": "2026-08-05",
@@ -165,10 +165,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 20365,
+   "reach": 20389,
    "saved": 190,
    "shares": 370,
-   "taxa_engaj": 10.91
+   "taxa_engaj": 10.9
   },
   {
    "data": "2026-08-21",
@@ -205,10 +205,10 @@
    "formato": "reel",
    "legenda": "Você dá ré, com o leme a meio, e a popa foge sozinha para um lado. Para qual? São os efeitos do hélice, e eles caem na prova.  1. O jato no leme: o hélice empur",
    "link": "https://www.instagram.com/reel/Df7dj0RR1je/",
-   "reach": 8947,
+   "reach": 8979,
    "saved": 74,
    "shares": 71,
-   "taxa_engaj": 6.65
+   "taxa_engaj": 6.63
   }
  ],
  "top_engajamento": [
@@ -297,10 +297,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 20365,
+   "reach": 20389,
    "saved": 190,
    "shares": 370,
-   "taxa_engaj": 10.91
+   "taxa_engaj": 10.9
   },
   {
    "data": "2026-07-22",
@@ -314,21 +314,21 @@
   }
  ],
  "stories_medias": {
-  "alcance": 82.7,
+  "alcance": 83.0,
   "respostas": 0.3,
-  "saidas": 11.1
+  "saidas": 11.2
  },
  "conta": [
   {
    "data": "2026-11-20",
    "follower_count": "",
-   "views": 23872,
-   "reach": 13848,
+   "views": 24308,
+   "reach": 14029,
    "profile_views": 145,
    "website_clicks": 15,
-   "accounts_engaged": 772,
-   "total_interactions": 1222,
-   "likes": 797,
+   "accounts_engaged": 776,
+   "total_interactions": 1227,
+   "likes": 802,
    "comments": 6,
    "shares": 142,
    "saves": 113,
@@ -785,7 +785,7 @@
   },
   {
    "data": "2026-10-22",
-   "follower_count": 24,
+   "follower_count": "24",
    "views": "3328",
    "reach": "1833",
    "profile_views": "44",
