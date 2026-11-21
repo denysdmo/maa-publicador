@@ -1,50 +1,50 @@
 {
- "atualizado": "2026-11-21T04:21-03:00",
- "seguidores": 20572,
+ "atualizado": "2026-11-21T07:31-03:00",
+ "seguidores": 20586,
  "publicacoes": 141,
  "por_formato": {
   "carrossel": {
    "posts": 39,
-   "alcance": 458.9,
+   "alcance": 460.2,
    "salvos": 3.7,
    "compart": 2.6,
    "engaj": 3.2
   },
   "post": {
    "posts": 16,
-   "alcance": 2652.4,
+   "alcance": 2652.7,
    "salvos": 34.1,
    "compart": 32.5,
    "engaj": 5.3
   },
   "reel": {
    "posts": 87,
-   "alcance": 9093.6,
+   "alcance": 9097.0,
    "salvos": 74.3,
-   "compart": 132.1,
+   "compart": 132.2,
    "engaj": 5.4
   }
  },
  "por_dia": {
   "seg": {
    "posts": 26,
-   "alcance": 20726.1
+   "alcance": 20730.6
   },
   "ter": {
    "posts": 21,
-   "alcance": 1399.2
+   "alcance": 1399.6
   },
   "qua": {
    "posts": 21,
-   "alcance": 6030.2
+   "alcance": 6030.4
   },
   "qui": {
    "posts": 22,
-   "alcance": 3528.0
+   "alcance": 3535.9
   },
   "sex": {
    "posts": 32,
-   "alcance": 1966.7
+   "alcance": 1968.3
   },
   "sáb": {
    "posts": 9,
@@ -66,15 +66,15 @@
   },
   "12": {
    "posts": 16,
-   "alcance": 773.9
+   "alcance": 777.4
   },
   "13": {
    "posts": 44,
-   "alcance": 15800.5
+   "alcance": 15804.5
   },
   "14": {
    "posts": 14,
-   "alcance": 1841.8
+   "alcance": 1841.9
   },
   "15": {
    "posts": 9,
@@ -86,11 +86,11 @@
   },
   "17": {
    "posts": 4,
-   "alcance": 5960.8
+   "alcance": 5990.0
   },
   "18": {
    "posts": 9,
-   "alcance": 904.4
+   "alcance": 904.7
   },
   "19": {
    "posts": 18,
@@ -126,9 +126,9 @@
    "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
    "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
    "reach": 74370,
-   "saved": 816,
-   "shares": 954,
-   "taxa_engaj": 9.49
+   "saved": 817,
+   "shares": 956,
+   "taxa_engaj": 9.51
   },
   {
    "data": "2026-08-05",
@@ -165,10 +165,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 20389,
+   "reach": 20506,
    "saved": 190,
    "shares": 370,
-   "taxa_engaj": 10.9
+   "taxa_engaj": 10.84
   },
   {
    "data": "2026-08-21",
@@ -205,10 +205,10 @@
    "formato": "reel",
    "legenda": "Você dá ré, com o leme a meio, e a popa foge sozinha para um lado. Para qual? São os efeitos do hélice, e eles caem na prova.  1. O jato no leme: o hélice empur",
    "link": "https://www.instagram.com/reel/Df7dj0RR1je/",
-   "reach": 8979,
+   "reach": 9111,
    "saved": 74,
    "shares": 71,
-   "taxa_engaj": 6.63
+   "taxa_engaj": 6.56
   }
  ],
  "top_engajamento": [
@@ -250,7 +250,7 @@
    "reach": 3827,
    "saved": 39,
    "shares": 94,
-   "taxa_engaj": 12.76
+   "taxa_engaj": 12.78
   },
   {
    "data": "2026-04-01",
@@ -297,10 +297,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 20389,
+   "reach": 20506,
    "saved": 190,
    "shares": 370,
-   "taxa_engaj": 10.9
+   "taxa_engaj": 10.84
   },
   {
    "data": "2026-07-22",
@@ -314,16 +314,31 @@
   }
  ],
  "stories_medias": {
-  "alcance": 83.0,
+  "alcance": 83.9,
   "respostas": 0.3,
-  "saidas": 11.2
+  "saidas": 11.3
  },
  "conta": [
   {
+   "data": "2026-11-21",
+   "views": 1025,
+   "reach": 690,
+   "profile_views": 7,
+   "website_clicks": 0,
+   "accounts_engaged": 27,
+   "total_interactions": 39,
+   "likes": 23,
+   "comments": 0,
+   "shares": 6,
+   "saves": 2,
+   "replies": 0,
+   "follows_and_unfollows": ""
+  },
+  {
    "data": "2026-11-20",
-   "follower_count": "",
-   "views": 24308,
-   "reach": 14029,
+   "follower_count": 0,
+   "views": 24411,
+   "reach": 14074,
    "profile_views": 145,
    "website_clicks": 15,
    "accounts_engaged": 776,
