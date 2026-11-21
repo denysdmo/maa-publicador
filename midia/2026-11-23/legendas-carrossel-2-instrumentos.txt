@@ -1,0 +1,12 @@
+Qual instrumento mede o quê? A tabela que cai na prova de Arrais-Amador está no primeiro slide: bússola, ecobatímetro, odômetro, tacômetro, anemômetro e GNSS.
+
+As três pegadinhas que a prova adora:
+1. A bússola aponta o norte MAGNÉTICO, não o verdadeiro. A diferença é a declinação magnética.
+2. O odômetro mede a velocidade em relação à ÁGUA; o GPS mede sobre o FUNDO. Com corrente forte, os números não batem.
+3. O ecobatímetro mede abaixo do TRANSDUTOR, não abaixo da quilha.
+
+Tira print do quadro e revisa na véspera.
+
+Quer ser aprovado? Toca no link da bio e treina com questões comentadas das 14 áreas da prova.
+
+#arraisamador #provadearrais #instrumentosnauticos #motonauta #navegacao
