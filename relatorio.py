@@ -10,6 +10,11 @@ e o app mostra junto. Imprime o Markdown (o workflow de segunda abre um issue co
 
 Uso: python relatorio.py [AAAA-MM-DD (segunda da semana)] [--salvar]   (padrão: a semana passada)"""
 import csv, datetime, json, os, statistics, sys
+# 22/11: no Windows o console é cp1252 e o print do relatório (com emoji) quebrava a rotina de sexta
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except Exception:
+    pass
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 P = os.path.join(AQUI, "metricas")
