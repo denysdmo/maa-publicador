@@ -1,54 +1,54 @@
 {
- "atualizado": "2026-11-22T08:21-03:00",
- "seguidores": 20684,
+ "atualizado": "2026-11-22T11:31-03:00",
+ "seguidores": 20699,
  "publicacoes": 142,
  "por_formato": {
   "carrossel": {
    "posts": 39,
-   "alcance": 475.6,
+   "alcance": 477.5,
    "salvos": 3.8,
    "compart": 2.7,
    "engaj": 3.2
   },
   "post": {
    "posts": 17,
-   "alcance": 2511.8,
+   "alcance": 2512.9,
    "salvos": 32.2,
    "compart": 30.6,
-   "engaj": 5.1
+   "engaj": 5.2
   },
   "reel": {
    "posts": 87,
-   "alcance": 9137.7,
-   "salvos": 74.9,
-   "compart": 132.7,
+   "alcance": 9141.7,
+   "salvos": 75.0,
+   "compart": 132.8,
    "engaj": 5.4
   }
  },
  "por_dia": {
   "seg": {
    "posts": 26,
-   "alcance": 20821.3
+   "alcance": 20827.7
   },
   "ter": {
    "posts": 21,
-   "alcance": 1403.5
+   "alcance": 1404.0
   },
   "qua": {
    "posts": 21,
-   "alcance": 6033.5
+   "alcance": 6034.2
   },
   "qui": {
    "posts": 22,
-   "alcance": 3581.0
+   "alcance": 3588.0
   },
   "sex": {
    "posts": 32,
-   "alcance": 1987.9
+   "alcance": 1990.4
   },
   "sáb": {
    "posts": 10,
-   "alcance": 735.9
+   "alcance": 737.2
   },
   "dom": {
    "posts": 11,
@@ -66,11 +66,11 @@
   },
   "12": {
    "posts": 17,
-   "alcance": 781.1
+   "alcance": 786.4
   },
   "13": {
    "posts": 44,
-   "alcance": 15855.2
+   "alcance": 15860.4
   },
   "14": {
    "posts": 14,
@@ -86,19 +86,19 @@
   },
   "17": {
    "posts": 4,
-   "alcance": 6259.5
+   "alcance": 6281.5
   },
   "18": {
    "posts": 9,
-   "alcance": 912.2
+   "alcance": 912.6
   },
   "19": {
    "posts": 18,
-   "alcance": 2968.1
+   "alcance": 2969.6
   },
   "20": {
    "posts": 6,
-   "alcance": 1503.0
+   "alcance": 1503.3
   },
   "21": {
    "posts": 1,
@@ -125,10 +125,10 @@
    "formato": "reel",
    "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
    "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
-   "reach": 75597,
-   "saved": 834,
-   "shares": 975,
-   "taxa_engaj": 9.56
+   "reach": 75671,
+   "saved": 836,
+   "shares": 983,
+   "taxa_engaj": 9.61
   },
   {
    "data": "2026-08-05",
@@ -165,10 +165,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 21583,
-   "saved": 201,
-   "shares": 381,
-   "taxa_engaj": 10.73
+   "reach": 21671,
+   "saved": 203,
+   "shares": 383,
+   "taxa_engaj": 10.76
   },
   {
    "data": "2026-08-21",
@@ -185,10 +185,10 @@
    "formato": "reel",
    "legenda": "🚤 Você conhece esses sinais de navegação fluvial? Eles podem fazer a diferença na sua prova!  Estude com método e prepare-se para passar de primeira! ⚓  👉 Acess",
    "link": "https://www.instagram.com/reel/DeSlfIkmzNn/",
-   "reach": 13049,
+   "reach": 13076,
    "saved": 122,
    "shares": 207,
-   "taxa_engaj": 9.87
+   "taxa_engaj": 9.85
   },
   {
    "data": "2026-08-12",
@@ -205,10 +205,10 @@
    "formato": "reel",
    "legenda": "Você dá ré, com o leme a meio, e a popa foge sozinha para um lado. Para qual? São os efeitos do hélice, e eles caem na prova.  1. O jato no leme: o hélice empur",
    "link": "https://www.instagram.com/reel/Df7dj0RR1je/",
-   "reach": 9764,
+   "reach": 9881,
    "saved": 85,
-   "shares": 83,
-   "taxa_engaj": 7.07
+   "shares": 84,
+   "taxa_engaj": 7.05
   }
  ],
  "top_engajamento": [
@@ -297,10 +297,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 21583,
-   "saved": 201,
-   "shares": 381,
-   "taxa_engaj": 10.73
+   "reach": 21671,
+   "saved": 203,
+   "shares": 383,
+   "taxa_engaj": 10.76
   },
   {
    "data": "2026-07-22",
@@ -314,31 +314,31 @@
   }
  ],
  "stories_medias": {
-  "alcance": 86.1,
+  "alcance": 85.4,
   "respostas": 0.2,
-  "saidas": 11.6
+  "saidas": 11.5
  },
  "conta": [
   {
    "data": "2026-11-22",
    "follower_count": "",
-   "views": 1801,
-   "reach": 1305,
-   "profile_views": 7,
-   "website_clicks": 0,
-   "accounts_engaged": 32,
-   "total_interactions": 50,
-   "likes": 29,
-   "comments": 3,
-   "shares": 7,
-   "saves": 3,
+   "views": 5070,
+   "reach": 3504,
+   "profile_views": 25,
+   "website_clicks": 2,
+   "accounts_engaged": 114,
+   "total_interactions": 172,
+   "likes": 101,
+   "comments": 4,
+   "shares": 28,
+   "saves": 7,
    "replies": 0,
    "follows_and_unfollows": ""
   },
   {
    "data": "2026-11-21",
    "follower_count": 0,
-   "views": 17094,
+   "views": 17097,
    "reach": 10098,
    "profile_views": 95,
    "website_clicks": 9,
