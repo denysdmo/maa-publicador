@@ -1,54 +1,54 @@
 {
- "atualizado": "2026-11-23T12:22-03:00",
- "seguidores": 20849,
- "publicacoes": 143,
+ "atualizado": "2026-11-23T15:31-03:00",
+ "seguidores": 20869,
+ "publicacoes": 144,
  "por_formato": {
   "carrossel": {
    "posts": 40,
-   "alcance": 484.4,
-   "salvos": 4.0,
-   "compart": 2.9,
-   "engaj": 3.2
+   "alcance": 496.3,
+   "salvos": 4.2,
+   "compart": 3.0,
+   "engaj": 3.4
   },
   "post": {
    "posts": 17,
-   "alcance": 2519.0,
+   "alcance": 2519.5,
    "salvos": 32.2,
    "compart": 30.6,
    "engaj": 5.1
   },
   "reel": {
-   "posts": 87,
-   "alcance": 9189.7,
-   "salvos": 75.5,
-   "compart": 133.5,
+   "posts": 88,
+   "alcance": 9109.3,
+   "salvos": 74.9,
+   "compart": 132.1,
    "engaj": 5.4
   }
  },
  "por_dia": {
   "seg": {
-   "posts": 27,
-   "alcance": 20174.2
+   "posts": 28,
+   "alcance": 19535.4
   },
   "ter": {
    "posts": 21,
-   "alcance": 1406.5
+   "alcance": 1407.1
   },
   "qua": {
    "posts": 21,
-   "alcance": 6037.3
+   "alcance": 6037.7
   },
   "qui": {
    "posts": 22,
-   "alcance": 3634.0
+   "alcance": 3641.4
   },
   "sex": {
    "posts": 32,
-   "alcance": 2009.3
+   "alcance": 2013.0
   },
   "sáb": {
    "posts": 10,
-   "alcance": 746.8
+   "alcance": 747.5
   },
   "dom": {
    "posts": 11,
@@ -66,11 +66,11 @@
   },
   "12": {
    "posts": 18,
-   "alcance": 789.9
+   "alcance": 816.8
   },
   "13": {
-   "posts": 44,
-   "alcance": 15912.0
+   "posts": 45,
+   "alcance": 15595.6
   },
   "14": {
    "posts": 14,
@@ -86,19 +86,19 @@
   },
   "17": {
    "posts": 4,
-   "alcance": 6693.0
+   "alcance": 6790.8
   },
   "18": {
    "posts": 9,
-   "alcance": 918.2
+   "alcance": 919.2
   },
   "19": {
    "posts": 18,
-   "alcance": 2977.3
+   "alcance": 2979.4
   },
   "20": {
    "posts": 6,
-   "alcance": 1513.0
+   "alcance": 1513.2
   },
   "21": {
    "posts": 1,
@@ -125,10 +125,10 @@
    "formato": "reel",
    "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
    "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
-   "reach": 77119,
-   "saved": 859,
-   "shares": 999,
-   "taxa_engaj": 9.63
+   "reach": 77217,
+   "saved": 864,
+   "shares": 1000,
+   "taxa_engaj": 9.65
   },
   {
    "data": "2026-08-05",
@@ -165,10 +165,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 23315,
-   "saved": 217,
-   "shares": 413,
-   "taxa_engaj": 10.74
+   "reach": 23706,
+   "saved": 221,
+   "shares": 416,
+   "taxa_engaj": 10.69
   },
   {
    "data": "2026-08-21",
@@ -185,20 +185,20 @@
    "formato": "reel",
    "legenda": "🚤 Você conhece esses sinais de navegação fluvial? Eles podem fazer a diferença na sua prova!  Estude com método e prepare-se para passar de primeira! ⚓  👉 Acess",
    "link": "https://www.instagram.com/reel/DeSlfIkmzNn/",
-   "reach": 13207,
+   "reach": 13243,
    "saved": 123,
    "shares": 215,
-   "taxa_engaj": 10.03
+   "taxa_engaj": 10.01
   },
   {
    "data": "2026-11-19",
    "formato": "reel",
    "legenda": "Você dá ré, com o leme a meio, e a popa foge sozinha para um lado. Para qual? São os efeitos do hélice, e eles caem na prova.  1. O jato no leme: o hélice empur",
    "link": "https://www.instagram.com/reel/Df7dj0RR1je/",
-   "reach": 10469,
-   "saved": 89,
-   "shares": 90,
-   "taxa_engaj": 7.05
+   "reach": 10535,
+   "saved": 90,
+   "shares": 92,
+   "taxa_engaj": 7.1
   },
   {
    "data": "2026-08-12",
@@ -253,6 +253,16 @@
    "taxa_engaj": 12.63
   },
   {
+   "data": "2026-11-23",
+   "formato": "carrossel",
+   "legenda": "O través fica a quantos graus da proa? Essa é a pergunta que derruba gente boa na prova de Arrais-Amador.  Proa é 000°. A marcação relativa cresce no sentido ho",
+   "link": "https://www.instagram.com/p/DgFp_qNn8SS/",
+   "reach": 322,
+   "saved": 9,
+   "shares": 5,
+   "taxa_engaj": 12.42
+  },
+  {
    "data": "2026-04-01",
    "formato": "reel",
    "legenda": "Se você acha que estudar pra Arrais Amador é só “dar uma lida”, tá perdendo tempo… ⛵📚  Aqui na Meu Arrais-Amador, a gente segue um ciclo de estudos estratégico ",
@@ -297,48 +307,38 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 23315,
-   "saved": 217,
-   "shares": 413,
-   "taxa_engaj": 10.74
-  },
-  {
-   "data": "2026-07-22",
-   "formato": "post",
-   "legenda": "Uma das maiores dúvidas quando se fala de prova de Arrais-Amador e Motonauta é sobre as classes de fogo, o que não é só um conteúdo para a prova, mas também par",
-   "link": "https://www.instagram.com/p/DbGwAbJuzLC/",
-   "reach": "1702",
-   "saved": "21",
-   "shares": "34",
-   "taxa_engaj": "10.61"
+   "reach": 23706,
+   "saved": 221,
+   "shares": 416,
+   "taxa_engaj": 10.69
   }
  ],
  "stories_medias": {
-  "alcance": 84.4,
-  "respostas": 0.2,
-  "saidas": 11.7
+  "alcance": 85.8,
+  "respostas": 0.3,
+  "saidas": 11.8
  },
  "conta": [
   {
    "data": "2026-11-23",
    "follower_count": "",
-   "views": 5027,
-   "reach": 3225,
-   "profile_views": 38,
-   "website_clicks": 4,
-   "accounts_engaged": 152,
-   "total_interactions": 235,
-   "likes": 139,
-   "comments": 1,
-   "shares": 33,
-   "saves": 21,
-   "replies": 1,
+   "views": 9840,
+   "reach": 6043,
+   "profile_views": 71,
+   "website_clicks": 7,
+   "accounts_engaged": 333,
+   "total_interactions": 478,
+   "likes": 302,
+   "comments": 2,
+   "shares": 53,
+   "saves": 56,
+   "replies": 2,
    "follows_and_unfollows": ""
   },
   {
    "data": "2026-11-22",
    "follower_count": 0,
-   "views": 17746,
+   "views": 17747,
    "reach": 11197,
    "profile_views": 104,
    "website_clicks": 12,
@@ -353,7 +353,7 @@
   },
   {
    "data": "2026-11-21",
-   "follower_count": 0,
+   "follower_count": 131,
    "views": 17098,
    "reach": 10098,
    "profile_views": 95,
@@ -2046,6 +2046,6 @@
   "2026-11-19": 2,
   "2026-11-20": 1,
   "2026-11-21": 1,
-  "2026-11-23": 1
+  "2026-11-23": 2
  }
 }

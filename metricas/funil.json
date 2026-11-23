@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-23T12:22-03:00",
+ "atualizado": "2026-11-23T15:31-03:00",
  "vturb": {
   "status": "ok",
   "players": [
@@ -27,12 +27,12 @@
   "dias": [
    {
     "data": "2026-11-23",
-    "plays": 44,
-    "views": 67,
+    "plays": 56,
+    "views": 91,
     "finalizados": 1,
-    "cliques": 4,
-    "acima_pitch": 6,
-    "conversoes": 0
+    "cliques": 5,
+    "acima_pitch": 8,
+    "conversoes": 1
    },
    {
     "data": "2026-11-22",
@@ -40,7 +40,7 @@
     "views": 258,
     "finalizados": 5,
     "cliques": 6,
-    "acima_pitch": 12,
+    "acima_pitch": 14,
     "conversoes": 3
    },
    {
@@ -49,7 +49,7 @@
     "views": 191,
     "finalizados": 4,
     "cliques": 10,
-    "acima_pitch": 13,
+    "acima_pitch": 14,
     "conversoes": 6
    },
    {
@@ -67,7 +67,7 @@
     "views": 64,
     "finalizados": 3,
     "cliques": 2,
-    "acima_pitch": 9,
+    "acima_pitch": 10,
     "conversoes": 0
    },
    {
@@ -130,7 +130,7 @@
     "views": 66,
     "finalizados": 8,
     "cliques": 6,
-    "acima_pitch": 12,
+    "acima_pitch": 13,
     "conversoes": 2
    },
    {
@@ -184,7 +184,7 @@
     "views": 32,
     "finalizados": 2,
     "cliques": 3,
-    "acima_pitch": 4,
+    "acima_pitch": 5,
     "conversoes": 0
    },
    {
@@ -211,7 +211,7 @@
     "views": 36,
     "finalizados": 1,
     "cliques": 4,
-    "acima_pitch": 7,
+    "acima_pitch": 9,
     "conversoes": 2
    },
    {
@@ -220,7 +220,7 @@
     "views": 23,
     "finalizados": 1,
     "cliques": 5,
-    "acima_pitch": 7,
+    "acima_pitch": 9,
     "conversoes": 1
    },
    {
@@ -274,7 +274,7 @@
     "views": 15,
     "finalizados": 0,
     "cliques": 0,
-    "acima_pitch": 1,
+    "acima_pitch": 2,
     "conversoes": 0
    },
    {
@@ -903,14 +903,14 @@
    },
    "2026-11-23": {
     "instagram": [
-     16,
+     26,
      1,
      0
     ],
     "fb": [
-     28,
-     2,
-     0
+     30,
+     3,
+     1
     ],
     "sem UTM": [
      0,
@@ -922,33 +922,33 @@
   "janelas": {
    "1": {
     "tempo_medio_s": 123,
-    "retencao": 11.3,
-    "minutos": 90
+    "retencao": 11.1,
+    "minutos": 115
    },
    "3": {
     "tempo_medio_s": 137,
-    "retencao": 12.3,
-    "minutos": 607
+    "retencao": 12.2,
+    "minutos": 632
    },
    "7": {
-    "tempo_medio_s": 168,
-    "retencao": 15.3,
-    "minutos": 1528
+    "tempo_medio_s": 167,
+    "retencao": 15.2,
+    "minutos": 1553
    },
    "14": {
-    "tempo_medio_s": 210,
-    "retencao": 19.3,
-    "minutos": 3499
+    "tempo_medio_s": 209,
+    "retencao": 19.2,
+    "minutos": 3524
    },
    "30": {
-    "tempo_medio_s": 235,
-    "retencao": 20.9,
-    "minutos": 5191
+    "tempo_medio_s": 234,
+    "retencao": 20.8,
+    "minutos": 5216
    },
    "90": {
-    "tempo_medio_s": 235,
-    "retencao": 20.9,
-    "minutos": 5191
+    "tempo_medio_s": 234,
+    "retencao": 20.8,
+    "minutos": 5216
    }
   },
   "curva": {
@@ -965,19 +965,19 @@
     ],
     [
      20,
-     14.7
+     14.5
     ],
     [
      30,
-     8.3
+     8.2
     ],
     [
      40,
-     2.8
+     2.7
     ],
     [
      50,
-     2.8
+     2.7
     ],
     [
      60,
@@ -985,27 +985,27 @@
     ],
     [
      70,
-     2.8
+     2.7
     ],
     [
      80,
-     4.6
+     4.5
     ],
     [
      90,
-     3.7
+     3.6
     ],
     [
      100,
-     3.7
+     3.6
     ],
     [
      110,
-     2.8
+     2.7
     ],
     [
      120,
-     3.7
+     3.6
     ],
     [
      135,
@@ -1013,7 +1013,7 @@
     ],
     [
      145,
-     2.8
+     2.7
     ],
     [
      155,
@@ -1041,7 +1041,7 @@
     ],
     [
      255,
-     3.7
+     3.6
     ],
     [
      270,
@@ -1069,7 +1069,7 @@
     ],
     [
      425,
-     3.7
+     3.6
     ],
     [
      440,
@@ -1156,36 +1156,47 @@
      0.9
     ],
     [
-     1145,
+     1140,
      0.9
     ],
     [
-     1165,
+     1155,
      0.9
     ],
     [
-     1195,
+     1180,
      0.9
     ],
     [
-     1210,
+     1205,
      0.9
     ],
     [
-     1220,
-     1.8
+     1215,
+     0.9
     ],
     [
-     1232,
-     26.6
+     1225,
+     0.9
     ]
    ]
   }
  },
  "kiwify": {
   "status": "ok",
-  "vendas_lidas": 276,
+  "vendas_lidas": 277,
   "dias": [
+   {
+    "data": "2026-11-23",
+    "vendas": 1,
+    "bruto": 197.0,
+    "liquido": 176.8,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 0,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
    {
     "data": "2026-11-22",
     "vendas": 3,
@@ -1936,6 +1947,12 @@
    }
   ],
   "por_origem": {
+   "2026-11-23": {
+    "fb": [
+     1,
+     176.8
+    ]
+   },
    "2026-11-22": {
     "instagram": [
      1,
@@ -2378,6 +2395,12 @@
    }
   },
   "por_campanha": {
+   "2026-11-23": {
+    "RVD - CBO|120252058419090190": [
+     1,
+     176.8
+    ]
+   },
    "2026-11-22": {
     "organico": [
      1,
@@ -2824,6 +2847,12 @@
    }
   },
   "por_meio": {
+   "2026-11-23": {
+    "VD01 / VD02 / VD04|120252058419120190": [
+     1,
+     176.8
+    ]
+   },
    "2026-11-22": {
     "bio": [
      1,
@@ -3298,6 +3327,12 @@
    }
   },
   "produtos": {
+   "2026-11-23": {
+    "Meu Arrais-Amador": [
+     1,
+     176.8
+    ]
+   },
    "2026-11-22": {
     "Meu Arrais-Amador": [
      3,
