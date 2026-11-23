@@ -233,6 +233,7 @@
     <button class="aprova" id="vaprova">✅ Aprovar este</button>
     <button class="veta" id="vveta">❌ Vetar</button>
     <button class="cancela" id="vcancela">↩ Cancelar agendamento</button>
+    <button class="aprova" id="vagenda" style="background:var(--ouro);color:#000">🕒 Programar horário</button>
   </div>
   <div class="vbase">
     <button id="vant">‹ Anterior</button>
@@ -335,11 +336,13 @@ function lerChave() { try { return localStorage.getItem(CHAVE) || ""; } catch (e
 function pedir(acao, itens) {
   const linhas = itens.map((p) => acao + ": " + primeiroArq(p)).join("\n");
   const titulo = acao === "aprovar" ? "Aprova" + (itens.length > 1 ? "r " + itens.length + " posts" : "r post de " + dd(itens[0].data) + " " + hhmm(itens[0].data))
+    : acao === "agendar" ? "Aprovação: programar post de " + dd(itens[0].data) + " " + hhmm(itens[0].data)
     : acao === "cancelar" ? "Aprovação: cancelar agendamento de " + dd(itens[0].data) + " " + hhmm(itens[0].data)
     : "Aprovação: vetar " + itens.length + " post" + (itens.length > 1 ? "s" : "");
   const T = {
     aprovar: { tit: itens.length > 1 ? "Aprovar " + itens.length + " posts?" : "Aprovar este post?", sim: "Aprovar", nao: "Não aprovar", ok: "✅ Aprovado" },
     vetar: { tit: itens.length > 1 ? "Vetar " + itens.length + " posts?" : "Vetar este post?", sim: "Vetar", nao: "Cancelar", ok: "❌ Vetado" },
+    agendar: { tit: "Programar para quando?", sim: "Programar", nao: "Voltar", ok: "🕒 Programado" },
     cancelar: { tit: "Cancelar o agendamento?", sim: "Cancelar agendamento", nao: "Voltar", ok: "↩ Agendamento cancelado" },
   }[acao];
   const cx = document.getElementById("confirma");
@@ -348,12 +351,15 @@ function pedir(acao, itens) {
   document.getElementById("csub").innerHTML = (itens.length === 1 ? esc(nomeDia(itens[0].data) + " " + dd(itens[0].data) + " · " + hhmm(itens[0].data)) : "") + (acao === "cancelar" ? "<br>Ele não será postado e volta para “Aguardando sua aprovação”." : "");
   if (precisaChave) document.getElementById("csub").innerHTML += '<br><br>Primeira vez neste aparelho: cole a chave do GitHub. <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Criar chave</a> (repositório maa-publicador, permissão Issues: leitura e escrita).';
   document.getElementById("cchave").hidden = !precisaChave;
+  document.getElementById("chora").hidden = acao !== "agendar";
+  if (acao === "agendar") { const d = new Date(Date.now() + 15 * 60000); d.setSeconds(0, 0); document.getElementById("chorainput").value = new Date(d - d.getTimezoneOffset() * 60000).toISOString().slice(0, 16); }
   const sim = document.getElementById("csim"); sim.hidden = false; sim.disabled = false;
   sim.textContent = T.sim;
   document.getElementById("cnao").textContent = T.nao;
   cx.classList.add("aberto");
   document.getElementById("cnao").onclick = () => cx.classList.remove("aberto");
   sim.onclick = async () => {
+    if (acao === "agendar" && !/^\d{4}-\d\d-\d\dT\d\d:\d\d$/.test(hora())) return;
     let chave = lerChave();
     if (!chave) { chave = document.getElementById("cinput").value.trim(); if (!chave) return; try { localStorage.setItem(CHAVE, chave); } catch (e) {} }
     sim.disabled = true; sim.textContent = "Enviando…";
@@ -363,7 +369,7 @@ function pedir(acao, itens) {
       if (!r.ok) throw new Error("http " + r.status);
       document.getElementById("ctit").textContent = T.ok;
       document.getElementById("csub").textContent = "A agenda atualiza em cerca de 1 minuto.";
-      document.getElementById("cchave").hidden = true;
+      document.getElementById("cchave").hidden = true; document.getElementById("chora").hidden = true;
       setTimeout(() => { cx.classList.remove("aberto"); location.reload(); }, 60000);
       sim.hidden = true; document.getElementById("cnao").textContent = "Fechar";
     } catch (e) {
@@ -411,7 +417,8 @@ async function mostrar() {
   document.getElementById("vcont").textContent = pos + 1 + " de " + lista.length;
   document.getElementById("vant").disabled = pos === 0;
   document.getElementById("vprox").disabled = pos === lista.length - 1;
-  document.getElementById("vdecide").hidden = p.cta || (p.status !== "rascunho" && p.status !== "pendente");
+  document.getElementById("vdecide").hidden = p.cta || !["rascunho", "pendente", "atrasado"].includes(p.status);
+  document.getElementById("vagenda").hidden = v > 0;
   document.getElementById("vaprova").hidden = document.getElementById("vveta").hidden = p.status !== "rascunho";
   document.getElementById("vcancela").hidden = p.status !== "pendente";
   document.getElementById("vaprova").textContent = v ? "✅ Escolher a versão " + v : "✅ Aprovar este";
@@ -454,6 +461,7 @@ document.getElementById("vfechar").onclick = fecharVisor;
 document.getElementById("vaprova").onclick = () => pedir("aprovar", [lista[pos]]);
 document.getElementById("vveta").onclick = () => pedir("vetar", [lista[pos]]);
 document.getElementById("vcancela").onclick = () => pedir("cancelar", [lista[pos]]);
+document.getElementById("vagenda").onclick = () => pedir("agendar", [lista[pos]]);
 document.getElementById("aprovartodos").onclick = () => {
   const r = fila.filter((p) => p.status === "rascunho" && !versao(p)).sort((a, b) => a.data - b.data);
   const comVersao = fila.filter((p) => p.status === "rascunho" && versao(p)).length;
@@ -781,6 +789,6 @@ document.getElementById("abaMetricas").onclick = () => aba("metricas");
 carregar();
 setInterval(carregar, 5 * 60 * 1000);
 </script>
-<div id="confirma" role="dialog" aria-modal="true"><div class="caixa"><div class="tit" id="ctit"></div><div class="sub" id="csub"></div><div id="cchave" hidden><input id="cinput" type="password" placeholder="Cole a chave do GitHub (uma vez só)" autocomplete="off"></div><div class="botoes"><button class="sim" id="csim">Aprovar</button><button class="nao" id="cnao">Não aprovar</button></div></div></div>
+<div id="confirma" role="dialog" aria-modal="true"><div class="caixa"><div class="tit" id="ctit"></div><div class="sub" id="csub"></div><div id="chora" hidden style="margin:10px 0"><input id="chorainput" type="datetime-local" style="font-size:18px;padding:8px;width:100%;box-sizing:border-box"></div><div id="cchave" hidden><input id="cinput" type="password" placeholder="Cole a chave do GitHub (uma vez só)" autocomplete="off"></div><div class="botoes"><button class="sim" id="csim">Aprovar</button><button class="nao" id="cnao">Não aprovar</button></div></div></div>
 </body>
 </html>

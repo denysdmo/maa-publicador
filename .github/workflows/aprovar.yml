@@ -5,6 +5,7 @@ on:
   issues:
     types: [opened]
 permissions:
+  actions: write
   contents: write
   issues: write
 # cada pedido na sua própria fila (14/11): no grupo "publicador" o GitHub DESCARTAVA pedidos enfileirados quando você
@@ -21,6 +22,7 @@ jobs:
       - name: Aplica na fila e salva (com nova tentativa se outro pedido salvar ao mesmo tempo)
         env:
           CORPO: ${{ github.event.issue.body }}
+          TZ: America/Sao_Paulo
         run: |
           git config user.name "maa-publicador"
           git config user.email "actions@users.noreply.github.com"
@@ -36,6 +38,11 @@ jobs:
             sleep $((tentativa * 4))
           done
           exit 1
+      # 23/11: commit feito com o GITHUB_TOKEN não dispara o publicador; chama ele na hora (posta o que venceu)
+      - name: Chama o publicador
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publicar.yml --repo ${{ github.repository }} --ref main
       - name: Responde e fecha o pedido
         env:
           GH_TOKEN: ${{ github.token }}
