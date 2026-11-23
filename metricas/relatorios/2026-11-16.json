@@ -3,50 +3,50 @@
   "ini": "2026-11-16",
   "fim": "2026-11-22"
  },
- "gerado": "2026-11-22T11:49-03:00",
- "seguidores": 20699,
+ "gerado": "2026-11-23T09:01-03:00",
+ "seguidores": 20799,
  "numeros": [
   {
    "rotulo": "Novos seguidores",
-   "valor": 1431,
+   "valor": 1548,
    "antes": 844,
-   "delta": 70
+   "delta": 83
   },
   {
    "rotulo": "Alcance da conta",
-   "valor": 130893,
+   "valor": 138576,
    "antes": 38377,
-   "delta": 241
+   "delta": 261
   },
   {
    "rotulo": "Visualizações",
-   "valor": 207038,
+   "valor": 219714,
    "antes": 69650,
-   "delta": 197
+   "delta": 215
   },
   {
    "rotulo": "Visitas ao perfil",
-   "valor": 1259,
+   "valor": 1338,
    "antes": 447,
-   "delta": 182
+   "delta": 199
   },
   {
    "rotulo": "Cliques no link da bio",
-   "valor": 166,
+   "valor": 176,
    "antes": 74,
-   "delta": 124
+   "delta": 138
   },
   {
    "rotulo": "Compartilhamentos",
-   "valor": 1567,
+   "valor": 1614,
    "antes": 291,
-   "delta": 438
+   "delta": 455
   },
   {
    "rotulo": "Salvamentos",
-   "valor": 1311,
+   "valor": 1355,
    "antes": 165,
-   "delta": 695
+   "delta": 721
   },
   {
    "rotulo": "Publicações no feed",
@@ -62,46 +62,46 @@
   }
  ],
  "certo": [
-  "**Reel de segunda 16/11 (13:02)** chegou a **75671 contas**, 49.9× a mediana dos últimos 30 dias (1516). Tema: “Boia preta e amarela com dois cones no alto: por qual lado você passa”.",
-  "**Reel de quinta 19/11 (13:02)** chegou a **9881 contas**, 6.5× a mediana dos últimos 30 dias (1516). Tema: “Você dá ré, com o leme a meio, e a popa foge sozinha para um lado”.",
-  "**Reel de terça 17/11 (13:32)** chegou a **2521 contas**, 1.7× a mediana dos últimos 30 dias (1516). Tema: “Cinco apitos curtos: o que significam”.",
-  "Mais **enviado** da semana: Reel de segunda 16/11 (13:02), 983 compartilhamentos (1.3% do alcance). É o sinal que mais leva o perfil a quem ainda não segue.",
+  "**Reel de segunda 16/11 (13:02)** chegou a **76985 contas**, 50.5× a mediana dos últimos 30 dias (1524). Tema: “Boia preta e amarela com dois cones no alto: por qual lado você passa”.",
+  "**Reel de quinta 19/11 (13:02)** chegou a **10291 contas**, 6.8× a mediana dos últimos 30 dias (1524). Tema: “Você dá ré, com o leme a meio, e a popa foge sozinha para um lado”.",
+  "**Carrossel de quinta 19/11 (12:02)** chegou a **2580 contas**, 1.7× a mediana dos últimos 30 dias (1524). Tema: “A lancha está afundando”.",
+  "Mais **enviado** da semana: Reel de segunda 16/11 (13:02), 993 compartilhamentos (1.3% do alcance). É o sinal que mais leva o perfil a quem ainda não segue.",
   "Mais **salvo**: Reel de terça 17/11 (13:32), 38 salvamentos (1.5% do alcance): conteúdo que a pessoa guarda para estudar.",
-  "**Novos seguidores** subiu 70% em relação à semana anterior (844 → 1431).",
-  "**Alcance da conta** subiu 241% em relação à semana anterior (38377 → 130893).",
-  "**Visualizações** subiu 197% em relação à semana anterior (69650 → 207038).",
-  "**Visitas ao perfil** subiu 182% em relação à semana anterior (447 → 1259).",
-  "**Cliques no link da bio** subiu 124% em relação à semana anterior (74 → 166).",
-  "**Compartilhamentos** subiu 438% em relação à semana anterior (291 → 1567).",
-  "**Salvamentos** subiu 695% em relação à semana anterior (165 → 1311).",
+  "**Novos seguidores** subiu 83% em relação à semana anterior (844 → 1548).",
+  "**Alcance da conta** subiu 261% em relação à semana anterior (38377 → 138576).",
+  "**Visualizações** subiu 215% em relação à semana anterior (69650 → 219714).",
+  "**Visitas ao perfil** subiu 199% em relação à semana anterior (447 → 1338).",
+  "**Cliques no link da bio** subiu 138% em relação à semana anterior (74 → 176).",
+  "**Compartilhamentos** subiu 455% em relação à semana anterior (291 → 1614).",
+  "**Salvamentos** subiu 721% em relação à semana anterior (165 → 1355).",
   "Story com mais respostas: seg 16/11 08:01 (5 respostas)."
  ],
  "errado": [
-  "**Post de sábado 21/11 (12:01)** ficou abaixo: 241 contas (0.2× a mediana). Tema: “No canal estreito, de que lado você navega”.",
-  "**Post de quarta 18/11 (12:10)** ficou abaixo: 362 contas (0.2× a mediana). Tema: “Hemorragia externa a bordo: qual é o primeiro passo”.",
-  "**Carrossel de segunda 16/11 (12:02)** ficou abaixo: 623 contas (0.4× a mediana). Tema: “Pegou fogo na gasolina a bordo”.",
+  "**Post de sábado 21/11 (12:01)** ficou abaixo: 295 contas (0.2× a mediana). Tema: “No canal estreito, de que lado você navega”.",
+  "**Post de quarta 18/11 (12:10)** ficou abaixo: 378 contas (0.2× a mediana). Tema: “Hemorragia externa a bordo: qual é o primeiro passo”.",
+  "**Carrossel de segunda 16/11 (12:02)** ficou abaixo: 647 contas (0.4× a mediana). Tema: “Pegou fogo na gasolina a bordo”.",
   "3 story(s) com muita saída (mais de 20% de quem viu saiu da sequência): rever o que vem antes deles."
  ],
  "passos": [
   {
    "acao": "Repetir o **molde** do campeão (Reel, “Boia preta e amarela com dois cones no alto: por qual lado você passa”) com **outro ângulo** ou outro tema da prova.",
-   "base": "75671 contas = 49.9× a mediana de 30 dias (1516); 983 envios e 836 salvamentos. Regra: o que passa de 1,3× a mediana vira molde; repostar igual divide o público."
+   "base": "76985 contas = 50.5× a mediana de 30 dias (1524); 993 envios e 851 salvamentos. Regra: o que passa de 1,3× a mediana vira molde; repostar igual divide o público."
   },
   {
    "acao": "Manter o carro-chefe às **13h**.",
-   "base": "Alcance médio às 13h: 15860 em 44 posts, contra 6281 às 17h (2º melhor, 4 posts). Só comparo horários com 3 posts ou mais."
+   "base": "Alcance médio às 13h: 15903 em 44 posts, contra 6576 às 17h (2º melhor, 4 posts). Só comparo horários com 3 posts ou mais."
   },
   {
    "acao": "Garantir pelo menos 2 **Reels** por semana.",
-   "base": "Alcance médio de Reel: 9141 (87 peças), contra 2512 de Post (17 peças)."
+   "base": "Alcance médio de Reel: 9178 (87 peças), contra 2517 de Post (17 peças)."
   }
  ],
  "auditoria": [
   "Planejado na fila: **25** peças (2 carrossel, 2 post, 4 reel, 17 story).",
   "Publicadas: **25** · agendadas: 0 · sem aprovação: 0 · canceladas/vetadas: 0 · falhas: 0.",
   "Publicações medidas no feed: 8 · stories medidos: 22 (stories só têm números por 24 h).",
-  "Mediana de alcance do feed nos últimos 30 dias: **1516** contas (régua usada acima).",
-  "Métricas atualizadas em 2026-11-22 11:31."
+  "Mediana de alcance do feed nos últimos 30 dias: **1524** contas (régua usada acima).",
+  "Métricas atualizadas em 2026-11-23 06:16."
  ],
  "top": [
   {
@@ -110,9 +110,9 @@
    "formato": "reel",
    "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
    "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
-   "reach": "75671",
-   "saved": "836",
-   "shares": "983"
+   "reach": "76985",
+   "saved": "851",
+   "shares": "993"
   },
   {
    "data": "2026-11-19",
@@ -120,19 +120,9 @@
    "formato": "reel",
    "legenda": "Você dá ré, com o leme a meio, e a popa foge sozinha para um lado. Para qual? São os efeitos do hélice, e eles caem na prova.  1. O jato no leme: o hélice empur",
    "link": "https://www.instagram.com/reel/Df7dj0RR1je/",
-   "reach": "9881",
-   "saved": "85",
-   "shares": "84"
-  },
-  {
-   "data": "2026-11-17",
-   "hora": "13:32",
-   "formato": "reel",
-   "legenda": "Cinco apitos curtos: o que significam? Essa pegadinha derruba muita gente na prova de Arrais-Amador.  1 apito curto: guinando para boreste. 2 curtos: guinando p",
-   "link": "https://www.instagram.com/reel/Df2XbElB_Dx/",
-   "reach": "2521",
-   "saved": "38",
-   "shares": "23"
+   "reach": "10291",
+   "saved": "88",
+   "shares": "89"
   },
   {
    "data": "2026-11-19",
@@ -140,9 +130,19 @@
    "formato": "carrossel",
    "legenda": "A lancha está afundando. Qual canal do VHF você usa?  Canal 16 (156,8 MHz), o canal de chamada e socorro. E a ordem das chamadas cai na prova: MAYDAY (perigo gr",
    "link": "https://www.instagram.com/p/Df7Wyarl6f8/",
-   "reach": "2307",
-   "saved": "22",
-   "shares": "14"
+   "reach": "2580",
+   "saved": "24",
+   "shares": "24"
+  },
+  {
+   "data": "2026-11-17",
+   "hora": "13:32",
+   "formato": "reel",
+   "legenda": "Cinco apitos curtos: o que significam? Essa pegadinha derruba muita gente na prova de Arrais-Amador.  1 apito curto: guinando para boreste. 2 curtos: guinando p",
+   "link": "https://www.instagram.com/reel/Df2XbElB_Dx/",
+   "reach": "2538",
+   "saved": "38",
+   "shares": "23"
   },
   {
    "data": "2026-11-20",
@@ -150,7 +150,7 @@
    "formato": "reel",
    "legenda": "Você vem por trás e vai passar outra lancha. Quem tem que manobrar?  Quem alcança. Se você chega por trás, dentro dos 135° da popa da outra (à noite, só vê a lu",
    "link": "https://www.instagram.com/reel/Df-F3WpJo7a/",
-   "reach": "1865",
+   "reach": "1935",
    "saved": "11",
    "shares": "10"
   }
