@@ -48,6 +48,19 @@ def api(metodo, caminho, **params):
         raise RuntimeError(f"API {caminho}: {corpo.get('error', corpo).get('message', corpo)}") from None
 
 
+def cria(**params):
+    """Cria o container. 23/11: a Meta devolveu "Timeout" (não baixou a imagem a tempo) e o story das 9h não saiu.
+    Criar container não publica nada, então dá para tentar de novo com segurança."""
+    for t in range(4):
+        try:
+            return api("POST", f"{UID}/media", **params)["id"]
+        except (RuntimeError, OSError) as e:
+            if t == 3:
+                raise
+            print(f"  criar mídia falhou ({e}); tentando de novo em {30 * (t + 1)} s")
+            time.sleep(30 * (t + 1))
+
+
 def jpeg(caminho):
     """PNG -> JPEG (a API só aceita JPEG em imagem)."""
     if caminho.lower().endswith((".jpg", ".jpeg", ".mp4", ".mov")):
@@ -170,18 +183,18 @@ def main():
         if a.tipo == "story":
             url = sobe(a.arquivos[0])
             video = url.lower().endswith((".mp4", ".mov"))
-            cid = api("POST", f"{UID}/media", media_type="STORIES", **({"video_url": url} if video else {"image_url": url}))["id"]
+            cid = cria(media_type="STORIES", **({"video_url": url} if video else {"image_url": url}))
         elif a.tipo == "post":
-            cid = api("POST", f"{UID}/media", image_url=sobe(a.arquivos[0]), caption=legenda)["id"]
+            cid = cria(image_url=sobe(a.arquivos[0]), caption=legenda)
         elif a.tipo == "carrossel":
             if not 2 <= len(a.arquivos) <= 10:
                 sys.exit("carrossel: de 2 a 10 imagens")
             filhos = []
             for arq in a.arquivos:
-                c = api("POST", f"{UID}/media", image_url=sobe(arq), is_carousel_item="true")["id"]
+                c = cria(image_url=sobe(arq), is_carousel_item="true")
                 espera(c)
                 filhos.append(c)
-            cid = api("POST", f"{UID}/media", media_type="CAROUSEL", children=",".join(filhos), caption=legenda)["id"]
+            cid = cria(media_type="CAROUSEL", children=",".join(filhos), caption=legenda)
         else:
             extra = {"cover_url": sobe(a.capa)} if a.capa else {}
             cid = None
