@@ -1,58 +1,58 @@
 {
- "atualizado": "2026-11-23T18:41-03:00",
- "seguidores": 20897,
+ "atualizado": "2026-11-23T21:51-03:00",
+ "seguidores": 20928,
  "publicacoes": 144,
  "por_formato": {
   "carrossel": {
    "posts": 40,
-   "alcance": 502.4,
-   "salvos": 4.3,
+   "alcance": 508.2,
+   "salvos": 4.4,
    "compart": 3.0,
    "engaj": 3.4
   },
   "post": {
    "posts": 17,
-   "alcance": 2520.2,
+   "alcance": 2521.5,
    "salvos": 32.2,
    "compart": 30.6,
    "engaj": 5.1
   },
   "reel": {
    "posts": 88,
-   "alcance": 9134.2,
-   "salvos": 75.1,
-   "compart": 132.3,
+   "alcance": 9153.1,
+   "salvos": 75.3,
+   "compart": 132.5,
    "engaj": 5.4
   }
  },
  "por_dia": {
   "seg": {
    "posts": 28,
-   "alcance": 19609.4
+   "alcance": 19662.9
   },
   "ter": {
    "posts": 21,
-   "alcance": 1407.4
+   "alcance": 1408.0
   },
   "qua": {
    "posts": 21,
-   "alcance": 6038.4
+   "alcance": 6038.9
   },
   "qui": {
    "posts": 22,
-   "alcance": 3652.0
+   "alcance": 3662.5
   },
   "sex": {
    "posts": 32,
-   "alcance": 2016.5
+   "alcance": 2020.6
   },
   "sáb": {
    "posts": 10,
-   "alcance": 748.5
+   "alcance": 750.1
   },
   "dom": {
    "posts": 11,
-   "alcance": 815.5
+   "alcance": 816.5
   }
  },
  "por_hora": {
@@ -66,15 +66,15 @@
   },
   "12": {
    "posts": 18,
-   "alcance": 831.1
+   "alcance": 845.1
   },
   "13": {
    "posts": 45,
-   "alcance": 15634.6
+   "alcance": 15662.2
   },
   "14": {
    "posts": 14,
-   "alcance": 1843.2
+   "alcance": 1843.3
   },
   "15": {
    "posts": 9,
@@ -82,23 +82,23 @@
   },
   "16": {
    "posts": 8,
-   "alcance": 707.5
+   "alcance": 707.6
   },
   "17": {
    "posts": 4,
-   "alcance": 6892.0
+   "alcance": 6980.5
   },
   "18": {
    "posts": 9,
-   "alcance": 919.9
+   "alcance": 921.7
   },
   "19": {
    "posts": 18,
-   "alcance": 2980.4
+   "alcance": 2982.1
   },
   "20": {
    "posts": 6,
-   "alcance": 1514.3
+   "alcance": 1516.2
   },
   "21": {
    "posts": 1,
@@ -125,10 +125,10 @@
    "formato": "reel",
    "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
    "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
-   "reach": 77542,
-   "saved": 871,
-   "shares": 1001,
-   "taxa_engaj": 9.65
+   "reach": 77715,
+   "saved": 876,
+   "shares": 1013,
+   "taxa_engaj": 9.71
   },
   {
    "data": "2026-08-05",
@@ -165,10 +165,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 24111,
-   "saved": 224,
-   "shares": 417,
-   "taxa_engaj": 10.58
+   "reach": 24465,
+   "saved": 227,
+   "shares": 423,
+   "taxa_engaj": 10.57
   },
   {
    "data": "2026-08-21",
@@ -185,20 +185,20 @@
    "formato": "reel",
    "legenda": "🚤 Você conhece esses sinais de navegação fluvial? Eles podem fazer a diferença na sua prova!  Estude com método e prepare-se para passar de primeira! ⚓  👉 Acess",
    "link": "https://www.instagram.com/reel/DeSlfIkmzNn/",
-   "reach": 13261,
+   "reach": 13288,
    "saved": 123,
    "shares": 215,
-   "taxa_engaj": 10.0
+   "taxa_engaj": 9.99
   },
   {
    "data": "2026-11-19",
    "formato": "reel",
    "legenda": "Você dá ré, com o leme a meio, e a popa foge sozinha para um lado. Para qual? São os efeitos do hélice, e eles caem na prova.  1. O jato no leme: o hélice empur",
    "link": "https://www.instagram.com/reel/Df7dj0RR1je/",
-   "reach": 10726,
+   "reach": 10902,
    "saved": 92,
    "shares": 97,
-   "taxa_engaj": 7.21
+   "taxa_engaj": 7.12
   },
   {
    "data": "2026-08-12",
@@ -247,10 +247,10 @@
    "formato": "reel",
    "legenda": "🌦️ Saber identificar as nuvens pode fazer a diferença na sua navegação e na prova de Arrais-Amador! 🚤 Aprenda meteorologia náutica com o Meu Arrais-Amador. Aces",
    "link": "https://www.instagram.com/reel/DeaXab_uApx/",
-   "reach": 3873,
+   "reach": 3880,
    "saved": 39,
    "shares": 94,
-   "taxa_engaj": 12.63
+   "taxa_engaj": 12.6
   },
   {
    "data": "2026-04-01",
@@ -277,10 +277,10 @@
    "formato": "carrossel",
    "legenda": "O través fica a quantos graus da proa? Essa é a pergunta que derruba gente boa na prova de Arrais-Amador.  Proa é 000°. A marcação relativa cresce no sentido ho",
    "link": "https://www.instagram.com/p/DgFp_qNn8SS/",
-   "reach": 454,
-   "saved": 12,
+   "reach": 565,
+   "saved": 16,
    "shares": 6,
-   "taxa_engaj": 12.0
+   "taxa_engaj": 12.12
   },
   {
    "data": "2026-08-21",
@@ -314,31 +314,31 @@
   }
  ],
  "stories_medias": {
-  "alcance": 86.7,
+  "alcance": 89.3,
   "respostas": 0.3,
-  "saidas": 11.9
+  "saidas": 12.2
  },
  "conta": [
   {
    "data": "2026-11-23",
    "follower_count": "",
-   "views": 14084,
-   "reach": 8229,
-   "profile_views": 98,
-   "website_clicks": 15,
-   "accounts_engaged": 492,
-   "total_interactions": 725,
-   "likes": 467,
+   "views": 18468,
+   "reach": 10538,
+   "profile_views": 121,
+   "website_clicks": 18,
+   "accounts_engaged": 617,
+   "total_interactions": 919,
+   "likes": 610,
    "comments": 3,
-   "shares": 75,
-   "saves": 85,
-   "replies": 4,
+   "shares": 91,
+   "saves": 100,
+   "replies": 5,
    "follows_and_unfollows": ""
   },
   {
    "data": "2026-11-22",
    "follower_count": 0,
-   "views": 17748,
+   "views": 17749,
    "reach": 11197,
    "profile_views": 104,
    "website_clicks": 12,
