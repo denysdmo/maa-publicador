@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-23T21:51-03:00",
+ "atualizado": "2026-11-24T00:55-03:00",
  "vturb": {
   "status": "ok",
   "players": [
@@ -26,12 +26,21 @@
   ],
   "dias": [
    {
+    "data": "2026-11-24",
+    "plays": 2,
+    "views": 4,
+    "finalizados": 0,
+    "cliques": 1,
+    "acima_pitch": 0,
+    "conversoes": 0
+   },
+   {
     "data": "2026-11-23",
-    "plays": 79,
-    "views": 139,
+    "plays": 89,
+    "views": 161,
     "finalizados": 1,
-    "cliques": 7,
-    "acima_pitch": 3,
+    "cliques": 8,
+    "acima_pitch": 11,
     "conversoes": 1
    },
    {
@@ -40,7 +49,7 @@
     "views": 258,
     "finalizados": 5,
     "cliques": 6,
-    "acima_pitch": 11,
+    "acima_pitch": 14,
     "conversoes": 3
    },
    {
@@ -49,7 +58,7 @@
     "views": 191,
     "finalizados": 4,
     "cliques": 10,
-    "acima_pitch": 5,
+    "acima_pitch": 14,
     "conversoes": 6
    },
    {
@@ -58,7 +67,7 @@
     "views": 69,
     "finalizados": 3,
     "cliques": 3,
-    "acima_pitch": 4,
+    "acima_pitch": 6,
     "conversoes": 0
    },
    {
@@ -67,7 +76,7 @@
     "views": 64,
     "finalizados": 3,
     "cliques": 2,
-    "acima_pitch": 8,
+    "acima_pitch": 10,
     "conversoes": 0
    },
    {
@@ -76,7 +85,7 @@
     "views": 134,
     "finalizados": 5,
     "cliques": 4,
-    "acima_pitch": 9,
+    "acima_pitch": 10,
     "conversoes": 1
    },
    {
@@ -85,7 +94,7 @@
     "views": 149,
     "finalizados": 6,
     "cliques": 6,
-    "acima_pitch": 14,
+    "acima_pitch": 16,
     "conversoes": 6
    },
    {
@@ -103,7 +112,7 @@
     "views": 147,
     "finalizados": 5,
     "cliques": 2,
-    "acima_pitch": 12,
+    "acima_pitch": 14,
     "conversoes": 1
    },
    {
@@ -112,7 +121,7 @@
     "views": 83,
     "finalizados": 6,
     "cliques": 5,
-    "acima_pitch": 13,
+    "acima_pitch": 16,
     "conversoes": 2
    },
    {
@@ -121,7 +130,7 @@
     "views": 105,
     "finalizados": 7,
     "cliques": 9,
-    "acima_pitch": 13,
+    "acima_pitch": 14,
     "conversoes": 5
    },
    {
@@ -130,7 +139,7 @@
     "views": 66,
     "finalizados": 8,
     "cliques": 6,
-    "acima_pitch": 12,
+    "acima_pitch": 13,
     "conversoes": 2
    },
    {
@@ -139,7 +148,7 @@
     "views": 49,
     "finalizados": 4,
     "cliques": 2,
-    "acima_pitch": 9,
+    "acima_pitch": 10,
     "conversoes": 1
    },
    {
@@ -175,7 +184,7 @@
     "views": 77,
     "finalizados": 0,
     "cliques": 4,
-    "acima_pitch": 4,
+    "acima_pitch": 5,
     "conversoes": 3
    },
    {
@@ -193,7 +202,7 @@
     "views": 49,
     "finalizados": 1,
     "cliques": 2,
-    "acima_pitch": 3,
+    "acima_pitch": 4,
     "conversoes": 0
    },
    {
@@ -202,7 +211,7 @@
     "views": 42,
     "finalizados": 2,
     "cliques": 7,
-    "acima_pitch": 7,
+    "acima_pitch": 9,
     "conversoes": 1
    },
    {
@@ -220,7 +229,7 @@
     "views": 23,
     "finalizados": 1,
     "cliques": 5,
-    "acima_pitch": 8,
+    "acima_pitch": 9,
     "conversoes": 1
    },
    {
@@ -229,7 +238,7 @@
     "views": 29,
     "finalizados": 0,
     "cliques": 3,
-    "acima_pitch": 3,
+    "acima_pitch": 4,
     "conversoes": 0
    },
    {
@@ -238,7 +247,7 @@
     "views": 19,
     "finalizados": 1,
     "cliques": 2,
-    "acima_pitch": 2,
+    "acima_pitch": 3,
     "conversoes": 0
    },
    {
@@ -247,7 +256,7 @@
     "views": 21,
     "finalizados": 0,
     "cliques": 3,
-    "acima_pitch": 4,
+    "acima_pitch": 5,
     "conversoes": 0
    },
    {
@@ -274,7 +283,7 @@
     "views": 15,
     "finalizados": 0,
     "cliques": 0,
-    "acima_pitch": 1,
+    "acima_pitch": 2,
     "conversoes": 0
    },
    {
@@ -283,7 +292,7 @@
     "views": 15,
     "finalizados": 0,
     "cliques": 1,
-    "acima_pitch": 1,
+    "acima_pitch": 2,
     "conversoes": 0
    },
    {
@@ -321,13 +330,13 @@
     ]
    },
    "2026-10-26": {
-    "instagram": [
-     3,
+    "facebook_mobile_reels": [
+     2,
      0,
      0
     ],
-    "facebook_mobile_reels": [
-     2,
+    "instagram": [
+     3,
      0,
      0
     ],
@@ -360,13 +369,13 @@
     ]
    },
    "2026-10-28": {
-    "instagram": [
-     6,
+    "facebook_mobile_feed": [
+     3,
      1,
      0
     ],
-    "facebook_mobile_feed": [
-     3,
+    "instagram": [
+     6,
      1,
      0
     ],
@@ -389,14 +398,14 @@
     ]
    },
    "2026-10-30": {
-    "facebook_mobile_feed": [
-     1,
-     0,
-     0
-    ],
     "instagram": [
      10,
      3,
+     0
+    ],
+    "facebook_mobile_feed": [
+     1,
+     0,
      0
     ],
     "facebook_mobile_reels": [
@@ -465,12 +474,12 @@
      5,
      1
     ],
-    "facebook_mobile_reels": [
+    "facebook_stories": [
      1,
      0,
      0
     ],
-    "facebook_stories": [
+    "facebook_mobile_reels": [
      1,
      0,
      0
@@ -487,11 +496,6 @@
     ]
    },
    "2026-11-03": {
-    "facebook_mobile_feed": [
-     4,
-     0,
-     0
-    ],
     "instagram": [
      14,
      2,
@@ -501,6 +505,11 @@
      2,
      2,
      1
+    ],
+    "facebook_mobile_feed": [
+     4,
+     0,
+     0
     ],
     "fb": [
      1,
@@ -514,9 +523,9 @@
     ]
    },
    "2026-11-04": {
-    "facebook_mobile_reels": [
+    "facebook_mobile_feed": [
      3,
-     0,
+     2,
      0
     ],
     "instagram": [
@@ -524,21 +533,21 @@
      5,
      1
     ],
-    "facebook_mobile_feed": [
-     3,
-     2,
-     0
-    ],
     "facebook_instream_video": [
      2,
+     0,
+     0
+    ],
+    "facebook_mobile_reels": [
+     3,
      0,
      0
     ]
    },
    "2026-11-05": {
-    "fb": [
+    "instagram": [
+     24,
      1,
-     0,
      0
     ],
     "facebook_mobile_reels": [
@@ -546,13 +555,13 @@
      0,
      0
     ],
-    "facebook_mobile_feed": [
-     6,
+    "fb": [
      1,
+     0,
      0
     ],
-    "instagram": [
-     24,
+    "facebook_mobile_feed": [
+     6,
      1,
      0
     ],
@@ -590,8 +599,23 @@
     ]
    },
    "2026-11-07": {
+    "instagram": [
+     18,
+     3,
+     2
+    ],
+    "facebook_mobile_feed": [
+     13,
+     1,
+     1
+    ],
     "facebook_mobile_reels": [
      5,
+     0,
+     0
+    ],
+    "facebook_instream_video": [
+     4,
      0,
      0
     ],
@@ -599,21 +623,6 @@
      4,
      0,
      0
-    ],
-    "instagram": [
-     18,
-     3,
-     2
-    ],
-    "facebook_instream_video": [
-     4,
-     0,
-     0
-    ],
-    "facebook_mobile_feed": [
-     13,
-     1,
-     1
     ],
     "fb": [
      2,
@@ -622,16 +631,6 @@
     ]
    },
    "2026-11-08": {
-    "facebook_stories": [
-     0,
-     0,
-     0
-    ],
-    "facebook_instream_video": [
-     2,
-     0,
-     0
-    ],
     "instagram": [
      19,
      2,
@@ -642,6 +641,16 @@
      0,
      0
     ],
+    "facebook_instream_video": [
+     2,
+     0,
+     0
+    ],
+    "facebook_stories": [
+     0,
+     0,
+     0
+    ],
     "fb": [
      1,
      0,
@@ -649,13 +658,8 @@
     ]
    },
    "2026-11-09": {
-    "instagram": [
-     32,
-     10,
-     4
-    ],
-    "facebook_mobile_feed": [
-     8,
+    "fb": [
+     2,
      0,
      0
     ],
@@ -664,8 +668,13 @@
      0,
      0
     ],
-    "fb": [
-     2,
+    "instagram": [
+     32,
+     10,
+     4
+    ],
+    "facebook_mobile_feed": [
+     8,
      0,
      0
     ],
@@ -681,8 +690,8 @@
     ]
    },
    "2026-11-10": {
-    "instagram": [
-     17,
+    "fb": [
+     8,
      3,
      0
     ],
@@ -691,15 +700,15 @@
      2,
      1
     ],
+    "instagram": [
+     17,
+     3,
+     0
+    ],
     "facebook_mobile_reels": [
      4,
      1,
      1
-    ],
-    "fb": [
-     8,
-     3,
-     0
     ],
     "facebook_instream_video": [
      1,
@@ -793,15 +802,15 @@
     ]
    },
    "2026-11-16": {
-    "fb": [
-     77,
-     7,
-     1
-    ],
     "instagram": [
      23,
      0,
      0
+    ],
+    "fb": [
+     77,
+     7,
+     1
     ],
     "sem UTM": [
      0,
@@ -815,15 +824,15 @@
      3,
      3
     ],
-    "instagram": [
-     31,
-     3,
-     2
-    ],
     "facebook_mobile_reels": [
      0,
      0,
      0
+    ],
+    "instagram": [
+     31,
+     3,
+     2
     ],
     "sem UTM": [
      0,
@@ -902,15 +911,32 @@
     ]
    },
    "2026-11-23": {
-    "instagram": [
+    "fb": [
      40,
+     4,
+     1
+    ],
+    "instagram": [
+     46,
      2,
      0
     ],
+    "sem UTM": [
+     0,
+     0,
+     0
+    ]
+   },
+   "2026-11-24": {
+    "instagram": [
+     1,
+     0,
+     0
+    ],
     "fb": [
-     37,
-     3,
-     1
+     1,
+     1,
+     0
     ],
     "sem UTM": [
      0,
@@ -921,34 +947,34 @@
   },
   "janelas": {
    "1": {
-    "tempo_medio_s": 114,
-    "retencao": 10.5,
-    "minutos": 151
+    "tempo_medio_s": 18,
+    "retencao": 1.4,
+    "minutos": 1
    },
    "3": {
-    "tempo_medio_s": 133,
-    "retencao": 11.9,
-    "minutos": 667
+    "tempo_medio_s": 125,
+    "retencao": 11.4,
+    "minutos": 461
    },
    "7": {
-    "tempo_medio_s": 164,
-    "retencao": 15.0,
-    "minutos": 1590
+    "tempo_medio_s": 157,
+    "retencao": 14.2,
+    "minutos": 1290
    },
    "14": {
-    "tempo_medio_s": 207,
-    "retencao": 19.0,
-    "minutos": 3560
+    "tempo_medio_s": 201,
+    "retencao": 18.5,
+    "minutos": 3342
    },
    "30": {
-    "tempo_medio_s": 231,
-    "retencao": 20.6,
-    "minutos": 5251
+    "tempo_medio_s": 230,
+    "retencao": 20.5,
+    "minutos": 5273
    },
    "90": {
-    "tempo_medio_s": 231,
-    "retencao": 20.6,
-    "minutos": 5251
+    "tempo_medio_s": 230,
+    "retencao": 20.5,
+    "minutos": 5273
    }
   },
   "curva": {
@@ -961,15 +987,15 @@
     ],
     [
      10,
-     5.4
+     5.3
     ],
     [
      20,
-     15.3
+     15.0
     ],
     [
      30,
-     8.1
+     8.0
     ],
     [
      40,
@@ -989,15 +1015,15 @@
     ],
     [
      80,
-     4.5
+     4.4
     ],
     [
      90,
-     3.6
+     3.5
     ],
     [
      100,
-     3.6
+     3.5
     ],
     [
      110,
@@ -1005,7 +1031,7 @@
     ],
     [
      120,
-     3.6
+     3.5
     ],
     [
      135,
@@ -1041,7 +1067,7 @@
     ],
     [
      255,
-     3.6
+     3.5
     ],
     [
      270,
@@ -1069,7 +1095,7 @@
     ],
     [
      425,
-     3.6
+     3.5
     ],
     [
      440,
@@ -1181,14 +1207,14 @@
     ],
     [
      1232,
-     26.1
+     25.7
     ]
    ]
   }
  },
  "kiwify": {
   "status": "ok",
-  "vendas_lidas": 277,
+  "vendas_lidas": 275,
   "dias": [
    {
     "data": "2026-11-23",
@@ -1937,17 +1963,6 @@
     "pendentes": 0,
     "devolvidas": 0,
     "recusadas": 0
-   },
-   {
-    "data": "2026-08-25",
-    "vendas": 2,
-    "bruto": 134.0,
-    "liquido": 119.46,
-    "ig_vendas": 0,
-    "ig_liquido": 0.0,
-    "pendentes": 0,
-    "devolvidas": 0,
-    "recusadas": 0
    }
   ],
   "por_origem": {
@@ -2389,12 +2404,6 @@
     "sem UTM": [
      1,
      85.79
-    ]
-   },
-   "2026-08-25": {
-    "sem UTM": [
-     2,
-     119.46
     ]
    }
   },
@@ -2841,12 +2850,6 @@
     "-": [
      1,
      85.79
-    ]
-   },
-   "2026-08-25": {
-    "-": [
-     2,
-     119.46
     ]
    }
   },
@@ -3321,12 +3324,6 @@
     "-": [
      1,
      85.79
-    ]
-   },
-   "2026-08-25": {
-    "-": [
-     2,
-     119.46
     ]
    }
   },
@@ -3910,16 +3907,6 @@
     ]
    },
    "2026-08-27": {
-    "Meu Arrais-Amador": [
-     1,
-     85.79
-    ]
-   },
-   "2026-08-25": {
-    "314 Questões Comentadas para o Exame de Arrais-Amador e Motonauta": [
-     1,
-     33.67
-    ],
     "Meu Arrais-Amador": [
      1,
      85.79
