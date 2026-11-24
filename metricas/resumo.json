@@ -1,58 +1,58 @@
 {
- "atualizado": "2026-11-24T04:01-03:00",
- "seguidores": 20958,
+ "atualizado": "2026-11-24T07:02-03:00",
+ "seguidores": 20974,
  "publicacoes": 144,
  "por_formato": {
   "carrossel": {
    "posts": 40,
-   "alcance": 514.4,
-   "salvos": 4.4,
-   "compart": 3.0,
+   "alcance": 517.0,
+   "salvos": 4.5,
+   "compart": 3.1,
    "engaj": 3.4
   },
   "post": {
    "posts": 17,
-   "alcance": 2522.7,
+   "alcance": 2523.1,
    "salvos": 32.2,
    "compart": 30.6,
    "engaj": 5.1
   },
   "reel": {
    "posts": 88,
-   "alcance": 9171.4,
+   "alcance": 9176.2,
    "salvos": 75.5,
-   "compart": 132.6,
+   "compart": 132.7,
    "engaj": 5.4
   }
  },
  "por_dia": {
   "seg": {
    "posts": 28,
-   "alcance": 19716.5
+   "alcance": 19732.0
   },
   "ter": {
    "posts": 21,
-   "alcance": 1408.6
+   "alcance": 1409.1
   },
   "qua": {
    "posts": 21,
-   "alcance": 6040.0
+   "alcance": 6040.5
   },
   "qui": {
    "posts": 22,
-   "alcance": 3671.8
+   "alcance": 3673.0
   },
   "sex": {
    "posts": 32,
-   "alcance": 2023.3
+   "alcance": 2024.5
   },
   "sáb": {
    "posts": 10,
-   "alcance": 752.8
+   "alcance": 753.6
   },
   "dom": {
    "posts": 11,
-   "alcance": 818.8
+   "alcance": 819.4
   }
  },
  "por_hora": {
@@ -66,15 +66,15 @@
   },
   "12": {
    "posts": 18,
-   "alcance": 858.9
+   "alcance": 865.1
   },
   "13": {
    "posts": 45,
-   "alcance": 15686.6
+   "alcance": 15690.7
   },
   "14": {
    "posts": 14,
-   "alcance": 1844.0
+   "alcance": 1844.1
   },
   "15": {
    "posts": 9,
@@ -82,23 +82,23 @@
   },
   "16": {
    "posts": 8,
-   "alcance": 708.8
+   "alcance": 709.4
   },
   "17": {
    "posts": 4,
-   "alcance": 7097.0
+   "alcance": 7148.0
   },
   "18": {
    "posts": 9,
-   "alcance": 922.8
+   "alcance": 923.0
   },
   "19": {
    "posts": 18,
-   "alcance": 2982.3
+   "alcance": 2983.1
   },
   "20": {
    "posts": 6,
-   "alcance": 1522.0
+   "alcance": 1523.8
   },
   "21": {
    "posts": 1,
@@ -125,8 +125,8 @@
    "formato": "reel",
    "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
    "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
-   "reach": 78158,
-   "saved": 882,
+   "reach": 78253,
+   "saved": 883,
    "shares": 1017,
    "taxa_engaj": 9.7
   },
@@ -165,10 +165,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 24930,
-   "saved": 227,
-   "shares": 425,
-   "taxa_engaj": 10.44
+   "reach": 25134,
+   "saved": 228,
+   "shares": 429,
+   "taxa_engaj": 10.42
   },
   {
    "data": "2026-08-21",
@@ -185,7 +185,7 @@
    "formato": "reel",
    "legenda": "🚤 Você conhece esses sinais de navegação fluvial? Eles podem fazer a diferença na sua prova!  Estude com método e prepare-se para passar de primeira! ⚓  👉 Acess",
    "link": "https://www.instagram.com/reel/DeSlfIkmzNn/",
-   "reach": 13288,
+   "reach": 13299,
    "saved": 124,
    "shares": 215,
    "taxa_engaj": 10.02
@@ -247,10 +247,10 @@
    "formato": "reel",
    "legenda": "🌦️ Saber identificar as nuvens pode fazer a diferença na sua navegação e na prova de Arrais-Amador! 🚤 Aprenda meteorologia náutica com o Meu Arrais-Amador. Aces",
    "link": "https://www.instagram.com/reel/DeaXab_uApx/",
-   "reach": 3907,
+   "reach": 3913,
    "saved": 40,
    "shares": 95,
-   "taxa_engaj": 12.64
+   "taxa_engaj": 12.62
   },
   {
    "data": "2026-04-01",
@@ -287,10 +287,10 @@
    "formato": "carrossel",
    "legenda": "O través fica a quantos graus da proa? Essa é a pergunta que derruba gente boa na prova de Arrais-Amador.  Proa é 000°. A marcação relativa cresce no sentido ho",
    "link": "https://www.instagram.com/p/DgFp_qNn8SS/",
-   "reach": 661,
-   "saved": 18,
+   "reach": 720,
+   "saved": 21,
    "shares": 7,
-   "taxa_engaj": 11.5
+   "taxa_engaj": 11.67
   },
   {
    "data": "2026-08-07",
@@ -314,21 +314,36 @@
   }
  ],
  "stories_medias": {
-  "alcance": 91.4,
+  "alcance": 92.0,
   "respostas": 0.3,
   "saidas": 12.6
  },
  "conta": [
   {
+   "data": "2026-11-24",
+   "views": 890,
+   "reach": 526,
+   "profile_views": 9,
+   "website_clicks": 0,
+   "accounts_engaged": 28,
+   "total_interactions": 49,
+   "likes": 23,
+   "comments": 0,
+   "shares": 11,
+   "saves": 4,
+   "replies": 0,
+   "follows_and_unfollows": ""
+  },
+  {
    "data": "2026-11-23",
-   "follower_count": "",
-   "views": 22029,
-   "reach": 12142,
-   "profile_views": 145,
+   "follower_count": 0,
+   "views": 22203,
+   "reach": 12217,
+   "profile_views": 147,
    "website_clicks": 19,
-   "accounts_engaged": 713,
-   "total_interactions": 1080,
-   "likes": 726,
+   "accounts_engaged": 714,
+   "total_interactions": 1085,
+   "likes": 731,
    "comments": 4,
    "shares": 100,
    "saves": 122,
