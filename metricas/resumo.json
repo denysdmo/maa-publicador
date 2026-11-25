@@ -1,54 +1,54 @@
 {
- "atualizado": "2026-11-25T01:51-03:00",
- "seguidores": 21156,
+ "atualizado": "2026-11-25T04:51-03:00",
+ "seguidores": 21160,
  "publicacoes": 145,
  "por_formato": {
   "carrossel": {
    "posts": 40,
-   "alcance": 552.4,
+   "alcance": 553.1,
    "salvos": 5.0,
    "compart": 3.5,
    "engaj": 3.4
   },
   "post": {
    "posts": 17,
-   "alcance": 2528.4,
+   "alcance": 2528.6,
    "salvos": 32.2,
    "compart": 30.6,
    "engaj": 5.1
   },
   "reel": {
    "posts": 89,
-   "alcance": 9233.0,
+   "alcance": 9237.5,
    "salvos": 75.9,
-   "compart": 134.3,
+   "compart": 134.4,
    "engaj": 5.5
   }
  },
  "por_dia": {
   "seg": {
    "posts": 28,
-   "alcance": 19930.7
+   "alcance": 19940.4
   },
   "ter": {
    "posts": 22,
-   "alcance": 1721.9
+   "alcance": 1727.3
   },
   "qua": {
    "posts": 21,
-   "alcance": 6043.5
+   "alcance": 6043.6
   },
   "qui": {
    "posts": 22,
-   "alcance": 3716.5
+   "alcance": 3717.2
   },
   "sex": {
    "posts": 32,
-   "alcance": 2048.3
+   "alcance": 2049.0
   },
   "sáb": {
    "posts": 10,
-   "alcance": 760.3
+   "alcance": 760.6
   },
   "dom": {
    "posts": 11,
@@ -66,19 +66,19 @@
   },
   "12": {
    "posts": 18,
-   "alcance": 947.6
+   "alcance": 949.2
   },
   "13": {
    "posts": 46,
-   "alcance": 15597.8
+   "alcance": 15603.2
   },
   "14": {
    "posts": 14,
-   "alcance": 1844.9
+   "alcance": 1845.0
   },
   "15": {
    "posts": 9,
-   "alcance": 1185.2
+   "alcance": 1185.3
   },
   "16": {
    "posts": 8,
@@ -86,11 +86,11 @@
   },
   "17": {
    "posts": 4,
-   "alcance": 7775.5
+   "alcance": 7814.5
   },
   "18": {
    "posts": 9,
-   "alcance": 932.6
+   "alcance": 932.8
   },
   "19": {
    "posts": 18,
@@ -125,9 +125,9 @@
    "formato": "reel",
    "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
    "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
-   "reach": 79678,
+   "reach": 79777,
    "saved": 906,
-   "shares": 1050,
+   "shares": 1051,
    "taxa_engaj": 9.79
   },
   {
@@ -165,10 +165,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 27639,
+   "reach": 27795,
    "saved": 245,
-   "shares": 498,
-   "taxa_engaj": 10.59
+   "shares": 499,
+   "taxa_engaj": 10.55
   },
   {
    "data": "2026-08-21",
@@ -195,10 +195,10 @@
    "formato": "reel",
    "legenda": "Você dá ré, com o leme a meio, e a popa foge sozinha para um lado. Para qual? São os efeitos do hélice, e eles caem na prova.  1. O jato no leme: o hélice empur",
    "link": "https://www.instagram.com/reel/Df7dj0RR1je/",
-   "reach": 11585,
+   "reach": 11602,
    "saved": 97,
    "shares": 102,
-   "taxa_engaj": 7.07
+   "taxa_engaj": 7.06
   },
   {
    "data": "2026-08-12",
@@ -253,16 +253,6 @@
    "taxa_engaj": 12.46
   },
   {
-   "data": "2026-11-23",
-   "formato": "carrossel",
-   "legenda": "O través fica a quantos graus da proa? Essa é a pergunta que derruba gente boa na prova de Arrais-Amador.  Proa é 000°. A marcação relativa cresce no sentido ho",
-   "link": "https://www.instagram.com/p/DgFp_qNn8SS/",
-   "reach": 1282,
-   "saved": 33,
-   "shares": 19,
-   "taxa_engaj": 12.29
-  },
-  {
    "data": "2026-04-01",
    "formato": "reel",
    "legenda": "Se você acha que estudar pra Arrais Amador é só “dar uma lida”, tá perdendo tempo… ⛵📚  Aqui na Meu Arrais-Amador, a gente segue um ciclo de estudos estratégico ",
@@ -281,6 +271,16 @@
    "saved": "653",
    "shares": "1269",
    "taxa_engaj": "12.19"
+  },
+  {
+   "data": "2026-11-23",
+   "formato": "carrossel",
+   "legenda": "O través fica a quantos graus da proa? Essa é a pergunta que derruba gente boa na prova de Arrais-Amador.  Proa é 000°. A marcação relativa cresce no sentido ho",
+   "link": "https://www.instagram.com/p/DgFp_qNn8SS/",
+   "reach": 1294,
+   "saved": 33,
+   "shares": 19,
+   "taxa_engaj": 12.17
   },
   {
    "data": "2026-08-21",
@@ -314,7 +314,7 @@
   }
  ],
  "stories_medias": {
-  "alcance": 92.5,
+  "alcance": 92.7,
   "respostas": 0.3,
   "saidas": 13.1
  },
@@ -322,16 +322,16 @@
   {
    "data": "2026-11-24",
    "follower_count": "",
-   "views": 30085,
-   "reach": 17585,
-   "profile_views": 183,
+   "views": 30748,
+   "reach": 17847,
+   "profile_views": 185,
    "website_clicks": 19,
-   "accounts_engaged": 1066,
-   "total_interactions": 1830,
-   "likes": 1019,
+   "accounts_engaged": 1088,
+   "total_interactions": 1863,
+   "likes": 1041,
    "comments": 9,
-   "shares": 315,
-   "saves": 152,
+   "shares": 319,
+   "saves": 155,
    "replies": 0,
    "follows_and_unfollows": ""
   },
@@ -785,7 +785,7 @@
   },
   {
    "data": "2026-10-26",
-   "follower_count": 14,
+   "follower_count": "14",
    "views": "4147",
    "reach": "2525",
    "profile_views": "39",
