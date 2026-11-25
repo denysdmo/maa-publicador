@@ -1,58 +1,58 @@
 {
- "atualizado": "2026-11-24T19:42-03:00",
- "seguidores": 21103,
+ "atualizado": "2026-11-24T22:51-03:00",
+ "seguidores": 21136,
  "publicacoes": 145,
  "por_formato": {
   "carrossel": {
    "posts": 40,
-   "alcance": 546.1,
+   "alcance": 550.9,
    "salvos": 5.0,
-   "compart": 3.4,
+   "compart": 3.5,
    "engaj": 3.4
   },
   "post": {
    "posts": 17,
-   "alcance": 2527.4,
+   "alcance": 2527.9,
    "salvos": 32.2,
    "compart": 30.6,
    "engaj": 5.1
   },
   "reel": {
    "posts": 89,
-   "alcance": 9181.2,
-   "salvos": 75.5,
-   "compart": 133.1,
+   "alcance": 9216.9,
+   "salvos": 75.8,
+   "compart": 134.0,
    "engaj": 5.5
   }
  },
  "por_dia": {
   "seg": {
    "posts": 28,
-   "alcance": 19868.2
+   "alcance": 19906.8
   },
   "ter": {
    "posts": 22,
-   "alcance": 1603.1
+   "alcance": 1691.2
   },
   "qua": {
    "posts": 21,
-   "alcance": 6042.4
+   "alcance": 6043.3
   },
   "qui": {
    "posts": 22,
-   "alcance": 3703.2
+   "alcance": 3712.0
   },
   "sex": {
    "posts": 32,
-   "alcance": 2043.0
+   "alcance": 2046.8
   },
   "sáb": {
    "posts": 10,
-   "alcance": 759.2
+   "alcance": 760.0
   },
   "dom": {
    "posts": 11,
-   "alcance": 821.0
+   "alcance": 822.3
   }
  },
  "por_hora": {
@@ -66,39 +66,39 @@
   },
   "12": {
    "posts": 18,
-   "alcance": 932.9
+   "alcance": 943.7
   },
   "13": {
    "posts": 46,
-   "alcance": 15516.2
+   "alcance": 15576.5
   },
   "14": {
    "posts": 14,
-   "alcance": 1844.7
+   "alcance": 1844.9
   },
   "15": {
    "posts": 9,
-   "alcance": 1185.1
+   "alcance": 1185.2
   },
   "16": {
    "posts": 8,
-   "alcance": 710.8
+   "alcance": 711.0
   },
   "17": {
    "posts": 4,
-   "alcance": 7575.5
+   "alcance": 7666.8
   },
   "18": {
    "posts": 9,
-   "alcance": 929.2
+   "alcance": 931.0
   },
   "19": {
    "posts": 18,
-   "alcance": 2989.6
+   "alcance": 2989.7
   },
   "20": {
    "posts": 6,
-   "alcance": 1535.5
+   "alcance": 1538.2
   },
   "21": {
    "posts": 1,
@@ -125,10 +125,10 @@
    "formato": "reel",
    "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
    "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
-   "reach": 78968,
-   "saved": 897,
-   "shares": 1041,
-   "taxa_engaj": 9.79
+   "reach": 79523,
+   "saved": 905,
+   "shares": 1046,
+   "taxa_engaj": 9.78
   },
   {
    "data": "2026-08-05",
@@ -165,10 +165,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 26841,
-   "saved": 243,
-   "shares": 490,
-   "taxa_engaj": 10.73
+   "reach": 27204,
+   "saved": 245,
+   "shares": 495,
+   "taxa_engaj": 10.7
   },
   {
    "data": "2026-08-21",
@@ -186,19 +186,19 @@
    "legenda": "🚤 Você conhece esses sinais de navegação fluvial? Eles podem fazer a diferença na sua prova!  Estude com método e prepare-se para passar de primeira! ⚓  👉 Acess",
    "link": "https://www.instagram.com/reel/DeSlfIkmzNn/",
    "reach": 13411,
-   "saved": 126,
+   "saved": 125,
    "shares": 218,
-   "taxa_engaj": 10.06
+   "taxa_engaj": 10.04
   },
   {
    "data": "2026-11-19",
    "formato": "reel",
    "legenda": "Você dá ré, com o leme a meio, e a popa foge sozinha para um lado. Para qual? São os efeitos do hélice, e eles caem na prova.  1. O jato no leme: o hélice empur",
    "link": "https://www.instagram.com/reel/Df7dj0RR1je/",
-   "reach": 11366,
+   "reach": 11504,
    "saved": 96,
    "shares": 101,
-   "taxa_engaj": 7.11
+   "taxa_engaj": 7.04
   },
   {
    "data": "2026-08-12",
@@ -243,14 +243,24 @@
    "taxa_engaj": "14.37"
   },
   {
+   "data": "2026-11-23",
+   "formato": "carrossel",
+   "legenda": "O través fica a quantos graus da proa? Essa é a pergunta que derruba gente boa na prova de Arrais-Amador.  Proa é 000°. A marcação relativa cresce no sentido ho",
+   "link": "https://www.instagram.com/p/DgFp_qNn8SS/",
+   "reach": 1249,
+   "saved": 33,
+   "shares": 19,
+   "taxa_engaj": 12.57
+  },
+  {
    "data": "2026-10-12",
    "formato": "reel",
    "legenda": "🌦️ Saber identificar as nuvens pode fazer a diferença na sua navegação e na prova de Arrais-Amador! 🚤 Aprenda meteorologia náutica com o Meu Arrais-Amador. Aces",
    "link": "https://www.instagram.com/reel/DeaXab_uApx/",
-   "reach": 3961,
+   "reach": 3968,
    "saved": 40,
    "shares": 95,
-   "taxa_engaj": 12.48
+   "taxa_engaj": 12.46
   },
   {
    "data": "2026-04-01",
@@ -283,16 +293,6 @@
    "taxa_engaj": "11.81"
   },
   {
-   "data": "2026-11-23",
-   "formato": "carrossel",
-   "legenda": "O través fica a quantos graus da proa? Essa é a pergunta que derruba gente boa na prova de Arrais-Amador.  Proa é 000°. A marcação relativa cresce no sentido ho",
-   "link": "https://www.instagram.com/p/DgFp_qNn8SS/",
-   "reach": 1196,
-   "saved": 31,
-   "shares": 15,
-   "taxa_engaj": 11.71
-  },
-  {
    "data": "2026-08-07",
    "formato": "reel",
    "legenda": "Aprenda os sinais sonoros que mais caem na prova de Arrais-Amador! (Pt.2) 🚤📢  ⚓ Quer passar de primeira? Estude com a plataforma **Meu Arrais-Amador**. Acesse o",
@@ -307,31 +307,31 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 26841,
-   "saved": 243,
-   "shares": 490,
-   "taxa_engaj": 10.73
+   "reach": 27204,
+   "saved": 245,
+   "shares": 495,
+   "taxa_engaj": 10.7
   }
  ],
  "stories_medias": {
-  "alcance": 92.1,
+  "alcance": 91.7,
   "respostas": 0.3,
-  "saidas": 13.1
+  "saidas": 12.9
  },
  "conta": [
   {
    "data": "2026-11-24",
    "follower_count": "",
-   "views": 20909,
-   "reach": 12613,
-   "profile_views": 143,
-   "website_clicks": 14,
-   "accounts_engaged": 730,
-   "total_interactions": 1217,
-   "likes": 670,
+   "views": 27397,
+   "reach": 16104,
+   "profile_views": 164,
+   "website_clicks": 19,
+   "accounts_engaged": 950,
+   "total_interactions": 1655,
+   "likes": 889,
    "comments": 9,
-   "shares": 209,
-   "saves": 108,
+   "shares": 298,
+   "saves": 142,
    "replies": 0,
    "follows_and_unfollows": ""
   },
