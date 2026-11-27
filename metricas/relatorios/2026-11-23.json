@@ -1,0 +1,161 @@
+{
+ "semana": {
+  "ini": "2026-11-23",
+  "fim": "2026-11-29"
+ },
+ "gerado": "2026-11-27T09:48-03:00",
+ "seguidores": 21463,
+ "numeros": [
+  {
+   "rotulo": "Novos seguidores",
+   "valor": 396,
+   "antes": 1853,
+   "delta": -79
+  },
+  {
+   "rotulo": "Alcance da conta",
+   "valor": 52014,
+   "antes": 138586,
+   "delta": -62
+  },
+  {
+   "rotulo": "Visualizações",
+   "valor": 90857,
+   "antes": 219718,
+   "delta": -59
+  },
+  {
+   "rotulo": "Visitas ao perfil",
+   "valor": 531,
+   "antes": 1338,
+   "delta": -60
+  },
+  {
+   "rotulo": "Cliques no link da bio",
+   "valor": 74,
+   "antes": 176,
+   "delta": -58
+  },
+  {
+   "rotulo": "Compartilhamentos",
+   "valor": 724,
+   "antes": 1614,
+   "delta": -55
+  },
+  {
+   "rotulo": "Salvamentos",
+   "valor": 505,
+   "antes": 1355,
+   "delta": -63
+  },
+  {
+   "rotulo": "Publicações no feed",
+   "valor": 6,
+   "antes": 8,
+   "delta": -25
+  },
+  {
+   "rotulo": "Stories publicados",
+   "valor": 16,
+   "antes": null,
+   "delta": null
+  }
+ ],
+ "certo": [
+  "**Reel de terça 24/11 (13:31)** chegou a **12719 contas**, 7.3× a mediana dos últimos 30 dias (1744). Tema: “Tanque de 90 litros, motor que gasta 15 litros por hora”.",
+  "**Reel de segunda 23/11 (13:32)** chegou a **5564 contas**, 3.2× a mediana dos últimos 30 dias (1744). Tema: “Tirou a Arrais-Amador”.",
+  "**Reel de quinta 26/11 (13:01)** chegou a **3085 contas**, 1.8× a mediana dos últimos 30 dias (1744). Tema: “A carta náutica diz 1,5 metro de profundidade”.",
+  "Mais **enviado** da semana: Reel de quinta 26/11 (13:01), 58 compartilhamentos (1.9% do alcance). É o sinal que mais leva o perfil a quem ainda não segue.",
+  "Mais **salvo**: Carrossel de segunda 23/11 (12:02), 42 salvamentos (2.6% do alcance): conteúdo que a pessoa guarda para estudar.",
+  "Story com mais respostas: seg 23/11 08:40 (6 respostas)."
+ ],
+ "errado": [
+  "**Carrossel de quinta 26/11 (12:02)** ficou abaixo: 333 contas (0.2× a mediana). Tema: “Qual instrumento mede o quê”.",
+  "**Post de quarta 25/11 (13:01)** ficou abaixo: 342 contas (0.2× a mediana). Tema: “Nuvem com o topo achatado, parecendo uma bigorna de ferreiro: é cumulonimbus”.",
+  "**Novos seguidores** caiu 79% (1853 → 396).",
+  "**Alcance da conta** caiu 62% (138586 → 52014).",
+  "**Visualizações** caiu 59% (219718 → 90857).",
+  "**Visitas ao perfil** caiu 60% (1338 → 531).",
+  "**Cliques no link da bio** caiu 58% (176 → 74).",
+  "**Compartilhamentos** caiu 55% (1614 → 724).",
+  "**Salvamentos** caiu 63% (1355 → 505).",
+  "1 story(s) com muita saída (mais de 20% de quem viu saiu da sequência): rever o que vem antes deles."
+ ],
+ "passos": [
+  {
+   "acao": "Repetir o **molde** do campeão (Reel, “Tanque de 90 litros, motor que gasta 15 litros por hora”) com **outro ângulo** ou outro tema da prova.",
+   "base": "12719 contas = 7.3× a mediana de 30 dias (1744); 233 envios e 100 salvamentos. Regra: o que passa de 1,3× a mediana vira molde; repostar igual divide o público."
+  },
+  {
+   "acao": "Manter o carro-chefe às **13h**.",
+   "base": "Alcance médio às 13h: 15210 em 48 posts, contra 8412 às 17h (2º melhor, 4 posts). Só comparo horários com 3 posts ou mais."
+  },
+  {
+   "acao": "Garantir pelo menos 2 **Reels** por semana.",
+   "base": "Alcance médio de Reel: 9301 (90 peças), contra 2411 de Post (18 peças)."
+  },
+  {
+   "acao": "Testar uma **série** (“Pegadinha da semana nº X”) para quem gostou de uma peça ir atrás da próxima; medir seguidores na semana do teste.",
+   "base": "Novos seguidores: 396 contra 1853 na semana anterior (-79%)."
+  }
+ ],
+ "auditoria": [
+  "Planejado na fila: **24** peças (2 carrossel, 1 post, 4 reel, 17 story).",
+  "Publicadas: **18** · agendadas: 2 · sem aprovação: 4 · canceladas/vetadas: 0 · falhas: 0.",
+  "Publicações medidas no feed: 6 · stories medidos: 16 (stories só têm números por 24 h).",
+  "Mediana de alcance do feed nos últimos 30 dias: **1744** contas (régua usada acima).",
+  "Métricas atualizadas em 2026-11-27 06:51."
+ ],
+ "top": [
+  {
+   "data": "2026-11-24",
+   "hora": "13:31",
+   "formato": "reel",
+   "legenda": "Tanque de 90 litros, motor que gasta 15 litros por hora. Quantas horas de IDA você pode planejar? A maioria responde 6 e erra.  Na náutica de esporte e recreio ",
+   "link": "https://www.instagram.com/reel/DgIY7jThxS4/",
+   "reach": "12719",
+   "saved": "100",
+   "shares": "233"
+  },
+  {
+   "data": "2026-11-23",
+   "hora": "13:32",
+   "formato": "reel",
+   "legenda": "Tirou a Arrais-Amador. Já pode ir pro mar aberto? Muita gente erra isso, e cai na prova.  A Arrais-Amador vale na navegação interior: águas abrigadas (lagos, la",
+   "link": "https://www.instagram.com/reel/DgF0NSqpV_M/",
+   "reach": "5564",
+   "saved": "42",
+   "shares": "30"
+  },
+  {
+   "data": "2026-11-26",
+   "hora": "13:01",
+   "formato": "reel",
+   "legenda": "A carta náutica diz 1,5 metro de profundidade. Seu calado é 2 metros. Você encalha? Depende da maré — e maré cai na prova de Arrais-Amador.  Aula rápida do Meu ",
+   "link": "https://www.instagram.com/reel/DgNfE1uJqqA/",
+   "reach": "3085",
+   "saved": "53",
+   "shares": "58"
+  },
+  {
+   "data": "2026-11-23",
+   "hora": "12:02",
+   "formato": "carrossel",
+   "legenda": "O través fica a quantos graus da proa? Essa é a pergunta que derruba gente boa na prova de Arrais-Amador.  Proa é 000°. A marcação relativa cresce no sentido ho",
+   "link": "https://www.instagram.com/p/DgFp_qNn8SS/",
+   "reach": "1606",
+   "saved": "42",
+   "shares": "20"
+  },
+  {
+   "data": "2026-11-25",
+   "hora": "13:01",
+   "formato": "post",
+   "legenda": "Nuvem com o topo achatado, parecendo uma bigorna de ferreiro: é cumulonimbus. Tempestade com raios, ventos fortes e possível granizo. Volte ao porto IMEDIATAMEN",
+   "link": "https://www.instagram.com/p/DgK6R7yjxdw/",
+   "reach": "342",
+   "saved": "1",
+   "shares": "0"
+  }
+ ]
+}
