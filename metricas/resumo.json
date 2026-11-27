@@ -1,58 +1,58 @@
 {
- "atualizado": "2026-11-27T06:51-03:00",
- "seguidores": 21463,
+ "atualizado": "2026-11-27T10:01-03:00",
+ "seguidores": 21494,
  "publicacoes": 148,
  "por_formato": {
   "carrossel": {
    "posts": 41,
-   "alcance": 577.1,
-   "salvos": 5.6,
+   "alcance": 579.7,
+   "salvos": 5.7,
    "compart": 3.7,
    "engaj": 3.5
   },
   "post": {
    "posts": 18,
-   "alcance": 2411.3,
+   "alcance": 2411.8,
    "salvos": 30.6,
    "compart": 28.9,
    "engaj": 4.9
   },
   "reel": {
    "posts": 90,
-   "alcance": 9301.1,
-   "salvos": 77.0,
-   "compart": 135.8,
+   "alcance": 9309.2,
+   "salvos": 77.2,
+   "compart": 136.1,
    "engaj": 5.6
   }
  },
  "por_dia": {
   "seg": {
    "posts": 28,
-   "alcance": 20157.9
+   "alcance": 20167.3
   },
   "ter": {
    "posts": 22,
-   "alcance": 1932.1
+   "alcance": 1937.0
   },
   "qua": {
    "posts": 22,
-   "alcance": 5788.0
+   "alcance": 5788.3
   },
   "qui": {
    "posts": 24,
-   "alcance": 3598.8
+   "alcance": 3614.8
   },
   "sex": {
    "posts": 32,
-   "alcance": 2085.2
+   "alcance": 2087.6
   },
   "sáb": {
    "posts": 10,
-   "alcance": 769.5
+   "alcance": 769.8
   },
   "dom": {
    "posts": 11,
-   "alcance": 828.1
+   "alcance": 828.5
   }
  },
  "por_hora": {
@@ -66,11 +66,11 @@
   },
   "12": {
    "posts": 19,
-   "alcance": 983.8
+   "alcance": 989.6
   },
   "13": {
    "posts": 48,
-   "alcance": 15210.6
+   "alcance": 15221.6
   },
   "14": {
    "posts": 14,
@@ -82,23 +82,23 @@
   },
   "16": {
    "posts": 8,
-   "alcance": 716.2
+   "alcance": 716.4
   },
   "17": {
    "posts": 4,
-   "alcance": 8412.0
+   "alcance": 8456.5
   },
   "18": {
    "posts": 9,
-   "alcance": 943.6
+   "alcance": 944.8
   },
   "19": {
    "posts": 18,
-   "alcance": 3008.8
+   "alcance": 3009.7
   },
   "20": {
    "posts": 6,
-   "alcance": 1548.7
+   "alcance": 1549.2
   },
   "21": {
    "posts": 1,
@@ -125,10 +125,10 @@
    "formato": "reel",
    "legenda": "Boia preta e amarela com dois cones no alto: por qual lado você passa? É a boia cardinal, e o nome dela já dá a resposta.  Cardinal Norte: passe pelo norte dela",
    "link": "https://www.instagram.com/reel/DfzvObpJGtM/",
-   "reach": 82442,
-   "saved": 943,
-   "shares": 1117,
-   "taxa_engaj": 9.94
+   "reach": 82469,
+   "saved": 944,
+   "shares": 1123,
+   "taxa_engaj": 9.97
   },
   {
    "data": "2026-08-05",
@@ -155,10 +155,10 @@
    "formato": "reel",
    "legenda": "Quem tem a preferência no canal?  A preferência entre embarcações é pegadinha clássica no exame de Arrais-Amador - e derruba muita gente.  Quer parar de cair ne",
    "link": "https://www.instagram.com/reel/DfiKlR1OSy9/",
-   "reach": 30185,
-   "saved": 266,
-   "shares": 538,
-   "taxa_engaj": 10.5
+   "reach": 30363,
+   "saved": 269,
+   "shares": 541,
+   "taxa_engaj": 10.51
   },
   {
    "data": "2026-07-08",
@@ -185,30 +185,30 @@
    "formato": "reel",
    "legenda": "🚤 Você conhece esses sinais de navegação fluvial? Eles podem fazer a diferença na sua prova!  Estude com método e prepare-se para passar de primeira! ⚓  👉 Acess",
    "link": "https://www.instagram.com/reel/DeSlfIkmzNn/",
-   "reach": 13740,
+   "reach": 13755,
    "saved": 128,
    "shares": 227,
-   "taxa_engaj": 10.11
+   "taxa_engaj": 10.1
   },
   {
    "data": "2026-11-24",
    "formato": "reel",
    "legenda": "Tanque de 90 litros, motor que gasta 15 litros por hora. Quantas horas de IDA você pode planejar? A maioria responde 6 e erra.  Na náutica de esporte e recreio ",
    "link": "https://www.instagram.com/reel/DgIY7jThxS4/",
-   "reach": 12719,
-   "saved": 100,
-   "shares": 233,
-   "taxa_engaj": 10.14
+   "reach": 12820,
+   "saved": 101,
+   "shares": 237,
+   "taxa_engaj": 10.19
   },
   {
    "data": "2026-11-19",
    "formato": "reel",
    "legenda": "Você dá ré, com o leme a meio, e a popa foge sozinha para um lado. Para qual? São os efeitos do hélice, e eles caem na prova.  1. O jato no leme: o hélice empur",
    "link": "https://www.instagram.com/reel/Df7dj0RR1je/",
-   "reach": 12490,
+   "reach": 12577,
    "saved": 102,
    "shares": 106,
-   "taxa_engaj": 6.91
+   "taxa_engaj": 6.87
   }
  ],
  "top_engajamento": [
@@ -233,6 +233,16 @@
    "taxa_engaj": "14.9"
   },
   {
+   "data": "2026-11-26",
+   "formato": "reel",
+   "legenda": "A carta náutica diz 1,5 metro de profundidade. Seu calado é 2 metros. Você encalha? Depende da maré — e maré cai na prova de Arrais-Amador.  Aula rápida do Meu ",
+   "link": "https://www.instagram.com/reel/DgNfE1uJqqA/",
+   "reach": 3334,
+   "saved": 64,
+   "shares": 69,
+   "taxa_engaj": 14.65
+  },
+  {
    "data": "2026-07-06",
    "formato": "carrossel",
    "legenda": "IMAGENS QUE VÃO TE SALVAR NA PROVA DE ARRAIS-AMADOR  Acesse o link da bio e faça uma demonstração GRÁTIS da plataforma com questões de prova!",
@@ -241,16 +251,6 @@
    "saved": "19",
    "shares": "11",
    "taxa_engaj": "14.37"
-  },
-  {
-   "data": "2026-11-26",
-   "formato": "reel",
-   "legenda": "A carta náutica diz 1,5 metro de profundidade. Seu calado é 2 metros. Você encalha? Depende da maré — e maré cai na prova de Arrais-Amador.  Aula rápida do Meu ",
-   "link": "https://www.instagram.com/reel/DgNfE1uJqqA/",
-   "reach": 3085,
-   "saved": 53,
-   "shares": 58,
-   "taxa_engaj": 13.55
   },
   {
    "data": "2026-10-12",
@@ -297,10 +297,10 @@
    "formato": "carrossel",
    "legenda": "O través fica a quantos graus da proa? Essa é a pergunta que derruba gente boa na prova de Arrais-Amador.  Proa é 000°. A marcação relativa cresce no sentido ho",
    "link": "https://www.instagram.com/p/DgFp_qNn8SS/",
-   "reach": 1606,
-   "saved": 42,
+   "reach": 1621,
+   "saved": 43,
    "shares": 20,
-   "taxa_engaj": 11.64
+   "taxa_engaj": 11.72
   },
   {
    "data": "2026-08-07",
@@ -314,31 +314,32 @@
   }
  ],
  "stories_medias": {
-  "alcance": 96.5,
+  "alcance": 94.7,
   "respostas": 0.3,
-  "saidas": 13.5
+  "saidas": 13.3
  },
  "conta": [
   {
    "data": "2026-11-27",
-   "views": 601,
-   "reach": 366,
-   "profile_views": 2,
-   "website_clicks": 1,
-   "accounts_engaged": 27,
-   "total_interactions": 41,
-   "likes": 24,
+   "follower_count": "",
+   "views": 2988,
+   "reach": 1935,
+   "profile_views": 24,
+   "website_clicks": 4,
+   "accounts_engaged": 120,
+   "total_interactions": 194,
+   "likes": 107,
    "comments": 0,
-   "shares": 4,
-   "saves": 8,
+   "shares": 25,
+   "saves": 31,
    "replies": 0,
    "follows_and_unfollows": ""
   },
   {
    "data": "2026-11-26",
    "follower_count": 0,
-   "views": 16071,
-   "reach": 8715,
+   "views": 16073,
+   "reach": 8721,
    "profile_views": 86,
    "website_clicks": 18,
    "accounts_engaged": 716,
