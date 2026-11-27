@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-27T10:01-03:00",
+ "atualizado": "2026-11-27T13:02-03:00",
  "vturb": {
   "status": "ok",
   "players": [
@@ -58,7 +58,7 @@
     "views": 187,
     "finalizados": 0,
     "cliques": 7,
-    "acima_pitch": 5,
+    "acima_pitch": 3,
     "conversoes": 3
    },
    {
@@ -67,7 +67,7 @@
     "views": 161,
     "finalizados": 1,
     "cliques": 8,
-    "acima_pitch": 10,
+    "acima_pitch": 8,
     "conversoes": 1
    },
    {
@@ -76,7 +76,7 @@
     "views": 258,
     "finalizados": 5,
     "cliques": 6,
-    "acima_pitch": 13,
+    "acima_pitch": 12,
     "conversoes": 3
    },
    {
@@ -85,7 +85,7 @@
     "views": 191,
     "finalizados": 4,
     "cliques": 10,
-    "acima_pitch": 14,
+    "acima_pitch": 11,
     "conversoes": 6
    },
    {
@@ -94,7 +94,7 @@
     "views": 69,
     "finalizados": 3,
     "cliques": 3,
-    "acima_pitch": 6,
+    "acima_pitch": 4,
     "conversoes": 0
    },
    {
@@ -103,7 +103,7 @@
     "views": 64,
     "finalizados": 3,
     "cliques": 2,
-    "acima_pitch": 9,
+    "acima_pitch": 8,
     "conversoes": 0
    },
    {
@@ -121,7 +121,7 @@
     "views": 149,
     "finalizados": 6,
     "cliques": 6,
-    "acima_pitch": 15,
+    "acima_pitch": 14,
     "conversoes": 6
    },
    {
@@ -130,7 +130,7 @@
     "views": 143,
     "finalizados": 8,
     "cliques": 7,
-    "acima_pitch": 14,
+    "acima_pitch": 16,
     "conversoes": 1
    },
    {
@@ -139,7 +139,7 @@
     "views": 147,
     "finalizados": 5,
     "cliques": 2,
-    "acima_pitch": 12,
+    "acima_pitch": 14,
     "conversoes": 1
    },
    {
@@ -148,7 +148,7 @@
     "views": 83,
     "finalizados": 6,
     "cliques": 5,
-    "acima_pitch": 16,
+    "acima_pitch": 15,
     "conversoes": 2
    },
    {
@@ -166,7 +166,7 @@
     "views": 66,
     "finalizados": 8,
     "cliques": 6,
-    "acima_pitch": 12,
+    "acima_pitch": 13,
     "conversoes": 2
    },
    {
@@ -175,7 +175,7 @@
     "views": 49,
     "finalizados": 4,
     "cliques": 2,
-    "acima_pitch": 9,
+    "acima_pitch": 8,
     "conversoes": 1
    },
    {
@@ -184,7 +184,7 @@
     "views": 73,
     "finalizados": 2,
     "cliques": 13,
-    "acima_pitch": 11,
+    "acima_pitch": 12,
     "conversoes": 3
    },
    {
@@ -301,7 +301,7 @@
     "views": 22,
     "finalizados": 3,
     "cliques": 3,
-    "acima_pitch": 5,
+    "acima_pitch": 4,
     "conversoes": 0
    },
    {
@@ -425,22 +425,22 @@
     ]
    },
    "2026-10-30": {
-    "instagram": [
-     10,
-     3,
-     0
-    ],
-    "facebook_mobile_reels": [
-     1,
-     0,
-     0
-    ],
     "facebook_notification": [
      1,
      0,
      0
     ],
+    "instagram": [
+     10,
+     3,
+     0
+    ],
     "facebook_mobile_feed": [
+     1,
+     0,
+     0
+    ],
+    "facebook_mobile_reels": [
      1,
      0,
      0
@@ -469,14 +469,14 @@
     ]
    },
    "2026-11-01": {
-    "instagram": [
-     13,
-     3,
-     0
-    ],
     "facebook_mobile_feed": [
      3,
      0,
+     0
+    ],
+    "instagram": [
+     13,
+     3,
      0
     ],
     "fb": [
@@ -528,15 +528,15 @@
      2,
      1
     ],
-    "facebook_mobile_reels": [
-     2,
-     2,
-     1
-    ],
     "facebook_mobile_feed": [
      4,
      0,
      0
+    ],
+    "facebook_mobile_reels": [
+     2,
+     2,
+     1
     ],
     "fb": [
      1,
@@ -550,6 +550,11 @@
     ]
    },
    "2026-11-04": {
+    "facebook_mobile_feed": [
+     3,
+     2,
+     0
+    ],
     "instagram": [
      18,
      5,
@@ -564,16 +569,11 @@
      3,
      0,
      0
-    ],
-    "facebook_mobile_feed": [
-     3,
-     2,
-     0
     ]
    },
    "2026-11-05": {
-    "facebook_mobile_reels": [
-     5,
+    "fb": [
+     1,
      0,
      0
     ],
@@ -582,14 +582,14 @@
      1,
      0
     ],
+    "facebook_mobile_reels": [
+     5,
+     0,
+     0
+    ],
     "facebook_mobile_feed": [
      6,
      1,
-     0
-    ],
-    "fb": [
-     1,
-     0,
      0
     ],
     "facebook_instream_video": [
@@ -609,14 +609,14 @@
      1,
      0
     ],
-    "instagram": [
-     10,
-     2,
-     0
-    ],
     "facebook_mobile_reels": [
      2,
      0,
+     0
+    ],
+    "instagram": [
+     10,
+     2,
      0
     ],
     "sem UTM": [
@@ -641,12 +641,12 @@
      0,
      0
     ],
-    "facebook_stories": [
+    "facebook_instream_video": [
      4,
      0,
      0
     ],
-    "facebook_instream_video": [
+    "facebook_stories": [
      4,
      0,
      0
@@ -658,11 +658,6 @@
     ]
    },
    "2026-11-08": {
-    "instagram": [
-     19,
-     2,
-     2
-    ],
     "facebook_stories": [
      0,
      0,
@@ -672,6 +667,11 @@
      2,
      0,
      0
+    ],
+    "instagram": [
+     19,
+     2,
+     2
     ],
     "facebook_mobile_feed": [
      9,
@@ -685,13 +685,8 @@
     ]
    },
    "2026-11-09": {
-    "fb": [
-     2,
-     0,
-     0
-    ],
-    "facebook_mobile_reels": [
-     2,
+    "facebook_mobile_feed": [
+     8,
      0,
      0
     ],
@@ -700,8 +695,13 @@
      10,
      4
     ],
-    "facebook_mobile_feed": [
-     8,
+    "facebook_mobile_reels": [
+     2,
+     0,
+     0
+    ],
+    "fb": [
+     2,
      0,
      0
     ],
@@ -717,13 +717,8 @@
     ]
    },
    "2026-11-10": {
-    "facebook_mobile_reels": [
-     4,
-     1,
-     1
-    ],
-    "fb": [
-     8,
+    "instagram": [
+     17,
      3,
      0
     ],
@@ -737,8 +732,13 @@
      2,
      1
     ],
-    "instagram": [
-     17,
+    "facebook_mobile_reels": [
+     4,
+     1,
+     1
+    ],
+    "fb": [
+     8,
      3,
      0
     ],
@@ -790,15 +790,15 @@
     ]
    },
    "2026-11-14": {
-    "fb": [
-     50,
-     4,
-     2
-    ],
     "instagram": [
      5,
      1,
      0
+    ],
+    "fb": [
+     50,
+     4,
+     2
     ],
     "teste_asi": [
      1,
@@ -829,15 +829,15 @@
     ]
    },
    "2026-11-16": {
-    "instagram": [
-     23,
-     0,
-     0
-    ],
     "fb": [
      77,
      7,
      1
+    ],
+    "instagram": [
+     23,
+     0,
+     0
     ],
     "sem UTM": [
      0,
@@ -851,15 +851,15 @@
      0,
      0
     ],
-    "fb": [
-     63,
-     3,
-     3
-    ],
     "instagram": [
      32,
      3,
      2
+    ],
+    "fb": [
+     63,
+     3,
+     3
     ],
     "sem UTM": [
      0,
@@ -885,13 +885,13 @@
     ]
    },
    "2026-11-19": {
-    "instagram": [
-     11,
+    "fb": [
+     33,
      1,
      0
     ],
-    "fb": [
-     33,
+    "instagram": [
+     11,
      1,
      0
     ]
@@ -909,27 +909,27 @@
     ]
    },
    "2026-11-21": {
-    "fb": [
-     61,
-     5,
-     4
-    ],
     "instagram": [
      22,
      3,
      2
+    ],
+    "fb": [
+     61,
+     5,
+     4
     ]
    },
    "2026-11-22": {
-    "instagram": [
-     47,
-     1,
-     1
-    ],
     "fb": [
      79,
      5,
      2
+    ],
+    "instagram": [
+     47,
+     1,
+     1
     ],
     "facebook_stories": [
      0,
@@ -955,15 +955,15 @@
     ]
    },
    "2026-11-24": {
-    "fb": [
-     29,
-     2,
-     1
-    ],
     "instagram": [
      49,
      4,
      2
+    ],
+    "fb": [
+     29,
+     2,
+     1
     ],
     "sem UTM": [
      0,
@@ -972,15 +972,15 @@
     ]
    },
    "2026-11-25": {
-    "instagram": [
-     36,
-     1,
-     0
-    ],
     "fb": [
      34,
      2,
      1
+    ],
+    "instagram": [
+     36,
+     1,
+     0
     ],
     "facebook_mobile_reels": [
      0,
@@ -994,15 +994,15 @@
     ]
    },
    "2026-11-26": {
-    "fb": [
-     0,
-     1,
-     1
-    ],
     "instagram": [
      5,
      0,
      0
+    ],
+    "fb": [
+     0,
+     1,
+     1
     ],
     "sem UTM": [
      0,
@@ -1279,8 +1279,19 @@
  },
  "kiwify": {
   "status": "ok",
-  "vendas_lidas": 279,
+  "vendas_lidas": 281,
   "dias": [
+   {
+    "data": "2026-11-27",
+    "vendas": 0,
+    "bruto": 0.0,
+    "liquido": 0.0,
+    "ig_vendas": 0,
+    "ig_liquido": 0.0,
+    "pendentes": 2,
+    "devolvidas": 0,
+    "recusadas": 0
+   },
    {
     "data": "2026-11-26",
     "vendas": 1,
@@ -3654,7 +3665,7 @@
      1,
      33.67
     ],
-    "Meteorologia Náutica Simplificada": [
+    "Mapas Mentais para Exame de Arrais-Amador": [
      1,
      15.47
     ],
@@ -3662,19 +3673,19 @@
      1,
      85.79
     ],
-    "Mapas Mentais para Exame de Arrais-Amador": [
+    "Meteorologia Náutica Simplificada": [
      1,
      15.47
     ]
    },
    "2026-10-23": {
-    "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
-     2,
-     67.34
-    ],
     "Meu Arrais-Amador": [
      3,
      257.37
+    ],
+    "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
+     2,
+     67.34
     ]
    },
    "2026-10-19": {
@@ -3692,13 +3703,13 @@
      1,
      85.79
     ],
-    "Mapas Mentais para Exame de Arrais-Amador": [
-     1,
-     15.47
-    ],
     "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
      1,
      33.67
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
     ]
    },
    "2026-10-16": {
@@ -3718,10 +3729,6 @@
     ]
    },
    "2026-10-13": {
-    "Mapas Mentais para Exame de Arrais-Amador": [
-     1,
-     15.47
-    ],
     "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
      2,
      67.34
@@ -3729,9 +3736,17 @@
     "Meu Arrais-Amador": [
      3,
      257.37
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
     ]
    },
    "2026-10-12": {
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ],
     "Meu Arrais-Amador": [
      1,
      85.79
@@ -3739,10 +3754,6 @@
     "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
      1,
      33.67
-    ],
-    "Mapas Mentais para Exame de Arrais-Amador": [
-     1,
-     15.47
     ],
     "Meteorologia Náutica Simplificada": [
      1,
@@ -3750,10 +3761,6 @@
     ]
    },
    "2026-10-08": {
-    "Meu Arrais-Amador": [
-     1,
-     85.79
-    ],
     "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
      1,
      33.67
@@ -3765,6 +3772,10 @@
     "Meteorologia Náutica Simplificada": [
      1,
      15.47
+    ],
+    "Meu Arrais-Amador": [
+     1,
+     85.79
     ]
    },
    "2026-10-06": {
@@ -3772,10 +3783,6 @@
      2,
      171.58
     ],
-    "Mapas Mentais para Exame de Arrais-Amador": [
-     1,
-     15.47
-    ],
     "Meteorologia Náutica Simplificada": [
      1,
      15.47
@@ -3783,6 +3790,10 @@
     "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
      1,
      33.67
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
     ]
    },
    "2026-10-05": {
@@ -3828,9 +3839,9 @@
     ]
    },
    "2026-09-25": {
-    "Meu Arrais-Amador": [
+    "Mapas Mentais para Exame de Arrais-Amador": [
      1,
-     85.79
+     15.47
     ],
     "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
      1,
@@ -3840,20 +3851,12 @@
      1,
      15.47
     ],
-    "Mapas Mentais para Exame de Arrais-Amador": [
+    "Meu Arrais-Amador": [
      1,
-     15.47
+     85.79
     ]
    },
    "2026-09-23": {
-    "Meu Arrais-Amador": [
-     1,
-     85.79
-    ],
-    "Mapas Mentais para Exame de Arrais-Amador": [
-     1,
-     15.47
-    ],
     "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
      1,
      33.67
@@ -3861,13 +3864,17 @@
     "Meteorologia Náutica Simplificada": [
      1,
      15.47
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
+    ],
+    "Meu Arrais-Amador": [
+     1,
+     85.79
     ]
    },
    "2026-09-22": {
-    "Meu Arrais-Amador": [
-     1,
-     85.79
-    ],
     "Meteorologia Náutica Simplificada": [
      1,
      15.47
@@ -3879,6 +3886,10 @@
     "Mapas Mentais para Exame de Arrais-Amador": [
      1,
      15.47
+    ],
+    "Meu Arrais-Amador": [
+     1,
+     85.79
     ]
    },
    "2026-09-21": {
@@ -3886,10 +3897,6 @@
      2,
      67.34
     ],
-    "Mapas Mentais para Exame de Arrais-Amador": [
-     1,
-     15.47
-    ],
     "Meteorologia Náutica Simplificada": [
      1,
      15.47
@@ -3897,6 +3904,10 @@
     "Meu Arrais-Amador": [
      1,
      85.79
+    ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     1,
+     15.47
     ]
    },
    "2026-09-20": {
@@ -3910,13 +3921,13 @@
     ]
    },
    "2026-09-17": {
-    "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
-     1,
-     33.67
-    ],
     "Meu Arrais-Amador": [
      1,
      85.79
+    ],
+    "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
+     1,
+     33.67
     ]
    },
    "2026-09-16": {
@@ -3942,31 +3953,31 @@
     ]
    },
    "2026-09-13": {
-    "Mapas Mentais para Exame de Arrais-Amador": [
+    "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
      2,
-     30.94
+     67.34
     ],
     "Meu Arrais-Amador": [
      2,
      171.58
     ],
+    "Mapas Mentais para Exame de Arrais-Amador": [
+     2,
+     30.94
+    ],
     "Meteorologia Náutica Simplificada": [
      1,
      15.47
-    ],
-    "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
-     2,
-     67.34
     ]
    },
    "2026-09-12": {
-    "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
-     1,
-     33.67
-    ],
     "Meu Arrais-Amador": [
      1,
      85.79
+    ],
+    "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
+     1,
+     33.67
     ]
    },
    "2026-09-11": {
@@ -3984,13 +3995,13 @@
      1,
      15.47
     ],
-    "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
-     1,
-     33.67
-    ],
     "Mapas Mentais para Exame de Arrais-Amador": [
      1,
      15.47
+    ],
+    "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
+     1,
+     33.67
     ]
    },
    "2026-09-09": {
@@ -3998,11 +4009,11 @@
      3,
      257.37
     ],
-    "Mapas Mentais para Exame de Arrais-Amador": [
+    "Meteorologia Náutica Simplificada": [
      1,
      15.47
     ],
-    "Meteorologia Náutica Simplificada": [
+    "Mapas Mentais para Exame de Arrais-Amador": [
      1,
      15.47
     ],
@@ -4022,17 +4033,17 @@
     ]
    },
    "2026-09-07": {
-    "Mapas Mentais para Exame de Arrais-Amador": [
+    "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
      1,
-     15.47
+     33.67
     ],
     "Meu Arrais-Amador": [
      2,
      171.58
     ],
-    "314 Questões Essenciais para Revisão -  Arrais-Amador e Motonauta": [
+    "Mapas Mentais para Exame de Arrais-Amador": [
      1,
-     33.67
+     15.47
     ]
    },
    "2026-09-06": {
