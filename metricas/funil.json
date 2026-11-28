@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-28T04:51-03:00",
+ "atualizado": "2026-11-28T08:01-03:00",
  "vturb": {
   "status": "ok",
   "players": [
@@ -27,8 +27,8 @@
   "dias": [
    {
     "data": "2026-11-28",
-    "plays": 7,
-    "views": 11,
+    "plays": 11,
+    "views": 18,
     "finalizados": 0,
     "cliques": 0,
     "acima_pitch": 0,
@@ -965,15 +965,15 @@
      0,
      0
     ],
-    "instagram": [
-     13,
-     0,
-     0
-    ],
     "fb": [
      15,
      2,
      1
+    ],
+    "instagram": [
+     13,
+     0,
+     0
     ]
    },
    "2026-11-28": {
@@ -983,12 +983,12 @@
      0
     ],
     "fb": [
-     4,
+     7,
      0,
      0
     ],
     "instagram": [
-     3,
+     5,
      0,
      0
     ]
@@ -996,34 +996,34 @@
   },
   "janelas": {
    "1": {
-    "tempo_medio_s": 23,
-    "retencao": 2.8,
-    "minutos": 3
+    "tempo_medio_s": 36,
+    "retencao": 4.4,
+    "minutos": 7
    },
    "3": {
-    "tempo_medio_s": 98,
-    "retencao": 11.7,
-    "minutos": 141
+    "tempo_medio_s": 96,
+    "retencao": 11.4,
+    "minutos": 144
    },
    "7": {
     "tempo_medio_s": 102,
     "retencao": 9.9,
-    "minutos": 763
+    "minutos": 766
    },
    "14": {
-    "tempo_medio_s": 154,
-    "retencao": 14.5,
-    "minutos": 2585
+    "tempo_medio_s": 153,
+    "retencao": 14.4,
+    "minutos": 2588
    },
    "30": {
-    "tempo_medio_s": 205,
+    "tempo_medio_s": 204,
     "retencao": 18.6,
-    "minutos": 5019
+    "minutos": 5022
    },
    "90": {
     "tempo_medio_s": 207,
-    "retencao": 18.8,
-    "minutos": 5183
+    "retencao": 18.7,
+    "minutos": 5186
    }
   },
   "curva": {
